@@ -20,13 +20,13 @@ export const Footer: React.FC = () => {
     <footer className="relative z-10 py-24 px-6 bg-[#F7F9FB] border-t border-outline-variant text-[#2c3437]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
         <div className="space-y-8 col-span-1">
-          <h3 className="text-[#2c3437] font-display font-black text-xl tracking-tight">
-            FreelanceCanvas
+          <h3 className="text[#737B8C] font-display font-black text-xl tracking-tight">
+            KaamPay
           </h3>
-          <p className="max-w-xs text-[#2c3437]/40 text-sm font-medium leading-relaxed">
+          <p className="max-w-xs text-[#737B8C]/40 text-sm font-medium leading-relaxed">
             The Curated Canvas for Modern Professionals. Revolutionizing the way the world works.
           </p>
-          <div className="flex items-center space-x-6 text-[#2c3437]/40">
+          <div className="flex items-center space-x-6 text-[#737B8C]/40">
              <Share2 className="w-5 h-5 hover:text-primary cursor-pointer transition-colors" />
              <Globe className="w-5 h-5 hover:text-primary cursor-pointer transition-colors" />
              <Users className="w-5 h-5 hover:text-primary cursor-pointer transition-colors" />

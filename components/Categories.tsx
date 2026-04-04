@@ -24,7 +24,7 @@ export const Categories: React.FC = () => {
             <p className="text-[#2c3437]/40 font-medium">Find the perfect match for your next project.</p>
 
           </div>
-          <Link href="#" className="flex items-center space-x-2 text-primary font-bold text-sm group">
+          <Link href="#" className="flex items-center space-x-2 text-blue-600 font-bold text-sm group">
             <span>View All</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>

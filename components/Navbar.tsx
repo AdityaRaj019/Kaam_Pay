@@ -26,19 +26,19 @@ export const Navbar: React.FC = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4 ${
         scrolled 
-          ? "bg-white/70 backdrop-blur-xl shadow-sm border-b border-outline-variant text-[#2c3437]" 
+          ? "bg-white/70 backdrop-blur-xl shadow-sm  border-outline-variant text-[#2c3437]" 
           : "bg-transparent text-white"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 group">
           <div className="w-10 h-10 bg-[#4a4bd7] rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform shadow-lg shadow-[#4a4bd7]/20">
-            <span className="text-white font-bold text-xl">F</span>
+            <span className="text-white font-bold text-xl">K</span>
           </div>
           <span className={`font-display font-black text-xl tracking-tight transition-colors ${
             scrolled ? "text-[#2c3437]" : "text-white"
           }`}>
-            FreelanceCanvas
+            KaamPay
           </span>
         </Link>
         
