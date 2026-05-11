@@ -1,13 +1,163 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../lib/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
+}
+
+enum UserRole {
+  CLIENT
+  FREELANCER
+  ADMIN
+}
+
+enum GigStatus {
+  ACTIVE
+  PAUSED
+  DRAFT
+}
+
+enum OrderStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  DISPUTED
+}
+
+enum EscrowStatus {
+  HELD
+  RELEASED
+  REFUNDED
+}
+
+model User {
+  id               String         @id @default(cuid())
+  name             String
+  email            String         @unique
+  passwordHash     String
+  role             UserRole       @default(CLIENT)
+  isVerified       Boolean        @default(false)
+  profile          Profile?
+  gigs             Gig[]          @relation("FreelancerGigs")
+  ordersAsClient   Order[]        @relation("ClientOrders")
+  ordersAsFreelancer Order[]      @relation("FreelancerOrders")
+  reviewsGiven     Review[]       @relation("ReviewsGiven")
+  reviewsReceived  Review[]       @relation("ReviewsReceived")
+  messages         Message[]
+  notifications    Notification[]
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model Profile {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bio            String?  @db.Text
+  skills         String[]
+  portfolioLinks String[]
+  hourlyRate     Float?
+  updatedAt      DateTime @updatedAt
+}
+
+model Gig {
+  id           String    @id @default(cuid())
+  freelancerId String
+  freelancer   User      @relation("FreelancerGigs", fields: [freelancerId], references: [id])
+  title        String
+  description  String    @db.Text
+  category     String
+  price        Float
+  deliveryTime Int       // In days
+  status       GigStatus @default(ACTIVE)
+  orders       Order[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Order {
+  id           String       @id @default(cuid())
+  clientId     String
+  client       User         @relation("ClientOrders", fields: [clientId], references: [id])
+  freelancerId String
+  freelancer   User         @relation("FreelancerOrders", fields: [freelancerId], references: [id])
+  gigId        String
+  gig          Gig          @relation(fields: [gigId], references: [id])
+  amount       Float
+  status       OrderStatus  @default(PENDING)
+  deliverables Deliverable[]
+  payment      Payment?
+  chatRoom     ChatRoom?
+  review       Review?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+model Deliverable {
+  id            String   @id @default(cuid())
+  orderId       String
+  order         Order    @relation(fields: [orderId], references: [id])
+  fileUrls      String[]
+  textProof     String?  @db.Text
+  revisionCount Int      @default(0)
+  createdAt     DateTime @default(now())
+}
+
+model Payment {
+  id                   String       @id @default(cuid())
+  orderId              String       @unique
+  order                Order        @relation(fields: [orderId], references: [id])
+  razorpayOrderId      String       @unique
+  amount               Float
+  platformFee          Float
+  escrowStatus         EscrowStatus @default(HELD)
+  createdAt            DateTime     @default(now())
+  updatedAt            DateTime     @updatedAt
+}
+
+model ChatRoom {
+  id        String    @id @default(cuid())
+  orderId   String    @unique
+  order     Order     @relation(fields: [orderId], references: [id])
+  messages  Message[]
+  createdAt DateTime  @default(now())
+}
+
+model Message {
+  id         String   @id @default(cuid())
+  chatRoomId String
+  chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id])
+  senderId   String
+  sender     User     @relation(fields: [senderId], references: [id])
+  text       String   @db.Text
+  createdAt  DateTime @default(now())
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  orderId    String   @unique
+  order      Order    @relation(fields: [orderId], references: [id])
+  reviewerId String
+  reviewer   User     @relation("ReviewsGiven", fields: [reviewerId], references: [id])
+  targetId   String
+  target     User     @relation("ReviewsReceived", fields: [targetId], references: [id])
+  rating     Int      // 1-5
+  comment    String?  @db.Text
+  createdAt  DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
 }
