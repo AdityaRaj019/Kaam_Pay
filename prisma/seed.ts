@@ -58,7 +58,8 @@ async function main() {
     data: {
       freelancerId: freelancer.id,
       title: 'Modern Next.js Website Development',
-      description: 'I will build a high-performance, SEO-friendly website using Next.js and Tailwind CSS.',
+      description:
+        'I will build a high-performance, SEO-friendly website using Next.js and Tailwind CSS.',
       category: 'Web Development',
       price: 500,
       deliveryTime: 7,
