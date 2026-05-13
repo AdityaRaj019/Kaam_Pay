@@ -19,7 +19,6 @@ const toPublicUser = (user: {
   createdAt: user.createdAt,
 });
 
-
 // ─── Service ─────────────────────────────────────────────────
 export class AuthService {
   /**
@@ -77,11 +76,10 @@ export class AuthService {
     });
 
     // Always run compare to prevent timing attacks (even if user doesn't exist)
-    const dummyHash =
-      '$2b$12$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+    const dummyHash = '$2b$12$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
     const passwordMatch = await AuthProvider.comparePassword(
       data.password,
-      user?.passwordHash ?? dummyHash
+      user?.passwordHash ?? dummyHash,
     );
 
     if (!user || !passwordMatch) {

@@ -1,10 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-type AsyncHandler = (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => Promise<unknown>;
+type AsyncHandler = (req: Request, res: Response, next: NextFunction) => Promise<unknown>;
 
 /**
  * Wraps an async route handler and forwards errors to the global error handler.

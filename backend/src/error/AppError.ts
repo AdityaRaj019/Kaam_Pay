@@ -24,11 +24,7 @@ export class AppError extends Error {
   public readonly errorCode: ErrorCode;
   public readonly isOperational: boolean;
 
-  constructor(
-    message: string,
-    statusCode: number,
-    errorCode?: ErrorCode
-  ) {
+  constructor(message: string, statusCode: number, errorCode?: ErrorCode) {
     super(message);
     this.statusCode = statusCode;
     this.errorCode = errorCode ?? STATUS_TO_CODE[statusCode] ?? ErrorCode.INTERNAL_ERROR;

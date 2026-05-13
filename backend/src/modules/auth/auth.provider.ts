@@ -24,10 +24,7 @@ export class AuthProvider {
     return bcrypt.hash(password, BCRYPT_ROUNDS);
   }
 
-  static async comparePassword(
-    plainText: string,
-    hash: string
-  ): Promise<boolean> {
+  static async comparePassword(plainText: string, hash: string): Promise<boolean> {
     return bcrypt.compare(plainText, hash);
   }
 
@@ -46,10 +43,7 @@ export class AuthProvider {
       // Narrow `unknown` to a structured error before reading properties
       const name = err instanceof Error ? err.name : '';
       if (name === 'TokenExpiredError') {
-        throw new AppError(
-          'Your session has expired. Please log in again.',
-          401
-        );
+        throw new AppError('Your session has expired. Please log in again.', 401);
       }
       throw new AppError('Invalid token. Please log in again.', 401);
     }

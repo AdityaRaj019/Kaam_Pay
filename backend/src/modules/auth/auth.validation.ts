@@ -10,11 +10,7 @@ export const registerSchema = z.object({
     .min(2, 'Name must be at least 2 characters')
     .max(60, 'Name must be at most 60 characters'),
 
-  email: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .email('Invalid email address'),
+  email: z.string().trim().toLowerCase().email('Invalid email address'),
 
   password: z
     .string()
@@ -37,11 +33,7 @@ export const registerSchema = z.object({
 
 // ─── Login schema ─────────────────────────────────────────────
 export const loginSchema = z.object({
-  email: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .email('Invalid email address'),
+  email: z.string().trim().toLowerCase().email('Invalid email address'),
 
   password: z.string().min(1, 'Password is required'),
 });

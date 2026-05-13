@@ -24,7 +24,7 @@ export const errorHandler = (
   _req: Request,
   res: Response,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  _next: NextFunction
+  _next: NextFunction,
 ): void => {
   // Always log the raw error in dev — helps diagnose 500s
   if (isDev) {
@@ -43,10 +43,7 @@ export const errorHandler = (
   ) {
     error = handleJwtInvalidError();
   } else if (err instanceof Error) {
-    error = new AppError(
-      isDev ? err.message : 'Something went wrong. Please try again.',
-      500
-    );
+    error = new AppError(isDev ? err.message : 'Something went wrong. Please try again.', 500);
   } else {
     error = new AppError('An unexpected error occurred.', 500);
   }
