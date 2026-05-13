@@ -57,14 +57,14 @@ export const Navbar: React.FC = () => {
         </div>
 
         <div className="flex items-center space-x-8">
-          <button className={`font-bold text-sm transition-colors ${
+          <Link href="/login" className={`font-bold text-sm transition-colors ${
             scrolled ? "text-[#2c3437] hover:text-[#4a4bd7]" : "text-white hover:text-white/70"
           }`}>
             Sign In
-          </button>
-          <button className="bg-[#4a4bd7] text-white px-8 py-2.5 rounded-full text-sm font-black hover:bg-[#3b3bc2] transition-all hover:scale-105 shadow-lg shadow-[#4a4bd7]/20">
+          </Link>
+          <Link href="/onboarding" className="bg-[#4a4bd7] text-white px-8 py-2.5 rounded-full text-sm font-black hover:bg-[#3b3bc2] transition-all hover:scale-105 shadow-lg shadow-[#4a4bd7]/20 inline-block text-center">
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
