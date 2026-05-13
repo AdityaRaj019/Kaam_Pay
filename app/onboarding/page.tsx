@@ -48,8 +48,8 @@ export default function OnboardingPage() {
         <div className="text-center">
           <p className="text-slate-600 text-lg">
             Already have an account?{' '}
-            <Link 
-              href="/login" 
+            <Link
+              href="/login"
               className="text-blue-900 font-semibold hover:underline hover:text-blue-800 transition-colors"
             >
               Log In

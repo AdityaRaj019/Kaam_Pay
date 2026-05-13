@@ -31,9 +31,7 @@ export default function LoginPage() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-semibold text-slate-700 mb-1">
-              Email address
-            </label>
+            <label className="block text-sm font-semibold text-slate-700 mb-1">Email address</label>
             <input
               type="email"
               required
@@ -45,9 +43,7 @@ export default function LoginPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-slate-700 mb-1">
-              Password
-            </label>
+            <label className="block text-sm font-semibold text-slate-700 mb-1">Password</label>
             <input
               type="password"
               required
@@ -69,9 +65,7 @@ export default function LoginPage() {
 
         <div className="mt-8 relative flex items-center justify-center">
           <div className="absolute border-t border-slate-200 w-full"></div>
-          <span className="bg-white px-4 text-sm text-slate-500 relative">
-            New to KaamPay?
-          </span>
+          <span className="bg-white px-4 text-sm text-slate-500 relative">New to KaamPay?</span>
         </div>
 
         <div className="mt-6">

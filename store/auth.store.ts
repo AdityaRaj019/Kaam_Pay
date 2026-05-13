@@ -35,7 +35,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     if (typeof window !== 'undefined') {
       const token = localStorage.getItem('auth_token');
       const userStr = localStorage.getItem('auth_user');
-      
+
       if (token && userStr) {
         try {
           const user = JSON.parse(userStr);
@@ -46,5 +46,5 @@ export const useAuthStore = create<AuthState>((set) => ({
         }
       }
     }
-  }
+  },
 }));

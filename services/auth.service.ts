@@ -44,5 +44,5 @@ export const AuthService = {
   async getMe(): Promise<{ success: boolean; data: { user: User } }> {
     const response = await api.get('/auth/me');
     return response.data;
-  }
+  },
 };
