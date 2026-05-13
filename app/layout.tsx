@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Kaampay',
-  description: 'Monetize your micro-skills on India\'s first hyper-local freelancing platform.',
+  description: "Monetize your micro-skills on India's first hyper-local freelancing platform.",
 };
 
 export default function RootLayout({
