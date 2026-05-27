@@ -12,6 +12,14 @@ const toPublicUser = (user: {
   emailVerified: boolean;
   image: string | null;
   createdAt: Date;
+  profile: {
+    title: string | null;
+    bio: string | null;
+    skills: string[];
+    hourlyRate: number | null;
+    experience: string | null;
+    purpose: string | null;
+  } | null;
 }): PublicUser => ({
   id: user.id,
   name: user.name,
@@ -20,6 +28,7 @@ const toPublicUser = (user: {
   emailVerified: user.emailVerified,
   image: user.image,
   createdAt: user.createdAt,
+  profile: user.profile,
 });
 
 // ─── Service ─────────────────────────────────────────────────
@@ -51,6 +60,16 @@ export class AuthService {
         emailVerified: true,
         image: true,
         createdAt: true,
+        profile: {
+          select: {
+            title: true,
+            bio: true,
+            skills: true,
+            hourlyRate: true,
+            experience: true,
+            purpose: true,
+          },
+        },
       },
     });
 

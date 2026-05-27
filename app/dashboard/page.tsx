@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useSession } from '@/lib/auth/auth-client';
 import { useAuthStore } from '@/store/auth.store';
 import { useAuth } from '@/hooks/useAuth';
+import api from '@/lib/axios';
 
 interface SessionUser {
   id?: string;
@@ -46,6 +47,29 @@ export default function DashboardPage() {
       router.push('/login');
     }
   }, [isPending, session, router]);
+
+  // Redirect freelancer to onboarding if they haven't completed it
+  useEffect(() => {
+    async function checkOnboarding() {
+      if (!session?.user) return;
+      const role = (session.user as SessionUser).role ?? 'CLIENT';
+      if (role !== 'FREELANCER') return;
+
+      try {
+        const response = await api.get('/auth/me');
+        const user = response.data?.data?.user;
+        if (user && (!user.profile || !user.profile.title)) {
+          router.push('/onboarding');
+        }
+      } catch (err) {
+        console.error('Error checking profile onboarding:', err);
+      }
+    }
+
+    if (session) {
+      checkOnboarding();
+    }
+  }, [session, router]);
 
   if (isPending) {
     return (
