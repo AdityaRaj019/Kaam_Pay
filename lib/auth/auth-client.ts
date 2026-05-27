@@ -1,4 +1,5 @@
 import { createAuthClient } from 'better-auth/react';
+import { twoFactorClient } from 'better-auth/client/plugins';
 
 /**
  * Better Auth Client
@@ -26,6 +27,12 @@ export const authClient = createAuthClient({
   baseURL: process.env.NEXT_PUBLIC_API_URL
     ? process.env.NEXT_PUBLIC_API_URL.replace('/api', '')
     : 'http://localhost:5000',
+  plugins: [
+    twoFactorClient({
+      // Redirect users here if they need to verify 2nd factor
+      twoFactorPage: '/two-factor',
+    }),
+  ],
 });
 
 // Export individual methods for convenience

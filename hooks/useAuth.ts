@@ -115,5 +115,21 @@ export const useAuth = () => {
     }
   };
 
-  return { login, register, logout, isLoading, error };
+  const loginWithSocial = async (provider: 'google' | 'github' | 'apple') => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      await authClient.signIn.social({
+        provider,
+        callbackURL: `${window.location.origin}/dashboard`,
+      });
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : `Failed to login with ${provider}`;
+      setError(message);
+      toast.error(message);
+      setIsLoading(false);
+    }
+  };
+
+  return { login, register, logout, loginWithSocial, isLoading, error };
 };

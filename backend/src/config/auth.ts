@@ -1,5 +1,6 @@
 import { betterAuth } from 'better-auth';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
+import { twoFactor } from 'better-auth/plugins';
 import prisma from './prisma';
 
 /**
@@ -7,6 +8,8 @@ import prisma from './prisma';
  *
  * This handles:
  *  - Email/password sign-up and sign-in
+ *  - OAuth / Social login (Google, GitHub, Apple)
+ *  - Two-Factor Authentication (2FA) via TOTP
  *  - Secure HTTP-only session cookies
  *  - Session lifecycle (create, validate, revoke)
  *  - Password hashing (built-in scrypt — replaces bcrypt)
@@ -61,6 +64,29 @@ export const auth = betterAuth({
       },
     },
   },
+
+  // ── Social Providers (OAuth) ──────────────────────────────
+  socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID || 'mock-google-client-id',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || 'mock-google-client-secret',
+    },
+    github: {
+      clientId: process.env.GITHUB_CLIENT_ID || 'mock-github-client-id',
+      clientSecret: process.env.GITHUB_CLIENT_SECRET || 'mock-github-client-secret',
+    },
+    apple: {
+      clientId: process.env.APPLE_CLIENT_ID || 'mock-apple-client-id',
+      clientSecret: process.env.APPLE_CLIENT_SECRET || 'mock-apple-client-secret',
+    },
+  },
+
+  // ── Plugins ────────────────────────────────────────────────
+  plugins: [
+    twoFactor({
+      issuer: 'KaamPay', // The issuer name shown in Authenticator Apps
+    }),
+  ],
 
   // ── Trusted origins for CORS (cookie domain) ───────────────
   trustedOrigins: (process.env.ALLOWED_ORIGINS ?? 'http://localhost:3000').split(','),
