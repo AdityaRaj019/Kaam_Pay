@@ -24,8 +24,8 @@ export default function VerifyEmailPage() {
       </h1>
 
       <p className="text-slate-600 mb-8 leading-relaxed">
-        We&apos;ve sent a verification link to your email address.
-        Please click the link to verify your account and get started.
+        We&apos;ve sent a verification link to your email address. Please click the link to verify
+        your account and get started.
       </p>
 
       {/* Status indicator */}

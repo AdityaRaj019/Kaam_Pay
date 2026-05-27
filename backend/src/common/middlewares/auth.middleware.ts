@@ -23,13 +23,7 @@ export const requireAuth = async (
     });
 
     if (!session || !session.user) {
-      return next(
-        new AppError(
-          'Not authenticated. Please sign in.',
-          401,
-          ErrorCode.UNAUTHORIZED,
-        ),
-      );
+      return next(new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED));
     }
 
     // Attach the session user to req.user for downstream handlers

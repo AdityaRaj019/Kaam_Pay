@@ -36,11 +36,11 @@ model User {
   twoFactorEnabled Boolean   @default(false)
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
-  
+
   // Relationships to Better Auth tables
   sessions         Session[]
   accounts         Account[]
-  
+
   // Existing business logic relationships
   profile          Profile?
   gigs             Gig[]     @relation("FreelancerGigs")
@@ -101,6 +101,7 @@ model TwoFactor {
 The backend will be responsible for defining security rules, issuing HTTP-Only cookies, and protecting API routes.
 
 ### Folder Structure
+
 ```text
 backend/
 ├── src/
@@ -116,19 +117,19 @@ backend/
 ### Implementation Details
 
 1.  **Configuration (`backend/src/config/auth.ts`)**:
-    *   Initialize `betterAuth()` with the Prisma adapter.
-    *   Inject the **Rate Limiter Plugin** (e.g., max 5 failed login attempts per minute per IP).
-    *   Inject the **Two Factor Plugin** (TOTP based).
-    *   Inject the **Email Verification Plugin** (configured to use NodeMailer or Resend).
-    *   Configure OAuth providers (Google, GitHub) using environment variables.
+    - Initialize `betterAuth()` with the Prisma adapter.
+    - Inject the **Rate Limiter Plugin** (e.g., max 5 failed login attempts per minute per IP).
+    - Inject the **Two Factor Plugin** (TOTP based).
+    - Inject the **Email Verification Plugin** (configured to use NodeMailer or Resend).
+    - Configure OAuth providers (Google, GitHub) using environment variables.
 
 2.  **Routing (`backend/src/modules/auth/auth.routes.ts`)**:
-    *   Convert the Better Auth instance to an Express handler using `toNodeHandler(auth)`.
-    *   Mount it at `app.use('/api/auth', toNodeHandler(auth))`. This single line automatically generates all secure endpoints (`/api/auth/sign-in`, `/api/auth/verify-email`, etc.).
-    *   *Delete the old custom JWT/Bcrypt controller logic entirely.*
+    - Convert the Better Auth instance to an Express handler using `toNodeHandler(auth)`.
+    - Mount it at `app.use('/api/auth', toNodeHandler(auth))`. This single line automatically generates all secure endpoints (`/api/auth/sign-in`, `/api/auth/verify-email`, etc.).
+    - _Delete the old custom JWT/Bcrypt controller logic entirely._
 
 3.  **Security Middleware (`backend/src/middlewares/requireAuth.ts`)**:
-    *   Create a middleware that intercepts incoming requests, reads the HTTP-Only cookie, and validates the session using `auth.api.getSession({ headers: req.headers })`. If invalid, it returns `401 Unauthorized`.
+    - Create a middleware that intercepts incoming requests, reads the HTTP-Only cookie, and validates the session using `auth.api.getSession({ headers: req.headers })`. If invalid, it returns `401 Unauthorized`.
 
 ---
 
@@ -137,6 +138,7 @@ backend/
 The frontend will act as a thin client. It will never touch tokens directly; it relies on the browser to automatically send the secure HTTP-Only cookies to the backend.
 
 ### Folder Structure
+
 ```text
 app/
 ├── (auth)/                      # Grouped auth routes
@@ -154,14 +156,14 @@ lib/
 ### Implementation Details
 
 1.  **Client Initialization (`lib/auth/auth-client.ts`)**:
-    *   Initialize `createAuthClient()` pointing to the backend URL (`http://localhost:5000/api/auth`).
-    *   Export the generated React hooks and methods (e.g., `useSession`, `signIn`, `signUp`).
+    - Initialize `createAuthClient()` pointing to the backend URL (`http://localhost:5000/api/auth`).
+    - Export the generated React hooks and methods (e.g., `useSession`, `signIn`, `signUp`).
 
 2.  **UI & Interactions**:
-    *   **Login**: Calling `signIn.email({ email, password })` will instruct the backend to validate credentials and set the HTTP-Only cookie.
-    *   **OAuth**: Calling `signIn.social({ provider: 'google' })` will redirect the user to Google, and upon return, the backend issues the cookie.
-    *   **State Management**: Use the `useSession()` hook across the application to conditionally render UI (e.g., showing user avatar in the navbar).
-    *   **Route Guards**: In Next.js layouts or middleware, use the session state to redirect unauthenticated users to the `/login` page.
+    - **Login**: Calling `signIn.email({ email, password })` will instruct the backend to validate credentials and set the HTTP-Only cookie.
+    - **OAuth**: Calling `signIn.social({ provider: 'google' })` will redirect the user to Google, and upon return, the backend issues the cookie.
+    - **State Management**: Use the `useSession()` hook across the application to conditionally render UI (e.g., showing user avatar in the navbar).
+    - **Route Guards**: In Next.js layouts or middleware, use the session state to redirect unauthenticated users to the `/login` page.
 
 ---
 
@@ -170,6 +172,6 @@ lib/
 Once implemented, the architecture must be verified against these security checks:
 
 1.  **Cookie Security Check**: Open browser DevTools -> Application -> Cookies. Verify that the `better-auth.session_token` cookie is present and has the `HttpOnly` and `Secure` flags set to true.
-2.  **XSS Resilience Check**: Open the browser console and type `document.cookie`. Verify that the session token is *not* visible (confirming it is immune to XSS theft).
+2.  **XSS Resilience Check**: Open the browser console and type `document.cookie`. Verify that the session token is _not_ visible (confirming it is immune to XSS theft).
 3.  **Rate Limit Check**: Intentionally fail the login multiple times in rapid succession. Verify that a `429 Too Many Requests` status is returned.
 4.  **2FA Flow Check**: Enable 2FA on a test account. Attempt to log in and verify that the system blocks access and prompts for the TOTP code before issuing the final session cookie.

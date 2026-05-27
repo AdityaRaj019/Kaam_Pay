@@ -26,18 +26,19 @@ app.use(
 // ─── Better Auth handler ─────────────────────────────────────
 // Mounted BEFORE express.json() body parser because Better Auth
 // handles its own request body parsing for auth endpoints.
-app.all(
-  '/api/auth/*splat',
-  (req: Request, res: Response, next: NextFunction) => {
-    // Let custom auth endpoints (like /api/auth/me) bypass the Better Auth
-    // handler and fall through to standard Express routing and body parsing.
-    if (req.path.startsWith('/api/auth/me')) {
-      return next();
-    }
-    const handler = toNodeHandler(auth) as unknown as (req: Request, res: Response, next: NextFunction) => void;
-    handler(req, res, next);
-  },
-);
+app.all('/api/auth/*splat', (req: Request, res: Response, next: NextFunction) => {
+  // Let custom auth endpoints (like /api/auth/me) bypass the Better Auth
+  // handler and fall through to standard Express routing and body parsing.
+  if (req.path.startsWith('/api/auth/me')) {
+    return next();
+  }
+  const handler = toNodeHandler(auth) as unknown as (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => void;
+  handler(req, res, next);
+});
 
 // ─── Body parsing ────────────────────────────────────────────
 app.use(express.json({ limit: '10kb' }));
