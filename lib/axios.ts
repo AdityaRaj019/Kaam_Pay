@@ -5,8 +5,7 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  // If we start using cookies, enable this:
-  // withCredentials: true,
+  withCredentials: true,
 });
 
 // Request interceptor to add token if it exists in local storage

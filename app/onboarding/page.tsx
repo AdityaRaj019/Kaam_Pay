@@ -1,62 +1,202 @@
-import Link from 'next/link';
-import { Briefcase, UserPlus } from 'lucide-react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useSession } from '@/lib/auth/auth-client';
+import api from '@/lib/axios';
+import SplitScreenLayout from '@/components/onboarding/SplitScreenLayout';
+import Step1_Rules from '@/components/onboarding/Step1_Rules';
+import Step2_Experience from '@/components/onboarding/Step2_Experience';
+import Step3_Purpose from '@/components/onboarding/Step3_Purpose';
+import Step4_TitleBio from '@/components/onboarding/Step1_TitleBio';
+import Step5_Skills from '@/components/onboarding/Step2_Skills';
+import Step6_Pricing from '@/components/onboarding/Step3_Pricing';
+import Step7_Review from '@/components/onboarding/Step4_Review';
+import toast from 'react-hot-toast';
+
+interface OnboardingData {
+  experience: 'newbie' | 'worked_earlier' | 'working' | '';
+  purpose: 'money' | 'experience' | 'full_time' | 'side_business' | '';
+  title: string;
+  bio: string;
+  skills: string[];
+  hourlyRate: number;
+}
 
 export default function OnboardingPage() {
-  return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
-      <div className="max-w-4xl w-full">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
-            Welcome to <span className="text-blue-900">KaamPay</span>
-          </h1>
-          <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            To give you the best experience, please tell us how you&apos;ll be using the platform.
-          </p>
-        </div>
+  const router = useRouter();
+  const { data: session, isPending } = useSession();
+  
+  const [currentStep, setCurrentStep] = useState(1);
+  const [formData, setFormData] = useState<OnboardingData>({
+    experience: '',
+    purpose: '',
+    title: '',
+    bio: '',
+    skills: [],
+    hourlyRate: 25,
+  });
+  
+  const [isLoadingProfile, setIsLoadingProfile] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-        {/* Options Section */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-stretch mb-12">
-          {/* Client Option */}
-          <Link href="/register?role=client" className="flex-1 group">
-            <div className="h-full bg-white border-2 border-transparent hover:border-blue-900 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center cursor-pointer">
-              <div className="w-20 h-20 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Briefcase size={40} strokeWidth={1.5} />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-3">I&apos;m a Client</h2>
-              <p className="text-slate-600">
-                I want to hire top talent and manage my projects securely.
-              </p>
-            </div>
-          </Link>
+  // 1. Redirect if not logged in
+  useEffect(() => {
+    if (!isPending && !session) {
+      router.push('/login');
+    }
+  }, [isPending, session, router]);
 
-          {/* Freelancer Option */}
-          <Link href="/register?role=freelancer" className="flex-1 group">
-            <div className="h-full bg-white border-2 border-transparent hover:border-blue-900 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center cursor-pointer">
-              <div className="w-20 h-20 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <UserPlus size={40} strokeWidth={1.5} />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-3">I&apos;m a Freelancer</h2>
-              <p className="text-slate-600">
-                I want to find great gigs, work with clients, and get paid securely.
-              </p>
-            </div>
-          </Link>
-        </div>
+  // 2. Fetch full profile to verify onboarding status
+  useEffect(() => {
+    async function checkProfile() {
+      if (!session) return;
+      try {
+        const response = await api.get('/auth/me');
+        const user = response.data?.data?.user;
+        
+        // If user is a client, they don't need profile onboarding
+        if (user && user.role === 'CLIENT') {
+          router.push('/dashboard');
+          return;
+        }
 
-        {/* Footer Section */}
-        <div className="text-center">
-          <p className="text-slate-600 text-lg">
-            Already have an account?{' '}
-            <Link
-              href="/login"
-              className="text-blue-900 font-semibold hover:underline hover:text-blue-800 transition-colors"
-            >
-              Log In
-            </Link>
-          </p>
+        // If user already has profile details filled, they are onboarded
+        if (user && user.profile && user.profile.title) {
+          router.push('/dashboard');
+          return;
+        }
+      } catch (err) {
+        console.error('Error checking profile:', err);
+      } finally {
+        setIsLoadingProfile(false);
+      }
+    }
+
+    if (session) {
+      checkProfile();
+    }
+  }, [session, router]);
+
+  if (isPending || isLoadingProfile) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-slate-500 font-semibold text-sm">Preparing your session...</p>
         </div>
       </div>
-    </div>
+    );
+  }
+
+  if (!session) {
+    return null;
+  }
+
+  const handleNext = (stepData?: Partial<OnboardingData>) => {
+    if (stepData) {
+      setFormData((prev) => ({ ...prev, ...stepData }));
+    }
+    setCurrentStep((prev) => Math.min(prev + 1, 7));
+  };
+
+  const handleBack = () => {
+    setCurrentStep((prev) => Math.max(prev - 1, 1));
+  };
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      const response = await api.post('/users/onboarding', formData);
+      if (response.data?.success) {
+        toast.success('Your profile is live!');
+        router.push('/dashboard');
+      } else {
+        toast.error(response.data?.message || 'Failed to submit onboarding');
+      }
+    } catch (err: unknown) {
+      let msg = 'Something went wrong. Please try again.';
+      if (err && typeof err === 'object' && 'response' in err) {
+        const errorWithResponse = err as { response?: { data?: { message?: string } } };
+        msg = errorWithResponse.response?.data?.message || msg;
+      }
+      toast.error(msg);
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <SplitScreenLayout
+      currentStep={currentStep}
+      totalSteps={7}
+      onBack={handleBack}
+    >
+      <div className="relative w-full overflow-hidden py-4">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={currentStep}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ type: 'tween', duration: 0.25 }}
+            className="w-full relative"
+          >
+            {currentStep === 1 && (
+              <Step1_Rules
+                onNext={handleNext}
+              />
+            )}
+
+            {currentStep === 2 && (
+              <Step2_Experience
+                selectedExperience={formData.experience}
+                onNext={handleNext}
+              />
+            )}
+
+            {currentStep === 3 && (
+              <Step3_Purpose
+                selectedPurpose={formData.purpose}
+                onNext={handleNext}
+              />
+            )}
+
+            {currentStep === 4 && (
+              <Step4_TitleBio
+                data={{ title: formData.title, bio: formData.bio }}
+                onNext={handleNext}
+              />
+            )}
+
+            {currentStep === 5 && (
+              <Step5_Skills
+                data={{ skills: formData.skills }}
+                onNext={handleNext}
+              />
+            )}
+
+            {currentStep === 6 && (
+              <Step6_Pricing
+                data={{ hourlyRate: formData.hourlyRate }}
+                onNext={handleNext}
+              />
+            )}
+
+            {currentStep === 7 && (
+              <Step7_Review
+                data={formData}
+                userName={session.user.name}
+                userImage={session.user.image ?? null}
+                isSubmitting={isSubmitting}
+                onSubmit={handleSubmit}
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </SplitScreenLayout>
   );
 }

@@ -25,10 +25,6 @@ export interface AuthenticatedUser {
   image: string | null;
 }
 
-/**
- * Safe public shape returned to clients by the /me endpoint.
- * Contains no sensitive data (no password hashes, no session tokens).
- */
 export interface PublicUser {
   id: string;
   name: string;
@@ -37,4 +33,12 @@ export interface PublicUser {
   emailVerified: boolean;
   image: string | null;
   createdAt: Date;
+  profile?: {
+    title: string | null;
+    bio: string | null;
+    skills: string[];
+    hourlyRate: number | null;
+    experience: string | null;
+    purpose: string | null;
+  } | null;
 }
