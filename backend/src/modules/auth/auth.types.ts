@@ -9,50 +9,32 @@ export const UserRole = {
 export type UserRole = (typeof UserRole)[keyof typeof UserRole];
 
 // ─────────────────────────────────────────────────────────────
-// Auth domain types
+// Auth domain types (Better Auth session-based)
 // ─────────────────────────────────────────────────────────────
 
-/** Attached to req.user after JWT verification */
+/**
+ * Shape of the user object attached to req.user by
+ * the requireAuth middleware after session validation.
+ */
 export interface AuthenticatedUser {
   id: string;
   name: string;
   email: string;
   role: UserRole;
+  emailVerified: boolean;
+  image: string | null;
 }
 
-/** Safe public shape returned to clients — no passwordHash */
+/**
+ * Safe public shape returned to clients by the /me endpoint.
+ * Contains no sensitive data (no password hashes, no session tokens).
+ */
 export interface PublicUser {
   id: string;
   name: string;
   email: string;
   role: UserRole;
+  emailVerified: boolean;
+  image: string | null;
   createdAt: Date;
-}
-
-/** JWT payload written into every token */
-export interface JwtPayload {
-  id: string;
-  role: UserRole;
-  iat?: number;
-  exp?: number;
-}
-
-/** Shape returned by register / login */
-export interface AuthResponse {
-  user: PublicUser;
-  token: string;
-}
-
-/** Input DTO for registration */
-export interface RegisterDTO {
-  name: string;
-  email: string;
-  password: string;
-  role: UserRole;
-}
-
-/** Input DTO for login */
-export interface LoginDTO {
-  email: string;
-  password: string;
 }

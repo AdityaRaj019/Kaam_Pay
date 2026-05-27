@@ -3,6 +3,9 @@ import authRoutes from './auth/auth.routes';
 
 const router = Router();
 
+// Custom auth endpoints (e.g., /api/auth/me)
+// The main Better Auth handler (sign-up, sign-in, sign-out, etc.)
+// is mounted directly in app.ts, before body parsing.
 router.use('/auth', authRoutes);
 
 // Future modules go here:

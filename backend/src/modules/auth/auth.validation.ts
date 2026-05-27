@@ -1,8 +1,17 @@
 import { z } from 'zod';
-import { UserRole } from './auth.types';
+
+/**
+ * Auth Validation Schemas
+ *
+ * Better Auth handles its own input validation for sign-up/sign-in
+ * endpoints. These schemas are kept for:
+ *  - Any custom auth-related endpoints you build later
+ *  - Re-use in frontend validation (shared schemas)
+ *  - Additional business validation (e.g., role assignment)
+ */
 
 // ─── Register schema ─────────────────────────────────────────
-// Zod v4 removed `required_error`; use .min(1) or custom .check() instead
+// Used for additional validation on custom endpoints, not by Better Auth itself.
 export const registerSchema = z.object({
   name: z
     .string()
@@ -38,6 +47,6 @@ export const loginSchema = z.object({
   password: z.string().min(1, 'Password is required'),
 });
 
-// ─── Inferred types (aligned with DTOs in auth.types.ts) ─────
+// ─── Inferred types ──────────────────────────────────────────
 export type RegisterInput = z.infer<typeof registerSchema>;
 export type LoginInput = z.infer<typeof loginSchema>;

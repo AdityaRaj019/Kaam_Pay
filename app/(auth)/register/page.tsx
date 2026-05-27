@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../../hooks/useAuth';
 
 function RegisterForm() {
   const searchParams = useSearchParams();
@@ -25,7 +25,6 @@ function RegisterForm() {
     e.preventDefault();
     if (!agreeTerms) return;
 
-    // Combine first and last name to match backend expectation of "name"
     const fullName = `${firstName.trim()} ${lastName.trim()}`;
     const role = isClient ? 'CLIENT' : 'FREELANCER';
 
@@ -40,9 +39,7 @@ function RegisterForm() {
   return (
     <>
       <div className="w-full max-w-6xl flex justify-between items-center mb-4">
-        <Link href="/" className="text-2xl font-extrabold text-slate-900 tracking-tight">
-          Kaam<span className="text-blue-900">Pay</span>
-        </Link>
+        <div /> {/* Spacer — logo is in the layout */}
         <div className="hidden sm:block text-sm">
           <span className="text-slate-600 mr-2">
             {isClient ? 'Looking for work?' : 'Here to hire?'}
@@ -118,6 +115,7 @@ function RegisterForm() {
             <div className="flex-1">
               <label className="block text-sm font-semibold text-slate-700 mb-1">First name</label>
               <input
+                id="register-first-name"
                 type="text"
                 required
                 value={firstName}
@@ -128,6 +126,7 @@ function RegisterForm() {
             <div className="flex-1">
               <label className="block text-sm font-semibold text-slate-700 mb-1">Last name</label>
               <input
+                id="register-last-name"
                 type="text"
                 required
                 value={lastName}
@@ -142,6 +141,7 @@ function RegisterForm() {
               {isClient ? 'Email address' : 'Work email address'}
             </label>
             <input
+              id="register-email"
               type="email"
               required
               value={email}
@@ -153,6 +153,7 @@ function RegisterForm() {
           <div>
             <label className="block text-sm font-semibold text-slate-700 mb-1">Password</label>
             <input
+              id="register-password"
               type="password"
               required
               minLength={8}
@@ -166,6 +167,7 @@ function RegisterForm() {
           <div>
             <label className="block text-sm font-semibold text-slate-700 mb-1">Country</label>
             <select
+              id="register-country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
               className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none bg-white"
@@ -190,6 +192,7 @@ function RegisterForm() {
 
             <label className="flex items-start gap-3 cursor-pointer">
               <input
+                id="register-agree-terms"
                 type="checkbox"
                 required
                 checked={agreeTerms}
@@ -216,6 +219,7 @@ function RegisterForm() {
 
           <div className="pt-4 flex flex-col items-center">
             <button
+              id="register-submit"
               type="submit"
               disabled={isLoading || !agreeTerms}
               className="bg-green-600 text-white font-bold px-12 py-3 rounded-full hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -237,11 +241,8 @@ function RegisterForm() {
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center py-10 px-4">
-      {/* Main Form */}
-      <Suspense fallback={<div className="mt-20">Loading...</div>}>
-        <RegisterForm />
-      </Suspense>
-    </div>
+    <Suspense fallback={<div className="mt-20">Loading...</div>}>
+      <RegisterForm />
+    </Suspense>
   );
 }
