@@ -1,33 +1,64 @@
 import prisma from '../backend/src/config/prisma';
 
+/**
+ * Database Seed Script
+ *
+ * With Better Auth, passwords are stored in the Account table
+ * (via the 'credential' provider), not directly on User.
+ * This seed creates Users + linked credential Accounts.
+ *
+ * NOTE: In production, users should register through the auth flow.
+ * This seed is only for development/testing purposes.
+ */
 async function main() {
   console.log('🌱 Seeding database...');
 
+  // Helper: create a user with a credential account
+  const createUserWithAccount = async (userData: {
+    email: string;
+    name: string;
+    role: 'ADMIN' | 'CLIENT' | 'FREELANCER';
+    password: string;
+  }) => {
+    const user = await prisma.user.upsert({
+      where: { email: userData.email },
+      update: {},
+      create: {
+        email: userData.email,
+        name: userData.name,
+        role: userData.role,
+        emailVerified: true,
+        accounts: {
+          create: {
+            id: `account_${userData.email.replace(/[@.]/g, '_')}`,
+            accountId: userData.email,
+            providerId: 'credential',
+            // NOTE: This is a placeholder hash. In real usage, Better Auth
+            // hashes passwords internally. For seeding, use the auth API
+            // or Better Auth's hashPassword utility.
+            password: userData.password,
+          },
+        },
+      },
+    });
+    return user;
+  };
+
   // 1. Create Admin
-  const admin = await prisma.user.upsert({
-    where: { email: 'admin@kaampay.com' },
-    update: {},
-    create: {
-      email: 'admin@kaampay.com',
-      name: 'Super Admin',
-      passwordHash: 'mocked_hash_admin123',
-      role: 'ADMIN',
-      isVerified: true,
-    },
+  const admin = await createUserWithAccount({
+    email: 'admin@kaampay.com',
+    name: 'Super Admin',
+    role: 'ADMIN',
+    password: 'mocked_hash_admin123',
   });
   console.log('✅ Created Admin:', admin.email);
 
   // 2. Create Client
-  const client = await prisma.user.upsert({
-    where: { email: 'client@example.com' },
-    update: {},
-    create: {
-      email: 'client@example.com',
-      name: 'John Client',
-      passwordHash: 'mocked_hash_client123',
-      role: 'CLIENT',
-      isVerified: true,
-    },
+  const client = await createUserWithAccount({
+    email: 'client@example.com',
+    name: 'John Client',
+    role: 'CLIENT',
+    password: 'mocked_hash_client123',
   });
   console.log('✅ Created Client:', client.email);
 
@@ -38,9 +69,16 @@ async function main() {
     create: {
       email: 'freelancer@example.com',
       name: 'Jane Freelancer',
-      passwordHash: 'mocked_hash_free123',
       role: 'FREELANCER',
-      isVerified: true,
+      emailVerified: true,
+      accounts: {
+        create: {
+          id: 'account_freelancer_example_com',
+          accountId: 'freelancer@example.com',
+          providerId: 'credential',
+          password: 'mocked_hash_free123',
+        },
+      },
       profile: {
         create: {
           bio: 'Expert Full-Stack Developer with 5 years of experience.',
@@ -54,7 +92,7 @@ async function main() {
   console.log('✅ Created Freelancer:', freelancer.email);
 
   // 4. Create Gigs for Freelancer
-  const gig1 = await prisma.gig.create({
+  await prisma.gig.create({
     data: {
       freelancerId: freelancer.id,
       title: 'Modern Next.js Website Development',
@@ -67,7 +105,7 @@ async function main() {
     },
   });
 
-  const gig2 = await prisma.gig.create({
+  await prisma.gig.create({
     data: {
       freelancerId: freelancer.id,
       title: 'Database Design and Optimization',

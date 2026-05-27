@@ -1,50 +1,61 @@
 import { create } from 'zustand';
-import { User } from '../services/auth.service';
+
+/**
+ * User shape returned by Better Auth session.
+ * Matches the Better Auth user object + custom `role` field.
+ */
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  emailVerified: boolean;
+  image: string | null;
+  role: string;
+  createdAt: string;
+}
 
 interface AuthState {
   user: User | null;
-  token: string | null;
   isAuthenticated: boolean;
-  setAuth: (user: User, token: string) => void;
-  logout: () => void;
-  checkAuth: () => void; // To initialize from localStorage
+  isLoading: boolean;
+
+  /**
+   * Set the authenticated user (called after Better Auth session check).
+   * No token needed — auth uses HTTP-only cookies.
+   */
+  setUser: (user: User) => void;
+
+  /** Clear the local state (called after signOut) */
+  clearUser: () => void;
+
+  /** Set loading state during session checks */
+  setLoading: (loading: boolean) => void;
 }
 
+/**
+ * Auth Store
+ *
+ * With Better Auth, we NO LONGER store tokens in localStorage.
+ * Authentication is entirely cookie-based (HTTP-only, Secure).
+ * This store only holds the user object for UI rendering.
+ *
+ * Session validation happens server-side via cookies — the store
+ * is populated by calling `useSession()` from Better Auth client.
+ */
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
-  token: null,
   isAuthenticated: false,
+  isLoading: true,
 
-  setAuth: (user, token) => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('auth_token', token);
-      localStorage.setItem('auth_user', JSON.stringify(user));
-    }
-    set({ user, token, isAuthenticated: true });
+  setUser: (user) => {
+    set({ user, isAuthenticated: true, isLoading: false });
   },
 
-  logout: () => {
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('auth_token');
-      localStorage.removeItem('auth_user');
-    }
-    set({ user: null, token: null, isAuthenticated: false });
+  clearUser: () => {
+    set({ user: null, isAuthenticated: false, isLoading: false });
   },
 
-  checkAuth: () => {
-    if (typeof window !== 'undefined') {
-      const token = localStorage.getItem('auth_token');
-      const userStr = localStorage.getItem('auth_user');
-
-      if (token && userStr) {
-        try {
-          const user = JSON.parse(userStr);
-          set({ user, token, isAuthenticated: true });
-        } catch (e) {
-          localStorage.removeItem('auth_token');
-          localStorage.removeItem('auth_user');
-        }
-      }
-    }
+  setLoading: (loading) => {
+    set({ isLoading: loading });
   },
 }));

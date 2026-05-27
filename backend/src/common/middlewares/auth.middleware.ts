@@ -1,57 +1,51 @@
 import { Request, Response, NextFunction } from 'express';
 import { AppError, ErrorCode } from '../../error';
-import { AuthProvider } from '../../modules/auth/auth.provider';
-import { AuthenticatedUser } from '../../modules/auth/auth.types';
-import prisma from '../../config/prisma';
+import { auth } from '../../config/auth';
+import { fromNodeHeaders } from 'better-auth/node';
+import type { AuthenticatedUser, UserRole } from '../../modules/auth/auth.types';
 
 /**
- * authenticate — verifies the Bearer JWT and attaches req.user.
- * Must be used on any route that requires a logged-in user.
+ * requireAuth — validates the Better Auth session cookie and
+ * attaches the authenticated user to req.user.
+ *
+ * Replaces the old JWT Bearer token middleware.
+ * Better Auth reads the HTTP-only session cookie from the request
+ * headers and validates it against the database-backed session store.
  */
-export const authenticate = async (
+export const requireAuth = async (
   req: Request,
   res: Response,
   next: NextFunction,
 ): Promise<void> => {
   try {
-    const authHeader = req.headers.authorization;
-    if (!authHeader?.startsWith('Bearer ')) {
-      return next(new AppError('No authentication token provided.', 401, ErrorCode.UNAUTHORIZED));
-    }
-
-    const token = authHeader.split(' ')[1];
-
-    // verifyToken throws typed AppError on expiry / invalid
-    const decoded = AuthProvider.verifyToken(token);
-
-    // Confirm the user still exists in the DB (handles deleted/deactivated accounts)
-    const user = await prisma.user.findUnique({
-      where: { id: decoded.id },
-      select: { id: true, name: true, email: true, role: true },
+    const session = await auth.api.getSession({
+      headers: fromNodeHeaders(req.headers),
     });
 
-    if (!user) {
-      return next(
-        new AppError(
-          'The account associated with this token no longer exists.',
-          401,
-          ErrorCode.UNAUTHORIZED,
-        ),
-      );
+    if (!session || !session.user) {
+      return next(new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED));
     }
 
-    req.user = user;
+    // Attach the session user to req.user for downstream handlers
+    req.user = {
+      id: session.user.id,
+      name: session.user.name,
+      email: session.user.email,
+      role: (session.user.role as UserRole) ?? 'CLIENT',
+      emailVerified: session.user.emailVerified,
+      image: session.user.image ?? null,
+    } satisfies AuthenticatedUser;
+
     next();
   } catch (err) {
-    // Pass AppErrors thrown by verifyToken straight through
     next(err);
   }
 };
 
 /**
- * authorize — role guard. Must come after authenticate.
+ * authorize — role guard. Must come after requireAuth.
  *
- * Usage: router.delete('/admin/user/:id', authenticate, authorize('ADMIN'), handler)
+ * Usage: router.delete('/admin/user/:id', requireAuth, authorize('ADMIN'), handler)
  */
 export const authorize =
   (...roles: string[]) =>
