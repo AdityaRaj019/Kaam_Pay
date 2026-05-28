@@ -48,7 +48,7 @@ export default function SignupRolePage() {
             >
               <Briefcase className="w-6 h-6" />
             </div>
-            
+
             <div className="relative flex items-center justify-center">
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
@@ -57,9 +57,7 @@ export default function SignupRolePage() {
                     : 'border-slate-300 bg-white group-hover:border-slate-400'
                 }`}
               >
-                {selectedRole === 'client' && (
-                  <div className="w-2.5 h-2.5 bg-white rounded-full" />
-                )}
+                {selectedRole === 'client' && <div className="w-2.5 h-2.5 bg-white rounded-full" />}
               </div>
             </div>
           </div>
@@ -96,7 +94,7 @@ export default function SignupRolePage() {
             >
               <Laptop className="w-6 h-6" />
             </div>
-            
+
             <div className="relative flex items-center justify-center">
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
@@ -138,8 +136,8 @@ export default function SignupRolePage() {
           {selectedRole === 'client'
             ? 'Join as a Client'
             : selectedRole === 'freelancer'
-            ? 'Join as a Freelancer'
-            : 'Create Account'}
+              ? 'Join as a Freelancer'
+              : 'Create Account'}
           <ArrowRight className="w-4 h-4" />
         </button>
 
