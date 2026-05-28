@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useAuth } from '../../../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
+import { COUNTRIES, formatFullName, getDisplayRole } from '@/utils';
 
-function RegisterForm() {
+export default function RegisterForm() {
   const searchParams = useSearchParams();
   const roleParam = searchParams.get('role'); // 'client' or 'freelancer'
 
@@ -13,20 +14,19 @@ function RegisterForm() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [country, setCountry] = useState('India');
+  const [country, setCountry] = useState(COUNTRIES[0]);
   const [agreeTerms, setAgreeTerms] = useState(false);
 
   const { register, isLoading, error } = useAuth();
 
   const isClient = roleParam === 'client';
-  const displayRole = isClient ? 'hire talent' : 'find work';
+  const displayRole = getDisplayRole(isClient);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreeTerms) return;
 
-    // Combine first and last name to match backend expectation of "name"
-    const fullName = `${firstName.trim()} ${lastName.trim()}`;
+    const fullName = formatFullName(firstName, lastName);
     const role = isClient ? 'CLIENT' : 'FREELANCER';
 
     await register({
@@ -170,10 +170,11 @@ function RegisterForm() {
               onChange={(e) => setCountry(e.target.value)}
               className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none bg-white"
             >
-              <option value="India">India</option>
-              <option value="United States">United States</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="Canada">Canada</option>
+              {COUNTRIES.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -232,13 +233,5 @@ function RegisterForm() {
         </form>
       </div>
     </>
-  );
-}
-
-export default function RegisterPage() {
-  return (
-    <Suspense fallback={<div className="mt-20">Loading...</div>}>
-      <RegisterForm />
-    </Suspense>
   );
 }
