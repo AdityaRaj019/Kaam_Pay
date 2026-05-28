@@ -121,7 +121,7 @@ export default function LoginPage() {
 
       <div className="mt-6">
         <Link
-          href="/register"
+          href="/signup"
           className="w-full block text-center border-2 border-blue-900 text-blue-900 font-bold py-2.5 rounded-full hover:bg-blue-50 transition-colors"
         >
           Sign Up

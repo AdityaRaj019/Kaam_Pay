@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
             Sign In
           </Link>
           <Link
-            href="/onboarding"
+            href="/signup"
             className="bg-[#4a4bd7] text-white px-8 py-2.5 rounded-full text-sm font-black hover:bg-[#3b3bc2] transition-all hover:scale-105 shadow-lg shadow-[#4a4bd7]/20 inline-block text-center"
           >
             Get Started
