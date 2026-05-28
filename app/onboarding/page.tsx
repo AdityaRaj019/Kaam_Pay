@@ -111,7 +111,7 @@ export default function OnboardingPage() {
       const response = await api.post('/users/onboarding', formData);
       if (response.data?.success) {
         toast.success('Your profile is live!');
-        router.push('/dashboard');
+        router.push('/profile');
       } else {
         toast.error(response.data?.message || 'Failed to submit onboarding');
       }

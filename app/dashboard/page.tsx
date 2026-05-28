@@ -233,12 +233,22 @@ export default function DashboardPage() {
                 Explore gigs, hire freelancers, or update your profile services.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/gigs"
-                  className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm"
-                >
-                  Browse Gigs
-                </Link>
+                {userRole === 'FREELANCER' && (
+                  <Link
+                    href="/profile"
+                    className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm"
+                  >
+                    View & Edit Profile
+                  </Link>
+                )}
+                {userRole === 'CLIENT' && (
+                  <Link
+                    href="/gigs"
+                    className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm"
+                  >
+                    Browse Gigs
+                  </Link>
+                )}
                 <Link
                   href="/onboarding"
                   className="border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold px-6 py-2.5 rounded-full transition-colors text-sm"

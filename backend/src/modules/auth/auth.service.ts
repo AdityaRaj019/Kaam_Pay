@@ -19,6 +19,7 @@ const toPublicUser = (user: {
     hourlyRate: number | null;
     experience: string | null;
     purpose: string | null;
+    resumeUrl: string | null;
   } | null;
 }): PublicUser => ({
   id: user.id,
@@ -68,6 +69,7 @@ export class AuthService {
             hourlyRate: true,
             experience: true,
             purpose: true,
+            resumeUrl: true,
           },
         },
       },

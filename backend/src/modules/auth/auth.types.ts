@@ -40,5 +40,6 @@ export interface PublicUser {
     hourlyRate: number | null;
     experience: string | null;
     purpose: string | null;
+    resumeUrl: string | null;
   } | null;
 }

@@ -123,6 +123,7 @@ model Profile {
   bio            String?  @db.Text
   skills         String[]
   portfolioLinks String[]
+  resumeUrl      String?
   hourlyRate     Float?
   experience     String?
   purpose        String?
