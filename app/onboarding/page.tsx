@@ -27,7 +27,7 @@ interface OnboardingData {
 export default function OnboardingPage() {
   const router = useRouter();
   const { data: session, isPending } = useSession();
-  
+
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<OnboardingData>({
     experience: '',
@@ -37,7 +37,7 @@ export default function OnboardingPage() {
     skills: [],
     hourlyRate: 25,
   });
-  
+
   const [isLoadingProfile, setIsLoadingProfile] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -55,7 +55,7 @@ export default function OnboardingPage() {
       try {
         const response = await api.get('/auth/me');
         const user = response.data?.data?.user;
-        
+
         // If user is a client, they don't need profile onboarding
         if (user && user.role === 'CLIENT') {
           router.push('/dashboard');
@@ -129,11 +129,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <SplitScreenLayout
-      currentStep={currentStep}
-      totalSteps={7}
-      onBack={handleBack}
-    >
+    <SplitScreenLayout currentStep={currentStep} totalSteps={7} onBack={handleBack}>
       <div className="relative w-full overflow-hidden py-4">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -144,24 +140,14 @@ export default function OnboardingPage() {
             transition={{ type: 'tween', duration: 0.25 }}
             className="w-full relative"
           >
-            {currentStep === 1 && (
-              <Step1_Rules
-                onNext={handleNext}
-              />
-            )}
+            {currentStep === 1 && <Step1_Rules onNext={handleNext} />}
 
             {currentStep === 2 && (
-              <Step2_Experience
-                selectedExperience={formData.experience}
-                onNext={handleNext}
-              />
+              <Step2_Experience selectedExperience={formData.experience} onNext={handleNext} />
             )}
 
             {currentStep === 3 && (
-              <Step3_Purpose
-                selectedPurpose={formData.purpose}
-                onNext={handleNext}
-              />
+              <Step3_Purpose selectedPurpose={formData.purpose} onNext={handleNext} />
             )}
 
             {currentStep === 4 && (
@@ -172,17 +158,11 @@ export default function OnboardingPage() {
             )}
 
             {currentStep === 5 && (
-              <Step5_Skills
-                data={{ skills: formData.skills }}
-                onNext={handleNext}
-              />
+              <Step5_Skills data={{ skills: formData.skills }} onNext={handleNext} />
             )}
 
             {currentStep === 6 && (
-              <Step6_Pricing
-                data={{ hourlyRate: formData.hourlyRate }}
-                onNext={handleNext}
-              />
+              <Step6_Pricing data={{ hourlyRate: formData.hourlyRate }} onNext={handleNext} />
             )}
 
             {currentStep === 7 && (

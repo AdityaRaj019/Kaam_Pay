@@ -22,7 +22,10 @@ export class FreelancerService {
     }
 
     if (!user.profile) {
-      throw new AppError('Freelancer profile does not exist. Please complete onboarding first.', 400);
+      throw new AppError(
+        'Freelancer profile does not exist. Please complete onboarding first.',
+        400,
+      );
     }
 
     const updatedProfile = await prisma.profile.update({
@@ -31,7 +34,12 @@ export class FreelancerService {
         title: data.title !== undefined ? data.title : undefined,
         bio: data.bio !== undefined ? data.bio : undefined,
         skills: data.skills !== undefined ? data.skills : undefined,
-        resumeUrl: data.resumeUrl !== undefined ? (data.resumeUrl === '' ? null : data.resumeUrl) : undefined,
+        resumeUrl:
+          data.resumeUrl !== undefined
+            ? data.resumeUrl === ''
+              ? null
+              : data.resumeUrl
+            : undefined,
         hourlyRate: data.hourlyRate !== undefined ? data.hourlyRate : undefined,
       },
     });

@@ -20,7 +20,8 @@ export default function RoleGuard({ allowedRoles, children }: RoleGuardProps) {
         toast.error('Please sign in to access this page.');
         router.push('/login');
       } else {
-        const userRole = (session.user as { role?: 'CLIENT' | 'FREELANCER' | 'ADMIN' }).role ?? 'CLIENT';
+        const userRole =
+          (session.user as { role?: 'CLIENT' | 'FREELANCER' | 'ADMIN' }).role ?? 'CLIENT';
         if (!allowedRoles.includes(userRole)) {
           toast.error('Invalid Authorization: You do not have permission to view this page.');
           router.push('/dashboard');

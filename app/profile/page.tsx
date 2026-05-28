@@ -21,7 +21,7 @@ import {
   MessageSquare,
   Sparkles,
   LogOut,
-  LayoutDashboard
+  LayoutDashboard,
 } from 'lucide-react';
 import api from '@/lib/axios';
 import RoleGuard from '@/components/RoleGuard';
@@ -148,7 +148,9 @@ function FreelancerProfileContent() {
       if (axiosError.response?.status === 429) {
         setSubmitError('Too many profile update attempts. Please try again after 1 minute.');
       } else {
-        setSubmitError(axiosError.response?.data?.message || 'Something went wrong. Please check your inputs.');
+        setSubmitError(
+          axiosError.response?.data?.message || 'Something went wrong. Please check your inputs.',
+        );
       }
     } finally {
       setIsSubmitting(false);
@@ -190,7 +192,8 @@ function FreelancerProfileContent() {
       title: 'Modern Full-Stack Next.js Web App Development',
       category: 'Web Development',
       price: 1500,
-      image: 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+      image:
+        'https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
       rating: 4.9,
       reviewsCount: 18,
     },
@@ -199,7 +202,8 @@ function FreelancerProfileContent() {
       title: 'Premium Tailwind CSS & UI Design Implementation',
       category: 'Frontend UI/UX',
       price: 800,
-      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+      image:
+        'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
       rating: 5.0,
       reviewsCount: 12,
     },
@@ -208,7 +212,8 @@ function FreelancerProfileContent() {
       title: 'REST API & PostgreSQL Database Integration',
       category: 'Backend APIs',
       price: 1200,
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+      image:
+        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
       rating: 4.8,
       reviewsCount: 7,
     },
@@ -221,9 +226,10 @@ function FreelancerProfileContent() {
       company: 'BuildFast Technologies',
       rating: 5,
       date: 'May 12, 2026',
-      comment: 'Absolutely exceptional work! The Next.js dashboard they developed is extremely fast, responsive, and beautifully styled. Code quality is clean and well-documented. Will definitely hire again.',
+      comment:
+        'Absolutely exceptional work! The Next.js dashboard they developed is extremely fast, responsive, and beautifully styled. Code quality is clean and well-documented. Will definitely hire again.',
       initials: 'RM',
-      bg: 'bg-emerald-100 text-emerald-800'
+      bg: 'bg-emerald-100 text-emerald-800',
     },
     {
       id: 'r2',
@@ -231,9 +237,10 @@ function FreelancerProfileContent() {
       company: 'Creative Studio In',
       rating: 5,
       date: 'April 28, 2026',
-      comment: 'Very professional freelancer. Understood our React styling issues instantly and converted the designs to interactive Tailwind components flawlessly. Communication was top-tier!',
+      comment:
+        'Very professional freelancer. Understood our React styling issues instantly and converted the designs to interactive Tailwind components flawlessly. Communication was top-tier!',
       initials: 'PS',
-      bg: 'bg-indigo-100 text-indigo-800'
+      bg: 'bg-indigo-100 text-indigo-800',
     },
     {
       id: 'r3',
@@ -241,10 +248,11 @@ function FreelancerProfileContent() {
       company: 'EcoKart Solutions',
       rating: 4,
       date: 'March 15, 2026',
-      comment: 'Super fast delivery and great problem solving skills. Helped setup our Prisma backend migrations and optimized query load speeds. Strong engineering chops.',
+      comment:
+        'Super fast delivery and great problem solving skills. Helped setup our Prisma backend migrations and optimized query load speeds. Strong engineering chops.',
       initials: 'AP',
-      bg: 'bg-amber-100 text-amber-800'
-    }
+      bg: 'bg-amber-100 text-amber-800',
+    },
   ];
 
   return (
@@ -311,7 +319,9 @@ function FreelancerProfileContent() {
             <div className="flex-1 text-center md:text-left space-y-4">
               <div>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
-                  <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">{user.name}</h1>
+                  <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+                    {user.name}
+                  </h1>
                   <div className="flex items-center gap-1 bg-[#4a4bd7]/10 text-[#4a4bd7] px-2.5 py-0.5 rounded-full text-xs font-bold">
                     <Award className="w-3.5 h-3.5" />
                     <span>Level 2 Seller</span>
@@ -322,7 +332,9 @@ function FreelancerProfileContent() {
                   </div>
                 </div>
 
-                <p className="text-lg font-bold text-[#4a4bd7] mt-1">{user.profile?.title || 'Professional Freelancer'}</p>
+                <p className="text-lg font-bold text-[#4a4bd7] mt-1">
+                  {user.profile?.title || 'Professional Freelancer'}
+                </p>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-2 text-slate-500 text-sm">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-4 h-4 text-slate-400" />
@@ -338,16 +350,20 @@ function FreelancerProfileContent() {
 
               {/* Bio summary */}
               <p className="text-slate-600 text-sm md:text-base max-w-3xl leading-relaxed">
-                {user.profile?.bio || 'No bio description provided yet. Click Edit Profile to add details about your expertise.'}
+                {user.profile?.bio ||
+                  'No bio description provided yet. Click Edit Profile to add details about your expertise.'}
               </p>
             </div>
 
             {/* Sidebar Rate & Action */}
             <div className="w-full md:w-auto flex flex-col items-center md:items-end justify-between bg-slate-50 p-6 rounded-2xl border border-slate-200 md:min-w-[240px]">
               <div className="text-center md:text-right">
-                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">Starting rate</span>
+                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">
+                  Starting rate
+                </span>
                 <p className="text-3xl font-black text-slate-900 mt-1">
-                  ₹{(user.profile?.hourlyRate || 0).toLocaleString('en-IN')}<span className="text-sm font-semibold text-slate-500">/hr</span>
+                  ₹{(user.profile?.hourlyRate || 0).toLocaleString('en-IN')}
+                  <span className="text-sm font-semibold text-slate-500">/hr</span>
                 </p>
               </div>
               <button
@@ -476,9 +492,7 @@ function FreelancerProfileContent() {
                       </div>
                       <div className="border-t border-slate-100 pt-2.5 flex items-center justify-between mt-2">
                         <span className="text-[10px] text-slate-400 font-medium">Starting at</span>
-                        <span className="text-xs font-black text-slate-800">
-                          ₹{gig.price}
-                        </span>
+                        <span className="text-xs font-black text-slate-800">₹{gig.price}</span>
                       </div>
                     </div>
                   </div>
@@ -495,10 +509,15 @@ function FreelancerProfileContent() {
 
               <div className="space-y-6">
                 {mockReviews.map((rev) => (
-                  <div key={rev.id} className="space-y-3 pb-6 border-b border-slate-100 last:border-0 last:pb-0">
+                  <div
+                    key={rev.id}
+                    className="space-y-3 pb-6 border-b border-slate-100 last:border-0 last:pb-0"
+                  >
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${rev.bg}`}>
+                        <div
+                          className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${rev.bg}`}
+                        >
                           {rev.initials}
                         </div>
                         <div>
@@ -512,9 +531,7 @@ function FreelancerProfileContent() {
                             <Star
                               key={i}
                               className={`w-3.5 h-3.5 ${
-                                i < rev.rating
-                                  ? 'text-amber-500 fill-amber-500'
-                                  : 'text-slate-200'
+                                i < rev.rating ? 'text-amber-500 fill-amber-500' : 'text-slate-200'
                               }`}
                             />
                           ))}
@@ -556,8 +573,12 @@ function FreelancerProfileContent() {
               {/* Modal Header */}
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div>
-                  <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">Edit Your Profile</h2>
-                  <p className="text-xs text-slate-500 mt-0.5">Keep your details up to date for potential client views.</p>
+                  <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
+                    Edit Your Profile
+                  </h2>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Keep your details up to date for potential client views.
+                  </p>
                 </div>
                 <button
                   onClick={() => setIsEditOpen(false)}
@@ -568,7 +589,10 @@ function FreelancerProfileContent() {
               </div>
 
               {/* Form Content */}
-              <form onSubmit={handleSaveProfile} className="flex-1 overflow-y-auto py-6 space-y-6 pr-2">
+              <form
+                onSubmit={handleSaveProfile}
+                className="flex-1 overflow-y-auto py-6 space-y-6 pr-2"
+              >
                 {submitError && (
                   <div className="bg-red-50 text-red-700 px-4 py-3 rounded-2xl text-sm font-semibold flex items-center gap-2 border border-red-150">
                     <AlertCircle className="w-5 h-5 text-red-500 shrink-0" />

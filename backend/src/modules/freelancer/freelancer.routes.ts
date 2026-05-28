@@ -21,7 +21,9 @@ const updateRateLimiter = (req: Request, _res: Response, next: NextFunction) => 
   }
 
   if (record.count >= maxRequests) {
-    return next(new AppError('Too many profile update requests. Please try again in 1 minute.', 429));
+    return next(
+      new AppError('Too many profile update requests. Please try again in 1 minute.', 429),
+    );
   }
 
   record.count += 1;
