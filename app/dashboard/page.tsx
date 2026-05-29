@@ -234,12 +234,20 @@ export default function DashboardPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 {userRole === 'FREELANCER' && (
-                  <Link
-                    href="/profile"
-                    className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm"
-                  >
-                    View & Edit Profile
-                  </Link>
+                  <>
+                    <Link
+                      href="/profile"
+                      className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm"
+                    >
+                      View & Edit Profile
+                    </Link>
+                    <Link
+                      href="/dashboard/create-gig"
+                      className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm shadow-md shadow-green-600/20"
+                    >
+                      Create Gig
+                    </Link>
+                  </>
                 )}
                 {userRole === 'CLIENT' && (
                   <Link

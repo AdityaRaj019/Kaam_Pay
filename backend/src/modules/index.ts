@@ -2,6 +2,7 @@ import { Router } from 'express';
 import authRoutes from './auth/auth.routes';
 import userRoutes from './users/user.routes';
 import freelancerRoutes from './freelancer/freelancer.routes';
+import gigRoutes from './gig/gig.routes';
 
 const router = Router();
 
@@ -11,9 +12,6 @@ const router = Router();
 router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 router.use('/freelancer', freelancerRoutes);
-
-// Future modules go here:
-// router.use('/gigs',   gigRoutes);
-// router.use('/orders', orderRoutes);
+router.use('/gigs', gigRoutes);
 
 export default router;
