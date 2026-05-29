@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "d_repo_kaampay_docy_freelancer_onboarding_plan_md",
+      "label": "freelancer_onboarding_plan.md",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_freelancer_onboarding_implementation_plan",
+      "label": "Freelancer Onboarding Implementation Plan",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_user_review_required",
+      "label": "User Review Required",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_proposed_changes",
+      "label": "Proposed Changes",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_1_ui_architecture_theme",
+      "label": "1. UI Architecture & Theme",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_app_onboarding_page_tsx",
+      "label": "[NEW] `app/onboarding/page.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_components_onboarding_selectablebox_tsx",
+      "label": "[NEW] `components/onboarding/SelectableBox.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "label": "2. The Onboarding Steps Flow",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L31"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_components_onboarding_step1_welcome_tsx",
+      "label": "[NEW] `components/onboarding/Step1_Welcome.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_components_onboarding_step2_experience_tsx",
+      "label": "[NEW] `components/onboarding/Step2_Experience.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L39"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_components_onboarding_step3_motivation_tsx",
+      "label": "[NEW] `components/onboarding/Step3_Motivation.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_components_onboarding_step4_professional_tsx",
+      "label": "[NEW] `components/onboarding/Step4_Professional.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_components_onboarding_step5_finalize_tsx",
+      "label": "[NEW] `components/onboarding/Step5_Finalize.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L56"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_3_backend_integration",
+      "label": "3. Backend Integration",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L64"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_modify_prisma_schema_prisma",
+      "label": "[MODIFY] `prisma/schema.prisma`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_new_backend_src_modules_users_user_controller_ts",
+      "label": "[NEW] `backend/src/modules/users/user.controller.ts`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L76"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_verification_plan",
+      "label": "Verification Plan",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "docy_freelancer_onboarding_plan_automated_manual_testing",
+      "label": "Automated / Manual Testing",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L85"
+    }
+  ],
+  "edges": [
+    {
+      "source": "d_repo_kaampay_docy_freelancer_onboarding_plan_md",
+      "target": "docy_freelancer_onboarding_plan_freelancer_onboarding_implementation_plan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_freelancer_onboarding_implementation_plan",
+      "target": "docy_freelancer_onboarding_plan_user_review_required",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_freelancer_onboarding_implementation_plan",
+      "target": "docy_freelancer_onboarding_plan_proposed_changes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_proposed_changes",
+      "target": "docy_freelancer_onboarding_plan_1_ui_architecture_theme",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_1_ui_architecture_theme",
+      "target": "docy_freelancer_onboarding_plan_new_app_onboarding_page_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_1_ui_architecture_theme",
+      "target": "docy_freelancer_onboarding_plan_new_components_onboarding_selectablebox_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_proposed_changes",
+      "target": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "target": "docy_freelancer_onboarding_plan_new_components_onboarding_step1_welcome_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "target": "docy_freelancer_onboarding_plan_new_components_onboarding_step2_experience_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "target": "docy_freelancer_onboarding_plan_new_components_onboarding_step3_motivation_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "target": "docy_freelancer_onboarding_plan_new_components_onboarding_step4_professional_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_2_the_onboarding_steps_flow",
+      "target": "docy_freelancer_onboarding_plan_new_components_onboarding_step5_finalize_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_proposed_changes",
+      "target": "docy_freelancer_onboarding_plan_3_backend_integration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_3_backend_integration",
+      "target": "docy_freelancer_onboarding_plan_modify_prisma_schema_prisma",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_3_backend_integration",
+      "target": "docy_freelancer_onboarding_plan_new_backend_src_modules_users_user_controller_ts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_freelancer_onboarding_implementation_plan",
+      "target": "docy_freelancer_onboarding_plan_verification_plan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_freelancer_onboarding_plan_verification_plan",
+      "target": "docy_freelancer_onboarding_plan_automated_manual_testing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md",
+      "source_location": "L85",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

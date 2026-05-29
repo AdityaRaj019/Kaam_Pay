@@ -1,0 +1,351 @@
+{
+  "nodes": [
+    {
+      "id": "d_repo_kaampay_docy_rbac_implementation_plan_md",
+      "label": "rbac_implementation_plan.md",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_rbac_unified_dashboard_implementation_plan",
+      "label": "RBAC & Unified Dashboard Implementation Plan",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_proposed_changes",
+      "label": "Proposed Changes",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_1_cleanup_redundant_code_backend",
+      "label": "1. Cleanup Redundant Code (Backend)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_delete_backend_src_modules_auth_auth_routes_ts",
+      "label": "[DELETE] `backend/src/modules/auth/auth.routes.ts`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_modify_backend_src_app_ts_or_main_server_file",
+      "label": "[MODIFY] `backend/src/app.ts` (or main server file)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_codeblock_1",
+      "label": "code:typescript (import { toNodeHandler } from 'better-auth/node';)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_2_frontend_login_redirection_next_js",
+      "label": "2. Frontend Login Redirection (Next.js)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_modify_app_auth_login_page_tsx",
+      "label": "[MODIFY] `app/(auth)/login/page.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L31"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_codeblock_2",
+      "label": "code:typescript (const handleLogin = async () => {)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_3_unified_dashboard_architecture_frontend",
+      "label": "3. Unified Dashboard Architecture (Frontend)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_modify_app_dashboard_layout_tsx",
+      "label": "[MODIFY] `app/dashboard/layout.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_modify_app_dashboard_page_tsx",
+      "label": "[MODIFY] `app/dashboard/page.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L57"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_codeblock_3",
+      "label": "code:tsx (if (user.role === 'FREELANCER') return <FreelancerDashboardV)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_4_frontend_security_authorization_popups",
+      "label": "4. Frontend Security & Authorization Popups",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L67"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_new_components_roleguard_tsx",
+      "label": "[NEW] `components/RoleGuard.tsx`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_codeblock_4",
+      "label": "code:tsx (export default function RoleGuard({ allowedRoles, children })",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L74"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_5_backend_rbac_middleware_express",
+      "label": "5. Backend RBAC Middleware (Express)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L93"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_new_backend_src_middlewares_auth_middleware_ts",
+      "label": "[NEW] `backend/src/middlewares/auth.middleware.ts`",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_codeblock_5",
+      "label": "code:typescript (export const requireRole = (allowedRoles: string[]) => {)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L100"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_verification_plan",
+      "label": "Verification Plan",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L121"
+    },
+    {
+      "id": "docy_rbac_implementation_plan_automated_manual_testing",
+      "label": "Automated / Manual Testing",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L123"
+    }
+  ],
+  "edges": [
+    {
+      "source": "d_repo_kaampay_docy_rbac_implementation_plan_md",
+      "target": "docy_rbac_implementation_plan_rbac_unified_dashboard_implementation_plan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_rbac_unified_dashboard_implementation_plan",
+      "target": "docy_rbac_implementation_plan_proposed_changes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_proposed_changes",
+      "target": "docy_rbac_implementation_plan_1_cleanup_redundant_code_backend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_1_cleanup_redundant_code_backend",
+      "target": "docy_rbac_implementation_plan_delete_backend_src_modules_auth_auth_routes_ts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_1_cleanup_redundant_code_backend",
+      "target": "docy_rbac_implementation_plan_modify_backend_src_app_ts_or_main_server_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_modify_backend_src_app_ts_or_main_server_file",
+      "target": "docy_rbac_implementation_plan_codeblock_1",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_proposed_changes",
+      "target": "docy_rbac_implementation_plan_2_frontend_login_redirection_next_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_2_frontend_login_redirection_next_js",
+      "target": "docy_rbac_implementation_plan_modify_app_auth_login_page_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_modify_app_auth_login_page_tsx",
+      "target": "docy_rbac_implementation_plan_codeblock_2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_proposed_changes",
+      "target": "docy_rbac_implementation_plan_3_unified_dashboard_architecture_frontend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_3_unified_dashboard_architecture_frontend",
+      "target": "docy_rbac_implementation_plan_modify_app_dashboard_layout_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_3_unified_dashboard_architecture_frontend",
+      "target": "docy_rbac_implementation_plan_modify_app_dashboard_page_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_modify_app_dashboard_page_tsx",
+      "target": "docy_rbac_implementation_plan_codeblock_3",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_proposed_changes",
+      "target": "docy_rbac_implementation_plan_4_frontend_security_authorization_popups",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_4_frontend_security_authorization_popups",
+      "target": "docy_rbac_implementation_plan_new_components_roleguard_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_new_components_roleguard_tsx",
+      "target": "docy_rbac_implementation_plan_codeblock_4",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_proposed_changes",
+      "target": "docy_rbac_implementation_plan_5_backend_rbac_middleware_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_5_backend_rbac_middleware_express",
+      "target": "docy_rbac_implementation_plan_new_backend_src_middlewares_auth_middleware_ts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_new_backend_src_middlewares_auth_middleware_ts",
+      "target": "docy_rbac_implementation_plan_codeblock_5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_rbac_unified_dashboard_implementation_plan",
+      "target": "docy_rbac_implementation_plan_verification_plan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_rbac_implementation_plan_verification_plan",
+      "target": "docy_rbac_implementation_plan_automated_manual_testing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md",
+      "source_location": "L123",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
