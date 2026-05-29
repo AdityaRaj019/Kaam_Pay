@@ -1,1 +1,1271 @@
-{"nodes": [{"id": "d_repo_kaampay_package_json", "label": "package.json", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L1"}, {"id": "kaampay_package_name", "label": "name", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L2"}, {"id": "kaampay_package_version", "label": "version", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L3"}, {"id": "kaampay_package_private", "label": "private", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L4"}, {"id": "kaampay_package_scripts", "label": "scripts", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L5"}, {"id": "kaampay_package_scripts_dev", "label": "dev", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L6"}, {"id": "kaampay_package_scripts_dev_backend", "label": "dev:backend", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L7"}, {"id": "kaampay_package_scripts_build", "label": "build", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L8"}, {"id": "kaampay_package_scripts_start", "label": "start", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L9"}, {"id": "kaampay_package_scripts_lint", "label": "lint", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L10"}, {"id": "kaampay_package_scripts_prepare", "label": "prepare", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L11"}, {"id": "kaampay_package_dependencies", "label": "dependencies", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L13"}, {"id": "kaampay_package_dependencies_hookform_resolvers", "label": "@hookform/resolvers", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L14"}, {"id": "kaampay_package_dependencies_prisma_adapter_pg", "label": "@prisma/adapter-pg", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L15"}, {"id": "kaampay_package_dependencies_prisma_client", "label": "@prisma/client", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L16"}, {"id": "kaampay_package_dependencies_prisma_extension_accelerate", "label": "@prisma/extension-accelerate", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L17"}, {"id": "kaampay_package_dependencies_axios", "label": "axios", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L18"}, {"id": "kaampay_package_dependencies_better_auth", "label": "better-auth", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L19"}, {"id": "kaampay_package_dependencies_cors", "label": "cors", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L20"}, {"id": "kaampay_package_dependencies_dotenv", "label": "dotenv", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L21"}, {"id": "kaampay_package_dependencies_express", "label": "express", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L22"}, {"id": "kaampay_package_dependencies_framer_motion", "label": "framer-motion", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L23"}, {"id": "kaampay_package_dependencies_helmet", "label": "helmet", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L24"}, {"id": "kaampay_package_dependencies_lucide_react", "label": "lucide-react", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L25"}, {"id": "kaampay_package_dependencies_next", "label": "next", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L26"}, {"id": "kaampay_package_dependencies_pg", "label": "pg", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L27"}, {"id": "kaampay_package_dependencies_react", "label": "react", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L28"}, {"id": "kaampay_package_dependencies_react_dom", "label": "react-dom", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L29"}, {"id": "kaampay_package_dependencies_react_hook_form", "label": "react-hook-form", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L30"}, {"id": "kaampay_package_dependencies_react_hot_toast", "label": "react-hot-toast", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L31"}, {"id": "kaampay_package_dependencies_zod", "label": "zod", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L32"}, {"id": "kaampay_package_dependencies_zustand", "label": "zustand", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L33"}, {"id": "kaampay_package_devdependencies", "label": "devDependencies", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L35"}, {"id": "kaampay_package_devdependencies_tailwindcss_postcss", "label": "@tailwindcss/postcss", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L36"}, {"id": "kaampay_package_devdependencies_types_cors", "label": "@types/cors", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L37"}, {"id": "kaampay_package_devdependencies_types_express", "label": "@types/express", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L38"}, {"id": "kaampay_package_devdependencies_types_node", "label": "@types/node", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L39"}, {"id": "kaampay_package_devdependencies_types_pg", "label": "@types/pg", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L40"}, {"id": "kaampay_package_devdependencies_types_react", "label": "@types/react", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L41"}, {"id": "kaampay_package_devdependencies_types_react_dom", "label": "@types/react-dom", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L42"}, {"id": "kaampay_package_devdependencies_eslint", "label": "eslint", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L43"}, {"id": "kaampay_package_devdependencies_eslint_config_next", "label": "eslint-config-next", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L44"}, {"id": "kaampay_package_devdependencies_eslint_config_prettier", "label": "eslint-config-prettier", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L45"}, {"id": "kaampay_package_devdependencies_eslint_plugin_prettier", "label": "eslint-plugin-prettier", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L46"}, {"id": "kaampay_package_devdependencies_husky", "label": "husky", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L47"}, {"id": "kaampay_package_devdependencies_lint_staged", "label": "lint-staged", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L48"}, {"id": "kaampay_package_devdependencies_prettier", "label": "prettier", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L49"}, {"id": "kaampay_package_devdependencies_prisma", "label": "prisma", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L50"}, {"id": "kaampay_package_devdependencies_tailwindcss", "label": "tailwindcss", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L51"}, {"id": "kaampay_package_devdependencies_tsx", "label": "tsx", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L52"}, {"id": "kaampay_package_devdependencies_typescript", "label": "typescript", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L53"}, {"id": "kaampay_package_lint_staged", "label": "lint-staged", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L55"}, {"id": "kaampay_package_lint_staged_js_jsx_ts_tsx", "label": "*.{js,jsx,ts,tsx}", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L56"}, {"id": "kaampay_package_lint_staged_json_css_md", "label": "*.{json,css,md}", "file_type": "code", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L60"}], "edges": [{"source": "d_repo_kaampay_package_json", "target": "kaampay_package_name", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L2", "weight": 1.0}, {"source": "d_repo_kaampay_package_json", "target": "kaampay_package_version", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L3", "weight": 1.0}, {"source": "d_repo_kaampay_package_json", "target": "kaampay_package_private", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L4", "weight": 1.0}, {"source": "d_repo_kaampay_package_json", "target": "kaampay_package_scripts", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L5", "weight": 1.0}, {"source": "kaampay_package_scripts", "target": "kaampay_package_scripts_dev", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L6", "weight": 1.0}, {"source": "kaampay_package_scripts", "target": "kaampay_package_scripts_dev_backend", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L7", "weight": 1.0}, {"source": "kaampay_package_scripts", "target": "kaampay_package_scripts_build", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L8", "weight": 1.0}, {"source": "kaampay_package_scripts", "target": "kaampay_package_scripts_start", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L9", "weight": 1.0}, {"source": "kaampay_package_scripts", "target": "kaampay_package_scripts_lint", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L10", "weight": 1.0}, {"source": "kaampay_package_scripts", "target": "kaampay_package_scripts_prepare", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L11", "weight": 1.0}, {"source": "d_repo_kaampay_package_json", "target": "kaampay_package_dependencies", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L13", "weight": 1.0}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_hookform_resolvers", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L14", "weight": 1.0}, {"source": "kaampay_package_dependencies_hookform_resolvers", "target": "hookform_resolvers", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L14", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_prisma_adapter_pg", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L15", "weight": 1.0}, {"source": "kaampay_package_dependencies_prisma_adapter_pg", "target": "prisma_adapter_pg", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L15", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_prisma_client", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L16", "weight": 1.0}, {"source": "kaampay_package_dependencies_prisma_client", "target": "prisma_client", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L16", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_prisma_extension_accelerate", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L17", "weight": 1.0}, {"source": "kaampay_package_dependencies_prisma_extension_accelerate", "target": "prisma_extension_accelerate", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L17", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_axios", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L18", "weight": 1.0}, {"source": "kaampay_package_dependencies_axios", "target": "axios", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L18", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_better_auth", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L19", "weight": 1.0}, {"source": "kaampay_package_dependencies_better_auth", "target": "better_auth", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L19", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_cors", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L20", "weight": 1.0}, {"source": "kaampay_package_dependencies_cors", "target": "cors", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L20", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_dotenv", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L21", "weight": 1.0}, {"source": "kaampay_package_dependencies_dotenv", "target": "dotenv", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L21", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_express", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L22", "weight": 1.0}, {"source": "kaampay_package_dependencies_express", "target": "express", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L22", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_framer_motion", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L23", "weight": 1.0}, {"source": "kaampay_package_dependencies_framer_motion", "target": "framer_motion", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L23", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_helmet", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L24", "weight": 1.0}, {"source": "kaampay_package_dependencies_helmet", "target": "helmet", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L24", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_lucide_react", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L25", "weight": 1.0}, {"source": "kaampay_package_dependencies_lucide_react", "target": "lucide_react", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L25", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_next", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L26", "weight": 1.0}, {"source": "kaampay_package_dependencies_next", "target": "next", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L26", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_pg", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L27", "weight": 1.0}, {"source": "kaampay_package_dependencies_pg", "target": "pg", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L27", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_react", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L28", "weight": 1.0}, {"source": "kaampay_package_dependencies_react", "target": "react", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L28", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_react_dom", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L29", "weight": 1.0}, {"source": "kaampay_package_dependencies_react_dom", "target": "react_dom", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L29", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_react_hook_form", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L30", "weight": 1.0}, {"source": "kaampay_package_dependencies_react_hook_form", "target": "react_hook_form", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L30", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_react_hot_toast", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L31", "weight": 1.0}, {"source": "kaampay_package_dependencies_react_hot_toast", "target": "react_hot_toast", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L31", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_zod", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L32", "weight": 1.0}, {"source": "kaampay_package_dependencies_zod", "target": "zod", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L32", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_dependencies", "target": "kaampay_package_dependencies_zustand", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L33", "weight": 1.0}, {"source": "kaampay_package_dependencies_zustand", "target": "zustand", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L33", "weight": 1.0, "context": "import"}, {"source": "d_repo_kaampay_package_json", "target": "kaampay_package_devdependencies", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L35", "weight": 1.0}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_tailwindcss_postcss", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L36", "weight": 1.0}, {"source": "kaampay_package_devdependencies_tailwindcss_postcss", "target": "tailwindcss_postcss", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L36", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_types_cors", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L37", "weight": 1.0}, {"source": "kaampay_package_devdependencies_types_cors", "target": "types_cors", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L37", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_types_express", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L38", "weight": 1.0}, {"source": "kaampay_package_devdependencies_types_express", "target": "types_express", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L38", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_types_node", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L39", "weight": 1.0}, {"source": "kaampay_package_devdependencies_types_node", "target": "types_node", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L39", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_types_pg", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L40", "weight": 1.0}, {"source": "kaampay_package_devdependencies_types_pg", "target": "types_pg", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L40", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_types_react", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L41", "weight": 1.0}, {"source": "kaampay_package_devdependencies_types_react", "target": "types_react", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L41", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_types_react_dom", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L42", "weight": 1.0}, {"source": "kaampay_package_devdependencies_types_react_dom", "target": "types_react_dom", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L42", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_eslint", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L43", "weight": 1.0}, {"source": "kaampay_package_devdependencies_eslint", "target": "eslint", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L43", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_eslint_config_next", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L44", "weight": 1.0}, {"source": "kaampay_package_devdependencies_eslint_config_next", "target": "eslint_config_next", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L44", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_eslint_config_prettier", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L45", "weight": 1.0}, {"source": "kaampay_package_devdependencies_eslint_config_prettier", "target": "eslint_config_prettier", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L45", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_eslint_plugin_prettier", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L46", "weight": 1.0}, {"source": "kaampay_package_devdependencies_eslint_plugin_prettier", "target": "eslint_plugin_prettier", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L46", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_husky", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L47", "weight": 1.0}, {"source": "kaampay_package_devdependencies_husky", "target": "husky", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L47", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_lint_staged", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L48", "weight": 1.0}, {"source": "kaampay_package_devdependencies_lint_staged", "target": "lint_staged", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L48", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_prettier", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L49", "weight": 1.0}, {"source": "kaampay_package_devdependencies_prettier", "target": "prettier", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L49", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_prisma", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L50", "weight": 1.0}, {"source": "kaampay_package_devdependencies_prisma", "target": "prisma", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L50", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_tailwindcss", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L51", "weight": 1.0}, {"source": "kaampay_package_devdependencies_tailwindcss", "target": "tailwindcss", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L51", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_tsx", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L52", "weight": 1.0}, {"source": "kaampay_package_devdependencies_tsx", "target": "tsx", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L52", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_devdependencies", "target": "kaampay_package_devdependencies_typescript", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L53", "weight": 1.0}, {"source": "kaampay_package_devdependencies_typescript", "target": "typescript", "relation": "imports", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L53", "weight": 1.0, "context": "import"}, {"source": "d_repo_kaampay_package_json", "target": "kaampay_package_lint_staged", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L55", "weight": 1.0}, {"source": "kaampay_package_lint_staged", "target": "kaampay_package_lint_staged_js_jsx_ts_tsx", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L56", "weight": 1.0}, {"source": "kaampay_package_lint_staged_js_jsx_ts_tsx", "target": "ref_eslint_fix", "relation": "extends", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L56", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_lint_staged_js_jsx_ts_tsx", "target": "ref_prettier_write", "relation": "extends", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L56", "weight": 1.0, "context": "import"}, {"source": "kaampay_package_lint_staged", "target": "kaampay_package_lint_staged_json_css_md", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L60", "weight": 1.0}, {"source": "kaampay_package_lint_staged_json_css_md", "target": "ref_prettier_write", "relation": "extends", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\package.json", "source_location": "L60", "weight": 1.0, "context": "import"}]}
+{
+  "nodes": [
+    {
+      "id": "d_repo_kaampay_package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "kaampay_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "kaampay_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "kaampay_package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "kaampay_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "kaampay_package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "kaampay_package_scripts_dev_backend",
+      "label": "dev:backend",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "kaampay_package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "kaampay_package_scripts_start",
+      "label": "start",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "kaampay_package_scripts_lint",
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "kaampay_package_scripts_prepare",
+      "label": "prepare",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "kaampay_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "kaampay_package_dependencies_hookform_resolvers",
+      "label": "@hookform/resolvers",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "kaampay_package_dependencies_prisma_adapter_pg",
+      "label": "@prisma/adapter-pg",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "kaampay_package_dependencies_prisma_client",
+      "label": "@prisma/client",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "kaampay_package_dependencies_prisma_extension_accelerate",
+      "label": "@prisma/extension-accelerate",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "kaampay_package_dependencies_axios",
+      "label": "axios",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "kaampay_package_dependencies_better_auth",
+      "label": "better-auth",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "kaampay_package_dependencies_cors",
+      "label": "cors",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "kaampay_package_dependencies_dotenv",
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "kaampay_package_dependencies_express",
+      "label": "express",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "kaampay_package_dependencies_framer_motion",
+      "label": "framer-motion",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "kaampay_package_dependencies_helmet",
+      "label": "helmet",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "kaampay_package_dependencies_lucide_react",
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "kaampay_package_dependencies_next",
+      "label": "next",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "kaampay_package_dependencies_pg",
+      "label": "pg",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "kaampay_package_dependencies_react",
+      "label": "react",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "kaampay_package_dependencies_react_dom",
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "kaampay_package_dependencies_react_hook_form",
+      "label": "react-hook-form",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "kaampay_package_dependencies_react_hot_toast",
+      "label": "react-hot-toast",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "kaampay_package_dependencies_zod",
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "kaampay_package_dependencies_zustand",
+      "label": "zustand",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "kaampay_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "kaampay_package_devdependencies_tailwindcss_postcss",
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "kaampay_package_devdependencies_types_cors",
+      "label": "@types/cors",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "kaampay_package_devdependencies_types_express",
+      "label": "@types/express",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "kaampay_package_devdependencies_types_node",
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "kaampay_package_devdependencies_types_pg",
+      "label": "@types/pg",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "kaampay_package_devdependencies_types_react",
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "kaampay_package_devdependencies_types_react_dom",
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "kaampay_package_devdependencies_eslint",
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L43"
+    },
+    {
+      "id": "kaampay_package_devdependencies_eslint_config_next",
+      "label": "eslint-config-next",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L44"
+    },
+    {
+      "id": "kaampay_package_devdependencies_eslint_config_prettier",
+      "label": "eslint-config-prettier",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "kaampay_package_devdependencies_eslint_plugin_prettier",
+      "label": "eslint-plugin-prettier",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L46"
+    },
+    {
+      "id": "kaampay_package_devdependencies_husky",
+      "label": "husky",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L47"
+    },
+    {
+      "id": "kaampay_package_devdependencies_lint_staged",
+      "label": "lint-staged",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L48"
+    },
+    {
+      "id": "kaampay_package_devdependencies_prettier",
+      "label": "prettier",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L49"
+    },
+    {
+      "id": "kaampay_package_devdependencies_prisma",
+      "label": "prisma",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "kaampay_package_devdependencies_tailwindcss",
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "kaampay_package_devdependencies_tsx",
+      "label": "tsx",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L52"
+    },
+    {
+      "id": "kaampay_package_devdependencies_typescript",
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "kaampay_package_lint_staged",
+      "label": "lint-staged",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L55"
+    },
+    {
+      "id": "kaampay_package_lint_staged_js_jsx_ts_tsx",
+      "label": "*.{js,jsx,ts,tsx}",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L56"
+    },
+    {
+      "id": "kaampay_package_lint_staged_json_css_md",
+      "label": "*.{json,css,md}",
+      "file_type": "code",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L60"
+    }
+  ],
+  "edges": [
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_scripts",
+      "target": "kaampay_package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_scripts",
+      "target": "kaampay_package_scripts_dev_backend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_scripts",
+      "target": "kaampay_package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_scripts",
+      "target": "kaampay_package_scripts_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_scripts",
+      "target": "kaampay_package_scripts_lint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_scripts",
+      "target": "kaampay_package_scripts_prepare",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_hookform_resolvers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_hookform_resolvers",
+      "target": "hookform_resolvers",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_prisma_adapter_pg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_prisma_adapter_pg",
+      "target": "prisma_adapter_pg",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_prisma_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_prisma_client",
+      "target": "prisma_client",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_prisma_extension_accelerate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_prisma_extension_accelerate",
+      "target": "prisma_extension_accelerate",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_axios",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_axios",
+      "target": "axios",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_better_auth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_better_auth",
+      "target": "better_auth",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_cors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_cors",
+      "target": "cors",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_dotenv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_dotenv",
+      "target": "dotenv",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_express",
+      "target": "express",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_framer_motion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_framer_motion",
+      "target": "framer_motion",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_helmet",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_helmet",
+      "target": "helmet",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_lucide_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_lucide_react",
+      "target": "lucide_react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_next",
+      "target": "next",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_pg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_pg",
+      "target": "pg",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_react",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_react_dom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_react_dom",
+      "target": "react_dom",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_react_hook_form",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_react_hook_form",
+      "target": "react_hook_form",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_react_hot_toast",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_react_hot_toast",
+      "target": "react_hot_toast",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_zod",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_zod",
+      "target": "zod",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_dependencies",
+      "target": "kaampay_package_dependencies_zustand",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_dependencies_zustand",
+      "target": "zustand",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_tailwindcss_postcss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_tailwindcss_postcss",
+      "target": "tailwindcss_postcss",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_types_cors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_types_cors",
+      "target": "types_cors",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_types_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_types_express",
+      "target": "types_express",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_types_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_types_node",
+      "target": "types_node",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_types_pg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_types_pg",
+      "target": "types_pg",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_types_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_types_react",
+      "target": "types_react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_types_react_dom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_types_react_dom",
+      "target": "types_react_dom",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_eslint",
+      "target": "eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_eslint_config_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_eslint_config_next",
+      "target": "eslint_config_next",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_eslint_config_prettier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_eslint_config_prettier",
+      "target": "eslint_config_prettier",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_eslint_plugin_prettier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_eslint_plugin_prettier",
+      "target": "eslint_plugin_prettier",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_husky",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_husky",
+      "target": "husky",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_lint_staged",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_lint_staged",
+      "target": "lint_staged",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_prettier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_prettier",
+      "target": "prettier",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_prisma",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_prisma",
+      "target": "prisma",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_tailwindcss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_tailwindcss",
+      "target": "tailwindcss",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_tsx",
+      "target": "tsx",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_devdependencies",
+      "target": "kaampay_package_devdependencies_typescript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_devdependencies_typescript",
+      "target": "typescript",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L53",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "d_repo_kaampay_package_json",
+      "target": "kaampay_package_lint_staged",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_lint_staged",
+      "target": "kaampay_package_lint_staged_js_jsx_ts_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_lint_staged_js_jsx_ts_tsx",
+      "target": "ref_eslint_fix",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L56",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_lint_staged_js_jsx_ts_tsx",
+      "target": "ref_prettier_write",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L56",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "kaampay_package_lint_staged",
+      "target": "kaampay_package_lint_staged_json_css_md",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "kaampay_package_lint_staged_json_css_md",
+      "target": "ref_prettier_write",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\package.json",
+      "source_location": "L60",
+      "weight": 1.0,
+      "context": "import"
+    }
+  ]
+}

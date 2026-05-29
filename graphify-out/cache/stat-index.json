@@ -1,1 +1,647 @@
-{"D:\\Repo\\kaampay\\eslint.config.mjs":{"size":508,"mtime_ns":1778694774867636200,"hash":"9e0ed974362908e357ec256906c0c8d21807c9674251ef1892a0fb5405fd325f"},"D:\\Repo\\kaampay\\mcp.json":{"size":84,"mtime_ns":1779969505302307600,"hash":"cfc5a760345acb66ead495024388971e788d501cb09ac3b30f0b3e854718e42d"},"D:\\Repo\\kaampay\\next-env.d.ts":{"size":251,"mtime_ns":1779969771721124700,"hash":"902bfdee3bafb65aa4a2c4c6f11f473c034e47987ade1a762f914f5ec24ebf00"},"D:\\Repo\\kaampay\\next.config.ts":{"size":133,"mtime_ns":1773510068226281400,"hash":"c3ad6748b3ceb9d6d9ad4eb13a11a65a029e1ee5a9e8e6d73ba66095ceeb7757"},"D:\\Repo\\kaampay\\package.json":{"size":1629,"mtime_ns":1779969505307367400,"hash":"68a13943b30f6d8f864df746324456cf1dde865dbb3864168abd52a3fe2e419f"},"D:\\Repo\\kaampay\\postcss.config.mjs":{"size":94,"mtime_ns":1773510068143916900,"hash":"2246a3acc22908a3eb405ad6ec1605ad51cdf4b121f22fd5cd6030c496b5d4b2"},"D:\\Repo\\kaampay\\prisma.config.ts":{"size":388,"mtime_ns":1778694774872848800,"hash":"f4085ba16677e51713a97a5cebeaf0b752729d58b47ac3d1f2d00a7abd237eef"},"D:\\Repo\\kaampay\\tsconfig.json":{"size":711,"mtime_ns":1778694774877871300,"hash":"09b154e3c847a649ee7fa893cac13be80eaa08e2f175eb273497fe2b320f0278"},"D:\\Repo\\kaampay\\.husky\\_\\applypatch-msg":{"size":39,"mtime_ns":1779876318235862000,"hash":"6a9064e8fb13487a3a621e0dbb7bd8c82245b9c904b0c2dbcf3ce5fe55506b9c"},"D:\\Repo\\kaampay\\.husky\\_\\commit-msg":{"size":39,"mtime_ns":1779876318235333300,"hash":"0bff8d003cbfd9b75abbe94b6017890688fb016d9cd9e4474bba08706c61d3d0"},"D:\\Repo\\kaampay\\.husky\\_\\h":{"size":551,"mtime_ns":1778332856961373100,"hash":"f99a890a7c2de1e26a154549cb667ee9a884327e25ddbd6380ab23a986570ffc"},"D:\\Repo\\kaampay\\.husky\\_\\husky.sh":{"size":160,"mtime_ns":1779876318237937900,"hash":"6db0aa99aece6ebd17bbc27c5e5287a462fb39cc4a2ca3a82a6277c166bdb3a0"},"D:\\Repo\\kaampay\\.husky\\_\\post-applypatch":{"size":39,"mtime_ns":1779876318236383200,"hash":"678bc23efa73439ac107fddd35e640e583d68b45ab0c119be3ba50a81553e99d"},"D:\\Repo\\kaampay\\.husky\\_\\post-checkout":{"size":39,"mtime_ns":1779876318236901600,"hash":"f5104aea4b990fe94fe2eacb0323c2128b3f66f11d3fc388538530dada2db808"},"D:\\Repo\\kaampay\\.husky\\_\\post-commit":{"size":39,"mtime_ns":1779876318235333300,"hash":"20dc01bba5753874a3746d18250b5b5d71aebbfbdfda5305a6dfc2541adb209b"},"D:\\Repo\\kaampay\\.husky\\_\\post-merge":{"size":39,"mtime_ns":1779876318236901600,"hash":"9dd56caa8fa28b5494661ce7c97d756013f200ac4e60f619671f4d4eca46faa6"},"D:\\Repo\\kaampay\\.husky\\_\\post-rewrite":{"size":39,"mtime_ns":1779876318236901600,"hash":"3aa066773301fd07106a7926663f6ca3931ebf19bcacce7e156ead4e8446121a"},"D:\\Repo\\kaampay\\.husky\\_\\pre-applypatch":{"size":39,"mtime_ns":1779876318235862000,"hash":"24332da3a5839bca3276206674c0c6119f653c3dd2b01e2f5b37194a02d185f8"},"D:\\Repo\\kaampay\\.husky\\_\\pre-auto-gc":{"size":39,"mtime_ns":1779876318237418600,"hash":"d0038c1f6c4208a560ea4669eefc633b8460563cc29fcbc3c0d6c44309916f62"},"D:\\Repo\\kaampay\\.husky\\_\\pre-commit":{"size":39,"mtime_ns":1779876318234812800,"hash":"d0b0ee2878cb9efe03dfbf9327e5038d7a10eabd56ad9b1321c45eff1447e98d"},"D:\\Repo\\kaampay\\.husky\\_\\pre-merge-commit":{"size":39,"mtime_ns":1779876318234812800,"hash":"20798fb4a9d9b6f3593cdd371ca98fa15a5d57c1bf9bfc489039b5595b7028ff"},"D:\\Repo\\kaampay\\.husky\\_\\pre-push":{"size":39,"mtime_ns":1779876318237418600,"hash":"dd427fbe45aac0d22b4b75cd3738b4f19bb6b9203413d57e83eb402c992e636d"},"D:\\Repo\\kaampay\\.husky\\_\\pre-rebase":{"size":39,"mtime_ns":1779876318236383200,"hash":"c94f2d13aabe67bf5766093bbd03c9b9e5580deadc230f73ad6421b3ec0bf290"},"D:\\Repo\\kaampay\\.husky\\_\\prepare-commit-msg":{"size":39,"mtime_ns":1779876318234812800,"hash":"d571f11fd4274692937568cb770a19c830c585c6cef79f550d5c27340871a18f"},"D:\\Repo\\kaampay\\app\\layout.tsx":{"size":808,"mtime_ns":1779802805569892900,"hash":"a9759099bd236ef6fa7430d9ab44e340f0637b31ce815f7ef7167749bc0e85a1"},"D:\\Repo\\kaampay\\app\\page.tsx":{"size":713,"mtime_ns":1778349635762131800,"hash":"90d36c42b48ea826855b67981ad97519036ff052ac081d1817eceb81a723acc4"},"D:\\Repo\\kaampay\\app\\(auth)\\layout.tsx":{"size":1172,"mtime_ns":1779969505293177200,"hash":"e11fc437169f95ab49aaa05521863f7dd24428eaed6670a3f4cc4fca20d05ce1"},"D:\\Repo\\kaampay\\app\\(auth)\\login\\page.tsx":{"size":5521,"mtime_ns":1779969505293177200,"hash":"bafe4e8e12975adbbde1f1bc5efef917c1fec92943f230b69814510651db95b0"},"D:\\Repo\\kaampay\\app\\(auth)\\register\\page.tsx":{"size":10275,"mtime_ns":1779969505293703000,"hash":"7a292209999b78d3057968d5416dba71d93032193f4f0c24415de42828739ab6"},"D:\\Repo\\kaampay\\app\\(auth)\\signup\\page.tsx":{"size":6371,"mtime_ns":1779969505294223300,"hash":"9245a5d123e90530f257231ea472feceac491008c072c90c8f42dab88775d868"},"D:\\Repo\\kaampay\\app\\(auth)\\verify-email\\page.tsx":{"size":2202,"mtime_ns":1779969505294741600,"hash":"2468c1b77963854b711f26b4c25b9d5bce8f66ae7dc93e51c016e83bc2430b04"},"D:\\Repo\\kaampay\\app\\dashboard\\page.tsx":{"size":13306,"mtime_ns":1779987407730997600,"hash":"2ba40202e92f623ac88b2fc4eec4b3429a257cecac8538d2aa3adefda688bbf3"},"D:\\Repo\\kaampay\\app\\onboarding\\page.tsx":{"size":5884,"mtime_ns":1779987407772265800,"hash":"533d9e207407b078d747264711941a16f04e5d7f90d7409cf5482f5ef25acd14"},"D:\\Repo\\kaampay\\app\\profile\\page.tsx":{"size":32772,"mtime_ns":1779987407833912200,"hash":"8a5382149d0b4bdebeb1b565adf7c9a7d54f03b7962f3f884613b18ef030a35f"},"D:\\Repo\\kaampay\\backend\\tsconfig.json":{"size":473,"mtime_ns":1778694774866120700,"hash":"fec9735d67ac73b499c96593ee96c3e8132f8832c099c55dbdb9b7f8d6efc497"},"D:\\Repo\\kaampay\\backend\\src\\app.ts":{"size":3483,"mtime_ns":1779969505296052100,"hash":"d23f73e0548a60ee5fc132eb01966b07e92a1bb7f763d74e2a2f011e6b6427f1"},"D:\\Repo\\kaampay\\backend\\src\\server.ts":{"size":1667,"mtime_ns":1778694774864605000,"hash":"588d75c017af9e909d4c878475dd4b5cea64c3c1e5817be9714fc86947c75bc5"},"D:\\Repo\\kaampay\\backend\\src\\common\\constant\\index.ts":{"size":0,"mtime_ns":1778694774857379000,"hash":"d11c030d26f31a75c6ee536e9c58e11bb1509c8733f0b520052c72b7c6794847"},"D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\auth.middleware.ts":{"size":1954,"mtime_ns":1779969505296568900,"hash":"5b768f98e7255fc9a0b5fd0c45a4b6cba3efe797fab2240ab3e1d6799929c5c4"},"D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\errorHandler.ts":{"size":184,"mtime_ns":1778694774858425700,"hash":"4bd565420c8326c285556a375d05461b1673123000d3b23ba27f393499d6bba8"},"D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\index.ts":{"size":12,"mtime_ns":1778694774858952400,"hash":"83f84e8f95a83cfbb30092b4bab04f8e5319e794d8a8328f15f998e4acaec25d"},"D:\\Repo\\kaampay\\backend\\src\\common\\utils\\apiResponse.ts":{"size":661,"mtime_ns":1778694774859468000,"hash":"fef95271c6a0d645671ae45c0b3f359e59171371ee20d1089ccddd2e9eb6c2ca"},"D:\\Repo\\kaampay\\backend\\src\\common\\utils\\catchAsync.ts":{"size":565,"mtime_ns":1778694774859468000,"hash":"ead569a330ae3ea1f1111a0a7cbf91ace8fde2a52d3f958cd72a5bdc9d7a8da3"},"D:\\Repo\\kaampay\\backend\\src\\common\\utils\\index.ts":{"size":0,"mtime_ns":1778694774860088300,"hash":"de7da279219a4227c8afbf9108019bfd3347b37fe586ba684a419252a681b23f"},"D:\\Repo\\kaampay\\backend\\src\\config\\auth.ts":{"size":3835,"mtime_ns":1779969505296568900,"hash":"0650ae4bf635845923e796b2f447df9927b54297977e58428f7af1941e8c9e78"},"D:\\Repo\\kaampay\\backend\\src\\config\\prisma.ts":{"size":1058,"mtime_ns":1778694774860088300,"hash":"a32c9b3b5fbfaece024e8a0957a3f1c12abe893da8bc06c96ec37d16dc9a71b1"},"D:\\Repo\\kaampay\\backend\\src\\error\\AppError.ts":{"size":1190,"mtime_ns":1778694774861097500,"hash":"f968e85fcc685894002615bec125d9bcdeef57f1f1a8e607bb785e2a662b1948"},"D:\\Repo\\kaampay\\backend\\src\\error\\errorHandler.ts":{"size":2010,"mtime_ns":1778694774861097500,"hash":"76e6eae10093870737ea072056c1c352fcf61bc90256a18027ea0757723cbcea"},"D:\\Repo\\kaampay\\backend\\src\\error\\index.ts":{"size":99,"mtime_ns":1778694774861097500,"hash":"b669106bd9999e3243151f6b030e7c8f882f3ff3c09e44b3570ecf2973924acf"},"D:\\Repo\\kaampay\\backend\\src\\modules\\index.ts":{"size":623,"mtime_ns":1779987407906527100,"hash":"4db3070965d5dc6b1d9cb693fea2784673509fc5652f79b574ec7ec3d8833efe"},"D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.controller.ts":{"size":1056,"mtime_ns":1779969505297088900,"hash":"e6393140aa0599c61c6d4b2189c0cfc8d1a225fa26680012e078cd945691848d"},"D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.routes.ts":{"size":524,"mtime_ns":1779969505297659100,"hash":"a549958176c029baac221eb538356b39d968578b26db2b61282770cc7b7ae4c3"},"D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.service.ts":{"size":2251,"mtime_ns":1779987407855289600,"hash":"8ed090d1094b85f734cf7ed995fc5ef5112ae0a80c612f2f7c1b8f11dd24afb4"},"D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.types.ts":{"size":1373,"mtime_ns":1779987407865699500,"hash":"0ec5a13b0221655e4b30135cd710ab4995d282b1e3069b5c031c0b7c74b0becf"},"D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.validation.ts":{"size":2082,"mtime_ns":1779969505298701600,"hash":"11eae90df9885ab4450f0dc6e5197212de338d015b1657d778e79cac353c81d6"},"D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.controller.ts":{"size":1220,"mtime_ns":1779987407876626300,"hash":"ec38e1c26d7029e041a690837a56037f90277bd46b6a4fe8926f9b4834328577"},"D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.routes.ts":{"size":1359,"mtime_ns":1779987407882737400,"hash":"b8cafd281e6644f01ae7ce47827fca1037f925dbc29eb6ed94ab0e4735d47e92"},"D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.service.ts":{"size":1468,"mtime_ns":1779987407892245100,"hash":"675f31e5b5401001bc6f9c1a85a5aa778655e03fd99a956211e16efcdb0fe7ed"},"D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.validation.ts":{"size":735,"mtime_ns":1779987407899331200,"hash":"236b8a7a3abf615be0184244c8b589dea25764c192c4677ab85187d62ce80f1f"},"D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.controller.ts":{"size":1236,"mtime_ns":1779969505299742400,"hash":"dfac29ca076287e0c7c50707a4d769d9d0156e00c8ce7ba862c180175ef80e15"},"D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.routes.ts":{"size":501,"mtime_ns":1779969505299742400,"hash":"0d64208ec666fbc15b63bf3515cd8981677d73ab04b149f9632e25cac3f63600"},"D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.service.ts":{"size":1731,"mtime_ns":1779969505300261200,"hash":"584e24aae3cb270dff07c361bfbd9fdcc5d392c442c49f09475404704792bb69"},"D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.validation.ts":{"size":1100,"mtime_ns":1779969505300779100,"hash":"206e4ce29a73b0ffcf789103bffa5f67a43863e11b89c79b6a1c3d079bc418c0"},"D:\\Repo\\kaampay\\backend\\src\\types\\express.d.ts":{"size":381,"mtime_ns":1779874426169636500,"hash":"b1508997618b043101f84f3d2a8d7ecbb2cc65aed92d5294dd7ad0fe02cb5658"},"D:\\Repo\\kaampay\\components\\Button.tsx":{"size":906,"mtime_ns":1778349635766801800,"hash":"780a78fc3174983ce316a5197d89cc52086600ff333d685affdb72dae93d758a"},"D:\\Repo\\kaampay\\components\\Categories.tsx":{"size":2281,"mtime_ns":1778349635767320200,"hash":"a338bd123f455bd7714729d6a4a834d10dd3ef3c546b5044dcb02f99bc5dcf99"},"D:\\Repo\\kaampay\\components\\Features.tsx":{"size":5776,"mtime_ns":1778349635767831800,"hash":"2c74740119c059a1c40dd03eeabb14109c8146802a2753f5035f42b27a5bedce"},"D:\\Repo\\kaampay\\components\\Footer.tsx":{"size":3425,"mtime_ns":1778349635768823000,"hash":"5e6d99961b3aec7b7e209112bd9b9ba6435e83960e7aeaf3349faaa838cf4942"},"D:\\Repo\\kaampay\\components\\Hero.tsx":{"size":2167,"mtime_ns":1778349635769384500,"hash":"59e1fb4f55a849c0f27480e3fed8f5baafcbb943e1ac58c39335eec8cf12440b"},"D:\\Repo\\kaampay\\components\\Navbar.tsx":{"size":2950,"mtime_ns":1779969505300779100,"hash":"64bd157c60a201740fef1b3d9801180fd383eb1b4ff9a39784bc0a439b22c291"},"D:\\Repo\\kaampay\\components\\RegisterForm.tsx":{"size":9978,"mtime_ns":1779969505301302300,"hash":"7e05f114d504ff95aadd77dd10bbde613c0fcd089765822ee4e4c64020a9c77b"},"D:\\Repo\\kaampay\\components\\RoleGuard.tsx":{"size":1677,"mtime_ns":1779987407915052800,"hash":"f11c1791d20760034584dac63f4936547440e715272f6c812700e2c64b1ee5a5"},"D:\\Repo\\kaampay\\components\\Search.tsx":{"size":2162,"mtime_ns":1778349635770700000,"hash":"14c99e4dfbe4271471684ac775147209d06ead17872337c92256496fabfc9e84"},"D:\\Repo\\kaampay\\components\\Testimonials.tsx":{"size":2318,"mtime_ns":1778349635771562900,"hash":"1437cd23bb9d0cd1f979855143763d23a8009c9ef779ffd730ba10fece085f91"},"D:\\Repo\\kaampay\\components\\onboarding\\SplitScreenLayout.tsx":{"size":6144,"mtime_ns":1779969505301302300,"hash":"3079447091211d41e5ce2c6b10eb3ff120c211039789597be388a777ddb4d6cb"},"D:\\Repo\\kaampay\\components\\onboarding\\Step1_Rules.tsx":{"size":3703,"mtime_ns":1779969505301302300,"hash":"dee3a603370cf3984eafd33507226c6b6144e837dabea6900aecf05bf5aec887"},"D:\\Repo\\kaampay\\components\\onboarding\\Step1_TitleBio.tsx":{"size":4040,"mtime_ns":1779969505302307600,"hash":"e81972b564129e674e6e80e39515d2cc69f9331ccc60ccb66e2fb42fc6723b5d"},"D:\\Repo\\kaampay\\components\\onboarding\\Step2_Experience.tsx":{"size":3984,"mtime_ns":1779969505302307600,"hash":"b2bfd9c196264f09978fe0d4b252bd9d5290b66a123e2def0a4017b3bef766bf"},"D:\\Repo\\kaampay\\components\\onboarding\\Step2_Skills.tsx":{"size":6361,"mtime_ns":1779969505302307600,"hash":"f5028f46afd4031ccc65542270b305760ae22e635ca419fad88926111ba00388"},"D:\\Repo\\kaampay\\components\\onboarding\\Step3_Pricing.tsx":{"size":4737,"mtime_ns":1779969505302307600,"hash":"ae324eded814ba74cfe6242a230c84bbfeb693410197fc00f4cf8ace6c5d1cdd"},"D:\\Repo\\kaampay\\components\\onboarding\\Step3_Purpose.tsx":{"size":4099,"mtime_ns":1779969505302307600,"hash":"0dd8fb8ae51fe854d57af8a094ff2547504aa64195a07e8b4d5a49aa9f6404f3"},"D:\\Repo\\kaampay\\components\\onboarding\\Step4_Review.tsx":{"size":4075,"mtime_ns":1779969505302307600,"hash":"00f9e07613c6f941921384395e121f42b3bc1e3d50eb1db34c47a1c092b1b98f"},"D:\\Repo\\kaampay\\features\\index.ts":{"size":0,"mtime_ns":1778694774867636200,"hash":"b664438eee68db9a36cc63375f9f7e9ffe5aa4641bcd15cfac431fbed6c3d837"},"D:\\Repo\\kaampay\\hooks\\index.ts":{"size":12,"mtime_ns":1778694774868643600,"hash":"5f9aa36b7ad10f30b572f0b4c13bb5574e1a80dd3ea1efe584b825ca7aefa8eb"},"D:\\Repo\\kaampay\\hooks\\useAuth.ts":{"size":4243,"mtime_ns":1779969505302307600,"hash":"1cdb178ab9a097c1891c5ce6c87bfcf462430c588de38ed8523ca02251dcb983"},"D:\\Repo\\kaampay\\lib\\axios.ts":{"size":585,"mtime_ns":1779969505302307600,"hash":"dc0fd187bfbebf6d90b07a0e709aab12a9c046de1d994a78442bb8df5fd38c49"},"D:\\Repo\\kaampay\\lib\\index.ts":{"size":12,"mtime_ns":1778694774869649700,"hash":"59b80cfa78d5a6d6601206dd7b621fbfa14bd4e71a0e772a95ba7ca64a124a93"},"D:\\Repo\\kaampay\\lib\\auth\\auth-client.ts":{"size":1222,"mtime_ns":1779969505302307600,"hash":"058c66e781ae463a23d1e11f44d75bc6bd1e3d27f471380efe701fcd1606bd0d"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\client.d.ts":{"size":23,"mtime_ns":1779981240500529700,"hash":"6e8cc1ef1073ef1522877743292c28e28384e689560a38318010f2e3354f3212"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\client.js":{"size":166,"mtime_ns":1779981240500529700,"hash":"773bb038286f7f59d35951ccfb2e0fe537fa5ad31ddd7655df487bc1c1832607"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\default.d.ts":{"size":23,"mtime_ns":1779981240500529700,"hash":"a78bcd025d7d80bed3d156a460c4920e23afc3f1131541dc800607f8347f939b"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\default.js":{"size":182,"mtime_ns":1779981240500529700,"hash":"706f46fa93acf14f6fd15a5e4f8ece08940dcd5d39e4ce63a69518f2b85ff1f3"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\edge.d.ts":{"size":25,"mtime_ns":1779981240501008100,"hash":"a0d4d3bd10c314b3cbfb3e560476a49b28308c368590746c3018fb64495da328"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\edge.js":{"size":84047,"mtime_ns":1779981240501008100,"hash":"abca4d1ca167a743df32f4d96ae7cf101a943f27d16c5439716211e482aff10d"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\index-browser.js":{"size":9973,"mtime_ns":1779981240501008100,"hash":"b5c53c5e05b5b74ecbb30d3ccb402667ed7d470603a24aaf899cb4f8b866c1a1"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\index.d.ts":{"size":945485,"mtime_ns":1779981240501008100,"hash":"afc111d1ebed27c0cb7bc714e4137c0108cf774929640aece0caec383cdaf504"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\index.js":{"size":83910,"mtime_ns":1779981240500529700,"hash":"e6894b5b115ef6ecd87db6ceb15b185878b1fa50bb6ce22a34d3c2e7c3728a21"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\package.json":{"size":4011,"mtime_ns":1779981240501008100,"hash":"6c53926da92f00e58aeb50b60237cf8f07eb7b17d1336c5a57e6964bc3a5386e"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\query_compiler_fast_bg.js":{"size":8153,"mtime_ns":1778333478743363500,"hash":"8c7b017b7bad0bb5b97f66fe49f12edf28c3233a2529913a92c2ae243b2206c9"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\query_compiler_fast_bg.wasm-base64.js":{"size":4903679,"mtime_ns":1778333479283691300,"hash":"f735e9a2014beb97df19da9c747be55540ea7f8e1419cd2b7c4c15f10a9f7dc4"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm-edge-light-loader.mjs":{"size":191,"mtime_ns":1779981240501008100,"hash":"b342f4ecb8bcf142cdcbf56aeb880f99a98444f1b785bfd6234164e965a0d86b"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm-worker-loader.mjs":{"size":184,"mtime_ns":1779981240501008100,"hash":"673314d0177c9d1cb8256e6c9e53fceaba871690b4fe1950bd8cf2f16402954b"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm.d.ts":{"size":25,"mtime_ns":1779875889040443200,"hash":"0cce5c9447976f49892b540bdd4ea12832827eb07e76b2b755dc317ed6fd8011"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm.js":{"size":24829,"mtime_ns":1779875889040443200,"hash":"4ad3c8d2c35b57576fad5d7ac410404c0b239c5646ff440886c6af906a3e12fb"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\client.d.ts":{"size":112208,"mtime_ns":1778333486498709800,"hash":"8676c3c4c74ef73fd384079f144332ea0a0fe280981c28301c3da4c65af82d88"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\client.js":{"size":186836,"mtime_ns":1779981240504531300,"hash":"4596efd31f5eda8896ba64d467382d47d86a38d4bc26e84908052bd556f27078"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\index-browser.d.ts":{"size":3454,"mtime_ns":1778333486502782500,"hash":"bd0500909e9337ac27c2fb546e7ba049091bddf217aa08f9510b4ba468d9f436"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\index-browser.js":{"size":2476,"mtime_ns":1779981240503529900,"hash":"936be9bd928da0a2074f104462616f4da0c114128336b79aaa808316e13efa1b"},"D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\wasm-compiler-edge.js":{"size":201510,"mtime_ns":1779981240503529900,"hash":"6b475ac4b36926bc6026c5f9d56cbb780863e20dffacd8a5ddb76eb0bf5166c9"},"D:\\Repo\\kaampay\\prisma\\seed.ts":{"size":3902,"mtime_ns":1779969505308060300,"hash":"195c89bf0002e531db994955121d64cb9e962f9ead52932c1c1adf76ffe43f8e"},"D:\\Repo\\kaampay\\providers\\index.ts":{"size":0,"mtime_ns":1778694774873857200,"hash":"062e5da574fcb783d95d8f9ab4b1a81503e7e7daa735f6b747d73c3e8ee1f2dc"},"D:\\Repo\\kaampay\\public\\index.ts":{"size":0,"mtime_ns":1778694774873857200,"hash":"3242cdd673289d270f6b64aee6286852f1280996ad0ba930273d80b5d6edd63e"},"D:\\Repo\\kaampay\\scripts\\index.ts":{"size":0,"mtime_ns":1778694774874859000,"hash":"2760e3dbe76f295b2a6a1141f71a1f966799c12bbe671a191bbafdf45d4f5ad3"},"D:\\Repo\\kaampay\\services\\auth.service.ts":{"size":1238,"mtime_ns":1779969505309066300,"hash":"01c5e52229609135ed7acf8bd51b854102047b4898077c75d8049da988897745"},"D:\\Repo\\kaampay\\services\\index.ts":{"size":0,"mtime_ns":1778694774875855400,"hash":"a9f8c6b3c5e8f7d3d21187cef3ba1523028d179dc949ea0c94685d30a8a9a6a5"},"D:\\Repo\\kaampay\\store\\auth.store.ts":{"size":1539,"mtime_ns":1779969505309066300,"hash":"12a4e155b008f0c3ca5f42841dcdcebdfcff2833eb653c896ed1ff82c216105b"},"D:\\Repo\\kaampay\\types\\index.ts":{"size":12,"mtime_ns":1778694774878375700,"hash":"5eb7a1fa99914bb50b70e8f9d96114737c0858f0887a83c8345c118f584dd8fb"},"D:\\Repo\\kaampay\\utils\\authUtils.ts":{"size":342,"mtime_ns":1779969505309066300,"hash":"999689852b45af3d0560f1fe8afc51ec5a090358a66a7447a182a3e31aa2f12e"},"D:\\Repo\\kaampay\\utils\\index.ts":{"size":30,"mtime_ns":1779969505310066700,"hash":"a834b18ca2f22af9ab41b4b308b625a8fd20ccab4fac5841966f48a2085222e8"},"D:\\Repo\\kaampay\\README.md":{"size":1490,"mtime_ns":1778694774854771100,"hash":"e11616b81e6e5bc1c3ff4b595b16e66535862b65e888300521f442807e6668d0"},"D:\\Repo\\kaampay\\.agents\\rules\\graphify.md":{"size":947,"mtime_ns":1779993045722522800,"hash":"e55792958648fb69255e3ce3f71a8fcead36307c34b2d67feda9ac650ac61803"},"D:\\Repo\\kaampay\\.agents\\workflows\\graphify.md":{"size":287,"mtime_ns":1779993045722522800,"hash":"02a10022db4416c89203d0bb199d5b2f48da01fb2962bb28adff3ca65ba10260"},"D:\\Repo\\kaampay\\docy\\better_auth_implementation_plan.md":{"size":8198,"mtime_ns":1779882820049761200,"hash":"19343e951e3496af45885cbb984938dea2ff5aecde33cda7da14773ec7696aad"},"D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md":{"size":3856,"mtime_ns":1779904494021337200,"hash":"96138029b8d0c348b38b248dd4d89f15355cee968adce774ce5b0aef679272b3"},"D:\\Repo\\kaampay\\docy\\freelancer_profile_prd.md":{"size":3105,"mtime_ns":1779980653102796100,"hash":"83e3091815bbfd93a9277b48558d1f09ecc9c34ab68ade29862beaae846ae146"},"D:\\Repo\\kaampay\\docy\\KaamPay_PRD.md":{"size":114700,"mtime_ns":1773554284382993200,"hash":"a63397bb35a7c57862c2f43beb45c4752fe5b14ba69c8e82dd9fa5b51cd4c1be"},"D:\\Repo\\kaampay\\docy\\plan.md":{"size":7719,"mtime_ns":1773572246118966900,"hash":"2b6373b2099253bcb76c2c683cba6965c15080c64ef5c57786ff8026ef3da1ab"},"D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md":{"size":4860,"mtime_ns":1779894800277238300,"hash":"a1d7d0757ffc0938a0886f94e714a2a11a3f557c2096b50e5aa2c525437fd4fd"},"D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md":{"size":13168,"mtime_ns":1778694774876864900,"hash":"c9237536790eff8565278612184e1f051cf1e62d1cdfa7343e9f350d02e3ee2b"}}
+{
+  "D:\\Repo\\kaampay\\eslint.config.mjs": {
+    "size": 508,
+    "mtime_ns": 1778694774867636200,
+    "hash": "9e0ed974362908e357ec256906c0c8d21807c9674251ef1892a0fb5405fd325f"
+  },
+  "D:\\Repo\\kaampay\\mcp.json": {
+    "size": 84,
+    "mtime_ns": 1779969505302307600,
+    "hash": "cfc5a760345acb66ead495024388971e788d501cb09ac3b30f0b3e854718e42d"
+  },
+  "D:\\Repo\\kaampay\\next-env.d.ts": {
+    "size": 251,
+    "mtime_ns": 1779969771721124700,
+    "hash": "902bfdee3bafb65aa4a2c4c6f11f473c034e47987ade1a762f914f5ec24ebf00"
+  },
+  "D:\\Repo\\kaampay\\next.config.ts": {
+    "size": 133,
+    "mtime_ns": 1773510068226281400,
+    "hash": "c3ad6748b3ceb9d6d9ad4eb13a11a65a029e1ee5a9e8e6d73ba66095ceeb7757"
+  },
+  "D:\\Repo\\kaampay\\package.json": {
+    "size": 1629,
+    "mtime_ns": 1779969505307367400,
+    "hash": "68a13943b30f6d8f864df746324456cf1dde865dbb3864168abd52a3fe2e419f"
+  },
+  "D:\\Repo\\kaampay\\postcss.config.mjs": {
+    "size": 94,
+    "mtime_ns": 1773510068143916900,
+    "hash": "2246a3acc22908a3eb405ad6ec1605ad51cdf4b121f22fd5cd6030c496b5d4b2"
+  },
+  "D:\\Repo\\kaampay\\prisma.config.ts": {
+    "size": 388,
+    "mtime_ns": 1778694774872848800,
+    "hash": "f4085ba16677e51713a97a5cebeaf0b752729d58b47ac3d1f2d00a7abd237eef"
+  },
+  "D:\\Repo\\kaampay\\tsconfig.json": {
+    "size": 711,
+    "mtime_ns": 1778694774877871300,
+    "hash": "09b154e3c847a649ee7fa893cac13be80eaa08e2f175eb273497fe2b320f0278"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\applypatch-msg": {
+    "size": 39,
+    "mtime_ns": 1779876318235862000,
+    "hash": "6a9064e8fb13487a3a621e0dbb7bd8c82245b9c904b0c2dbcf3ce5fe55506b9c"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\commit-msg": {
+    "size": 39,
+    "mtime_ns": 1779876318235333300,
+    "hash": "0bff8d003cbfd9b75abbe94b6017890688fb016d9cd9e4474bba08706c61d3d0"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\h": {
+    "size": 551,
+    "mtime_ns": 1778332856961373100,
+    "hash": "f99a890a7c2de1e26a154549cb667ee9a884327e25ddbd6380ab23a986570ffc"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\husky.sh": {
+    "size": 160,
+    "mtime_ns": 1779876318237937900,
+    "hash": "6db0aa99aece6ebd17bbc27c5e5287a462fb39cc4a2ca3a82a6277c166bdb3a0"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-applypatch": {
+    "size": 39,
+    "mtime_ns": 1779876318236383200,
+    "hash": "678bc23efa73439ac107fddd35e640e583d68b45ab0c119be3ba50a81553e99d"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-checkout": {
+    "size": 39,
+    "mtime_ns": 1779876318236901600,
+    "hash": "f5104aea4b990fe94fe2eacb0323c2128b3f66f11d3fc388538530dada2db808"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-commit": {
+    "size": 39,
+    "mtime_ns": 1779876318235333300,
+    "hash": "20dc01bba5753874a3746d18250b5b5d71aebbfbdfda5305a6dfc2541adb209b"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-merge": {
+    "size": 39,
+    "mtime_ns": 1779876318236901600,
+    "hash": "9dd56caa8fa28b5494661ce7c97d756013f200ac4e60f619671f4d4eca46faa6"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-rewrite": {
+    "size": 39,
+    "mtime_ns": 1779876318236901600,
+    "hash": "3aa066773301fd07106a7926663f6ca3931ebf19bcacce7e156ead4e8446121a"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-applypatch": {
+    "size": 39,
+    "mtime_ns": 1779876318235862000,
+    "hash": "24332da3a5839bca3276206674c0c6119f653c3dd2b01e2f5b37194a02d185f8"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-auto-gc": {
+    "size": 39,
+    "mtime_ns": 1779876318237418600,
+    "hash": "d0038c1f6c4208a560ea4669eefc633b8460563cc29fcbc3c0d6c44309916f62"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-commit": {
+    "size": 39,
+    "mtime_ns": 1779876318234812800,
+    "hash": "d0b0ee2878cb9efe03dfbf9327e5038d7a10eabd56ad9b1321c45eff1447e98d"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-merge-commit": {
+    "size": 39,
+    "mtime_ns": 1779876318234812800,
+    "hash": "20798fb4a9d9b6f3593cdd371ca98fa15a5d57c1bf9bfc489039b5595b7028ff"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-push": {
+    "size": 39,
+    "mtime_ns": 1779876318237418600,
+    "hash": "dd427fbe45aac0d22b4b75cd3738b4f19bb6b9203413d57e83eb402c992e636d"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-rebase": {
+    "size": 39,
+    "mtime_ns": 1779876318236383200,
+    "hash": "c94f2d13aabe67bf5766093bbd03c9b9e5580deadc230f73ad6421b3ec0bf290"
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\prepare-commit-msg": {
+    "size": 39,
+    "mtime_ns": 1779876318234812800,
+    "hash": "d571f11fd4274692937568cb770a19c830c585c6cef79f550d5c27340871a18f"
+  },
+  "D:\\Repo\\kaampay\\app\\layout.tsx": {
+    "size": 808,
+    "mtime_ns": 1779802805569892900,
+    "hash": "a9759099bd236ef6fa7430d9ab44e340f0637b31ce815f7ef7167749bc0e85a1"
+  },
+  "D:\\Repo\\kaampay\\app\\page.tsx": {
+    "size": 713,
+    "mtime_ns": 1778349635762131800,
+    "hash": "90d36c42b48ea826855b67981ad97519036ff052ac081d1817eceb81a723acc4"
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\layout.tsx": {
+    "size": 1172,
+    "mtime_ns": 1779969505293177200,
+    "hash": "e11fc437169f95ab49aaa05521863f7dd24428eaed6670a3f4cc4fca20d05ce1"
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\login\\page.tsx": {
+    "size": 5521,
+    "mtime_ns": 1779969505293177200,
+    "hash": "bafe4e8e12975adbbde1f1bc5efef917c1fec92943f230b69814510651db95b0"
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\register\\page.tsx": {
+    "size": 10275,
+    "mtime_ns": 1779969505293703000,
+    "hash": "7a292209999b78d3057968d5416dba71d93032193f4f0c24415de42828739ab6"
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\signup\\page.tsx": {
+    "size": 6371,
+    "mtime_ns": 1779969505294223300,
+    "hash": "9245a5d123e90530f257231ea472feceac491008c072c90c8f42dab88775d868"
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\verify-email\\page.tsx": {
+    "size": 2202,
+    "mtime_ns": 1779969505294741600,
+    "hash": "2468c1b77963854b711f26b4c25b9d5bce8f66ae7dc93e51c016e83bc2430b04"
+  },
+  "D:\\Repo\\kaampay\\app\\dashboard\\page.tsx": {
+    "size": 13306,
+    "mtime_ns": 1779987407730997600,
+    "hash": "2ba40202e92f623ac88b2fc4eec4b3429a257cecac8538d2aa3adefda688bbf3"
+  },
+  "D:\\Repo\\kaampay\\app\\onboarding\\page.tsx": {
+    "size": 5884,
+    "mtime_ns": 1779987407772265800,
+    "hash": "533d9e207407b078d747264711941a16f04e5d7f90d7409cf5482f5ef25acd14"
+  },
+  "D:\\Repo\\kaampay\\app\\profile\\page.tsx": {
+    "size": 32772,
+    "mtime_ns": 1779987407833912200,
+    "hash": "8a5382149d0b4bdebeb1b565adf7c9a7d54f03b7962f3f884613b18ef030a35f"
+  },
+  "D:\\Repo\\kaampay\\backend\\tsconfig.json": {
+    "size": 473,
+    "mtime_ns": 1778694774866120700,
+    "hash": "fec9735d67ac73b499c96593ee96c3e8132f8832c099c55dbdb9b7f8d6efc497"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\app.ts": {
+    "size": 3483,
+    "mtime_ns": 1779969505296052100,
+    "hash": "d23f73e0548a60ee5fc132eb01966b07e92a1bb7f763d74e2a2f011e6b6427f1"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\server.ts": {
+    "size": 1667,
+    "mtime_ns": 1778694774864605000,
+    "hash": "588d75c017af9e909d4c878475dd4b5cea64c3c1e5817be9714fc86947c75bc5"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\constant\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774857379000,
+    "hash": "d11c030d26f31a75c6ee536e9c58e11bb1509c8733f0b520052c72b7c6794847"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\auth.middleware.ts": {
+    "size": 1954,
+    "mtime_ns": 1779969505296568900,
+    "hash": "5b768f98e7255fc9a0b5fd0c45a4b6cba3efe797fab2240ab3e1d6799929c5c4"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\errorHandler.ts": {
+    "size": 184,
+    "mtime_ns": 1778694774858425700,
+    "hash": "4bd565420c8326c285556a375d05461b1673123000d3b23ba27f393499d6bba8"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\index.ts": {
+    "size": 12,
+    "mtime_ns": 1778694774858952400,
+    "hash": "83f84e8f95a83cfbb30092b4bab04f8e5319e794d8a8328f15f998e4acaec25d"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\apiResponse.ts": {
+    "size": 661,
+    "mtime_ns": 1778694774859468000,
+    "hash": "fef95271c6a0d645671ae45c0b3f359e59171371ee20d1089ccddd2e9eb6c2ca"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\catchAsync.ts": {
+    "size": 565,
+    "mtime_ns": 1778694774859468000,
+    "hash": "ead569a330ae3ea1f1111a0a7cbf91ace8fde2a52d3f958cd72a5bdc9d7a8da3"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774860088300,
+    "hash": "de7da279219a4227c8afbf9108019bfd3347b37fe586ba684a419252a681b23f"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\auth.ts": {
+    "size": 3835,
+    "mtime_ns": 1779969505296568900,
+    "hash": "0650ae4bf635845923e796b2f447df9927b54297977e58428f7af1941e8c9e78"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\prisma.ts": {
+    "size": 1058,
+    "mtime_ns": 1778694774860088300,
+    "hash": "a32c9b3b5fbfaece024e8a0957a3f1c12abe893da8bc06c96ec37d16dc9a71b1"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\error\\AppError.ts": {
+    "size": 1190,
+    "mtime_ns": 1778694774861097500,
+    "hash": "f968e85fcc685894002615bec125d9bcdeef57f1f1a8e607bb785e2a662b1948"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\error\\errorHandler.ts": {
+    "size": 2010,
+    "mtime_ns": 1778694774861097500,
+    "hash": "76e6eae10093870737ea072056c1c352fcf61bc90256a18027ea0757723cbcea"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\error\\index.ts": {
+    "size": 99,
+    "mtime_ns": 1778694774861097500,
+    "hash": "b669106bd9999e3243151f6b030e7c8f882f3ff3c09e44b3570ecf2973924acf"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\index.ts": {
+    "size": 623,
+    "mtime_ns": 1779987407906527100,
+    "hash": "4db3070965d5dc6b1d9cb693fea2784673509fc5652f79b574ec7ec3d8833efe"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.controller.ts": {
+    "size": 1056,
+    "mtime_ns": 1779969505297088900,
+    "hash": "e6393140aa0599c61c6d4b2189c0cfc8d1a225fa26680012e078cd945691848d"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.routes.ts": {
+    "size": 524,
+    "mtime_ns": 1779969505297659100,
+    "hash": "a549958176c029baac221eb538356b39d968578b26db2b61282770cc7b7ae4c3"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.service.ts": {
+    "size": 2251,
+    "mtime_ns": 1779987407855289600,
+    "hash": "8ed090d1094b85f734cf7ed995fc5ef5112ae0a80c612f2f7c1b8f11dd24afb4"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.types.ts": {
+    "size": 1373,
+    "mtime_ns": 1779987407865699500,
+    "hash": "0ec5a13b0221655e4b30135cd710ab4995d282b1e3069b5c031c0b7c74b0becf"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.validation.ts": {
+    "size": 2082,
+    "mtime_ns": 1779969505298701600,
+    "hash": "11eae90df9885ab4450f0dc6e5197212de338d015b1657d778e79cac353c81d6"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.controller.ts": {
+    "size": 1220,
+    "mtime_ns": 1779987407876626300,
+    "hash": "ec38e1c26d7029e041a690837a56037f90277bd46b6a4fe8926f9b4834328577"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.routes.ts": {
+    "size": 1359,
+    "mtime_ns": 1779987407882737400,
+    "hash": "b8cafd281e6644f01ae7ce47827fca1037f925dbc29eb6ed94ab0e4735d47e92"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.service.ts": {
+    "size": 1468,
+    "mtime_ns": 1779987407892245100,
+    "hash": "675f31e5b5401001bc6f9c1a85a5aa778655e03fd99a956211e16efcdb0fe7ed"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.validation.ts": {
+    "size": 735,
+    "mtime_ns": 1779987407899331200,
+    "hash": "236b8a7a3abf615be0184244c8b589dea25764c192c4677ab85187d62ce80f1f"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.controller.ts": {
+    "size": 1236,
+    "mtime_ns": 1779969505299742400,
+    "hash": "dfac29ca076287e0c7c50707a4d769d9d0156e00c8ce7ba862c180175ef80e15"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.routes.ts": {
+    "size": 501,
+    "mtime_ns": 1779969505299742400,
+    "hash": "0d64208ec666fbc15b63bf3515cd8981677d73ab04b149f9632e25cac3f63600"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.service.ts": {
+    "size": 1731,
+    "mtime_ns": 1779969505300261200,
+    "hash": "584e24aae3cb270dff07c361bfbd9fdcc5d392c442c49f09475404704792bb69"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.validation.ts": {
+    "size": 1100,
+    "mtime_ns": 1779969505300779100,
+    "hash": "206e4ce29a73b0ffcf789103bffa5f67a43863e11b89c79b6a1c3d079bc418c0"
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\types\\express.d.ts": {
+    "size": 381,
+    "mtime_ns": 1779874426169636500,
+    "hash": "b1508997618b043101f84f3d2a8d7ecbb2cc65aed92d5294dd7ad0fe02cb5658"
+  },
+  "D:\\Repo\\kaampay\\components\\Button.tsx": {
+    "size": 906,
+    "mtime_ns": 1778349635766801800,
+    "hash": "780a78fc3174983ce316a5197d89cc52086600ff333d685affdb72dae93d758a"
+  },
+  "D:\\Repo\\kaampay\\components\\Categories.tsx": {
+    "size": 2281,
+    "mtime_ns": 1778349635767320200,
+    "hash": "a338bd123f455bd7714729d6a4a834d10dd3ef3c546b5044dcb02f99bc5dcf99"
+  },
+  "D:\\Repo\\kaampay\\components\\Features.tsx": {
+    "size": 5776,
+    "mtime_ns": 1778349635767831800,
+    "hash": "2c74740119c059a1c40dd03eeabb14109c8146802a2753f5035f42b27a5bedce"
+  },
+  "D:\\Repo\\kaampay\\components\\Footer.tsx": {
+    "size": 3425,
+    "mtime_ns": 1778349635768823000,
+    "hash": "5e6d99961b3aec7b7e209112bd9b9ba6435e83960e7aeaf3349faaa838cf4942"
+  },
+  "D:\\Repo\\kaampay\\components\\Hero.tsx": {
+    "size": 2167,
+    "mtime_ns": 1778349635769384500,
+    "hash": "59e1fb4f55a849c0f27480e3fed8f5baafcbb943e1ac58c39335eec8cf12440b"
+  },
+  "D:\\Repo\\kaampay\\components\\Navbar.tsx": {
+    "size": 2950,
+    "mtime_ns": 1779969505300779100,
+    "hash": "64bd157c60a201740fef1b3d9801180fd383eb1b4ff9a39784bc0a439b22c291"
+  },
+  "D:\\Repo\\kaampay\\components\\RegisterForm.tsx": {
+    "size": 9978,
+    "mtime_ns": 1779969505301302300,
+    "hash": "7e05f114d504ff95aadd77dd10bbde613c0fcd089765822ee4e4c64020a9c77b"
+  },
+  "D:\\Repo\\kaampay\\components\\RoleGuard.tsx": {
+    "size": 1677,
+    "mtime_ns": 1779987407915052800,
+    "hash": "f11c1791d20760034584dac63f4936547440e715272f6c812700e2c64b1ee5a5"
+  },
+  "D:\\Repo\\kaampay\\components\\Search.tsx": {
+    "size": 2162,
+    "mtime_ns": 1778349635770700000,
+    "hash": "14c99e4dfbe4271471684ac775147209d06ead17872337c92256496fabfc9e84"
+  },
+  "D:\\Repo\\kaampay\\components\\Testimonials.tsx": {
+    "size": 2318,
+    "mtime_ns": 1778349635771562900,
+    "hash": "1437cd23bb9d0cd1f979855143763d23a8009c9ef779ffd730ba10fece085f91"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\SplitScreenLayout.tsx": {
+    "size": 6144,
+    "mtime_ns": 1779969505301302300,
+    "hash": "3079447091211d41e5ce2c6b10eb3ff120c211039789597be388a777ddb4d6cb"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step1_Rules.tsx": {
+    "size": 3703,
+    "mtime_ns": 1779969505301302300,
+    "hash": "dee3a603370cf3984eafd33507226c6b6144e837dabea6900aecf05bf5aec887"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step1_TitleBio.tsx": {
+    "size": 4040,
+    "mtime_ns": 1779969505302307600,
+    "hash": "e81972b564129e674e6e80e39515d2cc69f9331ccc60ccb66e2fb42fc6723b5d"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step2_Experience.tsx": {
+    "size": 3984,
+    "mtime_ns": 1779969505302307600,
+    "hash": "b2bfd9c196264f09978fe0d4b252bd9d5290b66a123e2def0a4017b3bef766bf"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step2_Skills.tsx": {
+    "size": 6361,
+    "mtime_ns": 1779969505302307600,
+    "hash": "f5028f46afd4031ccc65542270b305760ae22e635ca419fad88926111ba00388"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step3_Pricing.tsx": {
+    "size": 4737,
+    "mtime_ns": 1779969505302307600,
+    "hash": "ae324eded814ba74cfe6242a230c84bbfeb693410197fc00f4cf8ace6c5d1cdd"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step3_Purpose.tsx": {
+    "size": 4099,
+    "mtime_ns": 1779969505302307600,
+    "hash": "0dd8fb8ae51fe854d57af8a094ff2547504aa64195a07e8b4d5a49aa9f6404f3"
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step4_Review.tsx": {
+    "size": 4075,
+    "mtime_ns": 1779969505302307600,
+    "hash": "00f9e07613c6f941921384395e121f42b3bc1e3d50eb1db34c47a1c092b1b98f"
+  },
+  "D:\\Repo\\kaampay\\features\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774867636200,
+    "hash": "b664438eee68db9a36cc63375f9f7e9ffe5aa4641bcd15cfac431fbed6c3d837"
+  },
+  "D:\\Repo\\kaampay\\hooks\\index.ts": {
+    "size": 12,
+    "mtime_ns": 1778694774868643600,
+    "hash": "5f9aa36b7ad10f30b572f0b4c13bb5574e1a80dd3ea1efe584b825ca7aefa8eb"
+  },
+  "D:\\Repo\\kaampay\\hooks\\useAuth.ts": {
+    "size": 4243,
+    "mtime_ns": 1779969505302307600,
+    "hash": "1cdb178ab9a097c1891c5ce6c87bfcf462430c588de38ed8523ca02251dcb983"
+  },
+  "D:\\Repo\\kaampay\\lib\\axios.ts": {
+    "size": 585,
+    "mtime_ns": 1779969505302307600,
+    "hash": "dc0fd187bfbebf6d90b07a0e709aab12a9c046de1d994a78442bb8df5fd38c49"
+  },
+  "D:\\Repo\\kaampay\\lib\\index.ts": {
+    "size": 12,
+    "mtime_ns": 1778694774869649700,
+    "hash": "59b80cfa78d5a6d6601206dd7b621fbfa14bd4e71a0e772a95ba7ca64a124a93"
+  },
+  "D:\\Repo\\kaampay\\lib\\auth\\auth-client.ts": {
+    "size": 1222,
+    "mtime_ns": 1779969505302307600,
+    "hash": "058c66e781ae463a23d1e11f44d75bc6bd1e3d27f471380efe701fcd1606bd0d"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\client.d.ts": {
+    "size": 23,
+    "mtime_ns": 1779981240500529700,
+    "hash": "6e8cc1ef1073ef1522877743292c28e28384e689560a38318010f2e3354f3212"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\client.js": {
+    "size": 166,
+    "mtime_ns": 1779981240500529700,
+    "hash": "773bb038286f7f59d35951ccfb2e0fe537fa5ad31ddd7655df487bc1c1832607"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\default.d.ts": {
+    "size": 23,
+    "mtime_ns": 1779981240500529700,
+    "hash": "a78bcd025d7d80bed3d156a460c4920e23afc3f1131541dc800607f8347f939b"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\default.js": {
+    "size": 182,
+    "mtime_ns": 1779981240500529700,
+    "hash": "706f46fa93acf14f6fd15a5e4f8ece08940dcd5d39e4ce63a69518f2b85ff1f3"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\edge.d.ts": {
+    "size": 25,
+    "mtime_ns": 1779981240501008100,
+    "hash": "a0d4d3bd10c314b3cbfb3e560476a49b28308c368590746c3018fb64495da328"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\edge.js": {
+    "size": 84047,
+    "mtime_ns": 1779981240501008100,
+    "hash": "abca4d1ca167a743df32f4d96ae7cf101a943f27d16c5439716211e482aff10d"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\index-browser.js": {
+    "size": 9973,
+    "mtime_ns": 1779981240501008100,
+    "hash": "b5c53c5e05b5b74ecbb30d3ccb402667ed7d470603a24aaf899cb4f8b866c1a1"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\index.d.ts": {
+    "size": 945485,
+    "mtime_ns": 1779981240501008100,
+    "hash": "afc111d1ebed27c0cb7bc714e4137c0108cf774929640aece0caec383cdaf504"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\index.js": {
+    "size": 83910,
+    "mtime_ns": 1779981240500529700,
+    "hash": "e6894b5b115ef6ecd87db6ceb15b185878b1fa50bb6ce22a34d3c2e7c3728a21"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\package.json": {
+    "size": 4011,
+    "mtime_ns": 1779981240501008100,
+    "hash": "6c53926da92f00e58aeb50b60237cf8f07eb7b17d1336c5a57e6964bc3a5386e"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\query_compiler_fast_bg.js": {
+    "size": 8153,
+    "mtime_ns": 1778333478743363500,
+    "hash": "8c7b017b7bad0bb5b97f66fe49f12edf28c3233a2529913a92c2ae243b2206c9"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\query_compiler_fast_bg.wasm-base64.js": {
+    "size": 4903679,
+    "mtime_ns": 1778333479283691300,
+    "hash": "f735e9a2014beb97df19da9c747be55540ea7f8e1419cd2b7c4c15f10a9f7dc4"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm-edge-light-loader.mjs": {
+    "size": 191,
+    "mtime_ns": 1779981240501008100,
+    "hash": "b342f4ecb8bcf142cdcbf56aeb880f99a98444f1b785bfd6234164e965a0d86b"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm-worker-loader.mjs": {
+    "size": 184,
+    "mtime_ns": 1779981240501008100,
+    "hash": "673314d0177c9d1cb8256e6c9e53fceaba871690b4fe1950bd8cf2f16402954b"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm.d.ts": {
+    "size": 25,
+    "mtime_ns": 1779875889040443200,
+    "hash": "0cce5c9447976f49892b540bdd4ea12832827eb07e76b2b755dc317ed6fd8011"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\wasm.js": {
+    "size": 24829,
+    "mtime_ns": 1779875889040443200,
+    "hash": "4ad3c8d2c35b57576fad5d7ac410404c0b239c5646ff440886c6af906a3e12fb"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\client.d.ts": {
+    "size": 112208,
+    "mtime_ns": 1778333486498709800,
+    "hash": "8676c3c4c74ef73fd384079f144332ea0a0fe280981c28301c3da4c65af82d88"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\client.js": {
+    "size": 186836,
+    "mtime_ns": 1779981240504531300,
+    "hash": "4596efd31f5eda8896ba64d467382d47d86a38d4bc26e84908052bd556f27078"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\index-browser.d.ts": {
+    "size": 3454,
+    "mtime_ns": 1778333486502782500,
+    "hash": "bd0500909e9337ac27c2fb546e7ba049091bddf217aa08f9510b4ba468d9f436"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\index-browser.js": {
+    "size": 2476,
+    "mtime_ns": 1779981240503529900,
+    "hash": "936be9bd928da0a2074f104462616f4da0c114128336b79aaa808316e13efa1b"
+  },
+  "D:\\Repo\\kaampay\\lib\\generated\\prisma\\runtime\\wasm-compiler-edge.js": {
+    "size": 201510,
+    "mtime_ns": 1779981240503529900,
+    "hash": "6b475ac4b36926bc6026c5f9d56cbb780863e20dffacd8a5ddb76eb0bf5166c9"
+  },
+  "D:\\Repo\\kaampay\\prisma\\seed.ts": {
+    "size": 3902,
+    "mtime_ns": 1779969505308060300,
+    "hash": "195c89bf0002e531db994955121d64cb9e962f9ead52932c1c1adf76ffe43f8e"
+  },
+  "D:\\Repo\\kaampay\\providers\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774873857200,
+    "hash": "062e5da574fcb783d95d8f9ab4b1a81503e7e7daa735f6b747d73c3e8ee1f2dc"
+  },
+  "D:\\Repo\\kaampay\\public\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774873857200,
+    "hash": "3242cdd673289d270f6b64aee6286852f1280996ad0ba930273d80b5d6edd63e"
+  },
+  "D:\\Repo\\kaampay\\scripts\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774874859000,
+    "hash": "2760e3dbe76f295b2a6a1141f71a1f966799c12bbe671a191bbafdf45d4f5ad3"
+  },
+  "D:\\Repo\\kaampay\\services\\auth.service.ts": {
+    "size": 1238,
+    "mtime_ns": 1779969505309066300,
+    "hash": "01c5e52229609135ed7acf8bd51b854102047b4898077c75d8049da988897745"
+  },
+  "D:\\Repo\\kaampay\\services\\index.ts": {
+    "size": 0,
+    "mtime_ns": 1778694774875855400,
+    "hash": "a9f8c6b3c5e8f7d3d21187cef3ba1523028d179dc949ea0c94685d30a8a9a6a5"
+  },
+  "D:\\Repo\\kaampay\\store\\auth.store.ts": {
+    "size": 1539,
+    "mtime_ns": 1779969505309066300,
+    "hash": "12a4e155b008f0c3ca5f42841dcdcebdfcff2833eb653c896ed1ff82c216105b"
+  },
+  "D:\\Repo\\kaampay\\types\\index.ts": {
+    "size": 12,
+    "mtime_ns": 1778694774878375700,
+    "hash": "5eb7a1fa99914bb50b70e8f9d96114737c0858f0887a83c8345c118f584dd8fb"
+  },
+  "D:\\Repo\\kaampay\\utils\\authUtils.ts": {
+    "size": 342,
+    "mtime_ns": 1779969505309066300,
+    "hash": "999689852b45af3d0560f1fe8afc51ec5a090358a66a7447a182a3e31aa2f12e"
+  },
+  "D:\\Repo\\kaampay\\utils\\index.ts": {
+    "size": 30,
+    "mtime_ns": 1779969505310066700,
+    "hash": "a834b18ca2f22af9ab41b4b308b625a8fd20ccab4fac5841966f48a2085222e8"
+  },
+  "D:\\Repo\\kaampay\\README.md": {
+    "size": 1490,
+    "mtime_ns": 1778694774854771100,
+    "hash": "e11616b81e6e5bc1c3ff4b595b16e66535862b65e888300521f442807e6668d0"
+  },
+  "D:\\Repo\\kaampay\\.agents\\rules\\graphify.md": {
+    "size": 947,
+    "mtime_ns": 1779993045722522800,
+    "hash": "e55792958648fb69255e3ce3f71a8fcead36307c34b2d67feda9ac650ac61803"
+  },
+  "D:\\Repo\\kaampay\\.agents\\workflows\\graphify.md": {
+    "size": 287,
+    "mtime_ns": 1779993045722522800,
+    "hash": "02a10022db4416c89203d0bb199d5b2f48da01fb2962bb28adff3ca65ba10260"
+  },
+  "D:\\Repo\\kaampay\\docy\\better_auth_implementation_plan.md": {
+    "size": 8198,
+    "mtime_ns": 1779882820049761200,
+    "hash": "19343e951e3496af45885cbb984938dea2ff5aecde33cda7da14773ec7696aad"
+  },
+  "D:\\Repo\\kaampay\\docy\\freelancer_onboarding_plan.md": {
+    "size": 3856,
+    "mtime_ns": 1779904494021337200,
+    "hash": "96138029b8d0c348b38b248dd4d89f15355cee968adce774ce5b0aef679272b3"
+  },
+  "D:\\Repo\\kaampay\\docy\\freelancer_profile_prd.md": {
+    "size": 3105,
+    "mtime_ns": 1779980653102796100,
+    "hash": "83e3091815bbfd93a9277b48558d1f09ecc9c34ab68ade29862beaae846ae146"
+  },
+  "D:\\Repo\\kaampay\\docy\\KaamPay_PRD.md": {
+    "size": 114700,
+    "mtime_ns": 1773554284382993200,
+    "hash": "a63397bb35a7c57862c2f43beb45c4752fe5b14ba69c8e82dd9fa5b51cd4c1be"
+  },
+  "D:\\Repo\\kaampay\\docy\\plan.md": {
+    "size": 7719,
+    "mtime_ns": 1773572246118966900,
+    "hash": "2b6373b2099253bcb76c2c683cba6965c15080c64ef5c57786ff8026ef3da1ab"
+  },
+  "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md": {
+    "size": 4860,
+    "mtime_ns": 1779894800277238300,
+    "hash": "a1d7d0757ffc0938a0886f94e714a2a11a3f557c2096b50e5aa2c525437fd4fd"
+  },
+  "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md": {
+    "size": 13168,
+    "mtime_ns": 1778694774876864900,
+    "hash": "c9237536790eff8565278612184e1f051cf1e62d1cdfa7343e9f350d02e3ee2b"
+  }
+}

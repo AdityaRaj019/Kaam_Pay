@@ -1,1 +1,191 @@
-{"nodes": [{"id": "d_repo_kaampay_docy_stepwise_development_plan_md", "label": "stepwise_development_plan.md", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L1"}, {"id": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "label": "KaamPay Stepwise Development Plan", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L1"}, {"id": "docy_stepwise_development_plan_1_project_setup_environment_configuration", "label": "1. Project Setup & Environment Configuration", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L7"}, {"id": "docy_stepwise_development_plan_2_database_schema_data_models_design", "label": "2. Database Schema & Data Models Design", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L21"}, {"id": "docy_stepwise_development_plan_3_backend_authentication_authorization_core", "label": "3. Backend Authentication & Authorization Core", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L37"}, {"id": "docy_stepwise_development_plan_4_frontend_foundation_authentication_ui", "label": "4. Frontend Foundation & Authentication UI", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L53"}, {"id": "docy_stepwise_development_plan_5_gig_management_freelancer_flow", "label": "5. Gig Management (Freelancer Flow)", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L69"}, {"id": "docy_stepwise_development_plan_6_client_discovery_ordering_flow", "label": "6. Client Discovery & Ordering Flow", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L85"}, {"id": "docy_stepwise_development_plan_7_order_lifecycle_revisions_submissions", "label": "7. Order Lifecycle, Revisions & Submissions", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L101"}, {"id": "docy_stepwise_development_plan_8_real_time_communication_chat_notifications", "label": "8. Real-time Communication (Chat & Notifications)", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L117"}, {"id": "docy_stepwise_development_plan_9_trust_system_ratings_reviews_admin_panel", "label": "9. Trust System: Ratings, Reviews & Admin Panel", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L133"}, {"id": "docy_stepwise_development_plan_10_performance_refinement_deployment", "label": "10. Performance, Refinement & Deployment", "file_type": "document", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L149"}], "edges": [{"source": "d_repo_kaampay_docy_stepwise_development_plan_md", "target": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L1", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_1_project_setup_environment_configuration", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L7", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_2_database_schema_data_models_design", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L21", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_3_backend_authentication_authorization_core", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L37", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_4_frontend_foundation_authentication_ui", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L53", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_5_gig_management_freelancer_flow", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L69", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_6_client_discovery_ordering_flow", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L85", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_7_order_lifecycle_revisions_submissions", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L101", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_8_real_time_communication_chat_notifications", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L117", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_9_trust_system_ratings_reviews_admin_panel", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L133", "weight": 1.0}, {"source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan", "target": "docy_stepwise_development_plan_10_performance_refinement_deployment", "relation": "contains", "confidence": "EXTRACTED", "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md", "source_location": "L149", "weight": 1.0}], "input_tokens": 0, "output_tokens": 0}
+{
+  "nodes": [
+    {
+      "id": "d_repo_kaampay_docy_stepwise_development_plan_md",
+      "label": "stepwise_development_plan.md",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "label": "KaamPay Stepwise Development Plan",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docy_stepwise_development_plan_1_project_setup_environment_configuration",
+      "label": "1. Project Setup & Environment Configuration",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "docy_stepwise_development_plan_2_database_schema_data_models_design",
+      "label": "2. Database Schema & Data Models Design",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "docy_stepwise_development_plan_3_backend_authentication_authorization_core",
+      "label": "3. Backend Authentication & Authorization Core",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "docy_stepwise_development_plan_4_frontend_foundation_authentication_ui",
+      "label": "4. Frontend Foundation & Authentication UI",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "docy_stepwise_development_plan_5_gig_management_freelancer_flow",
+      "label": "5. Gig Management (Freelancer Flow)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "docy_stepwise_development_plan_6_client_discovery_ordering_flow",
+      "label": "6. Client Discovery & Ordering Flow",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "docy_stepwise_development_plan_7_order_lifecycle_revisions_submissions",
+      "label": "7. Order Lifecycle, Revisions & Submissions",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L101"
+    },
+    {
+      "id": "docy_stepwise_development_plan_8_real_time_communication_chat_notifications",
+      "label": "8. Real-time Communication (Chat & Notifications)",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L117"
+    },
+    {
+      "id": "docy_stepwise_development_plan_9_trust_system_ratings_reviews_admin_panel",
+      "label": "9. Trust System: Ratings, Reviews & Admin Panel",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L133"
+    },
+    {
+      "id": "docy_stepwise_development_plan_10_performance_refinement_deployment",
+      "label": "10. Performance, Refinement & Deployment",
+      "file_type": "document",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L149"
+    }
+  ],
+  "edges": [
+    {
+      "source": "d_repo_kaampay_docy_stepwise_development_plan_md",
+      "target": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_1_project_setup_environment_configuration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_2_database_schema_data_models_design",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_3_backend_authentication_authorization_core",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_4_frontend_foundation_authentication_ui",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_5_gig_management_freelancer_flow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_6_client_discovery_ordering_flow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_7_order_lifecycle_revisions_submissions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_8_real_time_communication_chat_notifications",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_9_trust_system_ratings_reviews_admin_panel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "docy_stepwise_development_plan_kaampay_stepwise_development_plan",
+      "target": "docy_stepwise_development_plan_10_performance_refinement_deployment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md",
+      "source_location": "L149",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
