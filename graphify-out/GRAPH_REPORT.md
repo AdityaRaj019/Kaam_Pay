@@ -1,7 +1,7 @@
 # Graph Report - kaampay  (2026-05-29)
 
 ## Corpus Check
-- 117 files · ~139,831 words
+- 117 files · ~139,849 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ca73b23e`
+- Built from commit: `0aac8401`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -280,12 +280,12 @@ Cohesion: 0.09
 Nodes (25): build_component_data(), connections_from_cache(), connections_from_cache2(), connections_to_cache(), connections_to_cache2(), context_items(), find_connections(), find_connections2() (+17 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.11
-Nodes (23): build_plugin_file_record(), bytePairEncode(), bytePairMerge(), create_settings_proxy(), current_note(), decode(), default(), emit_source_opened() (+15 more)
+Cohesion: 0.12
+Nodes (21): build_plugin_file_record(), bytePairEncode(), bytePairMerge(), create_settings_proxy(), current_note(), decode(), default(), emit_source_opened() (+13 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.09
-Nodes (25): adapter_name(), ajson_merge(), get_adapters_as_options(), get_context_codeblock_suggest_action_keys(), get_enriched_model_data(), get_model_key_options(), get_models(), get_models_as_options() (+17 more)
+Cohesion: 0.10
+Nodes (22): adapter_name(), blocks(), get_adapters_as_options(), get_context_codeblock_suggest_action_keys(), get_enriched_model_data(), get_many(), get_model_key_options(), get_models() (+14 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.10
@@ -316,8 +316,8 @@ Cohesion: 0.16
 Nodes (17): display(), empty(), empty_element(), post_process23(), prepare_layout(), render(), render28(), render6() (+9 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.17
-Nodes (21): download_and_write_release_asset(), download_plugin_files(), emit(), enable(), enable_plugin(), get_install_enable_behavior(), get_latest_github_release(), get_plugin_action_label() (+13 more)
+Cohesion: 0.28
+Nodes (13): download_and_write_release_asset(), download_plugin_files(), enable(), enable_plugin(), get_install_enable_behavior(), get_latest_github_release(), get_plugin_action_label(), get_plugin_install_method() (+5 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.16
@@ -352,8 +352,8 @@ Cohesion: 0.13
 Nodes (16): build_badge_html(), build_html2(), build_html6(), build_item_html(), build_origin_badges_html(), derive_events_checklist_groups(), escape_html(), format_folder_badge_label() (+8 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.18
-Nodes (11): build_link_record(), get_bases_cache_links(), get_bases_file_links(), get_bases_markdown_table(), get_bases_table_links(), get_canvas_node_links(), get_links(), get_markdown_links() (+3 more)
+Cohesion: 0.12
+Nodes (18): build_link_record(), clean_and_update_source_blocks(), _extract_block(), get_bases_cache_links(), get_bases_file_links(), get_bases_markdown_table(), get_bases_table_links(), get_canvas_node_links() (+10 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.10
@@ -372,8 +372,8 @@ Cohesion: 0.11
 Nodes (19): devDependencies, eslint, eslint-config-next, eslint-config-prettier, eslint-plugin-prettier, husky, lint-staged, prettier (+11 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.29
-Nodes (8): embed_input(), embed_queue(), error(), get_embed_input(), next_log_stats(), on_any_event(), post_process21(), show_native_notice()
+Cohesion: 0.17
+Nodes (15): add_item(), default_model_key(), embed_input(), embed_queue(), error(), get_embed_input(), new_model(), next_log_stats() (+7 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.11
@@ -464,8 +464,8 @@ Cohesion: 0.20
 Nodes (10): 6.2 Module 2: Profile Management, 6.5 Module 5: Payment System, 6.6 Module 6: Real-Time Chat System, 6.7 Module 7: Ratings & Reviews, 6.8 Module 8: Admin Panel, 6.9 Module 9: Notifications (Basic), 6. Functional Requirements, code:block2 (+----------------------+) (+2 more)
 
 ### Community 53 - "Community 53"
-Cohesion: 0.16
-Nodes (15): build_plugin_release_page_url(), canonical_url(), details_url(), get_plugin_canonical_url(), get_plugin_details_url(), get_release_page_slug(), get_track_canonical_url(), get_track_details_url() (+7 more)
+Cohesion: 0.28
+Nodes (9): canonical_url(), details_url(), get_plugin_canonical_url(), get_plugin_details_url(), get_track_canonical_url(), get_track_details_url(), get_track_plugin(), installed_plugin() (+1 more)
 
 ### Community 54 - "Community 54"
 Cohesion: 0.20
@@ -532,8 +532,8 @@ Cohesion: 0.19
 Nodes (14): add_items(), context_convert_to_named(), copy_to_clipboard2(), emit_event(), emit_get_text_error(), emit_named_context_remove_blocked_notice(), emit_warning_event(), get_named_context() (+6 more)
 
 ### Community 70 - "Community 70"
-Cohesion: 0.18
-Nodes (14): add_item(), clean_and_update_source_blocks(), default_model_key(), _extract_block(), get_line_range2(), get_longest_words_in_order(), has_block_data_changes(), new_model() (+6 more)
+Cohesion: 0.40
+Nodes (5): ajson_merge(), is_object(), _parse(), _parse_ajson_key(), parse_single_file_ajson()
 
 ### Community 71 - "Community 71"
 Cohesion: 0.33
@@ -672,8 +672,8 @@ Cohesion: 0.25
 Nodes (8): build_events_opts(), constructor(), define_default_create_methods(), item_sub_exp(), merge_defaults(), normalize_positive_epoch_ms(), _reset_embed_queue_stats(), validate_opts()
 
 ### Community 123 - "Community 123"
-Cohesion: 0.36
-Nodes (8): build_plugin_list_items(), default_smart_plugins_list(), display_item_type(), get_plugin_group_key(), get_plugin_item_type(), hydrate_core_plugin_versions(), hydrate_plugins_list(), install_target_item_type()
+Cohesion: 0.18
+Nodes (14): build_plugin_list_items(), build_plugin_release_page_url(), default_smart_plugins_list(), display_item_type(), get_plugin_group_key(), get_plugin_item_type(), get_release_page_slug(), hydrate_core_plugin_versions() (+6 more)
 
 ### Community 124 - "Community 124"
 Cohesion: 0.22
@@ -724,8 +724,8 @@ Cohesion: 0.29
 Nodes (7): compute_collections_version_signature(), config(), deep_clone_config(), handle_env_load_attempt_after_loaded(), is_plain_object2(), is_supported_smart_env_version(), normalize_opts()
 
 ### Community 143 - "Community 143"
-Cohesion: 0.43
-Nodes (7): dispatch_btn_event_action(), dispatch_notice_action(), get_source_event(), get_source_event_key(), is_plain_object4(), run_notice_callback(), to_trimmed_string()
+Cohesion: 0.19
+Nodes (15): dispatch_btn_event_action(), dispatch_notice_action(), emit(), get_source_event(), get_source_event_key(), handle_choose_action(), is_plain_object4(), mark_all_notification_entries_seen() (+7 more)
 
 ### Community 144 - "Community 144"
 Cohesion: 0.33
@@ -813,7 +813,7 @@ Nodes (4): check_for_updates(), get_last_known_version(), is_new_plugin_version(
 
 ### Community 168 - "Community 168"
 Cohesion: 0.67
-Nodes (3): blocks(), get_many(), update_many()
+Nodes (3): normalize_remove_targets(), remove_by_path(), remove_by_paths()
 
 ### Community 169 - "Community 169"
 Cohesion: 0.50
@@ -944,7 +944,7 @@ Cohesion: 0.40
 Nodes (6): clear_all(), init_fs(), init_items(), run_clear_all(), selection_callback(), update_exclusions()
 
 ## Knowledge Gaps
-- **469 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+464 more)
+- **469 isolated node(s):** `UserProfile`, `FullUser`, `AppNavbarProps`, `[2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes`, `eslintConfig` (+464 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -955,7 +955,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `18. Development Roadmap & Sprint Plan` connect `Community 51` to `Community 21`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
+- **What connects `UserProfile`, `FullUser`, `AppNavbarProps` to the rest of the system?**
   _469 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.0058823529411764705 - nodes in this community are weakly interconnected._

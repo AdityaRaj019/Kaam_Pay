@@ -4,14 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Bell,
-  Search,
-  ChevronDown,
-  LogOut,
-  LayoutDashboard,
-  ExternalLink,
-} from 'lucide-react';
+import { Bell, Search, ChevronDown, LogOut, LayoutDashboard, ExternalLink } from 'lucide-react';
 import api from '@/lib/axios';
 import toast from 'react-hot-toast';
 
@@ -65,13 +58,12 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
   return (
     <nav className="bg-white border-b border-slate-200 px-6 py-3.5 sticky top-0 z-40 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        
-      {/* KaamPay Logo */}
-          <Link href="/" className="flex items-center gap-2 pl-4 border-l border-slate-200">
-            <span className="text-xl font-black text-[#4a4bd7] tracking-tight">
-              Kaam<span className="text-green-600">Pay</span>
-            </span>
-          </Link>
+        {/* KaamPay Logo */}
+        <Link href="/" className="flex items-center gap-2 pl-4 border-l border-slate-200">
+          <span className="text-xl font-black text-[#4a4bd7] tracking-tight">
+            Kaam<span className="text-green-600">Pay</span>
+          </span>
+        </Link>
         {/* Left Side: Navigation Links AFTER the logo */}
         <div className="flex items-center space-x-6">
           {/* Find Work Dropdown */}
@@ -81,7 +73,9 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
               className="flex items-center gap-1.5 text-slate-700 hover:text-[#4a4bd7] transition-colors font-bold text-sm"
             >
               <span>Find Work</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isFindWorkOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${isFindWorkOpen ? 'rotate-180' : ''}`}
+              />
             </button>
             <AnimatePresence>
               {isFindWorkOpen && (
@@ -104,7 +98,9 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
               className="flex items-center gap-1.5 text-slate-700 hover:text-[#4a4bd7] transition-colors font-bold text-sm"
             >
               <span>Deliver</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDeliverOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${isDeliverOpen ? 'rotate-180' : ''}`}
+              />
             </button>
             <AnimatePresence>
               {isDeliverOpen && (
@@ -127,7 +123,6 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
           >
             <span>Messages</span>
           </Link>
-
         </div>
 
         {/* Right Side: Search, Notification, Avatar */}
@@ -180,7 +175,9 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                 >
                   {/* User Profile Summary */}
                   <div className="px-3 py-2 border-b border-slate-100 mb-2">
-                    <p className="font-bold text-slate-800 text-sm truncate">{user?.name || 'User'}</p>
+                    <p className="font-bold text-slate-800 text-sm truncate">
+                      {user?.name || 'User'}
+                    </p>
                     <p className="text-slate-400 text-xs truncate mt-0.5">{user?.email || ''}</p>
                   </div>
 
@@ -211,7 +208,6 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
             </AnimatePresence>
           </div>
         </div>
-
       </div>
     </nav>
   );
