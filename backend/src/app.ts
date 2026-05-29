@@ -41,8 +41,8 @@ app.all('/api/auth/*splat', (req: Request, res: Response, next: NextFunction) =>
 });
 
 // ─── Body parsing ────────────────────────────────────────────
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ limit: '10mb', extended: false }));
 
 // ─── Debug logger ─────────────────────────────────────────────
 app.use((req: Request, _res: Response, next: NextFunction) => {

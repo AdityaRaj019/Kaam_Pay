@@ -127,6 +127,7 @@ model Profile {
   hourlyRate     Float?
   experience     String?
   purpose        String?
+  education      String?
   updatedAt      DateTime @updatedAt
 }
 
@@ -140,6 +141,7 @@ model Gig {
   price        Float
   deliveryTime Int       // In days
   status       GigStatus @default(ACTIVE)
+  images       String[]
   orders       Order[]
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
