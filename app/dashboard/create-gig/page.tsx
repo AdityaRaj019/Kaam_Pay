@@ -6,13 +6,7 @@ import Link from 'next/link';
 import { useSession } from '@/lib/auth/auth-client';
 import api from '@/lib/axios';
 import toast from 'react-hot-toast';
-import {
-  ArrowLeft,
-  UploadCloud,
-  X,
-  Loader2,
-  Sparkles,
-} from 'lucide-react';
+import { ArrowLeft, UploadCloud, X, Loader2, Sparkles } from 'lucide-react';
 import { AppNavbar } from '@/components/AppNavbar';
 import { Footer } from '@/components/Footer';
 
@@ -173,7 +167,7 @@ export default function CreateGigPage() {
     <div className="min-h-screen bg-slate-50 font-inter flex flex-col justify-between">
       <div>
         <AppNavbar user={appNavbarUser} />
-        
+
         <main className="max-w-4xl mx-auto px-6 py-10">
           {/* Back Button */}
           <Link
@@ -198,7 +192,8 @@ export default function CreateGigPage() {
                 Create a New Gig <Sparkles className="w-6 h-6 text-amber-500" />
               </h1>
               <p className="text-slate-500 text-sm mt-1">
-                Outline your service, set a competitive price, and upload portfolio images. Gigs are instantly discoverable by clients.
+                Outline your service, set a competitive price, and upload portfolio images. Gigs are
+                instantly discoverable by clients.
               </p>
             </div>
 
@@ -218,7 +213,7 @@ export default function CreateGigPage() {
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4a4bd7]/20 focus:border-[#4a4bd7] transition-all text-slate-800 font-semibold"
                 />
                 <p className="text-[10px] text-slate-400 font-medium">
-                  {"Be descriptive. Start with words like \"I will...\" (Min. 5 characters)."}
+                  {'Be descriptive. Start with words like "I will..." (Min. 5 characters).'}
                 </p>
               </div>
 
@@ -235,7 +230,9 @@ export default function CreateGigPage() {
                     onChange={(e) => setCategory(e.target.value)}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4a4bd7]/20 focus:border-[#4a4bd7] transition-all text-slate-800 font-semibold"
                   >
-                    <option value="" disabled>Select category</option>
+                    <option value="" disabled>
+                      Select category
+                    </option>
                     <option value="Video Editing">Video Editing</option>
                     <option value="Copywriting">Copywriting</option>
                     <option value="Cooking">Cooking</option>
@@ -260,7 +257,9 @@ export default function CreateGigPage() {
                       min={100}
                       placeholder="e.g. 1500"
                       value={price}
-                      onChange={(e) => setPrice(e.target.value === '' ? '' : Number(e.target.value))}
+                      onChange={(e) =>
+                        setPrice(e.target.value === '' ? '' : Number(e.target.value))
+                      }
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4a4bd7]/20 focus:border-[#4a4bd7] transition-all text-slate-800 font-bold"
                     />
                   </div>
@@ -277,7 +276,9 @@ export default function CreateGigPage() {
                     min={1}
                     placeholder="e.g. 3"
                     value={deliveryTime}
-                    onChange={(e) => setDeliveryTime(e.target.value === '' ? '' : Number(e.target.value))}
+                    onChange={(e) =>
+                      setDeliveryTime(e.target.value === '' ? '' : Number(e.target.value))
+                    }
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4a4bd7]/20 focus:border-[#4a4bd7] transition-all text-slate-800 font-semibold"
                   />
                 </div>
@@ -306,7 +307,7 @@ export default function CreateGigPage() {
                 <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
                   Portfolio / Proof Images <span className="text-red-500">*</span>
                 </label>
-                
+
                 {/* Drag and Drop Zone */}
                 <div
                   onDragOver={handleDragOver}
@@ -322,7 +323,8 @@ export default function CreateGigPage() {
                   />
                   <UploadCloud className="w-10 h-10 text-slate-400 group-hover:text-[#4a4bd7] transition-colors mb-3" />
                   <p className="text-sm font-bold text-slate-700">
-                    Drag and drop your images here, or <span className="text-[#4a4bd7]">browse files</span>
+                    Drag and drop your images here, or{' '}
+                    <span className="text-[#4a4bd7]">browse files</span>
                   </p>
                   <p className="text-[10px] text-slate-400 mt-1 font-semibold">
                     Supports PNG, JPG, JPEG, WEBP (Max 5MB each)
@@ -333,7 +335,10 @@ export default function CreateGigPage() {
                 {imagePreviews.length > 0 && (
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 bg-slate-50 p-4 border border-slate-200 rounded-2xl">
                     {imagePreviews.map((preview, index) => (
-                      <div key={index} className="relative group aspect-video rounded-xl overflow-hidden border border-slate-200 bg-white">
+                      <div
+                        key={index}
+                        className="relative group aspect-video rounded-xl overflow-hidden border border-slate-200 bg-white"
+                      >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={preview}

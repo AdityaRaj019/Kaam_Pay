@@ -15,7 +15,7 @@ export class GigService {
     ) {
       throw new AppError(
         'Cloudinary credentials are not configured in the backend .env file.',
-        500
+        500,
       );
     }
 
@@ -28,10 +28,7 @@ export class GigService {
     } catch (err: unknown) {
       console.error('Cloudinary Upload Error:', err);
       const message = err instanceof Error ? err.message : String(err);
-      throw new AppError(
-        `Failed to upload image to Cloudinary: ${message}`,
-        500
-      );
+      throw new AppError(`Failed to upload image to Cloudinary: ${message}`, 500);
     }
   }
 

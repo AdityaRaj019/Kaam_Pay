@@ -1,16 +1,16 @@
 # Graph Report - kaampay  (2026-05-29)
 
 ## Corpus Check
-- 123 files · ~142,384 words
+- 123 files · ~142,462 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2205 nodes · 3990 edges · 227 communities (193 shown, 34 thin omitted)
+- 2205 nodes · 3990 edges · 226 communities (192 shown, 34 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `be819d59`
+- Built from commit: `62617fc8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -162,7 +162,6 @@
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 161|Community 161]]
 - [[_COMMUNITY_Community 162|Community 162]]
-- [[_COMMUNITY_Community 163|Community 163]]
 - [[_COMMUNITY_Community 164|Community 164]]
 - [[_COMMUNITY_Community 165|Community 165]]
 - [[_COMMUNITY_Community 166|Community 166]]
@@ -246,7 +245,7 @@
 - `DashboardPage()` --calls--> `useAuthStore`  [EXTRACTED]
   app/dashboard/page.tsx → store/auth.store.ts
 
-## Communities (227 total, 34 thin omitted)
+## Communities (226 total, 34 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.25
@@ -290,7 +289,7 @@ Nodes (20): centerStrength, close, collapse-color-groups, collapse-display, coll
 
 ### Community 10 - "Community 10"
 Cohesion: 0.12
-Nodes (19): getDisplayText(), initialize(), is_new_user(), load_new_user_state(), on(), post_process3(), register_codeblock_processors(), register_commands() (+11 more)
+Nodes (19): getDisplayText(), highlight_reset_data(), initialize(), is_new_user(), load_new_user_state(), on(), post_process10(), register_codeblock_processors() (+11 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.14
@@ -329,8 +328,8 @@ Cohesion: 0.27
 Nodes (10): can_fallback_to_v3(), clear_message_timeout(), _handle_message(), _handle_message_result(), is_iframe_timeout_error(), is_retryable_webgpu_error(), should_fallback_to_v3(), should_retry_in_v4() (+2 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.16
-Nodes (14): actions(), add_main(), add_smart_chat_icon(), add_smart_connections_icon(), add_smart_lookup_icon(), camel_case_to_snake_case(), create(), create_actions_proxy() (+6 more)
+Cohesion: 0.12
+Nodes (20): actions(), add_main(), add_smart_chat_icon(), add_smart_connections_icon(), add_smart_lookup_icon(), build_events_opts(), camel_case_to_snake_case(), constructor() (+12 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.09
@@ -486,7 +485,7 @@ Nodes (8): 4.1 Primary User Segments, 4.2 Detailed User Personas, 4.3 User Roles
 
 ### Community 59 - "Community 59"
 Cohesion: 0.23
-Nodes (14): attach_disposer(), create_render_scheduler(), get_pending_removals(), highlight_reset_data(), on_event(), post_process10(), post_process13(), post_process14() (+6 more)
+Nodes (14): attach_disposer(), create_render_scheduler(), get_pending_removals(), on_event(), post_process13(), post_process14(), post_process15(), post_process16() (+6 more)
 
 ### Community 60 - "Community 60"
 Cohesion: 0.25
@@ -673,8 +672,8 @@ Cohesion: 0.50
 Nodes (4): check_for_updates(), get_last_known_version(), is_new_plugin_version(), set_last_known_version()
 
 ### Community 125 - "Community 125"
-Cohesion: 0.33
-Nodes (5): UserService, FreelancerOnboardingInput, freelancerOnboardingSchema, AsyncHandler, catchAsync()
+Cohesion: 0.52
+Nodes (3): UserService, FreelancerOnboardingInput, freelancerOnboardingSchema
 
 ### Community 133 - "Community 133"
 Cohesion: 0.32
@@ -733,8 +732,8 @@ Cohesion: 0.40
 Nodes (6): build_html(), build_html3(), calculate_embed_coverage(), format_collection_name(), generate_collection_stats(), get_generic_collection_stats()
 
 ### Community 147 - "Community 147"
-Cohesion: 0.52
-Nodes (3): FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema
+Cohesion: 0.33
+Nodes (5): FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema, AsyncHandler, catchAsync()
 
 ### Community 148 - "Community 148"
 Cohesion: 0.38
@@ -795,10 +794,6 @@ Nodes (5): get_copy_current_dependencies(), get_current_copy_params(), is_copy_c
 ### Community 162 - "Community 162"
 Cohesion: 0.60
 Nodes (5): _get_openai_content(), _get_openai_role(), _transform_message_to_openai(), _transform_single_message_to_openai(), _transform_tool_calls_to_openai()
-
-### Community 163 - "Community 163"
-Cohesion: 0.33
-Nodes (6): build_events_opts(), constructor(), define_default_create_methods(), merge_defaults(), _reset_embed_queue_stats(), validate_opts()
 
 ### Community 164 - "Community 164"
 Cohesion: 0.40
@@ -937,7 +932,7 @@ Cohesion: 0.50
 Nodes (3): [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes, [2026-05-29] Gig & Project Creation Feature (Backend, Cloudinary, and Frontend), Action Register
 
 ## Knowledge Gaps
-- **475 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+470 more)
+- **475 isolated node(s):** `SessionUser`, `SessionUser`, `UserProfile`, `FullUser`, `Gig` (+470 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -950,7 +945,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `6.3 Module 3: Gig Management` connect `Community 144` to `Community 52`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
+- **What connects `SessionUser`, `SessionUser`, `UserProfile` to the rest of the system?**
   _475 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.0058823529411764705 - nodes in this community are weakly interconnected._

@@ -15,12 +15,10 @@
   - Created validation schemas (Zod), controllers, and services inside the new `gig` module to process, validate, upload base64 images to Cloudinary, and persist gig records with the returned URLs.
   - Implemented the `createGigRateLimiter` middleware on the API route to throttle creations to 3 requests per minute per IP.
   - Added query methods to retrieve a freelancer's own gigs (`GET /api/gigs/my-gigs`) and all active gigs (`GET /api/gigs`).
-- **Frontend Implementation & Gig Rendering**: 
+- **Frontend Implementation & Gig Rendering**:
   - Built a premium creation form incorporating drag-and-drop file inputs, base64 reader hooks, validation warnings, and publish triggers inside [create-gig/page.tsx](file:///d:/Repo/kaampay/app/dashboard/create-gig/page.tsx). Added the "Create Gig" CTA to the main [dashboard/page.tsx](file:///d:/Repo/kaampay/app/dashboard/page.tsx).
   - Updated [profile/page.tsx](file:///d:/Repo/kaampay/app/profile/page.tsx) to query the database and render the user's real gigs (showing Cloudinary-stored portfolio images) with a fallback to mock gigs if none are found.
 - **Type Safety & Linter Fixes**: Removed caught `: any` types and implemented robust `unknown` type-checking/narrowing in [create-gig/page.tsx](file:///d:/Repo/kaampay/app/dashboard/create-gig/page.tsx) and [gig.service.ts](file:///d:/Repo/kaampay/backend/src/modules/gig/gig.service.ts) to satisfy ESLint. Escaped raw JSX double quotes on line 221 of [create-gig/page.tsx](file:///d:/Repo/kaampay/app/dashboard/create-gig/page.tsx) to resolve the `react/no-unescaped-entities` rule.
 - **Payload Limit Increase ([backend/src/app.ts](file:///d:/Repo/kaampay/backend/src/app.ts))**: Increased Express body parsing limit to `10mb` (from `10kb`) for JSON and URL-encoded payloads to support uploading base64 gig portfolio images.
-
-
-
+- **Git Hooks**: Disabled the automatic background graphify hooks by clearing `.husky/post-commit` and `.husky/post-checkout` to prevent files in `graphify-out/` from becoming dirty in the working tree immediately after a commit.
 

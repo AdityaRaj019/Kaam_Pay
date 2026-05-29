@@ -21,11 +21,7 @@ export const createGig = catchAsync(async (req: Request, res: Response) => {
     const errorDetails = validation.error.issues
       .map((issue) => `${issue.path.join('.')}: ${issue.message}`)
       .join(', ');
-    throw new AppError(
-      `Validation failed: ${errorDetails}`,
-      422,
-      ErrorCode.VALIDATION_ERROR
-    );
+    throw new AppError(`Validation failed: ${errorDetails}`, 422, ErrorCode.VALIDATION_ERROR);
   }
 
   const newGig = await GigService.createGig(req.user.id, validation.data);

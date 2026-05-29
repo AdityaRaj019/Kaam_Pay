@@ -513,83 +513,90 @@ function FreelancerProfileContent() {
 
                 {/* Horizontal Portfolio Row */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {gigs.length > 0 ? (
-                    gigs.map((gig) => (
-                      <div
-                        key={gig.id}
-                        className="group border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
-                      >
-                        {/* Gig Image */}
-                        <div className="h-32 w-full overflow-hidden bg-slate-100 relative">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={gig.images[0] || 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'}
-                            alt={gig.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute top-2 left-2 bg-white/95 backdrop-blur px-2 py-0.5 rounded-md text-[10px] font-black text-slate-800 uppercase tracking-wider shadow-sm">
-                            {gig.category}
+                  {gigs.length > 0
+                    ? gigs.map((gig) => (
+                        <div
+                          key={gig.id}
+                          className="group border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
+                        >
+                          {/* Gig Image */}
+                          <div className="h-32 w-full overflow-hidden bg-slate-100 relative">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={
+                                gig.images[0] ||
+                                'https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
+                              }
+                              alt={gig.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-2 left-2 bg-white/95 backdrop-blur px-2 py-0.5 rounded-md text-[10px] font-black text-slate-800 uppercase tracking-wider shadow-sm">
+                              {gig.category}
+                            </div>
                           </div>
-                        </div>
 
-                        {/* Gig Content */}
-                        <div className="p-4 space-y-2">
-                          <h3 className="font-bold text-slate-855 text-xs line-clamp-2 leading-tight group-hover:text-[#4a4bd7] transition-colors">
-                            {gig.title}
-                          </h3>
-                          <div className="flex items-center gap-1 text-[10px] text-slate-500">
-                            <Star className="w-3.5 h-3.5 text-amber-550 fill-amber-550" />
-                            <span className="font-bold text-slate-700">5.0</span>
-                            <span>(Active)</span>
-                          </div>
-                          <div className="border-t border-slate-100 pt-2.5 flex items-center justify-between mt-2">
-                            <span className="text-[10px] text-slate-400 font-medium">
-                              Starting at
-                            </span>
-                            <span className="text-xs font-black text-slate-800">₹{gig.price}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    mockGigs.map((gig) => (
-                      <div
-                        key={gig.id}
-                        className="group border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
-                      >
-                        {/* Gig Image */}
-                        <div className="h-32 w-full overflow-hidden bg-slate-100 relative">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={gig.image}
-                            alt={gig.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute top-2 left-2 bg-white/95 backdrop-blur px-2 py-0.5 rounded-md text-[10px] font-black text-slate-800 uppercase tracking-wider shadow-sm">
-                            {gig.category}
+                          {/* Gig Content */}
+                          <div className="p-4 space-y-2">
+                            <h3 className="font-bold text-slate-855 text-xs line-clamp-2 leading-tight group-hover:text-[#4a4bd7] transition-colors">
+                              {gig.title}
+                            </h3>
+                            <div className="flex items-center gap-1 text-[10px] text-slate-500">
+                              <Star className="w-3.5 h-3.5 text-amber-550 fill-amber-550" />
+                              <span className="font-bold text-slate-700">5.0</span>
+                              <span>(Active)</span>
+                            </div>
+                            <div className="border-t border-slate-100 pt-2.5 flex items-center justify-between mt-2">
+                              <span className="text-[10px] text-slate-400 font-medium">
+                                Starting at
+                              </span>
+                              <span className="text-xs font-black text-slate-800">
+                                ₹{gig.price}
+                              </span>
+                            </div>
                           </div>
                         </div>
+                      ))
+                    : mockGigs.map((gig) => (
+                        <div
+                          key={gig.id}
+                          className="group border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
+                        >
+                          {/* Gig Image */}
+                          <div className="h-32 w-full overflow-hidden bg-slate-100 relative">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={gig.image}
+                              alt={gig.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-2 left-2 bg-white/95 backdrop-blur px-2 py-0.5 rounded-md text-[10px] font-black text-slate-800 uppercase tracking-wider shadow-sm">
+                              {gig.category}
+                            </div>
+                          </div>
 
-                        {/* Gig Content */}
-                        <div className="p-4 space-y-2">
-                          <h3 className="font-bold text-slate-855 text-xs line-clamp-2 leading-tight group-hover:text-[#4a4bd7] transition-colors">
-                            {gig.title}
-                          </h3>
-                          <div className="flex items-center gap-1 text-[10px] text-slate-500">
-                            <Star className="w-3.5 h-3.5 text-amber-550 fill-amber-500" />
-                            <span className="font-bold text-slate-700">{gig.rating.toFixed(1)}</span>
-                            <span>({gig.reviewsCount})</span>
-                          </div>
-                          <div className="border-t border-slate-100 pt-2.5 flex items-center justify-between mt-2">
-                            <span className="text-[10px] text-slate-400 font-medium">
-                              Starting at
-                            </span>
-                            <span className="text-xs font-black text-slate-800">₹{gig.price}</span>
+                          {/* Gig Content */}
+                          <div className="p-4 space-y-2">
+                            <h3 className="font-bold text-slate-855 text-xs line-clamp-2 leading-tight group-hover:text-[#4a4bd7] transition-colors">
+                              {gig.title}
+                            </h3>
+                            <div className="flex items-center gap-1 text-[10px] text-slate-500">
+                              <Star className="w-3.5 h-3.5 text-amber-550 fill-amber-500" />
+                              <span className="font-bold text-slate-700">
+                                {gig.rating.toFixed(1)}
+                              </span>
+                              <span>({gig.reviewsCount})</span>
+                            </div>
+                            <div className="border-t border-slate-100 pt-2.5 flex items-center justify-between mt-2">
+                              <span className="text-[10px] text-slate-400 font-medium">
+                                Starting at
+                              </span>
+                              <span className="text-xs font-black text-slate-800">
+                                ₹{gig.price}
+                              </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))
-                  )}
+                      ))}
                 </div>
               </div>
             </div>
