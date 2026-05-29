@@ -705,8 +705,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\kaampay\\Action_Register.md": {
-    "mtime": 1780051235.0116286,
-    "ast_hash": "c8e1b88ed2c85fca9cd3433f07c0276e",
+    "mtime": 1780051572.7112951,
+    "ast_hash": "bda667ed14ddb481573a71c07cb776ef",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\kaampay\\Context_State.md": {
@@ -752,6 +752,11 @@
   "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.validation.ts": {
     "mtime": 1780049530.2683105,
     "ast_hash": "5d7cea7abf2129c7fb5306b5c9cdd180",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\pre-commit": {
+    "mtime": 1780051513.835681,
+    "ast_hash": "3fddc5e0925eb783c39411b7ed003394",
     "semantic_hash": ""
   }
 }

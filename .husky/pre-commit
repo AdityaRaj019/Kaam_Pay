@@ -1,1 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run linters and formatters
 npx lint-staged
+
+# Rebuild the graphify graph synchronously
+echo "[graphify pre-commit] Rebuilding knowledge graph..."
+graphify update . 2>/dev/null || python3 -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))" 2>/dev/null || python -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))" 2>/dev/null
+
+# Automatically stage the updated graph files in the same commit
+echo "[graphify pre-commit] Staging graph files..."
+git add graphify-out/
