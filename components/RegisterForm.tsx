@@ -17,7 +17,7 @@ export default function RegisterForm() {
   const [country, setCountry] = useState(COUNTRIES[0]);
   const [agreeTerms, setAgreeTerms] = useState(false);
 
-  const { register, isLoading, error } = useAuth();
+  const { register, loginWithSocial, isLoading, error } = useAuth();
 
   const isClient = roleParam === 'client';
   const displayRole = getDisplayRole(isClient);
@@ -66,7 +66,9 @@ export default function RegisterForm() {
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <button
             type="button"
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 border border-slate-300 rounded-full hover:bg-slate-50 transition-colors font-semibold text-slate-700"
+            onClick={() => loginWithSocial('apple')}
+            disabled={isLoading}
+            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 border border-slate-300 rounded-full hover:bg-slate-50 transition-colors font-semibold text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -78,7 +80,9 @@ export default function RegisterForm() {
           </button>
           <button
             type="button"
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors font-semibold"
+            onClick={() => loginWithSocial('google')}
+            disabled={isLoading}
+            className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <svg className="w-5 h-5 bg-white p-0.5 rounded-full" viewBox="0 0 24 24">
               <path
