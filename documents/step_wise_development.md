@@ -5,6 +5,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 1. Project Setup & Environment Configuration
+
 **Goal:** Establish the foundational architecture, repositories, and development environment.
 
 - [ ] **1.1. Backend Scaffolding:** Initialize Node.js & Express API backend with basic folder structure (controllers, routes, models).
@@ -19,6 +20,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 2. Database Schema & Data Models Design
+
 **Goal:** Build robust schemas mapping to the PRD specifications.
 
 - [ ] **2.1. User Model:** Define schema for users (Name, Email, Password Hash, Role, Verification Status).
@@ -35,6 +37,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 3. Backend Authentication & Authorization Core
+
 **Goal:** Secure the platform and manage user identities.
 
 - [ ] **3.1. Auth Routes Initialization:** Set up `/api/auth` controller structure.
@@ -51,6 +54,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 4. Frontend Foundation & Authentication UI
+
 **Goal:** Create a stunning, responsive aesthetic and functional auth flow.
 
 - [ ] **4.1. Global Styling & Theme:** Configure `globals.css`, fonts (Inter/Outfit), standard colors, and Dark/Light mode tokens.
@@ -67,6 +71,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 5. Gig Management (Freelancer Flow)
+
 **Goal:** Allow freelancers to create, edit, and exhibit their services.
 
 - [ ] **5.1. Create Gig API:** Build backend endpoint accepting complete gig details and saving to DB.
@@ -83,6 +88,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 6. Client Discovery & Ordering Flow
+
 **Goal:** Enable clients to find gigs, execute payments, and track orders.
 
 - [ ] **6.1. Discovery Feed & Search API:** Backend logic allowing full-text search, filtering (by price, rating) and pagination.
@@ -99,6 +105,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 7. Order Lifecycle, Revisions & Submissions
+
 **Goal:** Handle the workflow between payment and final delivery.
 
 - [ ] **7.1. Order State Machine Logic:** Backend enforcer to ensure transition safety (`Pending` -> `Progress` -> `Submitted` -> `Complete`).
@@ -115,6 +122,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 8. Real-time Communication (Chat & Notifications)
+
 **Goal:** Enable seamless communication and immediate platform feedback.
 
 - [ ] **8.1. Socket.IO Server Setup:** Mount WebSocket server on Node endpoint, configuring CORS correctly.
@@ -131,6 +139,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 9. Trust System: Ratings, Reviews & Admin Panel
+
 **Goal:** Moderate the ecosystem and establish credibility metrics.
 
 - [ ] **9.1. Review Mechanism API:** Endpoint permitting a client to submit exactly 1 review post-completion.
@@ -147,6 +156,7 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 ---
 
 ## 10. Performance, Refinement & Deployment
+
 **Goal:** Make the application production-ready, highly aesthetic, and globally available.
 
 - [ ] **10.1. Frontend Optimization:** Implement Next.js Image Optimization and Lazy loading components heavily to ensure sub 2-sec loads.
