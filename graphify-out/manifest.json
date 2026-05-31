@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\app\\(auth)\\register\\page.tsx": {
-    "mtime": 1780162194.1440434,
-    "ast_hash": "c247eef9b60f62e5856704d6b1945457",
+    "mtime": 1780162563.2103736,
+    "ast_hash": "0ece6e8c029cd05007037caa7ff69476",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\app\\(auth)\\signup\\page.tsx": {
@@ -175,8 +175,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\backend\\src\\app.ts": {
-    "mtime": 1780162194.173984,
-    "ast_hash": "baabb5cf427ee13e043b4777aad5f30f",
+    "mtime": 1780162563.2103736,
+    "ast_hash": "b87b18ada2ea33375f32e78df62943f3",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\backend\\src\\server.ts": {
@@ -350,8 +350,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\components\\RegisterForm.tsx": {
-    "mtime": 1780162194.196644,
-    "ast_hash": "fc247b8dd3fbadce3d4ca6adac6ec926",
+    "mtime": 1780162563.2103736,
+    "ast_hash": "a542760abb5c1957ab60d74b7c333998",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\components\\RoleGuard.tsx": {
@@ -420,8 +420,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\hooks\\useAuth.ts": {
-    "mtime": 1780162194.2160783,
-    "ast_hash": "6f71e13b3c1a2269d81991bf06b823bb",
+    "mtime": 1780162563.2174666,
+    "ast_hash": "61f48576d8ba4e0ee0a456513f534aba",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\lib\\axios.ts": {
@@ -705,8 +705,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\kaampay\\Action_Register.md": {
-    "mtime": 1780162191.5498729,
-    "ast_hash": "90daf0c0433e6ce2f8999d2ee2d1fef7",
+    "mtime": 1780162563.2174666,
+    "ast_hash": "4a959239f718b91da0d424ff665fd54d",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\kaampay\\Context_State.md": {

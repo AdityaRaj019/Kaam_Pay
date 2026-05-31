@@ -5,3 +5,4 @@ docy/
 lib/generated/
 .next/
 kaampay/.obsidian/plugins*
+.agents/
