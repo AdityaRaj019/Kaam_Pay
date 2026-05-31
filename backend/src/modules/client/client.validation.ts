@@ -26,7 +26,14 @@ export const freelancerSearchSchema = z.object({
     .string()
     .trim()
     .optional()
-    .transform((val) => (val ? val.split(',').map((s) => s.trim()).filter(Boolean) : undefined)),
+    .transform((val) =>
+      val
+        ? val
+            .split(',')
+            .map((s) => s.trim())
+            .filter(Boolean)
+        : undefined,
+    ),
   minRate: z.coerce.number().min(0, 'minRate must be non-negative').optional(),
   maxRate: z.coerce.number().min(0, 'maxRate must be non-negative').optional(),
   page: z.coerce.number().int().min(1).optional().default(1),
