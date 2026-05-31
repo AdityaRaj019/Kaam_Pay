@@ -2,6 +2,7 @@
 trigger: always_on
 description: Startup and recovery instructions for reading Graphify output and Obsidian vault state before project work
 ---
+
 # Project Context Bootstrap
 
 Use this document to recover project memory before making decisions. The goal is to understand recent changes, open work, and architectural context without re-discovering the project from scratch.
@@ -71,4 +72,3 @@ Mention uncertainty when context is stale, missing, inferred, or contradicted by
 ## Output Discipline
 
 Do not dump the full content of Graphify or Obsidian files into the response. Summarize only the relevant facts and cite the file path when it informs a decision.
-

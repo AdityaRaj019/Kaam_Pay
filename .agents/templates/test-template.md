@@ -2,11 +2,13 @@
 name: test-template
 description: Standard test template for unit testing pure functions and mock services using Vitest/Jest and AAA patterns
 ---
+
 # Test Template Blueprint
 
 Follow this blueprint when writing a new test suite:
 
 ## 1. Pure Function Test Blueprint
+
 ```typescript
 import { describe, it, expect } from 'vitest';
 import { sum } from './math';
@@ -32,6 +34,7 @@ describe('math/sum', () => {
 ```
 
 ## 2. Async Service Test Blueprint with Mocks
+
 ```typescript
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { userService } from './userService';
@@ -55,7 +58,7 @@ describe('services/userService', () => {
     // Arrange
     const input = { email: 'test@example.com', name: 'John Doe' };
     const mockCreatedUser = { id: 'usr_abc', ...input, createdAt: new Date() };
-    
+
     vi.mocked(db.user.create).mockResolvedValue(mockCreatedUser);
 
     // Act

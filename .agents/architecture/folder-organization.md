@@ -2,6 +2,7 @@
 name: folder-organization
 description: Architectural standards for folder organization, directory naming, modular components, and layering of concerns in the repository
 ---
+
 # 1. Modular Directory Design
 
 Organize the repository using a modular, layered file system. Group files by logical domain or layer of concern rather than grouping all files by file type.
@@ -27,7 +28,6 @@ src/
 
 # 2. Layer Isolation Rules
 
-*   **No Circular Imports:** Files in the database layer must never import from the service or controller layers. Files in the utility folder must remain pure and free of imports from feature domains.
-*   **Feature Colocation:** Keep feature-specific APIs, state, hooks, and test files inside the feature's subfolder (e.g., `src/features/auth/`) to make copying, deleting, or moving features easy.
-*   **Public Interfaces:** Expose feature contents to the rest of the application using a central index file (`src/features/[feature]/index.ts`). Prevent other features from importing deep internal files directly.
-
+- **No Circular Imports:** Files in the database layer must never import from the service or controller layers. Files in the utility folder must remain pure and free of imports from feature domains.
+- **Feature Colocation:** Keep feature-specific APIs, state, hooks, and test files inside the feature's subfolder (e.g., `src/features/auth/`) to make copying, deleting, or moving features easy.
+- **Public Interfaces:** Expose feature contents to the rest of the application using a central index file (`src/features/[feature]/index.ts`). Prevent other features from importing deep internal files directly.

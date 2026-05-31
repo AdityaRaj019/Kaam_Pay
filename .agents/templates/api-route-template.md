@@ -2,17 +2,20 @@
 name: api-route-template
 description: Standard API route template with request validation, structured error mapping, and Express/Next.js compatibility
 ---
+
 # API Route Template Blueprint
 
 Follow this blueprint when creating a backend API handler or controller:
 
 ## 1. Directory Structure
+
 ```
 src/server/controllers/userController.ts  # Controller file
 src/server/services/userService.ts        # Service business logic
 ```
 
 ## 2. API Controller Implementation
+
 ```typescript
 import { Request, Response } from 'express';
 import { z } from 'zod';
@@ -50,7 +53,7 @@ export const createUserController = async (req: Request, res: Response): Promise
         error: {
           code: 'VALIDATION_FAILED',
           message: 'The request body failed validation checks.',
-          details: error.errors.map(err => ({
+          details: error.errors.map((err) => ({
             field: err.path.join('.'),
             issue: err.message,
           })),

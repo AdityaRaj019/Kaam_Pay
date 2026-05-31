@@ -2,12 +2,15 @@
 name: react-component-template
 description: Standard React component blueprint using TypeScript, named exports, CSS variables, and colocated unit tests
 ---
+
 # React Component Template Blueprint
 
 Follow this blueprint when creating a new UI component:
 
 ## 1. Directory Structure
+
 Create a folder for the component containing the component code, style, and test:
+
 ```
 src/components/ui/Button/
 |-- Button.tsx          # Component core
@@ -16,6 +19,7 @@ src/components/ui/Button/
 ```
 
 ## 2. Component Implementation (`Button.tsx`)
+
 ```typescript
 import React from 'react';
 import styles from './Button.module.css';
@@ -49,6 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
 ```
 
 ## 3. Styles (`Button.module.css`)
+
 ```css
 .button {
   display: inline-flex;
@@ -58,7 +63,9 @@ export const Button: React.FC<ButtonProps> = ({
   border-radius: var(--border-radius-sm);
   font-family: var(--font-primary);
   font-weight: 500;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
   cursor: pointer;
   border: none;
 }
@@ -82,4 +89,3 @@ export const Button: React.FC<ButtonProps> = ({
   cursor: not-allowed;
 }
 ```
-

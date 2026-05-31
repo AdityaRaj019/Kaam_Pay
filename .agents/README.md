@@ -2,6 +2,7 @@
 name: agents-index
 description: Entry point for the local agent operating system, skill map, and retrieval order
 ---
+
 # Agent Framework Index
 
 This folder defines the local operating model for AI agents working in this repository. Use it as the first stop before making code changes.
