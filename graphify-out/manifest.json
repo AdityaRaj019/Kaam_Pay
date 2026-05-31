@@ -624,11 +624,6 @@
     "ast_hash": "1c77cf9d9cf225376fad4087459c0030",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\docy\\KaamPay_PRD.md": {
-    "mtime": 1773554284.3829932,
-    "ast_hash": "177887079557c1d15c5b130d9ba0ff22",
-    "semantic_hash": ""
-  },
   "D:\\Repo\\kaampay\\docy\\plan.md": {
     "mtime": 1773572246.1189668,
     "ast_hash": "41ae7b14f2cc7c17046a878b8eebdccd",
@@ -637,11 +632,6 @@
   "D:\\Repo\\kaampay\\docy\\rbac_implementation_plan.md": {
     "mtime": 1779894800.2772384,
     "ast_hash": "ea808582fa8cd0594f8b14406ca137a2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\docy\\stepwise_development_plan.md": {
-    "mtime": 1778694774.876865,
-    "ast_hash": "b66285e7203d6f4a14e6927b3a0bc983",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\.husky\\post-checkout": {
@@ -777,6 +767,16 @@
   "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.validation.ts": {
     "mtime": 1780254019.4286125,
     "ast_hash": "ef5621567e170bed3bc702b9a94f912a",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\documents\\KaamPay_PRD.md": {
+    "mtime": 1780254401.2364755,
+    "ast_hash": "660209d8dcef7edb0df5ac0095812c5b",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\documents\\step_wise_development.md": {
+    "mtime": 1780254401.2729561,
+    "ast_hash": "0f1e124290923a08d5dc3d92d0210b90",
     "semantic_hash": ""
   }
 }

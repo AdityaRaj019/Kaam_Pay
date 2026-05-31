@@ -54,7 +54,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "id": "package_json",
-      "community": 29,
+      "community": 23,
       "norm_label": "package.json"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "id": "kaampay_package_name",
-      "community": 29,
+      "community": 23,
       "norm_label": "name"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "id": "kaampay_package_version",
-      "community": 29,
+      "community": 23,
       "norm_label": "version"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "id": "kaampay_package_private",
-      "community": 29,
+      "community": 23,
       "norm_label": "private"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "id": "kaampay_package_scripts",
-      "community": 29,
+      "community": 23,
       "norm_label": "scripts"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "id": "kaampay_package_scripts_dev",
-      "community": 29,
+      "community": 23,
       "norm_label": "dev"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "kaampay_package_scripts_dev_backend",
-      "community": 29,
+      "community": 23,
       "norm_label": "dev:backend"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "kaampay_package_scripts_build",
-      "community": 29,
+      "community": 23,
       "norm_label": "build"
     },
     {
@@ -126,7 +126,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "kaampay_package_scripts_start",
-      "community": 29,
+      "community": 23,
       "norm_label": "start"
     },
     {
@@ -135,7 +135,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "kaampay_package_scripts_lint",
-      "community": 29,
+      "community": 23,
       "norm_label": "lint"
     },
     {
@@ -144,7 +144,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "kaampay_package_scripts_prepare",
-      "community": 29,
+      "community": 23,
       "norm_label": "prepare"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "package.json",
       "source_location": "L56",
       "id": "kaampay_package_lint_staged",
-      "community": 29,
+      "community": 23,
       "norm_label": "lint-staged"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "package.json",
       "source_location": "L57",
       "id": "kaampay_package_lint_staged_js_jsx_ts_tsx",
-      "community": 29,
+      "community": 23,
       "norm_label": "*.{js,jsx,ts,tsx}"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "package.json",
       "source_location": "L61",
       "id": "kaampay_package_lint_staged_json_css_md",
-      "community": 29,
+      "community": 23,
       "norm_label": "*.{json,css,md}"
     },
     {
@@ -1889,7 +1889,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L29",
       "id": "client_client_service_clientservice",
-      "community": 6,
+      "community": 7,
       "norm_label": "clientservice"
     },
     {
@@ -1898,7 +1898,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L34",
       "id": "client_client_service_clientservice_searchgigs",
-      "community": 6,
+      "community": 7,
       "norm_label": ".searchgigs()"
     },
     {
@@ -1907,7 +1907,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L112",
       "id": "client_client_service_clientservice_getgigdetails",
-      "community": 6,
+      "community": 7,
       "norm_label": ".getgigdetails()"
     },
     {
@@ -1916,7 +1916,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L146",
       "id": "client_client_service_clientservice_searchfreelancers",
-      "community": 6,
+      "community": 7,
       "norm_label": ".searchfreelancers()"
     },
     {
@@ -1925,7 +1925,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L223",
       "id": "client_client_service_clientservice_getfreelancerdetails",
-      "community": 6,
+      "community": 7,
       "norm_label": ".getfreelancerdetails()"
     },
     {
@@ -1934,7 +1934,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L269",
       "id": "client_client_service_clientservice_getcategories",
-      "community": 6,
+      "community": 7,
       "norm_label": ".getcategories()"
     },
     {
@@ -4467,6 +4467,1581 @@
       "norm_label": "deployment"
     },
     {
+      "label": "KaamPay_PRD.md",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1",
+      "id": "documents_kaampay_prd_md",
+      "community": 8,
+      "norm_label": "kaampay_prd.md"
+    },
+    {
+      "label": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1",
+      "id": "documents_kaampay_prd",
+      "community": 8,
+      "norm_label": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+    },
+    {
+      "label": "PRODUCT REQUIREMENT DOCUMENT (PRD)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L3",
+      "id": "documents_kaampay_prd_product_requirement_document_prd",
+      "community": 8,
+      "norm_label": "product requirement document (prd)"
+    },
+    {
+      "label": "SkillPay \u2014 India's Hyper-Local",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L5",
+      "id": "documents_kaampay_prd_skillpay_india_s_hyper_local",
+      "community": 8,
+      "norm_label": "skillpay \u2014 india's hyper-local"
+    },
+    {
+      "label": "Micro-Freelancing Web Platform",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L7",
+      "id": "documents_kaampay_prd_micro_freelancing_web_platform",
+      "community": 8,
+      "norm_label": "micro-freelancing web platform"
+    },
+    {
+      "label": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L9",
+      "id": "documents_kaampay_prd_9",
+      "community": 33,
+      "norm_label": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+    },
+    {
+      "label": "Document Control",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L13",
+      "id": "documents_kaampay_prd_document_control",
+      "community": 33,
+      "norm_label": "document control"
+    },
+    {
+      "label": "Revision History",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L26",
+      "id": "documents_kaampay_prd_revision_history",
+      "community": 33,
+      "norm_label": "revision history"
+    },
+    {
+      "label": "Table of Contents",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L35",
+      "id": "documents_kaampay_prd_table_of_contents",
+      "community": 33,
+      "norm_label": "table of contents"
+    },
+    {
+      "label": "1. Executive Summary",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L64",
+      "id": "documents_kaampay_prd_1_executive_summary",
+      "community": 24,
+      "norm_label": "1. executive summary"
+    },
+    {
+      "label": "1.1 Product Name",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L66",
+      "id": "documents_kaampay_prd_1_1_product_name",
+      "community": 24,
+      "norm_label": "1.1 product name"
+    },
+    {
+      "label": "1.2 Product Type",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L70",
+      "id": "documents_kaampay_prd_1_2_product_type",
+      "community": 24,
+      "norm_label": "1.2 product type"
+    },
+    {
+      "label": "1.3 One-Line Description",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L74",
+      "id": "documents_kaampay_prd_1_3_one_line_description",
+      "community": 24,
+      "norm_label": "1.3 one-line description"
+    },
+    {
+      "label": "1.4 Summary",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L80",
+      "id": "documents_kaampay_prd_1_4_summary",
+      "community": 24,
+      "norm_label": "1.4 summary"
+    },
+    {
+      "label": "2. Problem Statement",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L104",
+      "id": "documents_kaampay_prd_2_problem_statement",
+      "community": 30,
+      "norm_label": "2. problem statement"
+    },
+    {
+      "label": "2.1 Problem Description",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L106",
+      "id": "documents_kaampay_prd_2_1_problem_description",
+      "community": 30,
+      "norm_label": "2.1 problem description"
+    },
+    {
+      "label": "2.2 Impact Analysis",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L121",
+      "id": "documents_kaampay_prd_2_2_impact_analysis",
+      "community": 30,
+      "norm_label": "2.2 impact analysis"
+    },
+    {
+      "label": "2.3 Expected Outcomes",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L145",
+      "id": "documents_kaampay_prd_2_3_expected_outcomes",
+      "community": 30,
+      "norm_label": "2.3 expected outcomes"
+    },
+    {
+      "label": "3. Product Vision, Mission & Goals",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L157",
+      "id": "documents_kaampay_prd_3_product_vision_mission_goals",
+      "community": 25,
+      "norm_label": "3. product vision, mission & goals"
+    },
+    {
+      "label": "3.1 Vision",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L159",
+      "id": "documents_kaampay_prd_3_1_vision",
+      "community": 25,
+      "norm_label": "3.1 vision"
+    },
+    {
+      "label": "3.2 Mission",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L164",
+      "id": "documents_kaampay_prd_3_2_mission",
+      "community": 25,
+      "norm_label": "3.2 mission"
+    },
+    {
+      "label": "3.3 Product Goals",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L170",
+      "id": "documents_kaampay_prd_3_3_product_goals",
+      "community": 25,
+      "norm_label": "3.3 product goals"
+    },
+    {
+      "label": "3.4 Design Principles",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L185",
+      "id": "documents_kaampay_prd_3_4_design_principles",
+      "community": 25,
+      "norm_label": "3.4 design principles"
+    },
+    {
+      "label": "4. Target Audience & User Personas",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L200",
+      "id": "documents_kaampay_prd_4_target_audience_user_personas",
+      "community": 14,
+      "norm_label": "4. target audience & user personas"
+    },
+    {
+      "label": "4.1 Primary User Segments",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L202",
+      "id": "documents_kaampay_prd_4_1_primary_user_segments",
+      "community": 14,
+      "norm_label": "4.1 primary user segments"
+    },
+    {
+      "label": "4.2 Detailed User Personas",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L211",
+      "id": "documents_kaampay_prd_4_2_detailed_user_personas",
+      "community": 14,
+      "norm_label": "4.2 detailed user personas"
+    },
+    {
+      "label": "Persona 1: Aarav \u2014 The College Student (Freelancer)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L213",
+      "id": "documents_kaampay_prd_persona_1_aarav_the_college_student_freelancer",
+      "community": 14,
+      "norm_label": "persona 1: aarav \u2014 the college student (freelancer)"
+    },
+    {
+      "label": "Persona 2: Sunita \u2014 The Homemaker (Freelancer)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L229",
+      "id": "documents_kaampay_prd_persona_2_sunita_the_homemaker_freelancer",
+      "community": 14,
+      "norm_label": "persona 2: sunita \u2014 the homemaker (freelancer)"
+    },
+    {
+      "label": "Persona 3: Rohit \u2014 The Small Business Owner (Client)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L244",
+      "id": "documents_kaampay_prd_persona_3_rohit_the_small_business_owner_client",
+      "community": 14,
+      "norm_label": "persona 3: rohit \u2014 the small business owner (client)"
+    },
+    {
+      "label": "Persona 4: Admin \u2014 Platform Moderator",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L257",
+      "id": "documents_kaampay_prd_persona_4_admin_platform_moderator",
+      "community": 14,
+      "norm_label": "persona 4: admin \u2014 platform moderator"
+    },
+    {
+      "label": "4.3 User Roles & Permissions",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L265",
+      "id": "documents_kaampay_prd_4_3_user_roles_permissions",
+      "community": 14,
+      "norm_label": "4.3 user roles & permissions"
+    },
+    {
+      "label": "5. Scope Definition & MVP Boundary",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L276",
+      "id": "documents_kaampay_prd_5_scope_definition_mvp_boundary",
+      "community": 33,
+      "norm_label": "5. scope definition & mvp boundary"
+    },
+    {
+      "label": "5.1 In-Scope (Phase 1 \u2014 MVP)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L278",
+      "id": "documents_kaampay_prd_5_1_in_scope_phase_1_mvp",
+      "community": 33,
+      "norm_label": "5.1 in-scope (phase 1 \u2014 mvp)"
+    },
+    {
+      "label": "5.2 Out-of-Scope (Phase 2+)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L292",
+      "id": "documents_kaampay_prd_5_2_out_of_scope_phase_2",
+      "community": 33,
+      "norm_label": "5.2 out-of-scope (phase 2+)"
+    },
+    {
+      "label": "5.3 MVP Success Criteria",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L307",
+      "id": "documents_kaampay_prd_5_3_mvp_success_criteria",
+      "community": 33,
+      "norm_label": "5.3 mvp success criteria"
+    },
+    {
+      "label": "6. Functional Requirements",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L324",
+      "id": "documents_kaampay_prd_6_functional_requirements",
+      "community": 2,
+      "norm_label": "6. functional requirements"
+    },
+    {
+      "label": "6.1 Module 1: User Authentication & Verification",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L326",
+      "id": "documents_kaampay_prd_6_1_module_1_user_authentication_verification",
+      "community": 39,
+      "norm_label": "6.1 module 1: user authentication & verification"
+    },
+    {
+      "label": "FR-1.1: User Registration",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L328",
+      "id": "documents_kaampay_prd_fr_1_1_user_registration",
+      "community": 39,
+      "norm_label": "fr-1.1: user registration"
+    },
+    {
+      "label": "FR-1.2: User Login",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L339",
+      "id": "documents_kaampay_prd_fr_1_2_user_login",
+      "community": 39,
+      "norm_label": "fr-1.2: user login"
+    },
+    {
+      "label": "FR-1.3: Identity Verification",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L348",
+      "id": "documents_kaampay_prd_fr_1_3_identity_verification",
+      "community": 39,
+      "norm_label": "fr-1.3: identity verification"
+    },
+    {
+      "label": "FR-1.4: Role-Based Access Control",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L357",
+      "id": "documents_kaampay_prd_fr_1_4_role_based_access_control",
+      "community": 39,
+      "norm_label": "fr-1.4: role-based access control"
+    },
+    {
+      "label": "6.2 Module 2: Profile Management",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L368",
+      "id": "documents_kaampay_prd_6_2_module_2_profile_management",
+      "community": 2,
+      "norm_label": "6.2 module 2: profile management"
+    },
+    {
+      "label": "6.3 Module 3: Gig Management",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L390",
+      "id": "documents_kaampay_prd_6_3_module_3_gig_management",
+      "community": 34,
+      "norm_label": "6.3 module 3: gig management"
+    },
+    {
+      "label": "FR-3.1: Create Gig (Freelancer Only)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L392",
+      "id": "documents_kaampay_prd_fr_3_1_create_gig_freelancer_only",
+      "community": 34,
+      "norm_label": "fr-3.1: create gig (freelancer only)"
+    },
+    {
+      "label": "FR-3.2: Gig Categories",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L400",
+      "id": "documents_kaampay_prd_fr_3_2_gig_categories",
+      "community": 34,
+      "norm_label": "fr-3.2: gig categories"
+    },
+    {
+      "label": "FR-3.3: Browse & Search Gigs",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L415",
+      "id": "documents_kaampay_prd_fr_3_3_browse_search_gigs",
+      "community": 34,
+      "norm_label": "fr-3.3: browse & search gigs"
+    },
+    {
+      "label": "FR-3.4: Gig Detail Page",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L425",
+      "id": "documents_kaampay_prd_fr_3_4_gig_detail_page",
+      "community": 34,
+      "norm_label": "fr-3.4: gig detail page"
+    },
+    {
+      "label": "FR-3.5: Manage Gigs (Freelancer)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L433",
+      "id": "documents_kaampay_prd_fr_3_5_manage_gigs_freelancer",
+      "community": 34,
+      "norm_label": "fr-3.5: manage gigs (freelancer)"
+    },
+    {
+      "label": "6.4 Module 4: Order Lifecycle Management",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L443",
+      "id": "documents_kaampay_prd_6_4_module_4_order_lifecycle_management",
+      "community": 50,
+      "norm_label": "6.4 module 4: order lifecycle management"
+    },
+    {
+      "label": "FR-4.1: Order Placement",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L445",
+      "id": "documents_kaampay_prd_fr_4_1_order_placement",
+      "community": 50,
+      "norm_label": "fr-4.1: order placement"
+    },
+    {
+      "label": "FR-4.2: Order Status State Machine",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L454",
+      "id": "documents_kaampay_prd_fr_4_2_order_status_state_machine",
+      "community": 50,
+      "norm_label": "fr-4.2: order status state machine"
+    },
+    {
+      "label": "code:block1 (PENDING)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L456",
+      "id": "documents_kaampay_prd_codeblock_1",
+      "community": 50,
+      "norm_label": "code:block1 (pending)"
+    },
+    {
+      "label": "FR-4.3: Order Management",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L503",
+      "id": "documents_kaampay_prd_fr_4_3_order_management",
+      "community": 50,
+      "norm_label": "fr-4.3: order management"
+    },
+    {
+      "label": "6.5 Module 5: Payment System",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L516",
+      "id": "documents_kaampay_prd_6_5_module_5_payment_system",
+      "community": 2,
+      "norm_label": "6.5 module 5: payment system"
+    },
+    {
+      "label": "FR-5.1: Payment Integration",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L518",
+      "id": "documents_kaampay_prd_fr_5_1_payment_integration",
+      "community": 2,
+      "norm_label": "fr-5.1: payment integration"
+    },
+    {
+      "label": "FR-5.2: Escrow Flow",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L526",
+      "id": "documents_kaampay_prd_fr_5_2_escrow_flow",
+      "community": 2,
+      "norm_label": "fr-5.2: escrow flow"
+    },
+    {
+      "label": "code:block2 (+----------------------+)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L537",
+      "id": "documents_kaampay_prd_codeblock_2",
+      "community": 2,
+      "norm_label": "code:block2 (+----------------------+)"
+    },
+    {
+      "label": "6.6 Module 6: Real-Time Chat System",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L581",
+      "id": "documents_kaampay_prd_6_6_module_6_real_time_chat_system",
+      "community": 2,
+      "norm_label": "6.6 module 6: real-time chat system"
+    },
+    {
+      "label": "6.7 Module 7: Ratings & Reviews",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L595",
+      "id": "documents_kaampay_prd_6_7_module_7_ratings_reviews",
+      "community": 2,
+      "norm_label": "6.7 module 7: ratings & reviews"
+    },
+    {
+      "label": "6.8 Module 8: Admin Panel",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L609",
+      "id": "documents_kaampay_prd_6_8_module_8_admin_panel",
+      "community": 2,
+      "norm_label": "6.8 module 8: admin panel"
+    },
+    {
+      "label": "6.9 Module 9: Notifications (Basic)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L623",
+      "id": "documents_kaampay_prd_6_9_module_9_notifications_basic",
+      "community": 2,
+      "norm_label": "6.9 module 9: notifications (basic)"
+    },
+    {
+      "label": "7. Non-Functional Requirements",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L633",
+      "id": "documents_kaampay_prd_7_non_functional_requirements",
+      "community": 15,
+      "norm_label": "7. non-functional requirements"
+    },
+    {
+      "label": "7.1 Performance",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L635",
+      "id": "documents_kaampay_prd_7_1_performance",
+      "community": 15,
+      "norm_label": "7.1 performance"
+    },
+    {
+      "label": "7.2 Security",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L645",
+      "id": "documents_kaampay_prd_7_2_security",
+      "community": 15,
+      "norm_label": "7.2 security"
+    },
+    {
+      "label": "7.3 Scalability",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L659",
+      "id": "documents_kaampay_prd_7_3_scalability",
+      "community": 15,
+      "norm_label": "7.3 scalability"
+    },
+    {
+      "label": "7.4 Usability",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L668",
+      "id": "documents_kaampay_prd_7_4_usability",
+      "community": 15,
+      "norm_label": "7.4 usability"
+    },
+    {
+      "label": "7.5 Reliability",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L678",
+      "id": "documents_kaampay_prd_7_5_reliability",
+      "community": 15,
+      "norm_label": "7.5 reliability"
+    },
+    {
+      "label": "7.6 Maintainability",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L686",
+      "id": "documents_kaampay_prd_7_6_maintainability",
+      "community": 15,
+      "norm_label": "7.6 maintainability"
+    },
+    {
+      "label": "8. System Architecture",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L697",
+      "id": "documents_kaampay_prd_8_system_architecture",
+      "community": 35,
+      "norm_label": "8. system architecture"
+    },
+    {
+      "label": "8.1 Architecture Overview",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L699",
+      "id": "documents_kaampay_prd_8_1_architecture_overview",
+      "community": 35,
+      "norm_label": "8.1 architecture overview"
+    },
+    {
+      "label": "code:block3 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L705",
+      "id": "documents_kaampay_prd_codeblock_3",
+      "community": 35,
+      "norm_label": "code:block3 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500)"
+    },
+    {
+      "label": "8.2 Architecture Decisions",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L783",
+      "id": "documents_kaampay_prd_8_2_architecture_decisions",
+      "community": 35,
+      "norm_label": "8.2 architecture decisions"
+    },
+    {
+      "label": "9. Technology Stack",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L796",
+      "id": "documents_kaampay_prd_9_technology_stack",
+      "community": 33,
+      "norm_label": "9. technology stack"
+    },
+    {
+      "label": "9.1 Complete Stack Overview",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L798",
+      "id": "documents_kaampay_prd_9_1_complete_stack_overview",
+      "community": 33,
+      "norm_label": "9.1 complete stack overview"
+    },
+    {
+      "label": "9.2 Development Tools",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L828",
+      "id": "documents_kaampay_prd_9_2_development_tools",
+      "community": 33,
+      "norm_label": "9.2 development tools"
+    },
+    {
+      "label": "9.3 Stack Justification",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L839",
+      "id": "documents_kaampay_prd_9_3_stack_justification",
+      "community": 33,
+      "norm_label": "9.3 stack justification"
+    },
+    {
+      "label": "10. Database Design",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L872",
+      "id": "documents_kaampay_prd_10_database_design",
+      "community": 18,
+      "norm_label": "10. database design"
+    },
+    {
+      "label": "10.1 Entity-Relationship Diagram (Conceptual)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L874",
+      "id": "documents_kaampay_prd_10_1_entity_relationship_diagram_conceptual",
+      "community": 18,
+      "norm_label": "10.1 entity-relationship diagram (conceptual)"
+    },
+    {
+      "label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510        1:N        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 )",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L876",
+      "id": "documents_kaampay_prd_codeblock_4",
+      "community": 18,
+      "norm_label": "code:block4 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510        1:n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 )"
+    },
+    {
+      "label": "10.2 Detailed Schema (Prisma Schema)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L927",
+      "id": "documents_kaampay_prd_10_2_detailed_schema_prisma_schema",
+      "community": 18,
+      "norm_label": "10.2 detailed schema (prisma schema)"
+    },
+    {
+      "label": "code:prisma (// schema.prisma)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L929",
+      "id": "documents_kaampay_prd_codeblock_5",
+      "community": 18,
+      "norm_label": "code:prisma (// schema.prisma)"
+    },
+    {
+      "label": "11. API Design & Endpoints",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1185",
+      "id": "documents_kaampay_prd_11_api_design_endpoints",
+      "community": 8,
+      "norm_label": "11. api design & endpoints"
+    },
+    {
+      "label": "11.1 API Conventions",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1187",
+      "id": "documents_kaampay_prd_11_1_api_conventions",
+      "community": 8,
+      "norm_label": "11.1 api conventions"
+    },
+    {
+      "label": "11.2 API Endpoint Inventory",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1201",
+      "id": "documents_kaampay_prd_11_2_api_endpoint_inventory",
+      "community": 8,
+      "norm_label": "11.2 api endpoint inventory"
+    },
+    {
+      "label": "Authentication API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1205",
+      "id": "documents_kaampay_prd_authentication_api",
+      "community": 8,
+      "norm_label": "authentication api"
+    },
+    {
+      "label": "Users API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1222",
+      "id": "documents_kaampay_prd_users_api",
+      "community": 8,
+      "norm_label": "users api"
+    },
+    {
+      "label": "Gigs API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1238",
+      "id": "documents_kaampay_prd_gigs_api",
+      "community": 49,
+      "norm_label": "gigs api"
+    },
+    {
+      "label": "Query Parameters for `GET /gigs`",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1253",
+      "id": "documents_kaampay_prd_query_parameters_for_get_gigs",
+      "community": 49,
+      "norm_label": "query parameters for `get /gigs`"
+    },
+    {
+      "label": "Orders API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1269",
+      "id": "documents_kaampay_prd_orders_api",
+      "community": 8,
+      "norm_label": "orders api"
+    },
+    {
+      "label": "Reviews API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1287",
+      "id": "documents_kaampay_prd_reviews_api",
+      "community": 8,
+      "norm_label": "reviews api"
+    },
+    {
+      "label": "Chat API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1299",
+      "id": "documents_kaampay_prd_chat_api",
+      "community": 8,
+      "norm_label": "chat api"
+    },
+    {
+      "label": "Payments API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1310",
+      "id": "documents_kaampay_prd_payments_api",
+      "community": 8,
+      "norm_label": "payments api"
+    },
+    {
+      "label": "Admin API",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1323",
+      "id": "documents_kaampay_prd_admin_api",
+      "community": 8,
+      "norm_label": "admin api"
+    },
+    {
+      "label": "11.3 Standard API Response Formats",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1341",
+      "id": "documents_kaampay_prd_11_3_standard_api_response_formats",
+      "community": 19,
+      "norm_label": "11.3 standard api response formats"
+    },
+    {
+      "label": "Success Response:",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1343",
+      "id": "documents_kaampay_prd_success_response",
+      "community": 19,
+      "norm_label": "success response:"
+    },
+    {
+      "label": "code:JSON",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1345",
+      "id": "documents_kaampay_prd_codeblock_6",
+      "community": 19,
+      "norm_label": "code:json"
+    },
+    {
+      "label": "Error Response:",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1359",
+      "id": "documents_kaampay_prd_error_response",
+      "community": 19,
+      "norm_label": "error response:"
+    },
+    {
+      "label": "code:JSON",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1361",
+      "id": "documents_kaampay_prd_codeblock_7",
+      "community": 19,
+      "norm_label": "code:json"
+    },
+    {
+      "label": "12. UI/UX Requirements & Wireframe Guidelines",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1373",
+      "id": "documents_kaampay_prd_12_ui_ux_requirements_wireframe_guidelines",
+      "community": 8,
+      "norm_label": "12. ui/ux requirements & wireframe guidelines"
+    },
+    {
+      "label": "12.1 Design System",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1377",
+      "id": "documents_kaampay_prd_12_1_design_system",
+      "community": 8,
+      "norm_label": "12.1 design system"
+    },
+    {
+      "label": "12.2 Page Inventory",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1394",
+      "id": "documents_kaampay_prd_12_2_page_inventory",
+      "community": 8,
+      "norm_label": "12.2 page inventory"
+    },
+    {
+      "label": "12.3 Key Page Layouts",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1422",
+      "id": "documents_kaampay_prd_12_3_key_page_layouts",
+      "community": 16,
+      "norm_label": "12.3 key page layouts"
+    },
+    {
+      "label": "Landing Page Structure",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1424",
+      "id": "documents_kaampay_prd_landing_page_structure",
+      "community": 16,
+      "norm_label": "landing page structure"
+    },
+    {
+      "label": "code:block8 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1426",
+      "id": "documents_kaampay_prd_codeblock_8",
+      "community": 16,
+      "norm_label": "code:block8 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500)"
+    },
+    {
+      "label": "Gig Card Component",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1504",
+      "id": "documents_kaampay_prd_gig_card_component",
+      "community": 16,
+      "norm_label": "gig card component"
+    },
+    {
+      "label": "code:block9 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1506",
+      "id": "documents_kaampay_prd_codeblock_9",
+      "community": 16,
+      "norm_label": "code:block9 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+    },
+    {
+      "label": "12.4 Responsive Breakpoints",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1524",
+      "id": "documents_kaampay_prd_12_4_responsive_breakpoints",
+      "community": 16,
+      "norm_label": "12.4 responsive breakpoints"
+    },
+    {
+      "label": "13. Security Requirements",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1535",
+      "id": "documents_kaampay_prd_13_security_requirements",
+      "community": 20,
+      "norm_label": "13. security requirements"
+    },
+    {
+      "label": "13.1 Authentication Security",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1539",
+      "id": "documents_kaampay_prd_13_1_authentication_security",
+      "community": 20,
+      "norm_label": "13.1 authentication security"
+    },
+    {
+      "label": "13.2 API Security",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1553",
+      "id": "documents_kaampay_prd_13_2_api_security",
+      "community": 20,
+      "norm_label": "13.2 api security"
+    },
+    {
+      "label": "13.3 Payment Security",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1567",
+      "id": "documents_kaampay_prd_13_3_payment_security",
+      "community": 20,
+      "norm_label": "13.3 payment security"
+    },
+    {
+      "label": "13.4 Data Privacy",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1578",
+      "id": "documents_kaampay_prd_13_4_data_privacy",
+      "community": 20,
+      "norm_label": "13.4 data privacy"
+    },
+    {
+      "label": "14. Payment Flow & Escrow Logic",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1589",
+      "id": "documents_kaampay_prd_14_payment_flow_escrow_logic",
+      "community": 43,
+      "norm_label": "14. payment flow & escrow logic"
+    },
+    {
+      "label": "14.1 End-to-End Payment Flow",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1591",
+      "id": "documents_kaampay_prd_14_1_end_to_end_payment_flow",
+      "community": 43,
+      "norm_label": "14.1 end-to-end payment flow"
+    },
+    {
+      "label": "code:text (Step 1: Client clicks \"Order Now\" on a gig)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1593",
+      "id": "documents_kaampay_prd_codeblock_10",
+      "community": 43,
+      "norm_label": "code:text (step 1: client clicks \"order now\" on a gig)"
+    },
+    {
+      "label": "14.2 MVP Payment Simplification",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1643",
+      "id": "documents_kaampay_prd_14_2_mvp_payment_simplification",
+      "community": 43,
+      "norm_label": "14.2 mvp payment simplification"
+    },
+    {
+      "label": "15.Chat System Design",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1654",
+      "id": "documents_kaampay_prd_15_chat_system_design",
+      "community": 27,
+      "norm_label": "15.chat system design"
+    },
+    {
+      "label": "code:block11 (Client A (Browser)                    Client B (Browser))",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1656",
+      "id": "documents_kaampay_prd_codeblock_11",
+      "community": 27,
+      "norm_label": "code:block11 (client a (browser)                    client b (browser))"
+    },
+    {
+      "label": "15.2 Socket Events",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1684",
+      "id": "documents_kaampay_prd_15_2_socket_events",
+      "community": 27,
+      "norm_label": "15.2 socket events"
+    },
+    {
+      "label": "15.3 Chat Rules",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1698",
+      "id": "documents_kaampay_prd_15_3_chat_rules",
+      "community": 27,
+      "norm_label": "15.3 chat rules"
+    },
+    {
+      "label": "16. Testing Strategy",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1710",
+      "id": "documents_kaampay_prd_16_testing_strategy",
+      "community": 44,
+      "norm_label": "16. testing strategy"
+    },
+    {
+      "label": "16.1 Testing Levels",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1712",
+      "id": "documents_kaampay_prd_16_1_testing_levels",
+      "community": 44,
+      "norm_label": "16.1 testing levels"
+    },
+    {
+      "label": "16.2 Critical Test Scenarios",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1723",
+      "id": "documents_kaampay_prd_16_2_critical_test_scenarios",
+      "community": 44,
+      "norm_label": "16.2 critical test scenarios"
+    },
+    {
+      "label": "17. Deployment Strategy",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1745",
+      "id": "documents_kaampay_prd_17_deployment_strategy",
+      "community": 17,
+      "norm_label": "17. deployment strategy"
+    },
+    {
+      "label": "17.1 Environment Configuration",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1747",
+      "id": "documents_kaampay_prd_17_1_environment_configuration",
+      "community": 17,
+      "norm_label": "17.1 environment configuration"
+    },
+    {
+      "label": "17.2 Deployment Architecture",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1757",
+      "id": "documents_kaampay_prd_17_2_deployment_architecture",
+      "community": 17,
+      "norm_label": "17.2 deployment architecture"
+    },
+    {
+      "label": "code:text (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1759",
+      "id": "documents_kaampay_prd_codeblock_12",
+      "community": 17,
+      "norm_label": "code:text (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+    },
+    {
+      "label": "17.3 Environment Variables",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1785",
+      "id": "documents_kaampay_prd_17_3_environment_variables",
+      "community": 17,
+      "norm_label": "17.3 environment variables"
+    },
+    {
+      "label": "code:env (# \u2500\u2500\u2500 Backend (.env) \u2500\u2500\u2500)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1787",
+      "id": "documents_kaampay_prd_codeblock_13",
+      "community": 17,
+      "norm_label": "code:env (# \u2500\u2500\u2500 backend (.env) \u2500\u2500\u2500)"
+    },
+    {
+      "label": "18. Development Roadmap & Sprint Plan",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1822",
+      "id": "documents_kaampay_prd_18_development_roadmap_sprint_plan",
+      "community": 13,
+      "norm_label": "18. development roadmap & sprint plan"
+    },
+    {
+      "label": "18.1 Overview",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1824",
+      "id": "documents_kaampay_prd_18_1_overview",
+      "community": 13,
+      "norm_label": "18.1 overview"
+    },
+    {
+      "label": "18.2 Sprint Breakdown (Phase 1 \u2014 MVP)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1834",
+      "id": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "community": 13,
+      "norm_label": "18.2 sprint breakdown (phase 1 \u2014 mvp)"
+    },
+    {
+      "label": "Sprint 1: Foundation (Week 1)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1836",
+      "id": "documents_kaampay_prd_sprint_1_foundation_week_1",
+      "community": 13,
+      "norm_label": "sprint 1: foundation (week 1)"
+    },
+    {
+      "label": "Sprint 2: Profiles & Gigs (Week 2)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1852",
+      "id": "documents_kaampay_prd_sprint_2_profiles_gigs_week_2",
+      "community": 13,
+      "norm_label": "sprint 2: profiles & gigs (week 2)"
+    },
+    {
+      "label": "Sprint 3: Orders & Workflow (Week 3)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1868",
+      "id": "documents_kaampay_prd_sprint_3_orders_workflow_week_3",
+      "community": 13,
+      "norm_label": "sprint 3: orders & workflow (week 3)"
+    },
+    {
+      "label": "Sprint 4: Chat & Reviews (Week 4)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1884",
+      "id": "documents_kaampay_prd_sprint_4_chat_reviews_week_4",
+      "community": 13,
+      "norm_label": "sprint 4: chat & reviews (week 4)"
+    },
+    {
+      "label": "Sprint 5: Payments & Admin (Week 5)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1900",
+      "id": "documents_kaampay_prd_sprint_5_payments_admin_week_5",
+      "community": 13,
+      "norm_label": "sprint 5: payments & admin (week 5)"
+    },
+    {
+      "label": "Sprint 6: Polish & Deploy (Week 6)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1917",
+      "id": "documents_kaampay_prd_sprint_6_polish_deploy_week_6",
+      "community": 13,
+      "norm_label": "sprint 6: polish & deploy (week 6)"
+    },
+    {
+      "label": "18.3 Total Estimated Effort",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1934",
+      "id": "documents_kaampay_prd_18_3_total_estimated_effort",
+      "community": 13,
+      "norm_label": "18.3 total estimated effort"
+    },
+    {
+      "label": "19. Risk Assessment & Mitigation",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1948",
+      "id": "documents_kaampay_prd_19_risk_assessment_mitigation",
+      "community": 8,
+      "norm_label": "19. risk assessment & mitigation"
+    },
+    {
+      "label": "20. Success Metrics & KPIs",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1965",
+      "id": "documents_kaampay_prd_20_success_metrics_kpis",
+      "community": 45,
+      "norm_label": "20. success metrics & kpis"
+    },
+    {
+      "label": "20.1 MVP Launch Criteria",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1967",
+      "id": "documents_kaampay_prd_20_1_mvp_launch_criteria",
+      "community": 45,
+      "norm_label": "20.1 mvp launch criteria"
+    },
+    {
+      "label": "20.2 Post-Launch KPIs (For Production)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1981",
+      "id": "documents_kaampay_prd_20_2_post_launch_kpis_for_production",
+      "community": 45,
+      "norm_label": "20.2 post-launch kpis (for production)"
+    },
+    {
+      "label": "21. Competitive Analysis",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1995",
+      "id": "documents_kaampay_prd_21_competitive_analysis",
+      "community": 47,
+      "norm_label": "21. competitive analysis"
+    },
+    {
+      "label": "21.1 Competitive Landscape",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1997",
+      "id": "documents_kaampay_prd_21_1_competitive_landscape",
+      "community": 47,
+      "norm_label": "21.1 competitive landscape"
+    },
+    {
+      "label": "21.2 SkillPay's Competitive Advantages",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2014",
+      "id": "documents_kaampay_prd_21_2_skillpay_s_competitive_advantages",
+      "community": 47,
+      "norm_label": "21.2 skillpay's competitive advantages"
+    },
+    {
+      "label": "22. Future Roadmap (Phase 2+)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2028",
+      "id": "documents_kaampay_prd_22_future_roadmap_phase_2",
+      "community": 48,
+      "norm_label": "22. future roadmap (phase 2+)"
+    },
+    {
+      "label": "Phase 2 (Post-MVP \u2014 4 Weeks)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2030",
+      "id": "documents_kaampay_prd_phase_2_post_mvp_4_weeks",
+      "community": 48,
+      "norm_label": "phase 2 (post-mvp \u2014 4 weeks)"
+    },
+    {
+      "label": "Phase 3 (Scale \u2014 Ongoing)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2045",
+      "id": "documents_kaampay_prd_phase_3_scale_ongoing",
+      "community": 48,
+      "norm_label": "phase 3 (scale \u2014 ongoing)"
+    },
+    {
+      "label": "23. Glossary",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2062",
+      "id": "documents_kaampay_prd_23_glossary",
+      "community": 8,
+      "norm_label": "23. glossary"
+    },
+    {
+      "label": "24. Appendices",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2082",
+      "id": "documents_kaampay_prd_24_appendices",
+      "community": 10,
+      "norm_label": "24. appendices"
+    },
+    {
+      "label": "Appendix A: Folder Structure",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2084",
+      "id": "documents_kaampay_prd_appendix_a_folder_structure",
+      "community": 10,
+      "norm_label": "appendix a: folder structure"
+    },
+    {
+      "label": "code:text (skillpay/)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2086",
+      "id": "documents_kaampay_prd_codeblock_14",
+      "community": 10,
+      "norm_label": "code:text (skillpay/)"
+    },
+    {
+      "label": "Appendix B: User Flow Diagrams",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2225",
+      "id": "documents_kaampay_prd_appendix_b_user_flow_diagrams",
+      "community": 10,
+      "norm_label": "appendix b: user flow diagrams"
+    },
+    {
+      "label": "B.1: Registration Flow",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2227",
+      "id": "documents_kaampay_prd_b_1_registration_flow",
+      "community": 10,
+      "norm_label": "b.1: registration flow"
+    },
+    {
+      "label": "code:block15 (Landing Page \u2192 Click \"Sign Up\")",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2229",
+      "id": "documents_kaampay_prd_codeblock_15",
+      "community": 10,
+      "norm_label": "code:block15 (landing page \u2192 click \"sign up\")"
+    },
+    {
+      "label": "B.2: Gig Purchase Flow",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2238",
+      "id": "documents_kaampay_prd_b_2_gig_purchase_flow",
+      "community": 10,
+      "norm_label": "b.2: gig purchase flow"
+    },
+    {
+      "label": "code:block16 (Browse Gigs \u2192 Select Gig \u2192 View Gig Detail)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2240",
+      "id": "documents_kaampay_prd_codeblock_16",
+      "community": 10,
+      "norm_label": "code:block16 (browse gigs \u2192 select gig \u2192 view gig detail)"
+    },
+    {
+      "label": "B.3: Freelancer Earning Flow",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2255",
+      "id": "documents_kaampay_prd_b_3_freelancer_earning_flow",
+      "community": 10,
+      "norm_label": "b.3: freelancer earning flow"
+    },
+    {
+      "label": "code:block17 (Create Profile \u2192 Add Skills \u2192 Create Gig)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2257",
+      "id": "documents_kaampay_prd_codeblock_17",
+      "community": 10,
+      "norm_label": "code:block17 (create profile \u2192 add skills \u2192 create gig)"
+    },
+    {
+      "label": "Appendix C: Revenue Model Summary",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2265",
+      "id": "documents_kaampay_prd_appendix_c_revenue_model_summary",
+      "community": 10,
+      "norm_label": "appendix c: revenue model summary"
+    },
+    {
+      "label": "Appendix D: Acceptance Criteria Template",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2277",
+      "id": "documents_kaampay_prd_appendix_d_acceptance_criteria_template",
+      "community": 10,
+      "norm_label": "appendix d: acceptance criteria template"
+    },
+    {
+      "label": "code:block18 (Each user story should be verified against acceptance criter)",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2279",
+      "id": "documents_kaampay_prd_codeblock_18",
+      "community": 10,
+      "norm_label": "code:block18 (each user story should be verified against acceptance criter)"
+    },
+    {
+      "label": "step_wise_development.md",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L1",
+      "id": "documents_step_wise_development_md",
+      "community": 11,
+      "norm_label": "step_wise_development.md"
+    },
+    {
+      "label": "KaamPay Stepwise Development Plan",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L1",
+      "id": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "community": 11,
+      "norm_label": "kaampay stepwise development plan"
+    },
+    {
+      "label": "1. Project Setup & Environment Configuration",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L7",
+      "id": "documents_step_wise_development_1_project_setup_environment_configuration",
+      "community": 11,
+      "norm_label": "1. project setup & environment configuration"
+    },
+    {
+      "label": "2. Database Schema & Data Models Design",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L22",
+      "id": "documents_step_wise_development_2_database_schema_data_models_design",
+      "community": 11,
+      "norm_label": "2. database schema & data models design"
+    },
+    {
+      "label": "3. Backend Authentication & Authorization Core",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L39",
+      "id": "documents_step_wise_development_3_backend_authentication_authorization_core",
+      "community": 11,
+      "norm_label": "3. backend authentication & authorization core"
+    },
+    {
+      "label": "4. Frontend Foundation & Authentication UI",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L56",
+      "id": "documents_step_wise_development_4_frontend_foundation_authentication_ui",
+      "community": 11,
+      "norm_label": "4. frontend foundation & authentication ui"
+    },
+    {
+      "label": "5. Gig Management (Freelancer Flow)",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L73",
+      "id": "documents_step_wise_development_5_gig_management_freelancer_flow",
+      "community": 11,
+      "norm_label": "5. gig management (freelancer flow)"
+    },
+    {
+      "label": "6. Client Discovery & Ordering Flow",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L90",
+      "id": "documents_step_wise_development_6_client_discovery_ordering_flow",
+      "community": 11,
+      "norm_label": "6. client discovery & ordering flow"
+    },
+    {
+      "label": "7. Order Lifecycle, Revisions & Submissions",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L107",
+      "id": "documents_step_wise_development_7_order_lifecycle_revisions_submissions",
+      "community": 11,
+      "norm_label": "7. order lifecycle, revisions & submissions"
+    },
+    {
+      "label": "8. Real-time Communication (Chat & Notifications)",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L124",
+      "id": "documents_step_wise_development_8_real_time_communication_chat_notifications",
+      "community": 11,
+      "norm_label": "8. real-time communication (chat & notifications)"
+    },
+    {
+      "label": "9. Trust System: Ratings, Reviews & Admin Panel",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L141",
+      "id": "documents_step_wise_development_9_trust_system_ratings_reviews_admin_panel",
+      "community": 11,
+      "norm_label": "9. trust system: ratings, reviews & admin panel"
+    },
+    {
+      "label": "10. Performance, Refinement & Deployment",
+      "file_type": "document",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L158",
+      "id": "documents_step_wise_development_10_performance_refinement_deployment",
+      "community": 11,
+      "norm_label": "10. performance, refinement & deployment"
+    },
+    {
       "label": "Action_Register.md",
       "file_type": "document",
       "source_file": "kaampay/Action_Register.md",
@@ -4546,6 +6121,15 @@
       "id": "auth_auth_client_signin_signup_signout_usesession",
       "community": 132,
       "norm_label": "{ signin, signup, signout, usesession }"
+    },
+    {
+      "label": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L5",
+      "community": 33,
+      "norm_label": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "id": "documents_kaampay_prd_5"
     },
     {
       "label": "graphify.md",
@@ -5722,7 +7306,7 @@
       "file_type": "document",
       "source_file": "docy/KaamPay_PRD.md",
       "source_location": "L1169",
-      "community": 2,
+      "community": 21,
       "norm_label": "11. api design & endpoints",
       "id": "docy_kaampay_prd_11_api_design_endpoints"
     },
@@ -5731,7 +7315,7 @@
       "file_type": "document",
       "source_file": "docy/KaamPay_PRD.md",
       "source_location": "L1171",
-      "community": 2,
+      "community": 21,
       "norm_label": "11.1 api conventions",
       "id": "docy_kaampay_prd_11_1_api_conventions"
     },
@@ -13392,6 +14976,1866 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1185",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_11_2_api_endpoint_inventory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1317",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_11_3_standard_api_response_formats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_11_api_design_endpoints"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1350",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_12_1_design_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1367",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_12_2_page_inventory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1394",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_12_3_key_page_layouts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1346",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_12_ui_ux_requirements_wireframe_guidelines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1505",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_13_security_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1558",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_14_payment_flow_escrow_logic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1622",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_15_chat_system_design"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1675",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_16_testing_strategy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1705",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_17_deployment_strategy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1776",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_18_development_roadmap_sprint_plan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1887",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_19_risk_assessment_mitigation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1903",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_20_success_metrics_kpis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1928",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_21_competitive_analysis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1957",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_22_future_roadmap_phase_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1990",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_23_glossary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2009",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_24_appendices"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1300",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_admin_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1189",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_authentication_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1278",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_chat_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1220",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_gigs_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_micro_freelancing_web_platform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1250",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_orders_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1288",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_payments_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_product_requirement_document_prd"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_reviews_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_skillpay_india_s_hyper_local"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1205",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_md",
+      "target": "documents_kaampay_prd_users_api"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L872",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_10_database_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_1_executive_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_2_problem_statement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_3_product_vision_mission_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_4_target_audience_user_personas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_5_scope_definition_mvp_boundary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_6_functional_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L633",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_7_non_functional_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L697",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_8_system_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L796",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_9_technology_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_document_control",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_9",
+      "target": "documents_kaampay_prd_table_of_contents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_document_control"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_document_control",
+      "target": "documents_kaampay_prd_revision_history"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_table_of_contents"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_1_executive_summary",
+      "target": "documents_kaampay_prd_1_1_product_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_1_executive_summary",
+      "target": "documents_kaampay_prd_1_2_product_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_1_executive_summary",
+      "target": "documents_kaampay_prd_1_3_one_line_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_1_executive_summary",
+      "target": "documents_kaampay_prd_1_4_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_1_executive_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_2_problem_statement",
+      "target": "documents_kaampay_prd_2_1_problem_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_2_problem_statement",
+      "target": "documents_kaampay_prd_2_2_impact_analysis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_2_problem_statement",
+      "target": "documents_kaampay_prd_2_3_expected_outcomes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_2_problem_statement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_3_product_vision_mission_goals",
+      "target": "documents_kaampay_prd_3_1_vision"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L154",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_3_product_vision_mission_goals",
+      "target": "documents_kaampay_prd_3_2_mission"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_3_product_vision_mission_goals",
+      "target": "documents_kaampay_prd_3_3_product_goals"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_3_product_vision_mission_goals",
+      "target": "documents_kaampay_prd_3_4_design_principles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_3_product_vision_mission_goals"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L191",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_target_audience_user_personas",
+      "target": "documents_kaampay_prd_4_1_primary_user_segments"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_target_audience_user_personas",
+      "target": "documents_kaampay_prd_4_2_detailed_user_personas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L254",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_target_audience_user_personas",
+      "target": "documents_kaampay_prd_4_3_user_roles_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_4_target_audience_user_personas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L202",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_2_detailed_user_personas",
+      "target": "documents_kaampay_prd_persona_1_aarav_the_college_student_freelancer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_2_detailed_user_personas",
+      "target": "documents_kaampay_prd_persona_2_sunita_the_homemaker_freelancer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L233",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_2_detailed_user_personas",
+      "target": "documents_kaampay_prd_persona_3_rohit_the_small_business_owner_client"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L246",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_4_2_detailed_user_personas",
+      "target": "documents_kaampay_prd_persona_4_admin_platform_moderator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L265",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_5_scope_definition_mvp_boundary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5_scope_definition_mvp_boundary",
+      "target": "documents_kaampay_prd_5_1_in_scope_phase_1_mvp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L281",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5_scope_definition_mvp_boundary",
+      "target": "documents_kaampay_prd_5_2_out_of_scope_phase_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L296",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5_scope_definition_mvp_boundary",
+      "target": "documents_kaampay_prd_5_3_mvp_success_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L313",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_6_functional_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L315",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_1_module_1_user_authentication_verification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L357",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_2_module_2_profile_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L379",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_3_module_3_gig_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L432",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_4_module_4_order_lifecycle_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L504",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_5_module_5_payment_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L568",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_6_module_6_real_time_chat_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L582",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_7_module_7_ratings_reviews"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L596",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_8_module_8_admin_panel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L610",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_functional_requirements",
+      "target": "documents_kaampay_prd_6_9_module_9_notifications_basic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L317",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_1_module_1_user_authentication_verification",
+      "target": "documents_kaampay_prd_fr_1_1_user_registration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L328",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_1_module_1_user_authentication_verification",
+      "target": "documents_kaampay_prd_fr_1_2_user_login"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L337",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_1_module_1_user_authentication_verification",
+      "target": "documents_kaampay_prd_fr_1_3_identity_verification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L346",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_1_module_1_user_authentication_verification",
+      "target": "documents_kaampay_prd_fr_1_4_role_based_access_control"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L381",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_3_module_3_gig_management",
+      "target": "documents_kaampay_prd_fr_3_1_create_gig_freelancer_only"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L389",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_3_module_3_gig_management",
+      "target": "documents_kaampay_prd_fr_3_2_gig_categories"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L404",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_3_module_3_gig_management",
+      "target": "documents_kaampay_prd_fr_3_3_browse_search_gigs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L414",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_3_module_3_gig_management",
+      "target": "documents_kaampay_prd_fr_3_4_gig_detail_page"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_3_module_3_gig_management",
+      "target": "documents_kaampay_prd_fr_3_5_manage_gigs_freelancer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L434",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_4_module_4_order_lifecycle_management",
+      "target": "documents_kaampay_prd_fr_4_1_order_placement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L443",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_4_module_4_order_lifecycle_management",
+      "target": "documents_kaampay_prd_fr_4_2_order_status_state_machine"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L491",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_4_module_4_order_lifecycle_management",
+      "target": "documents_kaampay_prd_fr_4_3_order_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L444",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_fr_4_2_order_status_state_machine",
+      "target": "documents_kaampay_prd_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L506",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_5_module_5_payment_system",
+      "target": "documents_kaampay_prd_fr_5_1_payment_integration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L514",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_6_5_module_5_payment_system",
+      "target": "documents_kaampay_prd_fr_5_2_escrow_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L524",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_fr_5_2_escrow_flow",
+      "target": "documents_kaampay_prd_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L620",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_7_non_functional_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L622",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_7_non_functional_requirements",
+      "target": "documents_kaampay_prd_7_1_performance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L632",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_7_non_functional_requirements",
+      "target": "documents_kaampay_prd_7_2_security"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L646",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_7_non_functional_requirements",
+      "target": "documents_kaampay_prd_7_3_scalability"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L655",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_7_non_functional_requirements",
+      "target": "documents_kaampay_prd_7_4_usability"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L665",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_7_non_functional_requirements",
+      "target": "documents_kaampay_prd_7_5_reliability"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L673",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_7_non_functional_requirements",
+      "target": "documents_kaampay_prd_7_6_maintainability"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L684",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_8_system_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L686",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_8_system_architecture",
+      "target": "documents_kaampay_prd_8_1_architecture_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L771",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_8_system_architecture",
+      "target": "documents_kaampay_prd_8_2_architecture_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L691",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_8_1_architecture_overview",
+      "target": "documents_kaampay_prd_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L784",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_9_technology_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L786",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_9_technology_stack",
+      "target": "documents_kaampay_prd_9_1_complete_stack_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L816",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_9_technology_stack",
+      "target": "documents_kaampay_prd_9_2_development_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L827",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_9_technology_stack",
+      "target": "documents_kaampay_prd_9_3_stack_justification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L858",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_10_database_design",
+      "target": "documents_kaampay_prd_10_1_entity_relationship_diagram_conceptual"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L911",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_10_database_design",
+      "target": "documents_kaampay_prd_10_2_detailed_schema_prisma_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L856",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_5",
+      "target": "documents_kaampay_prd_10_database_design"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L859",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_10_1_entity_relationship_diagram_conceptual",
+      "target": "documents_kaampay_prd_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L913",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_10_2_detailed_schema_prisma_schema",
+      "target": "documents_kaampay_prd_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1171",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_11_api_design_endpoints",
+      "target": "documents_kaampay_prd_11_1_api_conventions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1234",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_gigs_api",
+      "target": "documents_kaampay_prd_query_parameters_for_get_gigs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1333",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_11_3_standard_api_response_formats",
+      "target": "documents_kaampay_prd_error_response"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1318",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_11_3_standard_api_response_formats",
+      "target": "documents_kaampay_prd_success_response"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1320",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_success_response",
+      "target": "documents_kaampay_prd_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1335",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_error_response",
+      "target": "documents_kaampay_prd_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1494",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_12_3_key_page_layouts",
+      "target": "documents_kaampay_prd_12_4_responsive_breakpoints"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1476",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_12_3_key_page_layouts",
+      "target": "documents_kaampay_prd_gig_card_component"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1396",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_12_3_key_page_layouts",
+      "target": "documents_kaampay_prd_landing_page_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1399",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_landing_page_structure",
+      "target": "documents_kaampay_prd_codeblock_8"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1477",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_gig_card_component",
+      "target": "documents_kaampay_prd_codeblock_9"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1509",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_13_security_requirements",
+      "target": "documents_kaampay_prd_13_1_authentication_security"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1523",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_13_security_requirements",
+      "target": "documents_kaampay_prd_13_2_api_security"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1537",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_13_security_requirements",
+      "target": "documents_kaampay_prd_13_3_payment_security"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1548",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_13_security_requirements",
+      "target": "documents_kaampay_prd_13_4_data_privacy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1560",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_14_payment_flow_escrow_logic",
+      "target": "documents_kaampay_prd_14_1_end_to_end_payment_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1643",
+      "weight": 1.0,
+      "source": "documents_kaampay_prd_14_payment_flow_escrow_logic",
+      "target": "documents_kaampay_prd_14_2_mvp_payment_simplification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1562",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_14_1_end_to_end_payment_flow",
+      "target": "documents_kaampay_prd_codeblock_10"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1651",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_15_chat_system_design",
+      "target": "documents_kaampay_prd_15_2_socket_events"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1663",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_15_chat_system_design",
+      "target": "documents_kaampay_prd_15_3_chat_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1623",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_15_chat_system_design",
+      "target": "documents_kaampay_prd_codeblock_11"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1676",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_16_testing_strategy",
+      "target": "documents_kaampay_prd_16_1_testing_levels"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1685",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_16_testing_strategy",
+      "target": "documents_kaampay_prd_16_2_critical_test_scenarios"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1706",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_17_deployment_strategy",
+      "target": "documents_kaampay_prd_17_1_environment_configuration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1714",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_17_deployment_strategy",
+      "target": "documents_kaampay_prd_17_2_deployment_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1741",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_17_deployment_strategy",
+      "target": "documents_kaampay_prd_17_3_environment_variables"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1716",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_17_2_deployment_architecture",
+      "target": "documents_kaampay_prd_codeblock_12"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1742",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_17_3_environment_variables",
+      "target": "documents_kaampay_prd_codeblock_13"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1777",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_development_roadmap_sprint_plan",
+      "target": "documents_kaampay_prd_18_1_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1786",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_development_roadmap_sprint_plan",
+      "target": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1875",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_development_roadmap_sprint_plan",
+      "target": "documents_kaampay_prd_18_3_total_estimated_effort"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1788",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "target": "documents_kaampay_prd_sprint_1_foundation_week_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1802",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "target": "documents_kaampay_prd_sprint_2_profiles_gigs_week_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1816",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "target": "documents_kaampay_prd_sprint_3_orders_workflow_week_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1830",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "target": "documents_kaampay_prd_sprint_4_chat_reviews_week_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1844",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "target": "documents_kaampay_prd_sprint_5_payments_admin_week_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1859",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_18_2_sprint_breakdown_phase_1_mvp",
+      "target": "documents_kaampay_prd_sprint_6_polish_deploy_week_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1905",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_20_success_metrics_kpis",
+      "target": "documents_kaampay_prd_20_1_mvp_launch_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1917",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_20_success_metrics_kpis",
+      "target": "documents_kaampay_prd_20_2_post_launch_kpis_for_production"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1929",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_21_competitive_analysis",
+      "target": "documents_kaampay_prd_21_1_competitive_landscape"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1943",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_21_competitive_analysis",
+      "target": "documents_kaampay_prd_21_2_skillpay_s_competitive_advantages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1959",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_22_future_roadmap_phase_2",
+      "target": "documents_kaampay_prd_phase_2_post_mvp_4_weeks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L1974",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_22_future_roadmap_phase_2",
+      "target": "documents_kaampay_prd_phase_3_scale_ongoing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2011",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_24_appendices",
+      "target": "documents_kaampay_prd_appendix_a_folder_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2152",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_24_appendices",
+      "target": "documents_kaampay_prd_appendix_b_user_flow_diagrams"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2186",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_24_appendices",
+      "target": "documents_kaampay_prd_appendix_c_revenue_model_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_24_appendices",
+      "target": "documents_kaampay_prd_appendix_d_acceptance_criteria_template"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2013",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_appendix_a_folder_structure",
+      "target": "documents_kaampay_prd_codeblock_14"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_appendix_b_user_flow_diagrams",
+      "target": "documents_kaampay_prd_b_1_registration_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2163",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_appendix_b_user_flow_diagrams",
+      "target": "documents_kaampay_prd_b_2_gig_purchase_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2178",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_appendix_b_user_flow_diagrams",
+      "target": "documents_kaampay_prd_b_3_freelancer_earning_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2154",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_b_1_registration_flow",
+      "target": "documents_kaampay_prd_codeblock_15"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2164",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_b_2_gig_purchase_flow",
+      "target": "documents_kaampay_prd_codeblock_16"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2179",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_b_3_freelancer_earning_flow",
+      "target": "documents_kaampay_prd_codeblock_17"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/KaamPay_PRD.md",
+      "source_location": "L2196",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_kaampay_prd_appendix_d_acceptance_criteria_template",
+      "target": "documents_kaampay_prd_codeblock_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_md",
+      "target": "documents_step_wise_development_kaampay_stepwise_development_plan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_10_performance_refinement_deployment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_1_project_setup_environment_configuration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_2_database_schema_data_models_design"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_3_backend_authentication_authorization_core"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_4_frontend_foundation_authentication_ui"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_5_gig_management_freelancer_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_6_client_discovery_ordering_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_7_order_lifecycle_revisions_submissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_8_real_time_communication_chat_notifications"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "documents/step_wise_development.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "documents_step_wise_development_kaampay_stepwise_development_plan",
+      "target": "documents_step_wise_development_9_trust_system_ratings_reviews_admin_panel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "kaampay/Action_Register.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -16121,5 +19565,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8b58cd54655fb8fa282b5def9eaa0945336a0aa5"
+  "built_at_commit": "44fcbb9283bc512c5aef6208b4249e080422524e"
 }
