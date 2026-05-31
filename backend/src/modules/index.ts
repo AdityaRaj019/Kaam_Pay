@@ -3,6 +3,7 @@ import authRoutes from './auth/auth.routes';
 import userRoutes from './users/user.routes';
 import freelancerRoutes from './freelancer/freelancer.routes';
 import gigRoutes from './gig/gig.routes';
+import clientRoutes from './client/client.routes';
 
 const router = Router();
 
@@ -13,5 +14,6 @@ router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 router.use('/freelancer', freelancerRoutes);
 router.use('/gigs', gigRoutes);
+router.use('/client', clientRoutes);
 
 export default router;

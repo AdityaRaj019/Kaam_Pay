@@ -1,5 +1,18 @@
 # Action Register
 
+## [2026-06-01] Custom Agent Framework & Client Discovery Backend
+
+- **Agent Framework Migration ([.agents/](file:///d:/Repo/kaampay/.agents))**:
+  - Integrated custom agent framework containing always-on rules (`agent.md`, `rules.md`, `stack.md`, `context.md`, `workflow.md`), workflows (`bug-fixing.md`, `deployment-flow.md`, `feature-development.md`, `hotfix-rollback.md`), and 12 helper skills.
+  - Updated [.graphifyignore](file:///d:/Repo/kaampay/.graphifyignore) to ignore the `.agents/` folder.
+- **Client Discovery Module ([backend/src/modules/client](file:///d:/Repo/kaampay/backend/src/modules/client))**:
+  - Created a new Express sub-module for client-side queries.
+  - **Service Layer ([client.service.ts](file:///d:/Repo/kaampay/backend/src/modules/client/client.service.ts))**: Implemented static methods for querying gig and freelancer search with dynamic text matching, relational filters (user profiles, categories), price range filtering, skill tagging, and pagination.
+  - **Validation Layer ([client.validation.ts](file:///d:/Repo/kaampay/backend/src/modules/client/client.validation.ts))**: Defined strict Zod schemas for query parameters, using `z.preprocess` to coerce parameters into their correct primitive types.
+  - **Controller Layer ([client.controller.ts](file:///d:/Repo/kaampay/backend/src/modules/client/client.controller.ts))**: Implemented handlers utilizing standard helpers `catchAsync`, `safeParse`, and `sendSuccess`.
+  - **Routing Layer ([client.routes.ts](file:///d:/Repo/kaampay/backend/src/modules/client/client.routes.ts))**: Exposed 5 public GET routes: `/gigs`, `/gigs/:id`, `/freelancers`, `/freelancers/:id`, and `/categories`.
+  - **Module Entry Point ([backend/src/modules/index.ts](file:///d:/Repo/kaampay/backend/src/modules/index.ts))**: Mounted the client router under the `/client` prefix.
+
 ## [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes
 
 - **Freelancer Profile Layout ([app/profile/page.tsx](file:///d:/Repo/kaampay/app/profile/page.tsx))**: Refactored top header into a compact 3-column grid. Left card shows profile, bio, tags, and reviews/edit button. Right card replaces rate and resume upload with social links (GitHub, LinkedIn, Portfolio). Adjusted margins/paddings to prevent vertical stretching.

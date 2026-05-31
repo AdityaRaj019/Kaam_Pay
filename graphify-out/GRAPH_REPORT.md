@@ -1,16 +1,16 @@
-# Graph Report - kaampay  (2026-05-30)
+# Graph Report - kaampay  (2026-06-01)
 
 ## Corpus Check
-- 120 files · ~22,556 words
+- 122 files · ~24,010 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 759 nodes · 844 edges · 95 communities (84 shown, 11 thin omitted)
+- 782 nodes · 885 edges · 95 communities (84 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cbce89be`
+- Built from commit: `8b58cd54`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,6 +21,8 @@
 - [[_COMMUNITY_Community 3|Community 3]]
 - [[_COMMUNITY_Community 4|Community 4]]
 - [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
 - [[_COMMUNITY_Community 9|Community 9]]
 - [[_COMMUNITY_Community 12|Community 12]]
 - [[_COMMUNITY_Community 21|Community 21]]
@@ -48,7 +50,6 @@
 - [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
 - [[_COMMUNITY_Community 72|Community 72]]
-- [[_COMMUNITY_Community 73|Community 73]]
 - [[_COMMUNITY_Community 74|Community 74]]
 - [[_COMMUNITY_Community 75|Community 75]]
 - [[_COMMUNITY_Community 76|Community 76]]
@@ -78,7 +79,6 @@
 - [[_COMMUNITY_Community 125|Community 125]]
 - [[_COMMUNITY_Community 131|Community 131]]
 - [[_COMMUNITY_Community 132|Community 132]]
-- [[_COMMUNITY_Community 135|Community 135]]
 - [[_COMMUNITY_Community 147|Community 147]]
 - [[_COMMUNITY_Community 153|Community 153]]
 - [[_COMMUNITY_Community 171|Community 171]]
@@ -91,15 +91,15 @@
 - [[_COMMUNITY_Community 224|Community 224]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 16 edges
-2. `AppError` - 16 edges
+1. `AppError` - 18 edges
+2. `compilerOptions` - 16 edges
 3. `compilerOptions` - 14 edges
 4. `══════════════════════════════════════════════════════════════` - 13 edges
 5. `hiddenItems` - 11 edges
 6. `KaamPay Stepwise Development Plan` - 11 edges
 7. `useAuth()` - 10 edges
 8. `6. Functional Requirements` - 10 edges
-9. `ErrorCode` - 8 edges
+9. `ErrorCode` - 9 edges
 10. `KaamPay – Development Roadmap (Step-by-Step)` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -132,6 +132,14 @@ Nodes (32): active, bases:Create new base, canvas:Create new canvas, command-pal
 Cohesion: 0.06
 Nodes (31): audio-recorder, backlink, bases, bookmarks, canvas, command-palette, daily-notes, editor-status (+23 more)
 
+### Community 6 - "Community 6"
+Cohesion: 0.15
+Nodes (11): getCategoriesController, getFreelancerDetailsController, getGigDetailsController, searchFreelancersController, searchGigsController, router, ClientService, FreelancerSearchInput (+3 more)
+
+### Community 7 - "Community 7"
+Cohesion: 0.25
+Nodes (3): FreelancerSearchFilters, GigSearchFilters, globalForPrisma
+
 ### Community 9 - "Community 9"
 Cohesion: 0.10
 Nodes (20): centerStrength, close, collapse-color-groups, collapse-display, collapse-filter, collapse-forces, colorGroups, hideUnresolved (+12 more)
@@ -157,7 +165,7 @@ Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (6): AuthService, toPublicUser(), AuthenticatedUser, PublicUser, UserRole, Request
 
 ### Community 29 - "Community 29"
@@ -209,8 +217,8 @@ Cohesion: 0.08
 Nodes (26): 6.1 Module 1: User Authentication & Verification, 6.2 Module 2: Profile Management, 6.3 Module 3: Gig Management, 6.4 Module 4: Order Lifecycle Management, 6.5 Module 5: Payment System, 6.6 Module 6: Real-Time Chat System, 6.7 Module 7: Ratings & Reviews, 6.8 Module 8: Admin Panel (+18 more)
 
 ### Community 57 - "Community 57"
-Cohesion: 0.32
-Nodes (7): AppError, ErrorCode, STATUS_TO_CODE, errorHandler(), ErrorResponse, handleJwtExpiredError(), handleJwtInvalidError()
+Cohesion: 0.38
+Nodes (6): ErrorCode, STATUS_TO_CODE, errorHandler(), ErrorResponse, handleJwtExpiredError(), handleJwtInvalidError()
 
 ### Community 58 - "Community 58"
 Cohesion: 0.25
@@ -229,8 +237,8 @@ Cohesion: 0.29
 Nodes (7): 7.1 Performance, 7.2 Security, 7.3 Scalability, 7.4 Usability, 7.5 Reliability, 7.6 Maintainability, 7. Non-Functional Requirements
 
 ### Community 70 - "Community 70"
-Cohesion: 0.20
-Nodes (5): Auth, globalForPrisma, allowedOrigins, app, handler
+Cohesion: 0.19
+Nodes (9): router, Auth, requireAuth(), router, allowedOrigins, app, handler, completeFreelancerOnboarding (+1 more)
 
 ### Community 71 - "Community 71"
 Cohesion: 0.33
@@ -239,10 +247,6 @@ Nodes (6): 12.3 Key Page Layouts, 12.4 Responsive Breakpoints, code:block8 (┌�
 ### Community 72 - "Community 72"
 Cohesion: 0.33
 Nodes (6): 17.1 Environment Configuration, 17.2 Deployment Architecture, 17.3 Environment Variables, 17. Deployment Strategy, code:text (┌──────────────────────┐     ┌──────────────────────┐), code:env (# ─── Backend (.env) ───)
-
-### Community 73 - "Community 73"
-Cohesion: 0.20
-Nodes (7): updateFreelancerProfile, rateLimitStore, router, requireAuth(), router, completeFreelancerOnboarding, router
 
 ### Community 74 - "Community 74"
 Cohesion: 0.08
@@ -321,16 +325,12 @@ Cohesion: 0.67
 Nodes (3): 22. Future Roadmap (Phase 2+), Phase 2 (Post-MVP — 4 Weeks), Phase 3 (Scale — Ongoing)
 
 ### Community 125 - "Community 125"
-Cohesion: 0.52
-Nodes (3): UserService, FreelancerOnboardingInput, freelancerOnboardingSchema
-
-### Community 135 - "Community 135"
-Cohesion: 0.32
-Nodes (5): getMe, router, ErrorBody, sendSuccess(), SuccessResponse
+Cohesion: 0.21
+Nodes (9): getMe, UserService, FreelancerOnboardingInput, freelancerOnboardingSchema, ErrorBody, sendSuccess(), SuccessResponse, AsyncHandler (+1 more)
 
 ### Community 147 - "Community 147"
-Cohesion: 0.33
-Nodes (5): FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema, AsyncHandler, catchAsync()
+Cohesion: 0.23
+Nodes (7): AppError, updateFreelancerProfile, rateLimitStore, router, FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema
 
 ### Community 153 - "Community 153"
 Cohesion: 0.33
@@ -365,11 +365,11 @@ Cohesion: 0.67
 Nodes (3): smart_blocks, embed_blocks, min_chars
 
 ### Community 224 - "Community 224"
-Cohesion: 0.50
-Nodes (3): [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes, [2026-05-29] Gig & Project Creation Feature (Backend, Cloudinary, and Frontend), Action Register
+Cohesion: 0.40
+Nodes (4): [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes, [2026-05-29] Gig & Project Creation Feature (Backend, Cloudinary, and Frontend), [2026-06-01] Custom Agent Framework & Client Discovery Backend, Action Register
 
 ## Knowledge Gaps
-- **440 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+435 more)
+- **446 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+441 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -377,16 +377,16 @@ Nodes (3): [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes, [202
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `══════════════════════════════════════════════════════════════` connect `Community 1` to `Community 0`, `Community 65`, `Community 79`, `Community 80`, `Community 81`, `Community 52`, `Community 21`, `Community 58`, `Community 92`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `6. Functional Requirements` connect `Community 52` to `Community 1`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `24. Appendices` connect `Community 41` to `Community 21`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _440 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _446 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
-- **Should `Community 9` be split into smaller, more focused modules?**
-  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+- **Should `Community 6` be split into smaller, more focused modules?**
+  _Cohesion score 0.14619883040935672 - nodes in this community are weakly interconnected._

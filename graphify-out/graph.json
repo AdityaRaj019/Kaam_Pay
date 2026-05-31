@@ -1349,7 +1349,7 @@
       "source_file": "backend/src/common/middlewares/auth.middleware.ts",
       "source_location": "L1",
       "id": "backend_src_common_middlewares_auth_middleware_ts",
-      "community": 28,
+      "community": 70,
       "norm_label": "auth.middleware.ts"
     },
     {
@@ -1358,7 +1358,7 @@
       "source_file": "backend/src/common/middlewares/auth.middleware.ts",
       "source_location": "L15",
       "id": "middlewares_auth_middleware_requireauth",
-      "community": 73,
+      "community": 70,
       "norm_label": "requireauth()"
     },
     {
@@ -1367,7 +1367,7 @@
       "source_file": "backend/src/common/middlewares/auth.middleware.ts",
       "source_location": "L50",
       "id": "middlewares_auth_middleware_authorize",
-      "community": 28,
+      "community": 70,
       "norm_label": "authorize()"
     },
     {
@@ -1394,7 +1394,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L1",
       "id": "backend_src_common_utils_apiresponse_ts",
-      "community": 135,
+      "community": 125,
       "norm_label": "apiresponse.ts"
     },
     {
@@ -1403,7 +1403,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L3",
       "id": "utils_apiresponse_successresponse",
-      "community": 135,
+      "community": 125,
       "norm_label": "successresponse"
     },
     {
@@ -1412,7 +1412,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L10",
       "id": "utils_apiresponse_errorbody",
-      "community": 135,
+      "community": 125,
       "norm_label": "errorbody"
     },
     {
@@ -1421,7 +1421,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L17",
       "id": "utils_apiresponse_sendsuccess",
-      "community": 135,
+      "community": 125,
       "norm_label": "sendsuccess()"
     },
     {
@@ -1430,7 +1430,7 @@
       "source_file": "backend/src/common/utils/catchAsync.ts",
       "source_location": "L1",
       "id": "backend_src_common_utils_catchasync_ts",
-      "community": 147,
+      "community": 125,
       "norm_label": "catchasync.ts"
     },
     {
@@ -1439,7 +1439,7 @@
       "source_file": "backend/src/common/utils/catchAsync.ts",
       "source_location": "L3",
       "id": "utils_catchasync_asynchandler",
-      "community": 147,
+      "community": 125,
       "norm_label": "asynchandler"
     },
     {
@@ -1448,7 +1448,7 @@
       "source_file": "backend/src/common/utils/catchAsync.ts",
       "source_location": "L9",
       "id": "utils_catchasync_catchasync",
-      "community": 147,
+      "community": 125,
       "norm_label": "catchasync()"
     },
     {
@@ -1493,7 +1493,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L1",
       "id": "backend_src_config_prisma_ts",
-      "community": 70,
+      "community": 7,
       "norm_label": "prisma.ts"
     },
     {
@@ -1502,7 +1502,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L12",
       "id": "config_prisma_globalforprisma",
-      "community": 70,
+      "community": 7,
       "norm_label": "globalforprisma"
     },
     {
@@ -1511,7 +1511,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L16",
       "id": "config_prisma_buildprisma",
-      "community": 70,
+      "community": 7,
       "norm_label": "buildprisma()"
     },
     {
@@ -1547,7 +1547,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L22",
       "id": "error_apperror_apperror",
-      "community": 57,
+      "community": 147,
       "norm_label": "apperror"
     },
     {
@@ -1556,7 +1556,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L27",
       "id": "error_apperror_apperror_constructor",
-      "community": 57,
+      "community": 147,
       "norm_label": ".constructor()"
     },
     {
@@ -1619,16 +1619,16 @@
       "source_file": "backend/src/modules/index.ts",
       "source_location": "L1",
       "id": "backend_src_modules_index_ts",
-      "community": 73,
+      "community": 70,
       "norm_label": "index.ts"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "backend/src/modules/index.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "id": "modules_index_router",
-      "community": 73,
+      "community": 70,
       "norm_label": "router"
     },
     {
@@ -1637,7 +1637,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_controller_ts",
-      "community": 135,
+      "community": 125,
       "norm_label": "auth.controller.ts"
     },
     {
@@ -1646,7 +1646,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L23",
       "id": "auth_auth_controller_getme",
-      "community": 135,
+      "community": 125,
       "norm_label": "getme"
     },
     {
@@ -1655,7 +1655,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_routes_ts",
-      "community": 135,
+      "community": 70,
       "norm_label": "auth.routes.ts"
     },
     {
@@ -1664,7 +1664,7 @@
       "source_file": "backend/src/modules/auth/auth.routes.ts",
       "source_location": "L7",
       "id": "auth_auth_routes_router",
-      "community": 135,
+      "community": 70,
       "norm_label": "router"
     },
     {
@@ -1785,6 +1785,204 @@
       "norm_label": "logininput"
     },
     {
+      "label": "client.controller.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_client_client_controller_ts",
+      "community": 6,
+      "norm_label": "client.controller.ts"
+    },
+    {
+      "label": "searchGigsController",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L14",
+      "id": "client_client_controller_searchgigscontroller",
+      "community": 6,
+      "norm_label": "searchgigscontroller"
+    },
+    {
+      "label": "getGigDetailsController",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L33",
+      "id": "client_client_controller_getgigdetailscontroller",
+      "community": 6,
+      "norm_label": "getgigdetailscontroller"
+    },
+    {
+      "label": "searchFreelancersController",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L49",
+      "id": "client_client_controller_searchfreelancerscontroller",
+      "community": 6,
+      "norm_label": "searchfreelancerscontroller"
+    },
+    {
+      "label": "getFreelancerDetailsController",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L68",
+      "id": "client_client_controller_getfreelancerdetailscontroller",
+      "community": 6,
+      "norm_label": "getfreelancerdetailscontroller"
+    },
+    {
+      "label": "getCategoriesController",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L84",
+      "id": "client_client_controller_getcategoriescontroller",
+      "community": 6,
+      "norm_label": "getcategoriescontroller"
+    },
+    {
+      "label": "client.routes.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_client_client_routes_ts",
+      "community": 6,
+      "norm_label": "client.routes.ts"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L10",
+      "id": "client_client_routes_router",
+      "community": 6,
+      "norm_label": "router"
+    },
+    {
+      "label": "client.service.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_client_client_service_ts",
+      "community": 7,
+      "norm_label": "client.service.ts"
+    },
+    {
+      "label": "GigSearchFilters",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L7",
+      "id": "client_client_service_gigsearchfilters",
+      "community": 7,
+      "norm_label": "gigsearchfilters"
+    },
+    {
+      "label": "FreelancerSearchFilters",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L18",
+      "id": "client_client_service_freelancersearchfilters",
+      "community": 7,
+      "norm_label": "freelancersearchfilters"
+    },
+    {
+      "label": "ClientService",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L29",
+      "id": "client_client_service_clientservice",
+      "community": 6,
+      "norm_label": "clientservice"
+    },
+    {
+      "label": ".searchGigs()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L34",
+      "id": "client_client_service_clientservice_searchgigs",
+      "community": 6,
+      "norm_label": ".searchgigs()"
+    },
+    {
+      "label": ".getGigDetails()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L112",
+      "id": "client_client_service_clientservice_getgigdetails",
+      "community": 6,
+      "norm_label": ".getgigdetails()"
+    },
+    {
+      "label": ".searchFreelancers()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L146",
+      "id": "client_client_service_clientservice_searchfreelancers",
+      "community": 6,
+      "norm_label": ".searchfreelancers()"
+    },
+    {
+      "label": ".getFreelancerDetails()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L223",
+      "id": "client_client_service_clientservice_getfreelancerdetails",
+      "community": 6,
+      "norm_label": ".getfreelancerdetails()"
+    },
+    {
+      "label": ".getCategories()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L269",
+      "id": "client_client_service_clientservice_getcategories",
+      "community": 6,
+      "norm_label": ".getcategories()"
+    },
+    {
+      "label": "client.validation.ts",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L1",
+      "id": "backend_src_modules_client_client_validation_ts",
+      "community": 6,
+      "norm_label": "client.validation.ts"
+    },
+    {
+      "label": "gigSearchSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L5",
+      "id": "client_client_validation_gigsearchschema",
+      "community": 6,
+      "norm_label": "gigsearchschema"
+    },
+    {
+      "label": "GigSearchInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L19",
+      "id": "client_client_validation_gigsearchinput",
+      "community": 6,
+      "norm_label": "gigsearchinput"
+    },
+    {
+      "label": "freelancerSearchSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L23",
+      "id": "client_client_validation_freelancersearchschema",
+      "community": 6,
+      "norm_label": "freelancersearchschema"
+    },
+    {
+      "label": "FreelancerSearchInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L43",
+      "id": "client_client_validation_freelancersearchinput",
+      "community": 6,
+      "norm_label": "freelancersearchinput"
+    },
+    {
       "label": "freelancer.controller.ts",
       "file_type": "code",
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
@@ -1799,7 +1997,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
       "source_location": "L14",
       "id": "freelancer_freelancer_controller_updatefreelancerprofile",
-      "community": 73,
+      "community": 147,
       "norm_label": "updatefreelancerprofile"
     },
     {
@@ -1808,7 +2006,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_freelancer_freelancer_routes_ts",
-      "community": 73,
+      "community": 147,
       "norm_label": "freelancer.routes.ts"
     },
     {
@@ -1817,7 +2015,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L6",
       "id": "freelancer_freelancer_routes_router",
-      "community": 73,
+      "community": 147,
       "norm_label": "router"
     },
     {
@@ -1826,7 +2024,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L9",
       "id": "freelancer_freelancer_routes_ratelimitstore",
-      "community": 73,
+      "community": 147,
       "norm_label": "ratelimitstore"
     },
     {
@@ -1835,7 +2033,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L11",
       "id": "freelancer_freelancer_routes_updateratelimiter",
-      "community": 73,
+      "community": 147,
       "norm_label": "updateratelimiter()"
     },
     {
@@ -2060,7 +2258,7 @@
       "source_file": "backend/src/modules/users/user.controller.ts",
       "source_location": "L14",
       "id": "users_user_controller_completefreelanceronboarding",
-      "community": 73,
+      "community": 70,
       "norm_label": "completefreelanceronboarding"
     },
     {
@@ -2069,7 +2267,7 @@
       "source_file": "backend/src/modules/users/user.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_users_user_routes_ts",
-      "community": 73,
+      "community": 70,
       "norm_label": "user.routes.ts"
     },
     {
@@ -2078,7 +2276,7 @@
       "source_file": "backend/src/modules/users/user.routes.ts",
       "source_location": "L5",
       "id": "users_user_routes_router",
-      "community": 73,
+      "community": 70,
       "norm_label": "router"
     },
     {
@@ -4013,7 +4211,7 @@
       "source_file": "prisma/seed.ts",
       "source_location": "L1",
       "id": "prisma_seed_ts",
-      "community": 70,
+      "community": 7,
       "norm_label": "seed.ts"
     },
     {
@@ -4022,7 +4220,7 @@
       "source_file": "prisma/seed.ts",
       "source_location": "L13",
       "id": "prisma_seed_main",
-      "community": 70,
+      "community": 7,
       "norm_label": "main()"
     },
     {
@@ -4269,42 +4467,6 @@
       "norm_label": "deployment"
     },
     {
-      "label": "graphify.md",
-      "file_type": "document",
-      "source_file": ".agents/rules/graphify.md",
-      "source_location": "L1",
-      "id": "agents_rules_graphify_md",
-      "community": 112,
-      "norm_label": "graphify.md"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": ".agents/rules/graphify.md",
-      "source_location": "L6",
-      "id": "rules_graphify_graphify",
-      "community": 112,
-      "norm_label": "graphify"
-    },
-    {
-      "label": "graphify.md",
-      "file_type": "document",
-      "source_file": ".agents/workflows/graphify.md",
-      "source_location": "L1",
-      "id": "agents_workflows_graphify_md",
-      "community": 106,
-      "norm_label": "graphify.md"
-    },
-    {
-      "label": "Workflow: graphify",
-      "file_type": "document",
-      "source_file": ".agents/workflows/graphify.md",
-      "source_location": "L6",
-      "id": "workflows_graphify_workflow_graphify",
-      "community": 106,
-      "norm_label": "workflow: graphify"
-    },
-    {
       "label": "Action_Register.md",
       "file_type": "document",
       "source_file": "kaampay/Action_Register.md",
@@ -4323,10 +4485,19 @@
       "norm_label": "action register"
     },
     {
-      "label": "[2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes",
+      "label": "[2026-06-01] Custom Agent Framework & Client Discovery Backend",
       "file_type": "document",
       "source_file": "kaampay/Action_Register.md",
       "source_location": "L3",
+      "id": "kaampay_action_register_2026_06_01_custom_agent_framework_client_discovery_backend",
+      "community": 224,
+      "norm_label": "[2026-06-01] custom agent framework & client discovery backend"
+    },
+    {
+      "label": "[2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes",
+      "file_type": "document",
+      "source_file": "kaampay/Action_Register.md",
+      "source_location": "L16",
       "id": "kaampay_action_register_2026_05_29_freelancer_profile_page_redesign_git_setup_fixes",
       "community": 224,
       "norm_label": "[2026-05-29] freelancer profile page redesign & git setup fixes"
@@ -4335,7 +4506,7 @@
       "label": "[2026-05-29] Gig & Project Creation Feature (Backend, Cloudinary, and Frontend)",
       "file_type": "document",
       "source_file": "kaampay/Action_Register.md",
-      "source_location": "L10",
+      "source_location": "L23",
       "id": "kaampay_action_register_2026_05_29_gig_project_creation_feature_backend_cloudinary_and_frontend",
       "community": 224,
       "norm_label": "[2026-05-29] gig & project creation feature (backend, cloudinary, and frontend)"
@@ -4375,6 +4546,42 @@
       "id": "auth_auth_client_signin_signup_signout_usesession",
       "community": 132,
       "norm_label": "{ signin, signup, signout, usesession }"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L1",
+      "community": 112,
+      "norm_label": "graphify.md",
+      "id": "agents_rules_graphify_md"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "community": 112,
+      "norm_label": "graphify",
+      "id": "rules_graphify_graphify"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L1",
+      "community": 106,
+      "norm_label": "graphify.md",
+      "id": "agents_workflows_graphify_md"
+    },
+    {
+      "label": "Workflow: graphify",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "community": 106,
+      "norm_label": "workflow: graphify",
+      "id": "workflows_graphify_workflow_graphify"
     },
     {
       "label": "better_auth_implementation_plan.md",
@@ -8951,6 +9158,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "backend_src_common_utils_apiresponse_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -8989,6 +9207,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_apiresponse_sendsuccess"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
       "target": "utils_apiresponse_sendsuccess"
     },
     {
@@ -9059,6 +9288,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "backend_src_common_utils_catchasync_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
       "source_location": "L6",
       "weight": 1.0,
@@ -9097,6 +9337,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_controller_ts",
+      "target": "utils_catchasync_catchasync"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
       "target": "utils_catchasync_catchasync"
     },
     {
@@ -9221,6 +9472,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_service_ts",
+      "target": "backend_src_config_prisma_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/freelancer/freelancer.service.ts",
       "source_location": "L1",
       "weight": 1.0,
@@ -9339,6 +9601,28 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "backend_src_error_apperror_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_service_ts",
+      "target": "backend_src_error_apperror_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -9427,6 +9711,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "error_apperror_errorcode"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -9509,6 +9804,28 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_service_ts",
+      "target": "error_apperror_apperror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "error_apperror_apperror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_service_ts",
       "target": "error_apperror_apperror"
     },
     {
@@ -9725,6 +10042,17 @@
       "confidence_score": 1.0,
       "source": "backend_src_modules_index_ts",
       "target": "backend_src_modules_auth_auth_routes_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_index_ts",
+      "target": "backend_src_modules_client_client_routes_ts"
     },
     {
       "relation": "imports_from",
@@ -10020,6 +10348,307 @@
       "confidence_score": 1.0,
       "source": "backend_src_modules_auth_auth_validation_ts",
       "target": "auth_auth_validation_registerschema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "backend_src_modules_client_client_service_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "backend_src_modules_client_client_validation_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_controller_getcategoriescontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_controller_getfreelancerdetailscontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_controller_getgigdetailscontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_controller_searchfreelancerscontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_controller_searchgigscontroller"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_service_clientservice"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_validation_freelancersearchschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_controller_ts",
+      "target": "client_client_validation_gigsearchschema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "backend_src_modules_client_client_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "client_client_controller_searchgigscontroller"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "client_client_controller_getgigdetailscontroller"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "client_client_controller_searchfreelancerscontroller"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "client_client_controller_getfreelancerdetailscontroller"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "client_client_controller_getcategoriescontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.routes.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_routes_ts",
+      "target": "client_client_routes_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_service_ts",
+      "target": "client_client_service_clientservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_service_ts",
+      "target": "client_client_service_freelancersearchfilters"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_service_ts",
+      "target": "client_client_service_gigsearchfilters"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L269",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_client_service_clientservice",
+      "target": "client_client_service_clientservice_getcategories"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L223",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_client_service_clientservice",
+      "target": "client_client_service_clientservice_getfreelancerdetails"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_client_service_clientservice",
+      "target": "client_client_service_clientservice_getgigdetails"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_client_service_clientservice",
+      "target": "client_client_service_clientservice_searchfreelancers"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.service.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_client_service_clientservice",
+      "target": "client_client_service_clientservice_searchgigs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_validation_ts",
+      "target": "client_client_validation_freelancersearchinput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_validation_ts",
+      "target": "client_client_validation_freelancersearchschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_validation_ts",
+      "target": "client_client_validation_gigsearchinput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/client/client.validation.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_client_client_validation_ts",
+      "target": "client_client_validation_gigsearchschema"
     },
     {
       "relation": "imports_from",
@@ -12763,26 +13392,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".agents/rules/graphify.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_rules_graphify_md",
-      "target": "rules_graphify_graphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".agents/workflows/graphify.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_workflows_graphify_md",
-      "target": "workflows_graphify_workflow_graphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "kaampay/Action_Register.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -12809,6 +13418,36 @@
       "confidence_score": 1.0,
       "source": "kaampay_action_register_action_register",
       "target": "kaampay_action_register_2026_05_29_gig_project_creation_feature_backend_cloudinary_and_frontend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kaampay/Action_Register.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kaampay_action_register_action_register",
+      "target": "kaampay_action_register_2026_06_01_custom_agent_framework_client_discovery_backend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_rules_graphify_md",
+      "target": "rules_graphify_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_workflows_graphify_md",
+      "target": "workflows_graphify_workflow_graphify"
     },
     {
       "relation": "contains",
@@ -15482,5 +16121,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cbce89bea0c37ad87f30b6b9054fb401e218da5b"
+  "built_at_commit": "8b58cd54655fb8fa282b5def9eaa0945336a0aa5"
 }

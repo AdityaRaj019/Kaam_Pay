@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\backend\\src\\modules\\index.ts": {
-    "mtime": 1780078409.2546933,
-    "ast_hash": "d4a35bb1e2e983f7dc05c84d8baef0f0",
+    "mtime": 1780254019.4343486,
+    "ast_hash": "8770f79bcaefa93bc80a1207e9baf47f",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.controller.ts": {
@@ -705,8 +705,8 @@
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\kaampay\\Action_Register.md": {
-    "mtime": 1780162563.2174666,
-    "ast_hash": "4a959239f718b91da0d424ff665fd54d",
+    "mtime": 1780254016.5598488,
+    "ast_hash": "93c996927080d15173140242eaec7ed3",
     "semantic_hash": ""
   },
   "D:\\Repo\\kaampay\\kaampay\\Context_State.md": {
@@ -757,6 +757,26 @@
   "D:\\Repo\\kaampay\\.husky\\pre-commit": {
     "mtime": 1780051513.835681,
     "ast_hash": "3fddc5e0925eb783c39411b7ed003394",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.controller.ts": {
+    "mtime": 1780252592.9644384,
+    "ast_hash": "30ab0beaefffd3242cc6a7a828255f44",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.routes.ts": {
+    "mtime": 1780252650.0907612,
+    "ast_hash": "0b13adff2f737736ffbd26e2bae2827e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.service.ts": {
+    "mtime": 1780252515.9633133,
+    "ast_hash": "11c634b42401a92180f3de14d1a174cb",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.validation.ts": {
+    "mtime": 1780254019.4286125,
+    "ast_hash": "ef5621567e170bed3bc702b9a94f912a",
     "semantic_hash": ""
   }
 }
