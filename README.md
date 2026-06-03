@@ -25,26 +25,30 @@
 ## 🚀 Core Features
 
 ### 🔍 1. Client Discovery & Marketplace (`/find-work`)
-* **Dynamic Search & Filtering**: Client-side marketplace allowing instant, debounced (400ms) full-text query matching across titles and descriptions, category tags, price ranges (Min/Max ₹), and maximum delivery timelines (1, 3, 7, 14, or 30 days).
-* **Split-Pane Master-Detail View**: Optimized grid layout that loads list items on the left and updates a detailed seller and gig view panel on the right asynchronously upon selection. 
-* **Expanded Full Modal View**: Allows deep-dive reading of gig details, category alignments, delivery periods, seller bio metrics, and contact routes.
-* **Offline Bookmarking Sync**: Syncs bookmarked gigs to local storage (`kp_saved_gigs`) and supports instant toggling animations with scale ping bursts.
-* **Skeleton Loaders**: Provides elegant, layout-consistent skeletons for card grids and details panels to ensure high perceived speed.
+
+- **Dynamic Search & Filtering**: Client-side marketplace allowing instant, debounced (400ms) full-text query matching across titles and descriptions, category tags, price ranges (Min/Max ₹), and maximum delivery timelines (1, 3, 7, 14, or 30 days).
+- **Split-Pane Master-Detail View**: Optimized grid layout that loads list items on the left and updates a detailed seller and gig view panel on the right asynchronously upon selection.
+- **Expanded Full Modal View**: Allows deep-dive reading of gig details, category alignments, delivery periods, seller bio metrics, and contact routes.
+- **Offline Bookmarking Sync**: Syncs bookmarked gigs to local storage (`kp_saved_gigs`) and supports instant toggling animations with scale ping bursts.
+- **Skeleton Loaders**: Provides elegant, layout-consistent skeletons for card grids and details panels to ensure high perceived speed.
 
 ### 🎨 2. Freelancer Workspace & Gig Creation (`/dashboard/create-gig`)
-* **Multi-Step Gig Wizard**: Streamlined submission form featuring drag-and-drop file inputs, base64 reader pipelines, category selection, and instant database listings.
-* **Rate Limiting Protection**: Mounts backend middleware throttling gig submissions to 3 creation requests per minute per IP address.
-* **Payload Extensions**: Increased Express JSON parser payload limitations to `10mb` to fully support high-fidelity base64 image transfers.
-* **Cloudinary Pipeline**: Serves and optimizes media assets by receiving raw base64 arrays, piping them to Cloudinary SDK buckets, and persisting returned URLs.
+
+- **Multi-Step Gig Wizard**: Streamlined submission form featuring drag-and-drop file inputs, base64 reader pipelines, category selection, and instant database listings.
+- **Rate Limiting Protection**: Mounts backend middleware throttling gig submissions to 3 creation requests per minute per IP address.
+- **Payload Extensions**: Increased Express JSON parser payload limitations to `10mb` to fully support high-fidelity base64 image transfers.
+- **Cloudinary Pipeline**: Serves and optimizes media assets by receiving raw base64 arrays, piping them to Cloudinary SDK buckets, and persisting returned URLs.
 
 ### 👤 3. Profile Customization & Onboarding (`/profile` & `/onboarding`)
-* **Onboarding Wizard**: Multi-step wizard capturing freelancer skills, biographies, experience scopes, and pricing.
-* **Compact Grid Profile**: Redesigned `/profile` layout into a balanced 3-column deck separating bio tags, credentials, portfolio grids, and links (LinkedIn, GitHub, Portfolio).
+
+- **Onboarding Wizard**: Multi-step wizard capturing freelancer skills, biographies, experience scopes, and pricing.
+- **Compact Grid Profile**: Redesigned `/profile` layout into a balanced 3-column deck separating bio tags, credentials, portfolio grids, and links (LinkedIn, GitHub, Portfolio).
 
 ### 🔑 4. Session & Authentication Core
-* **Better Auth Integration**: Secured endpoint protection handles logins, signups, and sign-outs via cookie-based sessions.
-* **Role-Based Redirections**: Shielded page routes and layouts verify user roles and redirect accordingly (e.g. preventing clients from executing freelancer-scoped actions).
-* **Session Storage**: Syncs user data globally using lightweight Zustand stores (`auth.store.ts`).
+
+- **Better Auth Integration**: Secured endpoint protection handles logins, signups, and sign-outs via cookie-based sessions.
+- **Role-Based Redirections**: Shielded page routes and layouts verify user roles and redirect accordingly (e.g. preventing clients from executing freelancer-scoped actions).
+- **Session Storage**: Syncs user data globally using lightweight Zustand stores (`auth.store.ts`).
 
 ---
 
@@ -91,26 +95,28 @@ KaamPay/
 
 ## 🛠️ Technology Stack
 
-| Library/Framework | Layer | Responsibility |
-|---|---|---|
-| **Next.js 16** | Frontend | Core framework, App routing, SSR, layout structures |
-| **Express 5** | Backend | REST API endpoints, routing, error interception |
-| **Prisma 7** | Database | Database Client mapping & migrations (PostgreSQL) |
-| **Better Auth 1.6** | Authentication | Client-side & Server-side session guards |
-| **Zustand 5.0** | State Management | User state cache, local storage persistence |
-| **Tailwind CSS 4** | Styling | Utility classes, responsive grids, and transitions |
-| **Zod 4.4** | Validation | Type coercion, query validation, and schema definitions |
-| **Cloudinary** | Media Storage | Asset uploads and base64 conversion |
+| Library/Framework   | Layer            | Responsibility                                          |
+| ------------------- | ---------------- | ------------------------------------------------------- |
+| **Next.js 16**      | Frontend         | Core framework, App routing, SSR, layout structures     |
+| **Express 5**       | Backend          | REST API endpoints, routing, error interception         |
+| **Prisma 7**        | Database         | Database Client mapping & migrations (PostgreSQL)       |
+| **Better Auth 1.6** | Authentication   | Client-side & Server-side session guards                |
+| **Zustand 5.0**     | State Management | User state cache, local storage persistence             |
+| **Tailwind CSS 4**  | Styling          | Utility classes, responsive grids, and transitions      |
+| **Zod 4.4**         | Validation       | Type coercion, query validation, and schema definitions |
+| **Cloudinary**      | Media Storage    | Asset uploads and base64 conversion                     |
 
 ---
 
 ## ⚡ Setup & Installation
 
 ### Prerequisites
-* **Node.js** (v20+ recommended)
-* **PostgreSQL** database running locally or hosted on the cloud
+
+- **Node.js** (v20+ recommended)
+- **PostgreSQL** database running locally or hosted on the cloud
 
 ### 1. Configure Environment Variables
+
 Create a `.env` file in the root directory mapping the following keys:
 
 ```env
@@ -132,13 +138,17 @@ FRONTEND_URL="http://localhost:3000"
 ```
 
 ### 2. Install Dependencies
+
 Run the install command using NPM:
+
 ```bash
 npm install
 ```
 
 ### 3. Initialize Database Migrations & Seeds
+
 Run database migrations and seed default freelancers/active gigs:
+
 ```bash
 # Push schema structure to database
 npx prisma db push
@@ -151,6 +161,7 @@ npx tsx scripts/seed-gigs.ts
 ```
 
 ### 4. Run Development Servers
+
 Start both the client and the backend server in parallel:
 
 ```bash
@@ -168,13 +179,17 @@ Navigate to `http://localhost:3000/find-work` to test the client discovery flow.
 ## 📝 Code Standards & Development Workflow
 
 ### Asynchronous Execution Rules
-* Every asynchronous function must explicitly return a Promise or use the `async/await` keyword.
-* Every `await` must be caught locally inside a `try/catch` block, or handled using `catchAsync` wrappers on the backend to prevent unhandled rejection crashes.
+
+- Every asynchronous function must explicitly return a Promise or use the `async/await` keyword.
+- Every `await` must be caught locally inside a `try/catch` block, or handled using `catchAsync` wrappers on the backend to prevent unhandled rejection crashes.
 
 ### Knowledge Graph Updates (Graphify)
+
 The project includes a Git pre-commit hook that automatically runs linter checks, formats modifications, and regenerates the Graphify knowledge graph upon commits.
 To trigger the graphify compilation manual fallback, run:
+
 ```bash
 python -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))"
 ```
+
 This updates the HTML visualization maps under [graphify-out/graph.html](file:///d:/Repo/kaampay/graphify-out/graph.html).
