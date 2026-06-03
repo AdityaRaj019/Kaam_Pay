@@ -9,6 +9,7 @@ This document serves as the project memory and architectural context repository.
 KaamPay is a freelancing marketplace consisting of a Next.js frontend, an Express API backend, and a PostgreSQL database mapped via Prisma ORM.
 
 ### Tech Stack Inventory
+
 - **Frontend Framework**: Next.js 16 (React, App Router, TypeScript, Tailwind CSS)
 - **Backend API**: Express 5 (TypeScript, NodeJS)
 - **Database ORM**: Prisma 7 (PostgreSQL Client with pg adapter pooling)
@@ -24,6 +25,7 @@ KaamPay is a freelancing marketplace consisting of a Next.js frontend, an Expres
 The codebase is split into two primary components: Next.js Frontend (Root) and Express Backend (`backend/`).
 
 ### 🖥️ Next.js Frontend Structure
+
 - **[app/](file:///d:/Repo/kaampay/app)**: Next.js App Router root directories. Folder names define routing.
   - `(auth)/`: Grouped authentication routes (login, signup, register, verify-email).
   - `dashboard/`: Logged-in user workspace dashboard (includes `/create-gig` for freelancers).
@@ -53,6 +55,7 @@ The codebase is split into two primary components: Next.js Frontend (Root) and E
   - [gig.ts](file:///d:/Repo/kaampay/types/gig.ts): **(NEW)** Data contracts for `Gig`, `GigDetail`, `GigFreelancer`, filters, and search response shapes.
 
 ### ⚙️ Express Backend Structure (`backend/src/`)
+
 - **[server.ts](file:///d:/Repo/kaampay/backend/src/server.ts)**: API server bootstrapper listening on port 5000.
 - **[app.ts](file:///d:/Repo/kaampay/backend/src/app.ts)**: Configures helmet protection, routing endpoints, error-handling middleware, and parsed body limits (upgraded to `10mb`).
 - **[config/](file:///d:/Repo/kaampay/backend/src/config)**: Instantiates SDK wrapper clients (Prisma Client singleton, Cloudinary API, Better Auth core configs).
@@ -70,6 +73,7 @@ The codebase is split into two primary components: Next.js Frontend (Root) and E
 - **[error/](file:///d:/Repo/kaampay/backend/src/error)**: central `AppError` configuration and global handling block.
 
 ### 🗃️ Database & Seeding
+
 - **[prisma/](file:///d:/Repo/kaampay/prisma)**: Contains the database schema (`schema.prisma`) and migration timeline scripts.
 - **[scripts/](file:///d:/Repo/kaampay/scripts)**:
   - [seed-gigs.ts](file:///d:/Repo/kaampay/scripts/seed-gigs.ts): **(NEW)** Generates 3 mock freelancers with fully filled-out profiles and 10 realistic active gigs spanning standard PRD categories.
@@ -79,33 +83,36 @@ The codebase is split into two primary components: Next.js Frontend (Root) and E
 ## 🛠️ 3. Feature-by-Feature Implementation State
 
 ### Feature A: Client Discovery & Browsing (Frontend + Backend)
-* **Implementation Details**:
+
+- **Implementation Details**:
   - **Backend API**: Dynamic, unauthenticated Express endpoints filter active gigs and freelancers based on search tokens, categories, maximum delivery times, and price scopes.
   - **Dynamic SQL Coercion**: Query parameters undergo coercion filters inside the validation block to prevent crashes from invalid types.
   - **Search & Pagination**: The frontend (`/find-work`) triggers dynamic requests debounced by 400ms. It features pagination triggers, loading skeletons, and filter drawers.
   - **Split-Pane Layout**: The search results present a list-detail architecture. Clicking a card loads detailed seller statistics and order triggers in a persistent side panel.
   - **Bookmark Storage**: User bookmark selections are cached inside `localStorage` (key: `kp_saved_gigs`) and support offline hydration and toggling with interactive animations.
-* **Relevant Files**:
+- **Relevant Files**:
   - Frontend: `app/find-work/page.tsx`, `components/find-work/*`
   - Backend: `backend/src/modules/client/*`
   - Types: `types/gig.ts`
 
 ### Feature B: Gig & Project Creation (Cloudinary + Rate Limiting)
-* **Implementation Details**:
+
+- **Implementation Details**:
   - **Schema Extensions**: Added `images String[]` to model `Gig` and `education String?` to model `Profile`.
   - **Upload Pipeline**: Base64 file paths uploaded via drag-and-drop on the frontend are sent to Express, processed through `cloudinary.ts`, and converted to persistent URL strings.
   - **Rate Limiting**: Integrated `createGigRateLimiter` to throttle API calls to 3 gig creations per 1 minute per IP address.
   - **Payload Extensions**: Increased JSON parsing threshold limit on the Express engine to `10mb` to allow bulk base64 picture uploads.
-* **Relevant Files**:
+- **Relevant Files**:
   - Frontend: `app/dashboard/create-gig/page.tsx`, `app/dashboard/page.tsx`
   - Backend: `backend/src/modules/gig/*`, `backend/src/config/cloudinary.ts`
 
 ### Feature C: Freelancer Profile Layout & Onboarding
-* **Implementation Details**:
+
+- **Implementation Details**:
   - **Grid Layout**: Redesigned `/profile` header into a compact 3-column layout dividing bio details, rates, and external social anchors.
   - **Navbar/Footer Alignment**: Bound profile sections directly with `<AppNavbar />` and compacted the page `<Footer />` height metrics.
   - **Onboarding Wizard**: Step-by-step form capturing skills, hourly rates, experience metadata, and writing database changes on completion.
-* **Relevant Files**:
+- **Relevant Files**:
   - Frontend: `app/profile/page.tsx`, `app/onboarding/page.tsx`
   - Backend: `backend/src/modules/users/user.controller.ts`
 
@@ -128,12 +135,15 @@ The codebase is split into two primary components: Next.js Frontend (Root) and E
 ## 📜 5. Operational Conventions & Development Rules
 
 ### Asynchronous Safety
+
 1. All asynchronous actions MUST explicitly return a Promise or implement `async/await`.
 2. Every `await` must be contained inside a localized `try/catch` block, or call standard bubble-up catch handlers (`catchAsync` on backend).
 
 ### Package Governance
+
 1. Avoid raw dependency upgrades. Always matching packages via the current package manager (`npm install`).
 
 ### Version Control & Sanity Checks
+
 1. Staged hooks configured inside `.husky/pre-commit` run `graphify update .` automatically upon commit to regenerate dependencies and update metadata graphs.
 2. The compiler/lint parameters ignore `/kaampay/.obsidian` configurations to prevent formatting conflicts with Obsidian vault structures.
