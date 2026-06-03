@@ -1,27 +1,27 @@
 import { PrismaClient } from '../../../lib/generated/prisma';
-import { withAccelerate } from '@prisma/extension-accelerate';
+import { PrismaPg } from '@prisma/adapter-pg';
 
 /**
- * Prisma v7 + Prisma Accelerate (prisma+postgres://accelerate.prisma-data.net)
+ * Prisma v7 — Direct PostgreSQL connection via Driver Adapter.
  *
- * The DATABASE_URL is a Prisma Accelerate proxy URL — NOT a direct Postgres URL.
- * It must be passed as `accelerateUrl` (not as a pg.Pool connection string).
- * The withAccelerate() extension handles the HTTP transport.
+ * In Prisma v7, the `url` field was removed from schema.prisma.
+ * Use @prisma/adapter-pg with a connection string instead.
+ * No Prisma Accelerate required for local development.
  */
 
 const globalForPrisma = globalThis as unknown as {
-  prisma?: ReturnType<typeof buildPrisma>;
+  prisma?: PrismaClient;
 };
 
 function buildPrisma() {
-  const url = process.env.DATABASE_URL;
-  if (!url) {
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) {
     throw new Error('❌ DATABASE_URL is not set. Check your .env file.');
   }
 
-  return new PrismaClient({
-    accelerateUrl: url,
-  }).$extends(withAccelerate());
+  const adapter = new PrismaPg({ connectionString });
+
+  return new PrismaClient({ adapter });
 }
 
 // Singleton — prevents multiple instances during tsx watch hot-reloads
