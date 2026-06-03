@@ -9,7 +9,7 @@ import api from '@/lib/axios';
 import toast from 'react-hot-toast';
 
 interface AppNavbarProps {
-  user: {
+  user?: {
     name: string;
     email: string;
     image: string | null;
@@ -83,9 +83,16 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute left-0 mt-2 w-48 bg-white border border-slate-200 rounded-xl shadow-lg p-3 z-50 text-xs text-slate-400 italic text-center"
+                  className="absolute left-0 mt-2 w-52 bg-white border border-slate-200 rounded-xl shadow-lg p-2 z-50"
                 >
-                  No options available
+                  <Link
+                    href="/find-work"
+                    onClick={() => setIsFindWorkOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-50 text-slate-700 text-sm font-medium transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4 text-[#4a4bd7]" />
+                    Browse All Gigs
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>

@@ -251,7 +251,7 @@ export default function DashboardPage() {
                 )}
                 {userRole === 'CLIENT' && (
                   <Link
-                    href="/gigs"
+                    href="/find-work"
                     className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2.5 rounded-full transition-colors text-sm"
                   >
                     Browse Gigs
