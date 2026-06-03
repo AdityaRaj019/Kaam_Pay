@@ -5142,67 +5142,220 @@
       "norm_label": "readme.md"
     },
     {
-      "label": "Next.js Application",
+      "label": "\ud83d\udcbc KaamPay \u2014 Professional Freelance Marketplace for India",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "kaampay_readme_next_js_application",
+      "id": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
       "community": 60,
-      "norm_label": "next.js application"
+      "norm_label": "\ud83d\udcbc kaampay \u2014 professional freelance marketplace for india"
     },
     {
-      "label": "Getting Started",
+      "label": "code:block1 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L5",
-      "id": "kaampay_readme_getting_started",
-      "community": 60,
-      "norm_label": "getting started"
-    },
-    {
-      "label": "code:bash (npm run dev)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L9",
       "id": "kaampay_readme_codeblock_1",
       "community": 60,
-      "norm_label": "code:bash (npm run dev)"
+      "norm_label": "code:block1 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
     },
     {
-      "label": "Development",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L21",
-      "id": "kaampay_readme_development",
-      "community": 60,
-      "norm_label": "development"
-    },
-    {
-      "label": "code:bash (app/page.tsx)",
+      "label": "\ud83d\ude80 Core Features",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L25",
+      "id": "kaampay_readme_core_features",
+      "community": 60,
+      "norm_label": "\ud83d\ude80 core features"
+    },
+    {
+      "label": "\ud83d\udd0d 1. Client Discovery & Marketplace (`/find-work`)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "id": "kaampay_readme_1_client_discovery_marketplace_find_work",
+      "community": 60,
+      "norm_label": "\ud83d\udd0d 1. client discovery & marketplace (`/find-work`)"
+    },
+    {
+      "label": "\ud83c\udfa8 2. Freelancer Workspace & Gig Creation (`/dashboard/create-gig`)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "id": "kaampay_readme_2_freelancer_workspace_gig_creation_dashboard_create_gig",
+      "community": 60,
+      "norm_label": "\ud83c\udfa8 2. freelancer workspace & gig creation (`/dashboard/create-gig`)"
+    },
+    {
+      "label": "\ud83d\udc64 3. Profile Customization & Onboarding (`/profile` & `/onboarding`)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L42",
+      "id": "kaampay_readme_3_profile_customization_onboarding_profile_onboarding",
+      "community": 60,
+      "norm_label": "\ud83d\udc64 3. profile customization & onboarding (`/profile` & `/onboarding`)"
+    },
+    {
+      "label": "\ud83d\udd11 4. Session & Authentication Core",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "id": "kaampay_readme_4_session_authentication_core",
+      "community": 60,
+      "norm_label": "\ud83d\udd11 4. session & authentication core"
+    },
+    {
+      "label": "\ud83d\udcc1 Repository Directory Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L55",
+      "id": "kaampay_readme_repository_directory_structure",
+      "community": 60,
+      "norm_label": "\ud83d\udcc1 repository directory structure"
+    },
+    {
+      "label": "code:text (KaamPay/)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L57",
       "id": "kaampay_readme_codeblock_2",
       "community": 60,
-      "norm_label": "code:bash (app/page.tsx)"
+      "norm_label": "code:text (kaampay/)"
     },
     {
-      "label": "Learn More",
+      "label": "\ud83d\udee0\ufe0f Technology Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L33",
-      "id": "kaampay_readme_learn_more",
+      "source_location": "L96",
+      "id": "kaampay_readme_technology_stack",
       "community": 60,
-      "norm_label": "learn more"
+      "norm_label": "\ud83d\udee0\ufe0f technology stack"
     },
     {
-      "label": "Deployment",
+      "label": "\u26a1 Setup & Installation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L41",
-      "id": "kaampay_readme_deployment",
+      "source_location": "L111",
+      "id": "kaampay_readme_setup_installation",
       "community": 60,
-      "norm_label": "deployment"
+      "norm_label": "\u26a1 setup & installation"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "id": "kaampay_readme_prerequisites",
+      "community": 60,
+      "norm_label": "prerequisites"
+    },
+    {
+      "label": "1. Configure Environment Variables",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L118",
+      "id": "kaampay_readme_1_configure_environment_variables",
+      "community": 60,
+      "norm_label": "1. configure environment variables"
+    },
+    {
+      "label": "code:env (# \u2500\u2500\u2500 Database configuration (Prisma) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "id": "kaampay_readme_codeblock_3",
+      "community": 60,
+      "norm_label": "code:env (# \u2500\u2500\u2500 database configuration (prisma) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500)"
+    },
+    {
+      "label": "2. Install Dependencies",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L140",
+      "id": "kaampay_readme_2_install_dependencies",
+      "community": 60,
+      "norm_label": "2. install dependencies"
+    },
+    {
+      "label": "code:bash (npm install)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L144",
+      "id": "kaampay_readme_codeblock_4",
+      "community": 60,
+      "norm_label": "code:bash (npm install)"
+    },
+    {
+      "label": "3. Initialize Database Migrations & Seeds",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L148",
+      "id": "kaampay_readme_3_initialize_database_migrations_seeds",
+      "community": 60,
+      "norm_label": "3. initialize database migrations & seeds"
+    },
+    {
+      "label": "code:bash (# Push schema structure to database)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L152",
+      "id": "kaampay_readme_codeblock_5",
+      "community": 60,
+      "norm_label": "code:bash (# push schema structure to database)"
+    },
+    {
+      "label": "4. Run Development Servers",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L163",
+      "id": "kaampay_readme_4_run_development_servers",
+      "community": 60,
+      "norm_label": "4. run development servers"
+    },
+    {
+      "label": "code:bash (# Terminal 1 \u2014 Frontend Client (Port 3000))",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L167",
+      "id": "kaampay_readme_codeblock_6",
+      "community": 60,
+      "norm_label": "code:bash (# terminal 1 \u2014 frontend client (port 3000))"
+    },
+    {
+      "label": "\ud83d\udcdd Code Standards & Development Workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L179",
+      "id": "kaampay_readme_code_standards_development_workflow",
+      "community": 60,
+      "norm_label": "\ud83d\udcdd code standards & development workflow"
+    },
+    {
+      "label": "Asynchronous Execution Rules",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L181",
+      "id": "kaampay_readme_asynchronous_execution_rules",
+      "community": 60,
+      "norm_label": "asynchronous execution rules"
+    },
+    {
+      "label": "Knowledge Graph Updates (Graphify)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L186",
+      "id": "kaampay_readme_knowledge_graph_updates_graphify",
+      "community": 60,
+      "norm_label": "knowledge graph updates (graphify)"
+    },
+    {
+      "label": "code:bash (python -c \"from graphify.watch import _rebuild_code; from pa)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L191",
+      "id": "kaampay_readme_codeblock_7",
+      "community": 60,
+      "norm_label": "code:bash (python -c \"from graphify.watch import _rebuild_code; from pa)"
     },
     {
       "label": "Action_Register.md",
@@ -5428,6 +5581,51 @@
       "id": "auth_auth_client_signin_signup_signout_usesession",
       "community": 132,
       "norm_label": "{ signin, signup, signout, usesession }"
+    },
+    {
+      "label": "Next.js Application",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "community": 60,
+      "norm_label": "next.js application",
+      "id": "kaampay_readme_next_js_application"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "community": 60,
+      "norm_label": "getting started",
+      "id": "kaampay_readme_getting_started"
+    },
+    {
+      "label": "Development",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L21",
+      "community": 60,
+      "norm_label": "development",
+      "id": "kaampay_readme_development"
+    },
+    {
+      "label": "Learn More",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "community": 60,
+      "norm_label": "learn more",
+      "id": "kaampay_readme_learn_more"
+    },
+    {
+      "label": "Deployment",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "community": 60,
+      "norm_label": "deployment",
+      "id": "kaampay_readme_deployment"
     },
     {
       "label": "collapsed",
@@ -6172,7 +6370,7 @@
       "file_type": "document",
       "source_file": "documents/KaamPay_PRD.md",
       "source_location": "L1185",
-      "community": 56,
+      "community": 8,
       "norm_label": "11. api design & endpoints",
       "id": "documents_kaampay_prd_11_api_design_endpoints"
     },
@@ -6181,7 +6379,7 @@
       "file_type": "document",
       "source_file": "documents/KaamPay_PRD.md",
       "source_location": "L1187",
-      "community": 56,
+      "community": 8,
       "norm_label": "11.1 api conventions",
       "id": "documents_kaampay_prd_11_1_api_conventions"
     },
@@ -17213,6 +17411,16 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "source": "readme_md",
+      "target": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "readme_md",
       "target": "kaampay_readme_next_js_application"
@@ -17221,21 +17429,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L41",
+      "source_location": "L179",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "kaampay_readme_next_js_application",
-      "target": "kaampay_readme_deployment"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "kaampay_readme_next_js_application",
-      "target": "kaampay_readme_development"
+      "source": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "target": "kaampay_readme_code_standards_development_workflow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17243,19 +17441,49 @@
       "source_file": "README.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "kaampay_readme_next_js_application",
-      "target": "kaampay_readme_getting_started"
+      "source": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "target": "kaampay_readme_codeblock_1",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L25",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "kaampay_readme_next_js_application",
-      "target": "kaampay_readme_learn_more"
+      "source": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "target": "kaampay_readme_core_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "target": "kaampay_readme_repository_directory_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "target": "kaampay_readme_setup_installation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "kaampay_readme_kaampay_professional_freelance_marketplace_for_india",
+      "target": "kaampay_readme_technology_stack",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17271,11 +17499,181 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "kaampay_readme_core_features",
+      "target": "kaampay_readme_1_client_discovery_marketplace_find_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "kaampay_readme_core_features",
+      "target": "kaampay_readme_2_freelancer_workspace_gig_creation_dashboard_create_gig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "kaampay_readme_core_features",
+      "target": "kaampay_readme_3_profile_customization_onboarding_profile_onboarding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "kaampay_readme_core_features",
+      "target": "kaampay_readme_4_session_authentication_core",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "kaampay_readme_repository_directory_structure",
+      "target": "kaampay_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "kaampay_readme_development",
       "target": "kaampay_readme_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "kaampay_readme_setup_installation",
+      "target": "kaampay_readme_1_configure_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "kaampay_readme_setup_installation",
+      "target": "kaampay_readme_2_install_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "kaampay_readme_setup_installation",
+      "target": "kaampay_readme_3_initialize_database_migrations_seeds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "kaampay_readme_setup_installation",
+      "target": "kaampay_readme_4_run_development_servers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "kaampay_readme_setup_installation",
+      "target": "kaampay_readme_prerequisites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "kaampay_readme_1_configure_environment_variables",
+      "target": "kaampay_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "kaampay_readme_2_install_dependencies",
+      "target": "kaampay_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "kaampay_readme_3_initialize_database_migrations_seeds",
+      "target": "kaampay_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "kaampay_readme_4_run_development_servers",
+      "target": "kaampay_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "kaampay_readme_code_standards_development_workflow",
+      "target": "kaampay_readme_asynchronous_execution_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "kaampay_readme_code_standards_development_workflow",
+      "target": "kaampay_readme_knowledge_graph_updates_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "kaampay_readme_knowledge_graph_updates_graphify",
+      "target": "kaampay_readme_codeblock_7",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -17476,6 +17874,46 @@
       "confidence_score": 1.0,
       "source": "kaampay_context_state_5_operational_conventions_development_rules",
       "target": "kaampay_context_state_version_control_sanity_checks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kaampay_readme_next_js_application",
+      "target": "kaampay_readme_deployment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kaampay_readme_next_js_application",
+      "target": "kaampay_readme_development"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kaampay_readme_next_js_application",
+      "target": "kaampay_readme_getting_started"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "kaampay_readme_next_js_application",
+      "target": "kaampay_readme_learn_more"
     },
     {
       "relation": "contains",
@@ -22029,5 +22467,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "39f453fefb7b54b3ac4a0027360ccfa3beabf0cb"
+  "built_at_commit": "7e34870a555d3a932200528b077ee8c6b556d595"
 }

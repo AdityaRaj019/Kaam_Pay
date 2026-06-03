@@ -1,16 +1,16 @@
 # Graph Report - kaampay  (2026-06-03)
 
 ## Corpus Check
-- 134 files · ~33,236 words
+- 134 files · ~34,159 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1057 nodes · 1222 edges · 125 communities (113 shown, 12 thin omitted)
+- 1079 nodes · 1246 edges · 124 communities (113 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `39f453fe`
+- Built from commit: `7e34870a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -71,7 +71,6 @@
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
 - [[_COMMUNITY_Community 55|Community 55]]
-- [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Community 60|Community 60]]
@@ -145,7 +144,7 @@
 - `DashboardPage()` --calls--> `useAuth()`  [EXTRACTED]
   app/dashboard/page.tsx → hooks/useAuth.ts
 
-## Communities (125 total, 12 thin omitted)
+## Communities (124 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.50
@@ -176,8 +175,8 @@ Cohesion: 0.14
 Nodes (4): ClientService, FreelancerSearchFilters, GigSearchFilters, globalForPrisma
 
 ### Community 8 - "Community 8"
-Cohesion: 0.11
-Nodes (17): ══════════════════════════════════════════════════════════════, 11.2 API Endpoint Inventory, 12.1 Design System, 12.2 Page Inventory, 12. UI/UX Requirements & Wireframe Guidelines, 19. Risk Assessment & Mitigation, 23. Glossary, Admin API (+9 more)
+Cohesion: 0.10
+Nodes (19): ══════════════════════════════════════════════════════════════, 11.1 API Conventions, 11.2 API Endpoint Inventory, 11. API Design & Endpoints, 12.1 Design System, 12.2 Page Inventory, 12. UI/UX Requirements & Wireframe Guidelines, 19. Risk Assessment & Mitigation (+11 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.10
@@ -372,8 +371,8 @@ Cohesion: 0.25
 Nodes (8): 4.1 Primary User Segments, 4.2 Detailed User Personas, 4.3 User Roles & Permissions, 4. Target Audience & User Personas, Persona 1: Aarav — The College Student (Freelancer), Persona 2: Sunita — The Homemaker (Freelancer), Persona 3: Rohit — The Small Business Owner (Client), Persona 4: Admin — Platform Moderator
 
 ### Community 60 - "Community 60"
-Cohesion: 0.25
-Nodes (7): code:bash (npm run dev), code:bash (app/page.tsx), Deployment, Development, Getting Started, Learn More, Next.js Application
+Cohesion: 0.07
+Nodes (29): 🔍 1. Client Discovery & Marketplace (`/find-work`), 1. Configure Environment Variables, 🎨 2. Freelancer Workspace & Gig Creation (`/dashboard/create-gig`), 2. Install Dependencies, 3. Initialize Database Migrations & Seeds, 👤 3. Profile Customization & Onboarding (`/profile` & `/onboarding`), 4. Run Development Servers, 🔑 4. Session & Authentication Core (+21 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -520,21 +519,21 @@ Cohesion: 0.12
 Nodes (16): 🏗️ 1. Complete System Architecture & Tech Stack, 📁 2. Folder-by-Folder Directory Analysis, 🛠️ 3. Feature-by-Feature Implementation State, 📊 4. Graphify Structural Insights (From `graphify-out/`), 📜 5. Operational Conventions & Development Rules, Asynchronous Safety, Context State - KaamPay (June 2026), 🗃️ Database & Seeding (+8 more)
 
 ## Knowledge Gaps
-- **611 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+606 more)
+- **621 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+616 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `══════════════════════════════════════════════════════════════` connect `Community 1` to `Community 0`, `Community 65`, `Community 79`, `Community 80`, `Community 81`, `Community 52`, `Community 21`, `Community 58`, `Community 92`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `6. Functional Requirements` connect `Community 52` to `Community 1`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `6. Functional Requirements` connect `Community 2` to `Community 33`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **Why does `══════════════════════════════════════════════════════════════` connect `Community 33` to `Community 2`, `Community 35`, `Community 8`, `Community 14`, `Community 15`, `Community 18`, `Community 55`, `Community 24`, `Community 25`, `Community 30`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `══════════════════════════════════════════════════════════════` connect `Community 33` to `Community 2`, `Community 35`, `Community 8`, `Community 14`, `Community 15`, `Community 18`, `Community 55`, `Community 24`, `Community 25`, `Community 30`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _611 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _621 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
