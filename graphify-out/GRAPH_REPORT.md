@@ -1,16 +1,16 @@
-# Graph Report - kaampay  (2026-06-01)
+# Graph Report - kaampay  (2026-06-03)
 
 ## Corpus Check
-- 124 files · ~38,716 words
+- 134 files · ~33,236 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 958 nodes · 1071 edges · 121 communities (110 shown, 11 thin omitted)
+- 1057 nodes · 1222 edges · 125 communities (113 shown, 12 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `44fcbb92`
+- Built from commit: `39f453fe`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -68,6 +68,10 @@
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Community 60|Community 60]]
@@ -115,6 +119,7 @@
 - [[_COMMUNITY_Community 197|Community 197]]
 - [[_COMMUNITY_Community 198|Community 198]]
 - [[_COMMUNITY_Community 224|Community 224]]
+- [[_COMMUNITY_Community 225|Community 225]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `AppError` - 18 edges
@@ -124,8 +129,8 @@
 5. `══════════════════════════════════════════════════════════════` - 13 edges
 6. `══════════════════════════════════════════════════════════════` - 13 edges
 7. `hiddenItems` - 11 edges
-8. `6. Functional Requirements` - 11 edges
-9. `KaamPay Stepwise Development Plan` - 11 edges
+8. `🖥️ FRONTEND — Next.js (App Router)` - 11 edges
+9. `6. Functional Requirements` - 11 edges
 10. `KaamPay Stepwise Development Plan` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -133,14 +138,14 @@
   app/(auth)/login/page.tsx → hooks/useAuth.ts
 - `RegisterForm()` --calls--> `useAuth()`  [EXTRACTED]
   app/(auth)/register/page.tsx → hooks/useAuth.ts
+- `BookmarkBtnProps` --references--> `Gig`  [EXTRACTED]
+  components/find-work/BookmarkBtn.tsx → types/gig.ts
+- `GigCardProps` --references--> `Gig`  [EXTRACTED]
+  components/find-work/GigCard.tsx → types/gig.ts
 - `DashboardPage()` --calls--> `useAuth()`  [EXTRACTED]
   app/dashboard/page.tsx → hooks/useAuth.ts
-- `DashboardPage()` --calls--> `useAuthStore`  [EXTRACTED]
-  app/dashboard/page.tsx → store/auth.store.ts
-- `RegisterForm()` --calls--> `useAuth()`  [EXTRACTED]
-  components/RegisterForm.tsx → hooks/useAuth.ts
 
-## Communities (121 total, 11 thin omitted)
+## Communities (125 total, 12 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.50
@@ -151,8 +156,8 @@ Cohesion: 0.50
 Nodes (4): ══════════════════════════════════════════════════════════════, Document Control, Revision History, Table of Contents
 
 ### Community 2 - "Community 2"
-Cohesion: 0.20
-Nodes (10): 6.2 Module 2: Profile Management, 6.5 Module 5: Payment System, 6.6 Module 6: Real-Time Chat System, 6.7 Module 7: Ratings & Reviews, 6.8 Module 8: Admin Panel, 6.9 Module 9: Notifications (Basic), 6. Functional Requirements, code:block2 (+----------------------+) (+2 more)
+Cohesion: 0.08
+Nodes (26): 6.1 Module 1: User Authentication & Verification, 6.2 Module 2: Profile Management, 6.3 Module 3: Gig Management, 6.4 Module 4: Order Lifecycle Management, 6.5 Module 5: Payment System, 6.6 Module 6: Real-Time Chat System, 6.7 Module 7: Ratings & Reviews, 6.8 Module 8: Admin Panel (+18 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.06
@@ -171,8 +176,8 @@ Cohesion: 0.14
 Nodes (4): ClientService, FreelancerSearchFilters, GigSearchFilters, globalForPrisma
 
 ### Community 8 - "Community 8"
-Cohesion: 0.10
-Nodes (19): ══════════════════════════════════════════════════════════════, 11.1 API Conventions, 11.2 API Endpoint Inventory, 11. API Design & Endpoints, 12.1 Design System, 12.2 Page Inventory, 12. UI/UX Requirements & Wireframe Guidelines, 19. Risk Assessment & Mitigation (+11 more)
+Cohesion: 0.11
+Nodes (17): ══════════════════════════════════════════════════════════════, 11.2 API Endpoint Inventory, 12.1 Design System, 12.2 Page Inventory, 12. UI/UX Requirements & Wireframe Guidelines, 19. Risk Assessment & Mitigation, 23. Glossary, Admin API (+9 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.10
@@ -231,8 +236,8 @@ Cohesion: 0.09
 Nodes (21): 1. Cleanup Redundant Code (Backend), 2. Frontend Login Redirection (Next.js), 3. Unified Dashboard Architecture (Frontend), 4. Frontend Security & Authorization Popups, 5. Backend RBAC Middleware (Express), Automated / Manual Testing, code:typescript (import { toNodeHandler } from 'better-auth/node';), code:typescript (const handleLogin = async () => {) (+13 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.06
-Nodes (35): dependencies, axios, better-auth, cloudinary, cors, dotenv, express, framer-motion (+27 more)
+Cohesion: 0.09
+Nodes (22): dependencies, axios, better-auth, cloudinary, cors, dotenv, express, framer-motion (+14 more)
 
 ### Community 24 - "Community 24"
 Cohesion: 0.40
@@ -271,12 +276,12 @@ Cohesion: 0.11
 Nodes (17): 1. UI Architecture & Theme, 2. The Onboarding Steps Flow, 3. Backend Integration, Automated / Manual Testing, Freelancer Onboarding Implementation Plan, [MODIFY] `prisma/schema.prisma`, [NEW] `app/onboarding/page.tsx`, [NEW] `backend/src/modules/users/user.controller.ts` (+9 more)
 
 ### Community 33 - "Community 33"
-Cohesion: 0.19
-Nodes (13): ══════════════════════════════════════════════════════════════, 5.1 In-Scope (Phase 1 — MVP), 5.2 Out-of-Scope (Phase 2+), 5.3 MVP Success Criteria, 5. Scope Definition & MVP Boundary, ══════════════════════════════════════════════════════════════, 9.1 Complete Stack Overview, 9.2 Development Tools (+5 more)
+Cohesion: 0.28
+Nodes (9): ══════════════════════════════════════════════════════════════, 5.1 In-Scope (Phase 1 — MVP), 5.2 Out-of-Scope (Phase 2+), 5.3 MVP Success Criteria, 5. Scope Definition & MVP Boundary, ══════════════════════════════════════════════════════════════, Document Control, Revision History (+1 more)
 
 ### Community 34 - "Community 34"
-Cohesion: 0.33
-Nodes (6): 6.3 Module 3: Gig Management, FR-3.1: Create Gig (Freelancer Only), FR-3.2: Gig Categories, FR-3.3: Browse & Search Gigs, FR-3.4: Gig Detail Page, FR-3.5: Manage Gigs (Freelancer)
+Cohesion: 0.05
+Nodes (36): `app/` — Pages & Routes, ⚙️ BACKEND — Express API (`backend/`), code:block1 (Kaam_Pay/), code:block10 (Browser Request), code:ts (// Example usage), code:block12 (Frontend (Next.js :3000)), code:bash (# Terminal 1 — Frontend), code:block2 (app/) (+28 more)
 
 ### Community 35 - "Community 35"
 Cohesion: 0.50
@@ -295,8 +300,8 @@ Cohesion: 0.12
 Nodes (16): authClient, RegisterForm(), RoleGuardProps, DashboardPage(), SessionUser, LoginPayload, RegisterPayload, useAuth() (+8 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.40
-Nodes (5): 6.1 Module 1: User Authentication & Verification, FR-1.1: User Registration, FR-1.2: User Login, FR-1.3: Identity Verification, FR-1.4: Role-Based Access Control
+Cohesion: 0.14
+Nodes (25): BookmarkBtn(), BookmarkBtnProps, DEFAULT_FILTERS, FilterDrawer(), FilterDrawerProps, Filters, FullModal(), FullModalProps (+17 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.16
@@ -335,8 +340,8 @@ Cohesion: 0.67
 Nodes (3): 22. Future Roadmap (Phase 2+), Phase 2 (Post-MVP — 4 Weeks), Phase 3 (Scale — Ongoing)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.40
-Nodes (5): 6.4 Module 4: Order Lifecycle Management, code:block1 (PENDING), FR-4.1: Order Placement, FR-4.2: Order Status State Machine, FR-4.3: Order Management
+Cohesion: 0.20
+Nodes (7): adapter, FREELANCERS, FreelancerSeed, GIGS, GigSeed, pool, prisma
 
 ### Community 51 - "Community 51"
 Cohesion: 0.20
@@ -345,6 +350,18 @@ Nodes (10): 18.1 Overview, 18.2 Sprint Breakdown (Phase 1 — MVP), 18.3 Total E
 ### Community 52 - "Community 52"
 Cohesion: 0.08
 Nodes (26): 6.1 Module 1: User Authentication & Verification, 6.2 Module 2: Profile Management, 6.3 Module 3: Gig Management, 6.4 Module 4: Order Lifecycle Management, 6.5 Module 5: Payment System, 6.6 Module 6: Real-Time Chat System, 6.7 Module 7: Ratings & Reviews, 6.8 Module 8: Admin Panel (+18 more)
+
+### Community 53 - "Community 53"
+Cohesion: 0.29
+Nodes (6): lint-staged, *.{js,jsx,ts,tsx}, *.{json,css,md}, name, private, version
+
+### Community 54 - "Community 54"
+Cohesion: 0.29
+Nodes (7): scripts, build, dev, dev:backend, lint, prepare, start
+
+### Community 55 - "Community 55"
+Cohesion: 0.50
+Nodes (4): 9.1 Complete Stack Overview, 9.2 Development Tools, 9.3 Stack Justification, 9. Technology Stack
 
 ### Community 57 - "Community 57"
 Cohesion: 0.38
@@ -498,25 +515,29 @@ Nodes (3): smart_blocks, embed_blocks, min_chars
 Cohesion: 0.40
 Nodes (4): [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes, [2026-05-29] Gig & Project Creation Feature (Backend, Cloudinary, and Frontend), [2026-06-01] Custom Agent Framework & Client Discovery Backend, Action Register
 
+### Community 225 - "Community 225"
+Cohesion: 0.12
+Nodes (16): 🏗️ 1. Complete System Architecture & Tech Stack, 📁 2. Folder-by-Folder Directory Analysis, 🛠️ 3. Feature-by-Feature Implementation State, 📊 4. Graphify Structural Insights (From `graphify-out/`), 📜 5. Operational Conventions & Development Rules, Asynchronous Safety, Context State - KaamPay (June 2026), 🗃️ Database & Seeding (+8 more)
+
 ## Knowledge Gaps
-- **567 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+562 more)
+- **611 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+606 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `══════════════════════════════════════════════════════════════` connect `Community 1` to `Community 0`, `Community 65`, `Community 79`, `Community 80`, `Community 81`, `Community 52`, `Community 21`, `Community 58`, `Community 92`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `══════════════════════════════════════════════════════════════` connect `Community 33` to `Community 2`, `Community 35`, `Community 8`, `Community 14`, `Community 15`, `Community 18`, `Community 24`, `Community 25`, `Community 30`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `══════════════════════════════════════════════════════════════` connect `Community 33` to `Community 2`, `Community 35`, `Community 8`, `Community 14`, `Community 15`, `Community 18`, `Community 24`, `Community 25`, `Community 30`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `6. Functional Requirements` connect `Community 52` to `Community 1`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `6. Functional Requirements` connect `Community 2` to `Community 33`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _567 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _611 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
-- **Should `Community 7` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
