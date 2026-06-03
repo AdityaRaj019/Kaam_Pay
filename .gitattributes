@@ -1,0 +1,7 @@
+# GitHub Linguist overrides to exclude non-source files from repository language statistics
+
+# Treat Graphify outputs as documentation so they are not counted in language stats
+graphify-out/** linguist-documentation
+
+# Treat Obsidian configuration and plugins as vendored (third-party/config)
+kaampay/.obsidian/** linguist-vendored

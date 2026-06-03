@@ -51,9 +51,6 @@ graphify-out/cost.json
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
-<<<<<<< Updated upstream
 #db check files
 scripts/db-check.cjs
-=======
 project_structure.md
->>>>>>> Stashed changes
