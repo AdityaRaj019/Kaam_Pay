@@ -97,6 +97,7 @@ The following actions are strictly prohibited and will result in build/process f
 When explicitly instructed by the USER to perform git commits, you must adhere strictly to the Conventional Commits format. All commit messages must be structured, descriptive, and follow the format: `<type>(<scope>): <short description>`.
 
 ### Common Commit Types:
+
 - `feat`: A new feature (e.g., `feat(auth): implement jwt session based auth store cookie http based cookie`)
 - `fix`: A bug fix (e.g., `fix(auth): resolve jwt expiration issue`)
 - `docs`: Documentation changes only (e.g., `docs(readme): update API setup instructions`)
@@ -107,6 +108,7 @@ When explicitly instructed by the USER to perform git commits, you must adhere s
 - `chore`: Changes to the build process or auxiliary tools and libraries (e.g., updating dependencies)
 
 ### Message Rules:
+
 - **Imperative Mood:** Use the imperative mood in the description (e.g., "implement jwt", not "implemented jwt" or "implements jwt").
 - **Lowercase Description:** Begin the description with a lowercase letter.
 - **No Period:** Do not end the description with a period.
