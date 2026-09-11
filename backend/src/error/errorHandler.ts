@@ -28,7 +28,7 @@ export const errorHandler = (
 ): void => {
   // Always log the raw error in dev — helps diagnose 500s
   if (isDev) {
-    console.error('❌ [ErrorHandler]', err);
+    console.error('❌ [ErrorHandler]', err)
   }
 
   let error: AppError;
