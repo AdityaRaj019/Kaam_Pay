@@ -4,6 +4,7 @@ import userRoutes from './users/user.routes';
 import freelancerRoutes from './freelancer/freelancer.routes';
 import gigRoutes from './gig/gig.routes';
 import clientRoutes from './client/client.routes';
+import orderRoutes from './order/order.routes';
 
 const router = Router();
 
@@ -15,5 +16,6 @@ router.use('/users', userRoutes);
 router.use('/freelancer', freelancerRoutes);
 router.use('/gigs', gigRoutes);
 router.use('/client', clientRoutes);
+router.use('/orders', orderRoutes);
 
 export default router;
