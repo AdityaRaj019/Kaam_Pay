@@ -23,11 +23,7 @@ export const createOrder = catchAsync(async (req: Request, res: Response) => {
   // Double-guard: requireAuth middleware guarantees this,
   // but we enforce it here for defence-in-depth.
   if (!req.user) {
-    throw new AppError(
-      'Not authenticated. Please sign in.',
-      401,
-      ErrorCode.UNAUTHORIZED,
-    );
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
   }
 
   // Validate request body — only gigId is accepted.
@@ -37,11 +33,7 @@ export const createOrder = catchAsync(async (req: Request, res: Response) => {
     const errorDetails = validation.error.issues
       .map((issue) => `${issue.path.join('.')}: ${issue.message}`)
       .join(', ');
-    throw new AppError(
-      `Validation failed: ${errorDetails}`,
-      422,
-      ErrorCode.VALIDATION_ERROR,
-    );
+    throw new AppError(`Validation failed: ${errorDetails}`, 422, ErrorCode.VALIDATION_ERROR);
   }
 
   const result = await OrderService.initiateOrder(req.user.id, validation.data);

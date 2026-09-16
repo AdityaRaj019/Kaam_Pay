@@ -32,11 +32,7 @@ export class OrderService {
     });
 
     if (!gig) {
-      throw new AppError(
-        'Gig not found. It may have been removed.',
-        404,
-        ErrorCode.NOT_FOUND,
-      );
+      throw new AppError('Gig not found. It may have been removed.', 404, ErrorCode.NOT_FOUND);
     }
 
     // ── Step 2: Validate purchasability ───────────────────────
@@ -49,16 +45,12 @@ export class OrderService {
     }
 
     if (gig.freelancerId === clientId) {
-      throw new AppError(
-        'You cannot order your own gig.',
-        422,
-        ErrorCode.VALIDATION_ERROR,
-      );
+      throw new AppError('You cannot order your own gig.', 422, ErrorCode.VALIDATION_ERROR);
     }
 
     // ── Step 3: Server-authoritative pricing ──────────────────
     const subtotal = gig.price;
-    const platformFee = Math.round((subtotal * PLATFORM_FEE_PERCENT) / 100 * 100) / 100;
+    const platformFee = Math.round(((subtotal * PLATFORM_FEE_PERCENT) / 100) * 100) / 100;
     const total = Math.round((subtotal + platformFee) * 100) / 100;
 
     // ── Step 4: Create Order in PENDING status ────────────────

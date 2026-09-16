@@ -12,10 +12,7 @@ import { z } from 'zod';
  * source of truth for all monetary values.
  */
 export const createOrderSchema = z.object({
-  gigId: z
-    .string()
-    .min(1, 'Gig ID is required'),
+  gigId: z.string().min(1, 'Gig ID is required'),
 });
 
 export type CreateOrderInput = z.infer<typeof createOrderSchema>;
-
