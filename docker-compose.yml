@@ -1,0 +1,25 @@
+
+# KaamPay local development services
+# Run: docker compose up -d
+# Stop: docker compose down
+
+services:
+  redis-stack:
+    image: redis/redis-stack:latest
+    container_name: kaampay-redis
+    ports:
+      - '6379:6379'   # Redis port (used by ioredis / Socket.io adapter)
+      - '8001:8001'   # RedisInsight UI — open http://localhost:8001 to browse data
+    environment:
+      - REDIS_ARGS=--requirepass kaampay_redis_dev
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'redis-cli', '-a', 'kaampay_redis_dev', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  redis_data:

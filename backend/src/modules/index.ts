@@ -4,6 +4,8 @@ import userRoutes from './users/user.routes';
 import freelancerRoutes from './freelancer/freelancer.routes';
 import gigRoutes from './gig/gig.routes';
 import clientRoutes from './client/client.routes';
+import chatRoutes from './chat/chat.routes';
+import notificationRoutes from './notifications/notification.routes';
 
 const router = Router();
 
@@ -15,5 +17,8 @@ router.use('/users', userRoutes);
 router.use('/freelancer', freelancerRoutes);
 router.use('/gigs', gigRoutes);
 router.use('/client', clientRoutes);
+router.use('/chat', chatRoutes);
+router.use('/notifications', notificationRoutes);
 
 export default router;
+
