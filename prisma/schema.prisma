@@ -27,6 +27,8 @@ enum GigStatus {
 enum OrderStatus {
   PENDING
   IN_PROGRESS
+  SUBMITTED
+  REVISION
   COMPLETED
   CANCELLED
   DISPUTED
@@ -196,13 +198,26 @@ model ChatRoom {
 }
 
 model Message {
-  id         String   @id @default(cuid())
-  chatRoomId String
-  chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id])
-  senderId   String
-  sender     User     @relation(fields: [senderId], references: [id])
-  text       String   @db.Text
-  createdAt  DateTime @default(now())
+  id          String       @id @default(cuid())
+  chatRoomId  String
+  chatRoom    ChatRoom     @relation(fields: [chatRoomId], references: [id])
+  senderId    String
+  sender      User         @relation(fields: [senderId], references: [id])
+  text        String?      @db.Text // nullable: file-only messages are allowed
+  attachments Attachment[]
+  createdAt   DateTime     @default(now())
+}
+
+model Attachment {
+  id        String   @id @default(cuid())
+  messageId String
+  message   Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  url       String   // Cloudinary secure URL
+  publicId  String   // Cloudinary public_id (needed for deletion)
+  fileType  String   // "image" | "video" | "pdf" | "csv" | "other"
+  fileName  String   // original filename shown to user
+  fileSize  Int      // bytes
+  createdAt DateTime @default(now())
 }
 
 model Review {

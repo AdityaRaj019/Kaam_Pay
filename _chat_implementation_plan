@@ -1,0 +1,1280 @@
+# KaamPay — Real-Time Chat & Notification System
+## Implementation Plan (Beginner-Friendly, Step-by-Step)
+
+> **Context:** Your project is a Next.js 16 + Express 5 monorepo with Prisma (PostgreSQL), Better-Auth, Cloudinary, Zustand, and TailwindCSS. The Prisma schema already has `ChatRoom`, `Message`, and `Notification` models. This plan builds on top of what exists.
+
+---
+
+## Architecture Overview
+
+```
+Browser (Client / Freelancer)
+        │  Socket.io (WebSocket)
+        ▼
+Express Server ──── Kafka Producer ──── Aiven Kafka Broker
+        │                                       │
+        │                               Kafka Consumer
+        │                                       │
+        │                               Redis Stream
+        │                                       │
+        └── Socket.io ◄──── Redis Adapter ──────┘
+                │
+                ▼
+         PostgreSQL (persist messages)
+         Cloudinary (store files)
+```
+
+**The flow in plain English:**
+1. User types a message and hits Send
+2. Frontend emits `send_message` via Socket.io
+3. Express receives it → pushes to **Aiven Kafka** topic
+4. A Kafka consumer reads it → stores to **PostgreSQL** → puts it in **Redis Stream**
+5. Socket.io (with Redis adapter) reads from Redis Stream → broadcasts to the other person's browser
+6. Result: both users see the message in real-time
+
+---
+
+## What We Are Building (Feature Checklist)
+
+| Feature | Technology | Complexity |
+|---|---|---|
+| Chat rooms (only client + freelancer) | Socket.io rooms | Easy |
+| Online presence (green/red dot) | Socket.io events | Easy |
+| Typing indicator (debounced) | Socket.io + lodash | Easy |
+| Multi-file upload (images, PDF, video, CSV) | Cloudinary + Multer | Medium |
+| Image inline preview, other files download | Frontend logic | Easy |
+| Kafka message queue | Aiven Kafka + kafkajs | Medium |
+| Redis Stream WebSocket delivery | ioredis + socket.io-redis | Medium |
+| In-app notifications | Socket.io + DB | Easy |
+
+---
+
+## Phase 0 — Install All Required Packages
+
+> [!IMPORTANT]
+> Run this ONCE before starting any other phase. This installs everything needed.
+
+### 0.1 Backend Packages
+
+```bash
+# In project root (where package.json lives)
+npm install kafkajs ioredis @socket.io/redis-adapter socket.io multer \
+  multer-storage-cloudinary cloudinary lodash
+npm install --save-dev @types/multer @types/lodash
+```
+
+### 0.2 Frontend Packages
+
+```bash
+npm install socket.io-client use-debounce
+```
+
+### 0.3 Environment Variables to Add in `.env`
+
+```env
+# Aiven Kafka (get these from Aiven dashboard)
+KAFKA_BROKERS=your-aiven-host:port
+KAFKA_USERNAME=avnadmin
+KAFKA_PASSWORD=your_kafka_password
+KAFKA_CA_CERT=-----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----
+
+# Redis (Aiven Redis or local)
+REDIS_URL=redis://default:password@host:port
+
+# Cloudinary (already in your .env, verify these exist)
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+---
+
+## Phase 1 — Database Schema Update (Prisma)
+
+**File:** [`prisma/schema.prisma`](file:///e:/New%20folder/Kaam_Pay/prisma/schema.prisma)
+
+Your existing `Message` model only has a `text` field. We need to add file attachment support.
+
+### 1.1 Update the `Message` model
+
+```prisma
+// Add these fields to the existing Message model
+
+model Message {
+  id         String        @id @default(cuid())
+  chatRoomId String
+  chatRoom   ChatRoom      @relation(fields: [chatRoomId], references: [id])
+  senderId   String
+  sender     User          @relation(fields: [senderId], references: [id])
+  text       String?       @db.Text         // ← changed from required to optional
+  attachments Attachment[]                  // ← NEW: linked file attachments
+  createdAt  DateTime      @default(now())
+}
+
+// NEW MODEL: tracks uploaded files per message
+model Attachment {
+  id          String   @id @default(cuid())
+  messageId   String
+  message     Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  url         String   // Cloudinary URL
+  publicId    String   // Cloudinary public_id (for deletion)
+  fileType    String   // "image" | "pdf" | "video" | "csv" | "other"
+  fileName    String   // original filename
+  fileSize    Int      // bytes
+  createdAt   DateTime @default(now())
+}
+```
+
+### 1.2 Run the migration
+
+```bash
+npx prisma migrate dev --name add_message_attachments
+npx prisma generate
+```
+
+---
+
+## Phase 2 — Backend: Kafka & Redis Setup
+
+**New files to create:**
+
+### 2.1 Create `backend/src/config/kafka.ts`
+
+```typescript
+// This file creates and exports a Kafka client connected to Aiven.
+// Think of Kafka like a post office: producers drop messages, consumers pick them up.
+
+import { Kafka, logLevel } from 'kafkajs';
+
+if (!process.env.KAFKA_BROKERS) throw new Error('KAFKA_BROKERS is required');
+if (!process.env.KAFKA_USERNAME) throw new Error('KAFKA_USERNAME is required');
+if (!process.env.KAFKA_PASSWORD) throw new Error('KAFKA_PASSWORD is required');
+
+export const kafka = new Kafka({
+  clientId: 'kaampay-chat',
+  brokers: process.env.KAFKA_BROKERS.split(','),
+  logLevel: logLevel.ERROR,
+  ssl: {
+    // Aiven requires SSL; the CA cert proves the server is legitimate
+    ca: [process.env.KAFKA_CA_CERT ?? ''],
+  },
+  sasl: {
+    mechanism: 'plain',
+    username: process.env.KAFKA_USERNAME,
+    password: process.env.KAFKA_PASSWORD,
+  },
+});
+
+// Producer: sends messages TO Kafka
+export const producer = kafka.producer();
+
+// Consumer: reads messages FROM Kafka
+export const consumer = kafka.consumer({ groupId: 'chat-group' });
+
+export const CHAT_TOPIC = 'kaampay.chat.messages';
+export const NOTIFICATION_TOPIC = 'kaampay.notifications';
+```
+
+### 2.2 Create `backend/src/config/redis.ts`
+
+```typescript
+// Redis acts as the shared memory between multiple Socket.io server instances.
+// Even if you have only one server, it also acts as a fast message cache.
+
+import { Redis } from 'ioredis';
+
+if (!process.env.REDIS_URL) throw new Error('REDIS_URL is required');
+
+// We need TWO Redis clients for the Socket.io adapter (pub and sub)
+export const pubClient = new Redis(process.env.REDIS_URL);
+export const subClient = pubClient.duplicate();
+
+pubClient.on('error', (err: Error) => {
+  console.error('[Redis pubClient error]', err.message);
+});
+
+subClient.on('error', (err: Error) => {
+  console.error('[Redis subClient error]', err.message);
+});
+```
+
+### 2.3 Create `backend/src/config/cloudinary.ts`
+
+```typescript
+import { v2 as cloudinary } from 'cloudinary';
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+export default cloudinary;
+```
+
+---
+
+## Phase 3 — Backend: Kafka Consumer (Message Processor)
+
+**New file:** `backend/src/services/chat.consumer.ts`
+
+This is the "worker" that reads from Kafka and saves messages to the database, then puts them into the Socket.io delivery pipeline.
+
+```typescript
+// This file runs as a long-lived background process.
+// It listens to Kafka for chat messages, saves them, and delivers via Socket.io.
+
+import { consumer, CHAT_TOPIC, NOTIFICATION_TOPIC } from '../config/kafka';
+import { prisma } from '../config/database';
+import { Server as SocketServer } from 'socket.io';
+
+// We pass the io server in so we can emit events from here
+export async function startChatConsumer(io: SocketServer): Promise<void> {
+  await consumer.connect();
+  await consumer.subscribe({ topics: [CHAT_TOPIC, NOTIFICATION_TOPIC], fromBeginning: false });
+
+  await consumer.run({
+    eachMessage: async ({ topic, message }) => {
+      if (!message.value) return;
+
+      try {
+        const payload = JSON.parse(message.value.toString()) as Record<string, unknown>;
+
+        if (topic === CHAT_TOPIC) {
+          await processChatMessage(io, payload);
+        } else if (topic === NOTIFICATION_TOPIC) {
+          await processNotification(io, payload);
+        }
+      } catch (err) {
+        // Log error but do NOT crash the consumer; just skip the bad message
+        console.error(`[Consumer] Failed to process message on topic ${topic}:`, err);
+      }
+    },
+  });
+}
+
+// ── Saves a chat message to DB and broadcasts it ──────────────────────────────
+
+async function processChatMessage(
+  io: SocketServer,
+  payload: Record<string, unknown>,
+): Promise<void> {
+  const { chatRoomId, senderId, text, attachments } = payload as {
+    chatRoomId: string;
+    senderId: string;
+    text?: string;
+    attachments?: Array<{ url: string; publicId: string; fileType: string; fileName: string; fileSize: number }>;
+  };
+
+  // 1. Save to PostgreSQL
+  const savedMessage = await prisma.message.create({
+    data: {
+      chatRoomId,
+      senderId,
+      text: text ?? null,
+      attachments: attachments
+        ? { create: attachments }
+        : undefined,
+    },
+    include: {
+      sender: { select: { id: true, name: true, image: true } },
+      attachments: true,
+    },
+  });
+
+  // 2. Broadcast to the room via Socket.io
+  // The room name is "order_{orderId}" — only the two parties are in it
+  const room = `order_${chatRoomId}`;
+  io.to(room).emit('receive_message', savedMessage);
+}
+
+// ── Saves a notification to DB and pushes it to the target user ───────────────
+
+async function processNotification(
+  io: SocketServer,
+  payload: Record<string, unknown>,
+): Promise<void> {
+  const { userId, type, message } = payload as {
+    userId: string;
+    type: string;
+    message: string;
+  };
+
+  // 1. Save notification to DB
+  const notification = await prisma.notification.create({
+    data: { userId, type, message },
+  });
+
+  // 2. Push to that user's personal socket room (user_{userId})
+  io.to(`user_${userId}`).emit('notification', notification);
+}
+```
+
+---
+
+## Phase 4 — Backend: Socket.io Server with Redis Adapter
+
+**New file:** `backend/src/socket/chat.socket.ts`
+
+```typescript
+// This is the main Socket.io server logic.
+// Think of it as the receptionist that manages who is in which room.
+
+import { Server as HttpServer } from 'http';
+import { Server as SocketServer } from 'socket.io';
+import { createAdapter } from '@socket.io/redis-adapter';
+import { pubClient, subClient } from '../config/redis';
+import { producer, CHAT_TOPIC, NOTIFICATION_TOPIC } from '../config/kafka';
+import { prisma } from '../config/database';
+
+// Map to track which socket belongs to which user
+const onlineUsers = new Map<string, string>(); // socketId → userId
+
+export async function initSocketServer(httpServer: HttpServer): Promise<SocketServer> {
+  const io = new SocketServer(httpServer, {
+    cors: {
+      origin: process.env.CLIENT_URL ?? 'http://localhost:3000',
+      credentials: true,
+    },
+  });
+
+  // Connect Redis adapter so Socket.io state is shared across instances
+  await pubClient.connect().catch(() => {}); // ioredis auto-connects, ignore error
+  await subClient.connect().catch(() => {});
+  io.adapter(createAdapter(pubClient, subClient));
+
+  io.on('connection', (socket) => {
+    console.log(`[Socket] Connected: ${socket.id}`);
+
+    // ── Step 1: User identifies themselves ────────────────────────────────────
+    // Frontend sends { userId } immediately after connecting
+    socket.on('authenticate', async ({ userId }: { userId: string }) => {
+      if (!userId) return;
+
+      onlineUsers.set(socket.id, userId);
+
+      // Join a personal room for receiving notifications
+      await socket.join(`user_${userId}`);
+
+      // Tell everyone this user is online (for presence dots)
+      socket.broadcast.emit('user_online', { userId });
+
+      console.log(`[Socket] User ${userId} authenticated on socket ${socket.id}`);
+    });
+
+    // ── Step 2: User joins an order chat room ─────────────────────────────────
+    // Frontend sends { orderId } when opening the chat window
+    socket.on('join_room', async ({ orderId }: { orderId: string }) => {
+      const userId = onlineUsers.get(socket.id);
+      if (!userId) return socket.emit('error', { message: 'Not authenticated' });
+
+      // Security: verify user is a party in this order
+      const order = await prisma.order.findFirst({
+        where: {
+          id: orderId,
+          OR: [{ clientId: userId }, { freelancerId: userId }],
+        },
+        include: { chatRoom: true },
+      });
+
+      if (!order) return socket.emit('error', { message: 'Access denied to this chat' });
+
+      const roomName = `order_${order.chatRoom?.id ?? orderId}`;
+      await socket.join(roomName);
+
+      // Tell the other party that this user is now viewing the chat
+      socket.to(roomName).emit('user_joined_chat', { userId });
+
+      console.log(`[Socket] User ${userId} joined room ${roomName}`);
+    });
+
+    // ── Step 3: User sends a message ─────────────────────────────────────────
+    socket.on(
+      'send_message',
+      async ({
+        orderId,
+        text,
+        attachments,
+      }: {
+        orderId: string;
+        text?: string;
+        attachments?: Array<{ url: string; publicId: string; fileType: string; fileName: string; fileSize: number }>;
+      }) => {
+        const userId = onlineUsers.get(socket.id);
+        if (!userId) return;
+
+        // Find the ChatRoom for this order
+        const chatRoom = await prisma.chatRoom.findUnique({ where: { orderId } });
+        if (!chatRoom) return socket.emit('error', { message: 'Chat room not found' });
+
+        if (!text && (!attachments || attachments.length === 0)) {
+          return socket.emit('error', { message: 'Message cannot be empty' });
+        }
+
+        // Push to Kafka — the consumer will save to DB and broadcast
+        await producer.send({
+          topic: CHAT_TOPIC,
+          messages: [
+            {
+              key: chatRoom.id,
+              value: JSON.stringify({
+                chatRoomId: chatRoom.id,
+                senderId: userId,
+                text,
+                attachments,
+              }),
+            },
+          ],
+        });
+      },
+    );
+
+    // ── Step 4: Typing indicator (debounced on the frontend) ──────────────────
+    socket.on('typing', ({ orderId, isTyping }: { orderId: string; isTyping: boolean }) => {
+      const userId = onlineUsers.get(socket.id);
+      if (!userId) return;
+
+      // Broadcast to everyone else in the room (not back to the sender)
+      socket.to(`order_${orderId}`).emit('user_typing', { userId, isTyping });
+    });
+
+    // ── Step 5: User disconnects ─────────────────────────────────────────────
+    socket.on('disconnect', () => {
+      const userId = onlineUsers.get(socket.id);
+      if (userId) {
+        onlineUsers.delete(socket.id);
+        // Tell others this user went offline
+        socket.broadcast.emit('user_offline', { userId });
+        console.log(`[Socket] User ${userId} disconnected`);
+      }
+    });
+  });
+
+  return io;
+}
+
+// Helper: send a notification through Kafka (call this from your order controllers)
+export async function sendNotification(userId: string, type: string, message: string): Promise<void> {
+  await producer.send({
+    topic: NOTIFICATION_TOPIC,
+    messages: [{ key: userId, value: JSON.stringify({ userId, type, message }) }],
+  });
+}
+```
+
+### 4.1 Update `backend/src/server.ts` to boot everything
+
+```typescript
+// Add these to your existing server.ts startup sequence
+
+import { initSocketServer } from './socket/chat.socket';
+import { startChatConsumer } from './services/chat.consumer';
+import { producer } from './config/kafka';
+import http from 'http';
+
+// Wrap your Express app in an HTTP server
+const httpServer = http.createServer(app);
+
+async function startServer() {
+  // 1. Connect Kafka producer
+  await producer.connect();
+
+  // 2. Initialize Socket.io with Redis adapter
+  const io = await initSocketServer(httpServer);
+
+  // 3. Start Kafka consumer (pass io so it can broadcast)
+  await startChatConsumer(io);
+
+  // 4. Start listening
+  httpServer.listen(process.env.PORT ?? 5000, () => {
+    console.log(`Server running on port ${process.env.PORT ?? 5000}`);
+  });
+}
+
+startServer().catch((err) => {
+  console.error('[Server] Fatal startup error:', err);
+  process.exit(1);
+});
+```
+
+---
+
+## Phase 5 — Backend: File Upload API (Cloudinary + Multer)
+
+**New file:** `backend/src/middleware/upload.ts`
+
+```typescript
+// Multer handles the file upload. Multer-storage-cloudinary pipes it directly to Cloudinary.
+// This means files are NEVER written to your disk — they go straight to the cloud.
+
+import multer from 'multer';
+import { CloudinaryStorage } from 'multer-storage-cloudinary';
+import cloudinary from '../config/cloudinary';
+
+// Allowed file types
+const ALLOWED_FORMATS = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf', 'mp4', 'mov', 'csv', 'xlsx'];
+const MAX_FILE_SIZE_BYTES = 25 * 1024 * 1024; // 25MB per file
+const MAX_FILES = 5; // Max 5 files per message
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: async (_req, file) => {
+    // Detect resource type for Cloudinary
+    const isVideo = file.mimetype.startsWith('video/');
+    const isImage = file.mimetype.startsWith('image/');
+
+    return {
+      folder: 'kaampay/chat-attachments',
+      resource_type: isVideo ? 'video' : isImage ? 'image' : 'raw',
+      // raw = PDFs, CSVs, etc.
+      allowed_formats: ALLOWED_FORMATS,
+      // Use original filename as public_id for easier identification
+      public_id: `${Date.now()}-${file.originalname.replace(/\s+/g, '_')}`,
+    };
+  },
+});
+
+export const chatUpload = multer({
+  storage,
+  limits: { fileSize: MAX_FILE_SIZE_BYTES, files: MAX_FILES },
+  fileFilter: (_req, file, cb) => {
+    const ext = file.originalname.split('.').pop()?.toLowerCase() ?? '';
+    if (!ALLOWED_FORMATS.includes(ext)) {
+      return cb(new Error(`File type .${ext} is not allowed`));
+    }
+    cb(null, true);
+  },
+});
+```
+
+**New file:** `backend/src/routes/chat.routes.ts`
+
+```typescript
+import { Router } from 'express';
+import { authenticate } from '../middleware/auth'; // your existing auth middleware
+import { chatUpload } from '../middleware/upload';
+import { getChatHistory, uploadChatFiles } from '../controllers/chat.controller';
+
+const router = Router();
+
+// GET /api/v1/chat/order/:orderId — load previous messages
+router.get('/order/:orderId', authenticate, getChatHistory);
+
+// POST /api/v1/chat/upload — upload files, get back Cloudinary URLs
+// The frontend sends files here first, then sends the URLs via Socket.io
+router.post('/upload', authenticate, chatUpload.array('files', 5), uploadChatFiles);
+
+export default router;
+```
+
+**New file:** `backend/src/controllers/chat.controller.ts`
+
+```typescript
+import { Request, Response } from 'express';
+import { prisma } from '../config/database';
+import cloudinary from '../config/cloudinary';
+
+// ── GET chat history ──────────────────────────────────────────────────────────
+
+export async function getChatHistory(req: Request, res: Response): Promise<void> {
+  const { orderId } = req.params;
+  const userId = req.user?.id; // from your auth middleware
+
+  // Security: user must be a party in this order
+  const order = await prisma.order.findFirst({
+    where: {
+      id: orderId,
+      OR: [{ clientId: userId }, { freelancerId: userId }],
+    },
+    include: { chatRoom: { include: { messages: { include: { sender: { select: { id: true, name: true, image: true } }, attachments: true }, orderBy: { createdAt: 'asc' } } } } },
+  });
+
+  if (!order || !order.chatRoom) {
+    res.status(404).json({ success: false, error: { message: 'Chat not found' } });
+    return;
+  }
+
+  res.json({ success: true, data: order.chatRoom.messages });
+}
+
+// ── POST upload files ─────────────────────────────────────────────────────────
+
+export async function uploadChatFiles(req: Request, res: Response): Promise<void> {
+  const files = req.files as Express.Multer.File[];
+
+  if (!files || files.length === 0) {
+    res.status(400).json({ success: false, error: { message: 'No files provided' } });
+    return;
+  }
+
+  // Build the attachment metadata array
+  const attachments = files.map((file) => {
+    const cloudFile = file as Express.Multer.File & {
+      path: string;           // Cloudinary URL
+      filename: string;       // Cloudinary public_id
+      mimetype: string;
+      originalname: string;
+      size: number;
+    };
+
+    // Determine file type category
+    let fileType = 'other';
+    if (cloudFile.mimetype.startsWith('image/')) fileType = 'image';
+    else if (cloudFile.mimetype.startsWith('video/')) fileType = 'video';
+    else if (cloudFile.mimetype === 'application/pdf') fileType = 'pdf';
+    else if (cloudFile.mimetype.includes('csv') || cloudFile.mimetype.includes('excel')) fileType = 'csv';
+
+    return {
+      url: cloudFile.path,
+      publicId: cloudFile.filename,
+      fileType,
+      fileName: cloudFile.originalname,
+      fileSize: cloudFile.size,
+    };
+  });
+
+  res.json({ success: true, data: attachments });
+}
+```
+
+---
+
+## Phase 6 — Frontend: Socket.io Client Setup
+
+**File:** `lib/socket.ts`
+
+```typescript
+// This file creates the Socket.io client connection.
+// It connects to your backend and keeps the connection alive.
+
+import { io, Socket } from 'socket.io-client';
+
+let socket: Socket | null = null;
+
+export function getSocket(): Socket {
+  if (!socket) {
+    socket = io(process.env.NEXT_PUBLIC_SOCKET_URL ?? 'http://localhost:5000', {
+      withCredentials: true,
+      autoConnect: false, // we connect manually after auth
+    });
+  }
+  return socket;
+}
+
+export function connectSocket(userId: string): void {
+  const s = getSocket();
+  if (!s.connected) {
+    s.connect();
+    s.emit('authenticate', { userId });
+  }
+}
+
+export function disconnectSocket(): void {
+  socket?.disconnect();
+}
+```
+
+### 6.1 Create `hooks/useSocket.ts`
+
+```typescript
+// This React hook manages the socket lifecycle for a component.
+
+import { useEffect, useRef } from 'react';
+import { Socket } from 'socket.io-client';
+import { getSocket, connectSocket } from '@/lib/socket';
+
+export function useSocket(userId: string | undefined): Socket | null {
+  const socketRef = useRef<Socket | null>(null);
+
+  useEffect(() => {
+    if (!userId) return;
+
+    connectSocket(userId);
+    socketRef.current = getSocket();
+
+    return () => {
+      // Do NOT disconnect here — we want the socket alive across page navigations
+      // Disconnect only on logout (call disconnectSocket() there)
+    };
+  }, [userId]);
+
+  return socketRef.current;
+}
+```
+
+### 6.2 Create `hooks/useChat.ts`
+
+```typescript
+// This is the main hook for the chat window.
+// It manages: message list, typing state, online presence, sending messages.
+
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
+import axios from 'axios';
+import { getSocket } from '@/lib/socket';
+
+export interface Attachment {
+  url: string;
+  publicId: string;
+  fileType: 'image' | 'pdf' | 'video' | 'csv' | 'other';
+  fileName: string;
+  fileSize: number;
+}
+
+export interface ChatMessage {
+  id: string;
+  senderId: string;
+  text: string | null;
+  attachments: Attachment[];
+  createdAt: string;
+  sender: { id: string; name: string; image: string | null };
+}
+
+export function useChat(orderId: string, currentUserId: string) {
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [isOtherOnline, setIsOtherOnline] = useState(false);
+  const [otherIsTyping, setOtherIsTyping] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const socket = getSocket();
+
+  // ── Load chat history on mount ─────────────────────────────────────────────
+  useEffect(() => {
+    async function loadHistory() {
+      try {
+        const { data } = await axios.get(`/api/v1/chat/order/${orderId}`);
+        setMessages(data.data);
+      } catch (err) {
+        console.error('[Chat] Failed to load history:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    loadHistory();
+  }, [orderId]);
+
+  // ── Join room and listen for events ───────────────────────────────────────
+  useEffect(() => {
+    socket.emit('join_room', { orderId });
+
+    // New message arrives
+    socket.on('receive_message', (msg: ChatMessage) => {
+      setMessages((prev) => [...prev, msg]);
+    });
+
+    // The other person came online / went offline
+    socket.on('user_online', () => setIsOtherOnline(true));
+    socket.on('user_offline', () => setIsOtherOnline(false));
+    socket.on('user_joined_chat', () => setIsOtherOnline(true));
+
+    // Typing indicator
+    socket.on('user_typing', ({ userId, isTyping }: { userId: string; isTyping: boolean }) => {
+      if (userId !== currentUserId) {
+        setOtherIsTyping(isTyping);
+      }
+    });
+
+    return () => {
+      socket.off('receive_message');
+      socket.off('user_online');
+      socket.off('user_offline');
+      socket.off('user_joined_chat');
+      socket.off('user_typing');
+    };
+  }, [orderId, currentUserId, socket]);
+
+  // ── Debounced typing emitter (300ms) ──────────────────────────────────────
+  // Fires "stop typing" 1 second after user stops typing
+  const emitStopTyping = useDebouncedCallback(() => {
+    socket.emit('typing', { orderId, isTyping: false });
+  }, 1000);
+
+  const emitTyping = useCallback(() => {
+    socket.emit('typing', { orderId, isTyping: true });
+    emitStopTyping(); // schedule stop
+  }, [orderId, socket, emitStopTyping]);
+
+  // ── Send text message ─────────────────────────────────────────────────────
+  const sendTextMessage = useCallback(
+    (text: string) => {
+      if (!text.trim()) return;
+      socket.emit('send_message', { orderId, text: text.trim() });
+    },
+    [orderId, socket],
+  );
+
+  // ── Upload files then send message with attachments ───────────────────────
+  const sendFilesMessage = useCallback(
+    async (files: File[], text?: string) => {
+      const formData = new FormData();
+      files.forEach((f) => formData.append('files', f));
+
+      const { data } = await axios.post('/api/v1/chat/upload', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+
+      socket.emit('send_message', {
+        orderId,
+        text: text?.trim() || undefined,
+        attachments: data.data,
+      });
+    },
+    [orderId, socket],
+  );
+
+  return {
+    messages,
+    isOtherOnline,
+    otherIsTyping,
+    isLoading,
+    sendTextMessage,
+    sendFilesMessage,
+    emitTyping,
+  };
+}
+```
+
+---
+
+## Phase 7 — Frontend: Chat UI Components
+
+### 7.1 Create `components/chat/PresenceDot.tsx`
+
+```tsx
+// A simple green/red dot showing online status
+
+interface PresenceDotProps {
+  isOnline: boolean;
+  className?: string;
+}
+
+export function PresenceDot({ isOnline, className = '' }: PresenceDotProps) {
+  return (
+    <span
+      aria-label={isOnline ? 'Online' : 'Offline'}
+      className={`
+        inline-block w-2.5 h-2.5 rounded-full border-2 border-white
+        ${isOnline ? 'bg-emerald-500' : 'bg-gray-400'}
+        ${className}
+      `}
+    />
+  );
+}
+```
+
+### 7.2 Create `components/chat/AttachmentPreview.tsx`
+
+```tsx
+// Renders an attachment based on its type:
+// - Images: shown inline, click to download
+// - Videos: HTML5 video player
+// - PDF/CSV/other: download button
+
+import { Download, FileText, Film, File } from 'lucide-react';
+import { Attachment } from '@/hooks/useChat';
+
+interface AttachmentPreviewProps {
+  attachment: Attachment;
+}
+
+export function AttachmentPreview({ attachment }: AttachmentPreviewProps) {
+  const { url, fileType, fileName, fileSize } = attachment;
+  const fileSizeKB = (fileSize / 1024).toFixed(1);
+
+  if (fileType === 'image') {
+    return (
+      <a href={url} download={fileName} target="_blank" rel="noreferrer" className="block">
+        {/* Image shown inline */}
+        <img
+          src={url}
+          alt={fileName}
+          className="max-w-xs max-h-64 rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
+          loading="lazy"
+        />
+        <p className="text-xs text-gray-500 mt-1 flex items-center gap-1">
+          <Download className="w-3 h-3" /> {fileName} ({fileSizeKB} KB)
+        </p>
+      </a>
+    );
+  }
+
+  if (fileType === 'video') {
+    return (
+      <div className="max-w-xs">
+        <video controls className="rounded-lg w-full" preload="metadata">
+          <source src={url} />
+          Your browser does not support video.
+        </video>
+        <a
+          href={url}
+          download={fileName}
+          className="text-xs text-indigo-600 hover:underline flex items-center gap-1 mt-1"
+        >
+          <Download className="w-3 h-3" /> Download {fileName}
+        </a>
+      </div>
+    );
+  }
+
+  // PDF, CSV, or other — show a download card
+  const Icon = fileType === 'pdf' ? FileText : fileType === 'csv' ? File : Film;
+
+  return (
+    <a
+      href={url}
+      download={fileName}
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-3 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors max-w-xs"
+    >
+      <Icon className="w-8 h-8 text-indigo-600 shrink-0" />
+      <div className="min-w-0">
+        <p className="text-sm font-medium text-gray-900 truncate">{fileName}</p>
+        <p className="text-xs text-gray-500">{fileSizeKB} KB · Click to download</p>
+      </div>
+      <Download className="w-4 h-4 text-gray-400 shrink-0" />
+    </a>
+  );
+}
+```
+
+### 7.3 Create `components/chat/MessageBubble.tsx`
+
+```tsx
+import { ChatMessage } from '@/hooks/useChat';
+import { AttachmentPreview } from './AttachmentPreview';
+import { format } from 'date-fns';
+
+interface MessageBubbleProps {
+  message: ChatMessage;
+  isOwn: boolean; // true if this message was sent by the current user
+}
+
+export function MessageBubble({ message, isOwn }: MessageBubbleProps) {
+  return (
+    <div className={`flex ${isOwn ? 'justify-end' : 'justify-start'} mb-3`}>
+      <div className={`max-w-[75%] ${isOwn ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
+        {/* Attachments */}
+        {message.attachments.map((att) => (
+          <AttachmentPreview key={att.publicId} attachment={att} />
+        ))}
+
+        {/* Text content */}
+        {message.text && (
+          <div
+            className={`
+              px-4 py-2 rounded-2xl text-sm leading-relaxed
+              ${isOwn
+                ? 'bg-indigo-600 text-white rounded-br-sm'
+                : 'bg-gray-100 text-gray-900 rounded-bl-sm'
+              }
+            `}
+          >
+            {message.text}
+          </div>
+        )}
+
+        {/* Timestamp */}
+        <span className="text-xs text-gray-400">
+          {format(new Date(message.createdAt), 'h:mm a')}
+        </span>
+      </div>
+    </div>
+  );
+}
+```
+
+### 7.4 Create `components/chat/ChatWindow.tsx`
+
+```tsx
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { Send, Paperclip, X } from 'lucide-react';
+import { useChat } from '@/hooks/useChat';
+import { MessageBubble } from './MessageBubble';
+import { PresenceDot } from './PresenceDot';
+
+interface ChatWindowProps {
+  orderId: string;
+  currentUserId: string;
+  otherUserName: string;
+  otherUserImage?: string | null;
+}
+
+export function ChatWindow({ orderId, currentUserId, otherUserName, otherUserImage }: ChatWindowProps) {
+  const [text, setText] = useState('');
+  const [files, setFiles] = useState<File[]>([]);
+  const [isSending, setIsSending] = useState(false);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const { messages, isOtherOnline, otherIsTyping, isLoading, sendTextMessage, sendFilesMessage, emitTyping } =
+    useChat(orderId, currentUserId);
+
+  // Auto-scroll to latest message
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, otherIsTyping]);
+
+  const handleSend = async () => {
+    if (!text.trim() && files.length === 0) return;
+    setIsSending(true);
+    try {
+      if (files.length > 0) {
+        await sendFilesMessage(files, text);
+        setFiles([]);
+      } else {
+        sendTextMessage(text);
+      }
+      setText('');
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
+  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setText(e.target.value);
+    emitTyping(); // debounced — won't spam the server
+  };
+
+  return (
+    <div className="flex flex-col h-full bg-white rounded-xl border border-gray-200 overflow-hidden">
+
+      {/* ── Header ── */}
+      <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
+        <div className="relative">
+          {otherUserImage ? (
+            <img src={otherUserImage} alt={otherUserName} className="w-9 h-9 rounded-full object-cover" />
+          ) : (
+            <div className="w-9 h-9 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-semibold text-sm">
+              {otherUserName[0]}
+            </div>
+          )}
+          <PresenceDot isOnline={isOtherOnline} className="absolute bottom-0 right-0" />
+        </div>
+        <div>
+          <p className="font-semibold text-gray-900 text-sm">{otherUserName}</p>
+          <p className={`text-xs ${isOtherOnline ? 'text-emerald-600' : 'text-gray-400'}`}>
+            {isOtherOnline ? 'Online' : 'Offline'}
+          </p>
+        </div>
+      </div>
+
+      {/* ── Messages Area ── */}
+      <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1">
+        {isLoading && (
+          <p className="text-center text-gray-400 text-sm py-8">Loading messages…</p>
+        )}
+        {messages.map((msg) => (
+          <MessageBubble
+            key={msg.id}
+            message={msg}
+            isOwn={msg.senderId === currentUserId}
+          />
+        ))}
+
+        {/* Typing indicator */}
+        {otherIsTyping && (
+          <div className="flex justify-start mb-3">
+            <div className="bg-gray-100 px-4 py-2 rounded-2xl rounded-bl-sm">
+              <div className="flex gap-1 items-center h-4">
+                <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:0ms]" />
+                <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:150ms]" />
+                <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:300ms]" />
+              </div>
+            </div>
+          </div>
+        )}
+        <div ref={bottomRef} />
+      </div>
+
+      {/* ── File Previews ── */}
+      {files.length > 0 && (
+        <div className="px-4 py-2 border-t border-gray-100 flex flex-wrap gap-2">
+          {files.map((f, i) => (
+            <div key={i} className="flex items-center gap-1 bg-indigo-50 border border-indigo-200 rounded-lg px-2 py-1 text-xs text-indigo-700">
+              {f.name}
+              <button onClick={() => setFiles((prev) => prev.filter((_, j) => j !== i))}>
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* ── Input Area ── */}
+      <div className="px-4 py-3 border-t border-gray-100 flex items-end gap-2">
+        {/* File picker */}
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          className="p-2 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
+          aria-label="Attach files"
+        >
+          <Paperclip className="w-5 h-5" />
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          multiple
+          accept="image/*,video/*,.pdf,.csv,.xlsx"
+          className="hidden"
+          onChange={(e) => {
+            const selected = Array.from(e.target.files ?? []);
+            setFiles((prev) => [...prev, ...selected].slice(0, 5));
+          }}
+        />
+
+        {/* Text input */}
+        <textarea
+          value={text}
+          onChange={handleTextChange}
+          onKeyDown={handleKeyDown}
+          placeholder="Type a message… (Enter to send)"
+          rows={1}
+          className="flex-1 resize-none bg-gray-50 rounded-xl px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 max-h-32"
+        />
+
+        {/* Send button */}
+        <button
+          type="button"
+          onClick={handleSend}
+          disabled={isSending || (!text.trim() && files.length === 0)}
+          className="p-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          aria-label="Send message"
+        >
+          <Send className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
+```
+
+---
+
+## Phase 8 — Frontend: Notifications
+
+### 8.1 Create `hooks/useNotifications.ts`
+
+```typescript
+'use client';
+
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { getSocket } from '@/lib/socket';
+import toast from 'react-hot-toast';
+
+export interface AppNotification {
+  id: string;
+  type: string;
+  message: string;
+  isRead: boolean;
+  createdAt: string;
+}
+
+export function useNotifications(userId: string | undefined) {
+  const [notifications, setNotifications] = useState<AppNotification[]>([]);
+  const unreadCount = notifications.filter((n) => !n.isRead).length;
+
+  // Load existing notifications from DB on mount
+  useEffect(() => {
+    if (!userId) return;
+    axios
+      .get('/api/v1/notifications')
+      .then(({ data }) => setNotifications(data.data))
+      .catch(console.error);
+  }, [userId]);
+
+  // Listen for new real-time notifications
+  useEffect(() => {
+    if (!userId) return;
+    const socket = getSocket();
+
+    socket.on('notification', (notification: AppNotification) => {
+      setNotifications((prev) => [notification, ...prev]);
+      // Show a toast popup
+      toast(notification.message, { icon: '🔔' });
+    });
+
+    return () => { socket.off('notification'); };
+  }, [userId]);
+
+  const markAllRead = async () => {
+    await axios.post('/api/v1/notifications/mark-read');
+    setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
+  };
+
+  return { notifications, unreadCount, markAllRead };
+}
+```
+
+---
+
+## Open Questions
+
+> [!IMPORTANT]
+> **Please answer before we start coding:**
+
+1. **Aiven Kafka plan** — Do you have an Aiven account? Aiven free tier has limited resources. If not, should we use a local Kafka via Docker for development first?
+
+2. **Aiven Redis** — Do you have a Redis instance on Aiven, or should we use a local Redis via Docker for now?
+
+3. **Socket.io transport** — Should we use WebSockets only, or allow polling as a fallback (slower but more compatible)?
+
+4. **Message restrictions** — Should users be blocked from typing if the OTHER person is offline? (Your requirement says "msg can be done only when both online") — this would mean the Send button is disabled when `isOtherOnline === false`.
+
+5. **Notification persistence** — Add `GET /api/v1/notifications` endpoint to the existing backend? (Not in the current routes)
+
+---
+
+## Verification Plan
+
+### Automated
+```bash
+# 1. Compile TypeScript - zero errors
+npx tsc --noEmit
+
+# 2. Lint
+npm run lint
+```
+
+### Manual (step-by-step test)
+1. Open two browser windows — log in as Client in one, Freelancer in another
+2. Navigate both to the same Order's chat page
+3. Verify: green dot appears on both sides
+4. Type in one window — verify typing indicator appears in the other
+5. Send a text message — verify it appears in both windows instantly
+6. Attach an image — verify it shows inline in both windows
+7. Attach a PDF — verify download card appears in both windows
+8. Close one browser tab — verify red dot appears on the other side
+
+---
+
+## Summary of All New Files
+
+| File | Purpose |
+|---|---|
+| `backend/src/config/kafka.ts` | Aiven Kafka client, producer, consumer |
+| `backend/src/config/redis.ts` | Redis pub/sub clients for Socket.io |
+| `backend/src/config/cloudinary.ts` | Cloudinary SDK setup |
+| `backend/src/socket/chat.socket.ts` | Socket.io server, rooms, events |
+| `backend/src/services/chat.consumer.ts` | Kafka consumer → DB → Socket.io |
+| `backend/src/middleware/upload.ts` | Multer + Cloudinary file upload |
+| `backend/src/routes/chat.routes.ts` | Chat REST routes |
+| `backend/src/controllers/chat.controller.ts` | Chat history + file upload handlers |
+| `lib/socket.ts` | Frontend Socket.io client singleton |
+| `hooks/useSocket.ts` | React hook for socket lifecycle |
+| `hooks/useChat.ts` | Chat logic: messages, typing, presence |
+| `hooks/useNotifications.ts` | Real-time notification management |
+| `components/chat/ChatWindow.tsx` | Full chat UI with file upload |
+| `components/chat/MessageBubble.tsx` | Individual message with attachments |
+| `components/chat/AttachmentPreview.tsx` | Image/video/file rendering |
+| `components/chat/PresenceDot.tsx` | Online/offline indicator dot |

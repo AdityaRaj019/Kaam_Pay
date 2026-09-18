@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "app/dashboard/page.tsx": {
-    "mtime": 1789752759.4120655,
-    "ast_hash": "7b20e64bf32a36485ae8136329be3e78",
+    "mtime": 1789742582.4329174,
+    "ast_hash": "e06aa0b520f8d152df63601ccb04e356",
     "semantic_hash": ""
   },
   "app/find-work/page.tsx": {
@@ -210,8 +210,8 @@
     "semantic_hash": ""
   },
   "backend/src/config/kafka.ts": {
-    "mtime": 1789752759.437669,
-    "ast_hash": "e8ca19eb08bf3e21a1652bc96ecd4d2d",
+    "mtime": 1789741584.5240428,
+    "ast_hash": "32baea2fab32e469cf7e9f2bb7fdc5a6",
     "semantic_hash": ""
   },
   "backend/src/config/prisma.ts": {
@@ -265,8 +265,8 @@
     "semantic_hash": ""
   },
   "backend/src/modules/chat/chat.controller.ts": {
-    "mtime": 1789752759.4576619,
-    "ast_hash": "0928bfc71c3481ae20daca923e4edd3d",
+    "mtime": 1789751826.3727403,
+    "ast_hash": "5071e9cac1c679831582bf9438c71aab",
     "semantic_hash": ""
   },
   "backend/src/modules/chat/chat.routes.ts": {
@@ -340,8 +340,8 @@
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.controller.ts": {
-    "mtime": 1789752759.5041215,
-    "ast_hash": "4c6dc66164679a63bbbbdf3e68bc8358",
+    "mtime": 1789752442.5398774,
+    "ast_hash": "e08b20c7f80034ced958c896d08c011a",
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.routes.ts": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "backend/src/server.ts": {
-    "mtime": 1789752759.5411346,
-    "ast_hash": "333cabd7ea49abe717aa995ff7d7018c",
+    "mtime": 1789741595.1970642,
+    "ast_hash": "94f7d3e6494eedfe4fc416f375c9c43a",
     "semantic_hash": ""
   },
   "backend/src/services/chat.consumer.ts": {
@@ -475,13 +475,13 @@
     "semantic_hash": ""
   },
   "components/chat/ChatWindow.tsx": {
-    "mtime": 1789752759.6239853,
-    "ast_hash": "71d8b48b847a4e6f2dc01c7ad5b23b3b",
+    "mtime": 1789742988.0948324,
+    "ast_hash": "294d164a3ed9975de9807f60084c6e04",
     "semantic_hash": ""
   },
   "components/chat/MessageBubble.tsx": {
-    "mtime": 1789752759.6289766,
-    "ast_hash": "ffc298d9de0c7e6d42b0b7e1290058fb",
+    "mtime": 1789742892.5517612,
+    "ast_hash": "1341fe67e8037caa4861dd9542b89ead",
     "semantic_hash": ""
   },
   "components/chat/PresenceDot.tsx": {
@@ -490,8 +490,8 @@
     "semantic_hash": ""
   },
   "components/chat/TypingIndicator.tsx": {
-    "mtime": 1789752759.6319766,
-    "ast_hash": "6b1f6f0934c9d1f9f296c41958159481",
+    "mtime": 1789742947.0450542,
+    "ast_hash": "f02293f994a99e994449d4c5637e991d",
     "semantic_hash": ""
   },
   "components/find-work/BookmarkBtn.tsx": {
@@ -600,8 +600,8 @@
     "semantic_hash": ""
   },
   "hooks/useNotifications.ts": {
-    "mtime": 1789752759.6514933,
-    "ast_hash": "550dabe9094dfee97a4e5a1eeb8ec168",
+    "mtime": 1789752451.6707947,
+    "ast_hash": "d5e7581de1e094e595f5cf2d7e1a96e8",
     "semantic_hash": ""
   },
   "kaampay/.obsidian/app.json": {
@@ -810,8 +810,8 @@
     "semantic_hash": ""
   },
   "test/test-offline-notification.ts": {
-    "mtime": 1789752759.6800914,
-    "ast_hash": "3e7f5175441d8aa940dbc1a5108c2fcc",
+    "mtime": 1789741690.309674,
+    "ast_hash": "2b3b8eab4e7f08d526e0598636d2e381",
     "semantic_hash": ""
   },
   "backend/src/modules/chat/chat.service.ts": {
@@ -825,18 +825,18 @@
     "semantic_hash": ""
   },
   "backend/src/modules/chat/chat.validation.ts": {
-    "mtime": 1789752759.49617,
-    "ast_hash": "6f028d7783e1671a41cbfa920b7e041f",
+    "mtime": 1789751414.0485067,
+    "ast_hash": "5286cb674da8f92336f96569a1bf4eff",
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.service.ts": {
-    "mtime": 1789752759.518122,
-    "ast_hash": "38ad2c3f6d8ac8d4b7a0b447abb910fd",
+    "mtime": 1789751387.6176045,
+    "ast_hash": "da066e41643ca8ca9ecf573441411fb0",
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.types.ts": {
-    "mtime": 1789752759.5241218,
-    "ast_hash": "ba76040cb228ca2fe3ffcd3eeb0d8e30",
+    "mtime": 1789751369.633125,
+    "ast_hash": "e524ee8a3171ba21bda67a8f1e9e426d",
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.validation.ts": {

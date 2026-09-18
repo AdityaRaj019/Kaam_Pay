@@ -4,15 +4,25 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, Search, ChevronDown, LogOut, LayoutDashboard, ExternalLink } from 'lucide-react';
+import {
+  Search,
+  ChevronDown,
+  LogOut,
+  LayoutDashboard,
+  ExternalLink,
+  User as UserIcon,
+  PlusCircle,
+} from 'lucide-react';
 import api from '@/lib/axios';
 import toast from 'react-hot-toast';
+import { NotificationBell } from '@/components/notifications/NotificationBell';
 
 interface AppNavbarProps {
   user?: {
     name: string;
     email: string;
     image: string | null;
+    role?: 'CLIENT' | 'FREELANCER' | 'ADMIN' | string;
   } | null;
 }
 
@@ -115,9 +125,24 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute left-0 mt-2 w-48 bg-white border border-slate-200 rounded-xl shadow-lg p-3 z-50 text-xs text-slate-400 italic text-center"
+                  className="absolute left-0 mt-2 w-52 bg-white border border-slate-200 rounded-xl shadow-lg p-2 z-50"
                 >
-                  No options available
+                  <Link
+                    href="/dashboard/create-gig"
+                    onClick={() => setIsDeliverOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-50 text-slate-700 text-sm font-medium transition-colors"
+                  >
+                    <PlusCircle className="w-4 h-4 text-green-600" />
+                    Create New Gig
+                  </Link>
+                  <Link
+                    href="/profile"
+                    onClick={() => setIsDeliverOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-50 text-slate-700 text-sm font-medium transition-colors"
+                  >
+                    <UserIcon className="w-4 h-4 text-[#4a4bd7]" />
+                    Freelancer Profile
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -147,10 +172,7 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
           </div>
 
           {/* Notification Button */}
-          <button className="relative w-9 h-9 rounded-full border border-slate-200 hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors">
-            <Bell className="w-4.5 h-4.5" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-[#4a4bd7] rounded-full border border-white"></span>
-          </button>
+          <NotificationBell />
 
           {/* User Avatar with Dropdown */}
           <div className="relative" ref={avatarRef}>
@@ -186,6 +208,11 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                       {user?.name || 'User'}
                     </p>
                     <p className="text-slate-400 text-xs truncate mt-0.5">{user?.email || ''}</p>
+                    {user?.role && (
+                      <span className="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-blue-50 text-blue-900 rounded-full">
+                        {user.role}
+                      </span>
+                    )}
                   </div>
 
                   {/* Dropdown Items */}
@@ -194,7 +221,7 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                       setIsAvatarOpen(false);
                       router.push('/dashboard');
                     }}
-                    className="w-full flex items-center gap-2.5 hover:bg-slate-50 text-slate-700 transition-colors px-3 py-2.5 rounded-xl font-bold text-xs text-left cursor-pointer"
+                    className="w-full flex items-center gap-2.5 hover:bg-slate-50 text-slate-700 transition-colors px-3 py-2 rounded-xl font-bold text-xs text-left cursor-pointer"
                   >
                     <LayoutDashboard className="w-4 h-4 text-slate-500" />
                     <span>Dashboard</span>
@@ -203,9 +230,20 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                   <button
                     onClick={() => {
                       setIsAvatarOpen(false);
+                      router.push('/profile');
+                    }}
+                    className="w-full flex items-center gap-2.5 hover:bg-slate-50 text-slate-700 transition-colors px-3 py-2 rounded-xl font-bold text-xs text-left cursor-pointer"
+                  >
+                    <UserIcon className="w-4 h-4 text-slate-500" />
+                    <span>My Profile</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setIsAvatarOpen(false);
                       handleSignOut();
                     }}
-                    className="w-full flex items-center gap-2.5 hover:bg-red-50 hover:text-red-655 text-slate-700 transition-colors px-3 py-2.5 rounded-xl font-bold text-xs text-left border-t border-slate-100 mt-1 cursor-pointer"
+                    className="w-full flex items-center gap-2.5 hover:bg-red-50 hover:text-red-600 text-slate-700 transition-colors px-3 py-2 rounded-xl font-bold text-xs text-left border-t border-slate-100 mt-1 cursor-pointer"
                   >
                     <LogOut className="w-4 h-4 text-slate-500" />
                     <span>Sign Out</span>

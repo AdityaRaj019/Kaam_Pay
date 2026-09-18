@@ -1,6 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSession } from '@/lib/auth/auth-client';
+import api from '@/lib/axios';
+import toast from 'react-hot-toast';
 import type { GigDetail, Gig } from '@/types/gig';
 import { BookmarkBtn } from './BookmarkBtn';
 import { timeAgo, formatPrice } from './utils';
@@ -13,7 +17,90 @@ interface FullModalProps {
 }
 
 export function FullModal({ gig, isSaved, onClose, onToggleSave }: FullModalProps) {
+  const router = useRouter();
+  const { data: session } = useSession();
+  const [isInitiating, setIsInitiating] = useState(false);
   const backdropRef = useRef<HTMLDivElement>(null);
+
+  const handleContactSeller = async () => {
+    if (!gig) return;
+
+    if (!session?.user) {
+      toast.error('Please sign in to contact the freelancer');
+      router.push('/login');
+      return;
+    }
+
+    if (session.user.id === gig.freelancer.id) {
+      toast.error('You cannot message yourself on your own gig.');
+      return;
+    }
+
+    try {
+      setIsInitiating(true);
+      const res = await api.post('/chat/init', {
+        freelancerId: gig.freelancer.id,
+        gigId: gig.id,
+      });
+
+      const orderId = res.data?.data?.orderId;
+      if (orderId) {
+        toast.success(`Connecting with ${gig.freelancer.name}`);
+        onClose();
+        router.push(`/messages?orderId=${orderId}`);
+      } else {
+        onClose();
+        router.push('/messages');
+      }
+    } catch (err: unknown) {
+      const errorMsg =
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to contact seller';
+      toast.error(errorMsg);
+    } finally {
+      setIsInitiating(false);
+    }
+  };
+
+  const handleOrderNow = async () => {
+    if (!gig) return;
+
+    if (!session?.user) {
+      toast.error('Please sign in to order this gig');
+      router.push('/login');
+      return;
+    }
+
+    if (session.user.id === gig.freelancer.id) {
+      toast.error('You cannot order your own gig.');
+      return;
+    }
+
+    try {
+      setIsInitiating(true);
+      const res = await api.post('/chat/init', {
+        freelancerId: gig.freelancer.id,
+        gigId: gig.id,
+      });
+
+      const orderId = res.data?.data?.orderId;
+      if (orderId) {
+        toast.success(`Order placed! Starting chat with ${gig.freelancer.name}`);
+        onClose();
+        router.push(`/messages?orderId=${orderId}`);
+      } else {
+        onClose();
+        router.push('/messages');
+      }
+    } catch (err: unknown) {
+      const errorMsg =
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to initiate order';
+      toast.error(errorMsg);
+    } finally {
+      setIsInitiating(false);
+    }
+  };
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === backdropRef.current) onClose();
@@ -169,12 +256,20 @@ export function FullModal({ gig, isSaved, onClose, onToggleSave }: FullModalProp
                 </p>
                 <p className="text-xs text-[#596064] mt-1">Fixed-Price Delivery</p>
               </div>
-              <button className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#4a4bd7] to-[#7073ff] text-white font-bold text-sm hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-[#4a4bd7]/25">
-                Order Now
+              <button
+                onClick={handleOrderNow}
+                disabled={isInitiating}
+                className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#4a4bd7] to-[#7073ff] text-white font-bold text-sm hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-[#4a4bd7]/25 disabled:opacity-50"
+              >
+                {isInitiating ? 'Processing...' : 'Order Now'}
               </button>
               <BookmarkBtn gig={gig} saved={isSaved} onToggle={onToggleSave} variant="full" />
-              <button className="w-full py-3.5 px-6 rounded-full border border-[#4a4bd7]/30 text-[#4a4bd7] font-semibold text-sm hover:bg-[#4a4bd7]/5 transition-all">
-                Contact Seller
+              <button
+                onClick={handleContactSeller}
+                disabled={isInitiating}
+                className="w-full py-3.5 px-6 rounded-full border border-[#4a4bd7]/30 text-[#4a4bd7] font-semibold text-sm hover:bg-[#4a4bd7]/5 transition-all disabled:opacity-50"
+              >
+                {isInitiating ? 'Opening Chat...' : 'Contact Seller'}
               </button>
               <p className="text-center text-xs text-[#596064]">
                 🔒 Secure payment through KaamPay Escrow

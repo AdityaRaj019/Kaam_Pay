@@ -440,6 +440,16 @@ export default function FindWorkPage() {
               </div>
             )}
           </div>
+
+          {/* Full View Modal */}
+          {fullModal && gigDetail && (
+            <FullModal
+              gig={gigDetail}
+              isSaved={Boolean(savedMap[gigDetail.id])}
+              onClose={() => setFullModal(false)}
+              onToggleSave={toggleSave}
+            />
+          )}
         </main>
       </div>
     </>
