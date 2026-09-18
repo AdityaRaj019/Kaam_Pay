@@ -15,7 +15,7 @@ import { useNotifications } from '@/hooks/useNotifications';
 export function NotificationBell() {
   const [isOpen, setIsOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
-  const { notifications, unreadCount, markAllRead } = useNotifications();
+  const { notifications, unreadCount, markAllRead, markOneRead } = useNotifications();
 
   // Close the dropdown when clicking outside
   useEffect(() => {
@@ -76,7 +76,12 @@ export function NotificationBell() {
               notifications.slice(0, 20).map((notif) => (
                 <div
                   key={notif.id}
-                  className={`px-4 py-3 transition-colors hover:bg-slate-50 ${
+                  onClick={() => {
+                    if (!notif.isRead) {
+                      void markOneRead(notif.id);
+                    }
+                  }}
+                  className={`px-4 py-3 transition-colors cursor-pointer hover:bg-slate-50 ${
                     notif.isRead ? 'opacity-70 bg-white' : 'bg-indigo-50/30'
                   }`}
                 >

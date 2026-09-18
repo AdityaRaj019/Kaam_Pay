@@ -1,11 +1,9 @@
-'use client';
-
 /**
  * useNotifications.ts — Manages real-time and persisted notifications
  *
  * On mount: fetches existing notifications from the database via REST
  * On socket event: appends new real-time notifications + shows a toast
- * Provides: unreadCount (for the bell badge), markAllRead function
+ * Provides: unreadCount (for the bell badge), markAllRead, markOneRead
  */
 
 import { useState, useEffect } from 'react';
@@ -27,14 +25,21 @@ export function useNotifications() {
   const [isLoading, setIsLoading] = useState(true);
 
   // Derived: count of unread notifications for the bell badge
-  const unreadCount = notifications.filter((n) => !n.isRead).length;
+  const unreadCount = Array.isArray(notifications)
+    ? notifications.filter((n) => !n.isRead).length
+    : 0;
 
   // ── Load persisted notifications from DB ────────────────────────────────
   useEffect(() => {
     const load = async () => {
       try {
         const { data } = await api.get('/notifications');
-        setNotifications(data.data as AppNotification[]);
+        const list = Array.isArray(data?.data)
+          ? data.data
+          : Array.isArray(data?.data?.notifications)
+            ? data.data.notifications
+            : [];
+        setNotifications(list as AppNotification[]);
       } catch {
         // Silently fail — notifications are non-critical
       } finally {
@@ -82,7 +87,19 @@ export function useNotifications() {
     }
   };
 
-  return { notifications, isLoading, unreadCount, markAllRead };
+  // ── Mark single notification as read ────────────────────────────────────
+  const markOneRead = async (id: string) => {
+    try {
+      setNotifications((prev) =>
+        prev.map((n) => (n.id === id ? { ...n, isRead: true } : n)),
+      );
+      await api.patch(`/notifications/${id}/read`);
+    } catch {
+      toast.error('Failed to mark notification as read');
+    }
+  };
+
+  return { notifications, isLoading, unreadCount, markAllRead, markOneRead };
 }
 
 // ── Icon helper ───────────────────────────────────────────────────────────────

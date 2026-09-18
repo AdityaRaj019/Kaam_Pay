@@ -35,8 +35,8 @@ export function MessageBubble({ message, isOwn }: MessageBubbleProps) {
             className={`
               px-4 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap break-words
               ${isOwn
-                ? 'bg-indigo-600 text-white rounded-br-sm'
-                : 'bg-gray-800/70 text-gray-100 border border-white/10 rounded-bl-sm'
+                ? 'bg-[#4a4bd7] text-white rounded-br-xs shadow-sm font-normal'
+                : 'bg-white text-slate-800 border border-slate-200/90 rounded-bl-xs shadow-xs font-normal'
               }
             `}
           >
@@ -45,7 +45,7 @@ export function MessageBubble({ message, isOwn }: MessageBubbleProps) {
         )}
 
         {/* Timestamp */}
-        <span className="text-[11px] text-gray-500 px-1 opacity-0 group-hover:opacity-100 transition-opacity">
+        <span className="text-[10px] text-slate-400 px-1 font-medium opacity-70 group-hover:opacity-100 transition-opacity">
           {time}
         </span>
       </div>

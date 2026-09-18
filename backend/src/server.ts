@@ -26,8 +26,9 @@ import('./app').then(async ({ default: app }) => {
       const http = await import('http');
       const httpServer = http.createServer(app);
 
-      // ── 2. Connect Kafka producer ─────────────────────────────────────────
-      const { kafkaProducer } = await import('./config/kafka');
+      // ── 2. Ensure Kafka topics & connect producer ────────────────────────
+      const { kafkaProducer, ensureKafkaTopics } = await import('./config/kafka');
+      await ensureKafkaTopics();
       await kafkaProducer.connect();
       console.log('[Kafka Producer] Connected ✅');
 

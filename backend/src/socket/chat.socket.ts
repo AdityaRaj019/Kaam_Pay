@@ -1,13 +1,12 @@
 /**
  * chat.socket.ts — Socket.io server with Redis adapter
  *
- * This is the "telephone exchange" of the chat system.
- * It manages:
- *  - User authentication (mapping socket IDs to user IDs)
- *  - Chat room access control (only order parties can join)
+ * This is the gateway of the real-time chat & notification system.
+ * Manages:
+ *  - User session authentication via Better Auth cookies
+ *  - Chat room access control (verified via ChatService)
  *  - Message routing to Kafka
- *  - Online presence (green/red dot)
- *  - Typing indicators (debounced on the frontend)
+ *  - Real-time online presence & typing indicators
  */
 
 import { Server as HttpServer } from 'http';
@@ -15,10 +14,11 @@ import { Server as SocketServer } from 'socket.io';
 import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
 import { createAdapter } from '@socket.io/redis-adapter';
 import { pubClient, subClient } from '../config/redis';
-import { kafkaProducer, KAFKA_TOPIC_CHAT, KAFKA_TOPIC_NOTIFICATIONS } from '../config/kafka';
-import prisma from '../config/prisma';
+import { kafkaProducer, KAFKA_TOPIC_CHAT } from '../config/kafka';
 import { auth } from '../config/auth';
 import { fromNodeHeaders } from 'better-auth/node';
+import { ChatService } from '../modules/chat/chat.service';
+import { NotificationService } from '../modules/notifications/notification.service';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -62,23 +62,17 @@ export async function initSocketServer(
         origin: allowedOrigins,
         credentials: true, // needed so the browser sends session cookies
       },
-      // Allow both WebSocket and HTTP polling.
-      // Polling is slower but works behind strict firewalls/proxies.
       transports: ['websocket', 'polling'],
     },
   );
 
-  // Wire up the Redis adapter — this makes Socket.io state (rooms, sockets)
-  // shared across multiple server instances (horizontal scaling)
+  // Redis adapter for horizontal multi-instance scaling
   io.adapter(createAdapter(pubClient, subClient));
   console.log('[Socket.io] Redis adapter attached ✅');
 
   // ── Authentication middleware ───────────────────────────────────────────────
-  // This runs BEFORE any event handler. If auth fails, the connection is rejected.
   io.use(async (socket, next) => {
     try {
-      // Better Auth reads the session from the cookie header
-      // The browser sends cookies automatically with credentials: true
       const session = await auth.api.getSession({
         headers: fromNodeHeaders(socket.request.headers as Record<string, string>),
       });
@@ -87,7 +81,6 @@ export async function initSocketServer(
         return next(new Error('Authentication failed: no valid session'));
       }
 
-      // Store user info on the socket for use in event handlers
       socket.data.userId = session.user.id;
       socket.data.userName = session.user.name;
       next();
@@ -102,41 +95,31 @@ export async function initSocketServer(
     console.log(`[Socket] ${userName} (${userId}) connected — socket ${socket.id}`);
 
     // Join personal notification room immediately on connect
-    // Every notification for this user is sent to room `user_{userId}`
     await socket.join(`user_${userId}`);
 
-    // Broadcast to ALL other connected sockets: "this user came online"
-    // Other clients use this to update the presence dot
+    // Broadcast presence: "user came online"
     socket.broadcast.emit('user_online', { userId });
 
     // ── Event: join_room ─────────────────────────────────────────────────────
-    // Frontend emits this when the user opens an order's chat window
     socket.on('join_room', async (payload: JoinRoomPayload) => {
       const { orderId } = payload;
 
       try {
-        // Security check: user must be the client OR freelancer for this order
-        const order = await prisma.order.findFirst({
-          where: {
-            id: orderId,
-            OR: [{ clientId: userId }, { freelancerId: userId }],
-          },
-          include: { chatRoom: true },
-        });
+        // Access verification via ChatService
+        const { chatRoom, recipientId: otherUserId } = await ChatService.verifyOrderParty(
+          orderId,
+          userId,
+        );
 
-        if (!order || !order.chatRoom) {
+        if (!chatRoom) {
           socket.emit('error', { message: 'Chat room not found or access denied' });
           return;
         }
 
-        // The room name is based on the Order ID so it's easy to join from the frontend
         const roomName = `order_${orderId}`;
         await socket.join(roomName);
 
-        // Counterparty is whoever is NOT the current user
-        const otherUserId = order.clientId === userId ? order.freelancerId : order.clientId;
-
-        // Check if counterparty has any connected sockets in user_{otherUserId}
+        // Check if counterparty has active sockets in user_{otherUserId}
         const otherUserSockets = await io.in(`user_${otherUserId}`).fetchSockets();
         const isOtherOnline = otherUserSockets.length > 0;
 
@@ -144,7 +127,7 @@ export async function initSocketServer(
         const roomSockets = await io.in(roomName).fetchSockets();
         const isOtherInRoom = roomSockets.some((s) => s.data.userId === otherUserId);
 
-        // Inform the joining socket immediately about the other party's presence
+        // Inform joining socket about other party's presence
         socket.emit('room_presence', {
           orderId,
           otherUserId,
@@ -152,7 +135,7 @@ export async function initSocketServer(
           inRoom: isOtherInRoom,
         });
 
-        // Tell the other party that this user is now in the chat
+        // Notify other party
         socket.to(roomName).emit('user_joined_chat', { userId });
         socket.to(`user_${otherUserId}`).emit('user_online', { userId });
         console.log(
@@ -165,43 +148,31 @@ export async function initSocketServer(
     });
 
     // ── Event: send_message ──────────────────────────────────────────────────
-    // Frontend emits this to send a message (text, files, or both)
     socket.on('send_message', async (payload: SendMessagePayload) => {
       const { orderId, text, attachments } = payload;
 
-      // Basic validation
       if (!text?.trim() && (!attachments || attachments.length === 0)) {
         socket.emit('error', { message: 'Message cannot be empty' });
         return;
       }
 
       try {
-        // Look up the chat room and the other party's ID
-        const order = await prisma.order.findFirst({
-          where: {
-            id: orderId,
-            OR: [{ clientId: userId }, { freelancerId: userId }],
-          },
-          include: { chatRoom: true },
-        });
+        // Access verification via ChatService
+        const { chatRoom, recipientId } = await ChatService.verifyOrderParty(orderId, userId);
 
-        if (!order?.chatRoom) {
+        if (!chatRoom) {
           socket.emit('error', { message: 'Chat room not found' });
           return;
         }
 
-        // The recipient is whoever is NOT the current user
-        const recipientId = order.clientId === userId ? order.freelancerId : order.clientId;
-
-        // Push to Kafka — the consumer will save to DB and broadcast back
-        // Using chatRoomId as the Kafka message key ensures ordered delivery per room
+        // Push to Kafka for persistence and dispatching
         await kafkaProducer.send({
           topic: KAFKA_TOPIC_CHAT,
           messages: [
             {
-              key: order.chatRoom.id,
+              key: chatRoom.id,
               value: JSON.stringify({
-                chatRoomId: order.chatRoom.id,
+                chatRoomId: chatRoom.id,
                 orderId,
                 senderId: userId,
                 recipientId,
@@ -218,10 +189,8 @@ export async function initSocketServer(
     });
 
     // ── Event: typing ────────────────────────────────────────────────────────
-    // Frontend emits this when the user starts/stops typing (debounced on the client)
     socket.on('typing', (payload: TypingPayload) => {
       const { orderId, isTyping } = payload;
-      // Broadcast ONLY to others in the room (not back to the sender)
       socket.to(`order_${orderId}`).emit('user_typing', {
         userId,
         isTyping: Boolean(isTyping),
@@ -231,7 +200,6 @@ export async function initSocketServer(
     // ── Disconnect ───────────────────────────────────────────────────────────
     socket.on('disconnect', async (reason) => {
       console.log(`[Socket] ${userName} (${userId}) disconnected: ${reason}`);
-      // Only emit user_offline if the user has no remaining active socket connections
       const remainingSockets = await io.in(`user_${userId}`).fetchSockets();
       if (remainingSockets.length === 0) {
         socket.broadcast.emit('user_offline', { userId });
@@ -242,21 +210,5 @@ export async function initSocketServer(
   return io;
 }
 
-// ── Utility: send a notification through Kafka ────────────────────────────────
-// Call this from your order/gig controllers when order status changes, etc.
-
-export async function emitNotification(
-  userId: string,
-  type: string,
-  message: string,
-): Promise<void> {
-  await kafkaProducer.send({
-    topic: KAFKA_TOPIC_NOTIFICATIONS,
-    messages: [
-      {
-        key: userId,
-        value: JSON.stringify({ userId, type, message }),
-      },
-    ],
-  });
-}
+// ── Re-export for backward compatibility ──────────────────────────────────────
+export const emitNotification = NotificationService.publishNotification.bind(NotificationService);

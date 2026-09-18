@@ -45,3 +45,43 @@ export const KAFKA_TOPIC_CHAT = 'kaampay.chat.messages';
 
 /** Kafka topic for system notifications (order status changes, etc.) */
 export const KAFKA_TOPIC_NOTIFICATIONS = 'kaampay.notifications';
+
+/** Kafka topic for offline counterparty notifications */
+export const KAFKA_TOPIC_OFFLINE_NOTIFICATIONS = 'kaampay.notifications.offline';
+
+/**
+ * Ensures that all required Kafka topics exist on the broker.
+ * Automatically runs during backend bootstrap before consumers start.
+ */
+export async function ensureKafkaTopics(): Promise<void> {
+  const admin = kafka.admin();
+  try {
+    await admin.connect();
+    const existingTopics = await admin.listTopics();
+    const requiredTopics = [
+      KAFKA_TOPIC_CHAT,
+      KAFKA_TOPIC_NOTIFICATIONS,
+      KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
+    ];
+
+    const missingTopics = requiredTopics.filter((topic) => !existingTopics.includes(topic));
+    if (missingTopics.length > 0) {
+      console.log(`[Kafka Admin] Creating missing topics: ${missingTopics.join(', ')}...`);
+      await admin.createTopics({
+        topics: missingTopics.map((topic) => ({
+          topic,
+          numPartitions: 1,
+          replicationFactor: 1,
+        })),
+      });
+      console.log('[Kafka Admin] Required topics created successfully ✅');
+    } else {
+      console.log('[Kafka Admin] Required topics verified on broker ✅');
+    }
+  } catch (error) {
+    console.error('[Kafka Admin] Warning: Failed to verify/create Kafka topics:', error);
+  } finally {
+    await admin.disconnect().catch(() => {});
+  }
+}
+

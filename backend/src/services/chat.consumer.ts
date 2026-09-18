@@ -1,44 +1,28 @@
 /**
  * chat.consumer.ts — Kafka Consumer for chat messages and notifications
  *
- * This runs as a background process alongside the Express server.
- * Think of it as the "postal worker" that:
- *  1. Reads messages from the Kafka mailbox
- *  2. Saves them permanently to PostgreSQL
- *  3. Delivers them instantly to online users via Socket.io
- *  4. If the recipient is offline → saves as a DB notification (shown on next login)
+ * Background worker that:
+ *  1. Reads messages from Kafka topics
+ *  2. Saves them permanently via ChatService and NotificationService
+ *  3. Dispatches real-time Socket.io events to online users
+ *  4. Directs notifications for offline users to the dedicated offline queue & persistence
  */
 
 import { Server as SocketServer } from 'socket.io';
-import { kafkaConsumer, KAFKA_TOPIC_CHAT, KAFKA_TOPIC_NOTIFICATIONS } from '../config/kafka';
-import prisma from '../config/prisma';
-
-// ── Types ────────────────────────────────────────────────────────────────────
-
-interface AttachmentPayload {
-  url: string;
-  publicId: string;
-  fileType: string;
-  fileName: string;
-  fileSize: number;
-}
-
-interface ChatMessagePayload {
-  chatRoomId: string;
-  orderId: string;
-  senderId: string;
-  recipientId: string; // the other party — needed for offline notification
-  text?: string;
-  attachments?: AttachmentPayload[];
-}
-
-interface NotificationPayload {
-  userId: string;
-  type: string;
-  message: string;
-}
-
-// ── Main startup function ─────────────────────────────────────────────────────
+import {
+  kafkaConsumer,
+  KAFKA_TOPIC_CHAT,
+  KAFKA_TOPIC_NOTIFICATIONS,
+  KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
+} from '../config/kafka';
+import { ChatService } from '../modules/chat/chat.service';
+import type { ChatMessagePayload } from '../modules/chat/chat.types';
+import { NotificationService } from '../modules/notifications/notification.service';
+import {
+  NOTIFICATION_TYPES,
+  type NotificationPayload,
+  type OfflineNotificationPayload,
+} from '../modules/notifications/notification.types';
 
 /**
  * Call this once at server startup.
@@ -49,15 +33,11 @@ export async function startChatConsumer(io: SocketServer): Promise<void> {
   console.log('[Kafka Consumer] Connected ✅');
 
   await kafkaConsumer.subscribe({
-    topics: [KAFKA_TOPIC_CHAT, KAFKA_TOPIC_NOTIFICATIONS],
-    fromBeginning: false, // only process new messages, not old ones from the queue
+    topics: [KAFKA_TOPIC_CHAT, KAFKA_TOPIC_NOTIFICATIONS, KAFKA_TOPIC_OFFLINE_NOTIFICATIONS],
+    fromBeginning: false, // only process new messages
   });
 
   await kafkaConsumer.run({
-    /**
-     * eachMessage is called once per Kafka message.
-     * We never throw here — any error is caught and logged so the consumer keeps running.
-     */
     eachMessage: async ({ topic, message }) => {
       if (!message.value) return;
 
@@ -68,9 +48,10 @@ export async function startChatConsumer(io: SocketServer): Promise<void> {
           await handleChatMessage(io, payload as unknown as ChatMessagePayload);
         } else if (topic === KAFKA_TOPIC_NOTIFICATIONS) {
           await handleNotification(io, payload as unknown as NotificationPayload);
+        } else if (topic === KAFKA_TOPIC_OFFLINE_NOTIFICATIONS) {
+          await handleOfflineNotification(io, payload as unknown as OfflineNotificationPayload);
         }
       } catch (err) {
-        // Log the error but do NOT re-throw — a throw here would crash the entire consumer
         console.error(`[Kafka Consumer] Failed to process message on topic "${topic}":`, err);
       }
     },
@@ -80,71 +61,86 @@ export async function startChatConsumer(io: SocketServer): Promise<void> {
 // ── Chat message handler ──────────────────────────────────────────────────────
 
 async function handleChatMessage(io: SocketServer, payload: ChatMessagePayload): Promise<void> {
-  const { chatRoomId, orderId, senderId, recipientId, text, attachments } = payload;
+  const { orderId, senderId, recipientId, text, attachments } = payload;
 
-  // 1. Persist the message to PostgreSQL
-  const savedMessage = await prisma.message.create({
-    data: {
-      chatRoomId,
-      senderId,
-      text: text ?? null,
-      // Create attachment rows linked to this message
-      attachments: attachments?.length
-        ? {
-            create: attachments.map((a) => ({
-              url: a.url,
-              publicId: a.publicId,
-              fileType: a.fileType,
-              fileName: a.fileName,
-              fileSize: a.fileSize,
-            })),
-          }
-        : undefined,
-    },
-    include: {
-      sender: { select: { id: true, name: true, image: true } },
-      attachments: true,
-    },
-  });
+  // 1. Persist the message to PostgreSQL via ChatService
+  const savedMessage = await ChatService.saveIncomingMessage(payload);
 
   // 2. Broadcast to the order room — only the two parties are in this room
   const roomName = `order_${orderId}`;
   io.to(roomName).emit('receive_message', savedMessage);
 
-  // 3. If recipient is NOT currently in the room → save as notification
-  //    We check room membership via the Socket.io server adapter
+  // 3. Presence discrimination: check whether recipient is in room or online
   const socketsInRoom = await io.in(roomName).fetchSockets();
-  const recipientIsOnline = socketsInRoom.some((s) => s.data.userId === recipientId);
+  const recipientInRoom = socketsInRoom.some((s) => s.data.userId === recipientId);
 
-  if (!recipientIsOnline) {
-    const senderName = savedMessage.sender.name;
-    const preview = text
-      ? text.length > 50
-        ? text.slice(0, 50) + '…'
-        : text
-      : `${attachments?.length ?? 1} file(s)`;
+  const recipientSockets = await io.in(`user_${recipientId}`).fetchSockets();
+  const recipientIsOnline = recipientSockets.length > 0;
 
-    // Save notification to DB (they'll see it when they log in)
-    await prisma.notification.create({
-      data: {
-        userId: recipientId,
-        type: 'NEW_MESSAGE',
-        message: `${senderName}: ${preview}`,
-      },
-    });
+  const senderName = savedMessage.sender.name || 'User';
+  const preview = text
+    ? text.length > 50
+      ? text.slice(0, 50) + '…'
+      : text
+    : `${attachments?.length ?? 1} file(s)`;
+  const notificationText = `${senderName}: ${preview}`;
+
+  if (!recipientInRoom) {
+    if (recipientIsOnline) {
+      // Recipient is online on the site but not in this chat room
+      try {
+        await NotificationService.publishNotification(
+          recipientId,
+          NOTIFICATION_TYPES.NEW_MESSAGE,
+          notificationText,
+        );
+      } catch (err) {
+        console.error('[Kafka Consumer] Failed to send in-app notification to Kafka:', err);
+      }
+    } else {
+      // Recipient is completely OFFLINE
+      try {
+        await NotificationService.publishOfflineNotification({
+          userId: recipientId,
+          senderId,
+          senderName,
+          orderId,
+          type: NOTIFICATION_TYPES.NEW_MESSAGE,
+          message: notificationText,
+          createdAt: new Date().toISOString(),
+        });
+        console.log(
+          `[Kafka Producer] Dispatched offline notification to ${KAFKA_TOPIC_OFFLINE_NOTIFICATIONS} for user ${recipientId} (from ${senderName})`,
+        );
+      } catch (err) {
+        console.error('[Kafka Consumer] Failed to send offline notification to Kafka:', err);
+      }
+    }
   }
 }
 
-// ── Notification handler ──────────────────────────────────────────────────────
+// ── Notification handler (in-app / general) ───────────────────────────────────
 
 async function handleNotification(io: SocketServer, payload: NotificationPayload): Promise<void> {
-  const { userId, type, message } = payload;
+  await NotificationService.persistAndDispatch(payload, io);
+}
 
-  // 1. Save notification to DB first (persists for offline users)
-  const notification = await prisma.notification.create({
-    data: { userId, type, message },
-  });
+// ── Offline Notification handler ──────────────────────────────────────────────
 
-  // 2. Push to user's personal socket room — delivers as toast if they're online
-  io.to(`user_${userId}`).emit('notification', notification);
+async function handleOfflineNotification(
+  io: SocketServer,
+  payload: OfflineNotificationPayload,
+): Promise<void> {
+  const notification = await NotificationService.persistAndDispatch(
+    {
+      userId: payload.userId,
+      type: payload.type || NOTIFICATION_TYPES.NEW_MESSAGE,
+      message: payload.message,
+    },
+    io,
+  );
+
+  console.log(
+    `[Kafka Consumer] Stored offline notification (id: ${notification.id}) for user ${payload.userId} from ${payload.senderName} ✅`,
+  );
 }
