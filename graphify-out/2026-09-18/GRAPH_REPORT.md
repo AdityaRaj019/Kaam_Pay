@@ -1,20 +1,24 @@
-# Graph Report - Kaam_Pay  (2026-09-18)
+# Graph Report - Kaam_Pay (2026-09-18)
 
 ## Corpus Check
-- 156 files · ~42,280 words
+
+- 156 files · ~42,210 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
+
 - 716 nodes · 813 edges · 237 communities (76 shown, 161 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
+
 - Built from commit: `6392c1fa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
+
 - [[_COMMUNITY_Community 0|Community 0]]
 - [[_COMMUNITY_Community 1|Community 1]]
 - [[_COMMUNITY_Community 3|Community 3]]
@@ -198,6 +202,7 @@
 - [[_COMMUNITY_token|token]]
 
 ## God Nodes (most connected - your core abstractions)
+
 1. `AppError` - 19 edges
 2. `compilerOptions` - 16 edges
 3. `compilerOptions` - 14 edges
@@ -210,108 +215,132 @@
 10. `requireAuth()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `LoginPage()` --calls--> `useAuth()`  [EXTRACTED]
+
+- `LoginPage()` --calls--> `useAuth()` [EXTRACTED]
   app/(auth)/login/page.tsx → hooks/useAuth.ts
-- `RegisterForm()` --calls--> `useAuth()`  [EXTRACTED]
+- `RegisterForm()` --calls--> `useAuth()` [EXTRACTED]
   app/(auth)/register/page.tsx → hooks/useAuth.ts
-- `BookmarkBtnProps` --references--> `Gig`  [EXTRACTED]
+- `BookmarkBtnProps` --references--> `Gig` [EXTRACTED]
   components/find-work/BookmarkBtn.tsx → types/gig.ts
-- `GigCardProps` --references--> `Gig`  [EXTRACTED]
+- `GigCardProps` --references--> `Gig` [EXTRACTED]
   components/find-work/GigCard.tsx → types/gig.ts
-- `DashboardPage()` --calls--> `useAuth()`  [EXTRACTED]
+- `DashboardPage()` --calls--> `useAuth()` [EXTRACTED]
   app/dashboard/page.tsx → hooks/useAuth.ts
 
 ## Import Cycles
+
 - None detected.
 
 ## Communities (237 total, 161 thin omitted)
 
 ### Community 0 - "Community 0"
+
 Cohesion: 0.14
 Nodes (26): FindWorkPage(), BookmarkBtn(), BookmarkBtnProps, DEFAULT_FILTERS, FilterDrawer(), FilterDrawerProps, Filters, FullModal() (+18 more)
 
 ### Community 1 - "Community 1"
+
 Cohesion: 0.07
 Nodes (38): SessionUser, Conversation, MessagesContent(), OtherUser, FullUser, Gig, UserProfile, AppNavbar() (+30 more)
 
 ### Community 6 - "Community 6"
+
 Cohesion: 0.13
 Nodes (12): getCategoriesController, getFreelancerDetailsController, getGigDetailsController, searchFreelancersController, searchGigsController, ClientService, FreelancerSearchFilters, GigSearchFilters (+4 more)
 
 ### Community 8 - "Community 8"
+
 Cohesion: 0.05
 Nodes (41): dependencies, axios, better-auth, cors, dotenv, express, framer-motion, helmet (+33 more)
 
 ### Community 10 - "Community 10"
+
 Cohesion: 0.07
 Nodes (20): kafka, kafkaConsumer, kafkaProducer, globalForPrisma, pubClient, subClient, AttachmentPayload, ChatMessagePayload (+12 more)
 
 ### Community 14 - "Community 14"
+
 Cohesion: 0.21
 Nodes (13): ALLOWED_MIMES, CloudinaryResult, fileFilter(), getFileType(), getResourceType(), uploadMiddleware, uploadToCloudinary(), downloadChatAttachment() (+5 more)
 
 ### Community 16 - "Community 16"
+
 Cohesion: 0.20
 Nodes (7): adapter, FREELANCERS, FreelancerSeed, GIGS, GigSeed, pool, prisma
 
 ### Community 23 - "Community 23"
+
 Cohesion: 0.09
 Nodes (21): husky.sh script, devDependencies, eslint, eslint-config-next, eslint-config-prettier, eslint-plugin-prettier, husky, lint-staged (+13 more)
 
 ### Community 26 - "Community 26"
+
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 28 - "Community 28"
+
 Cohesion: 0.09
 Nodes (23): allowedOrigins, app, requireAuth(), Auth, router, AuthService, toPublicUser(), AuthenticatedUser (+15 more)
 
 ### Community 31 - "Community 31"
+
 Cohesion: 0.11
 Nodes (17): compilerOptions, baseUrl, esModuleInterop, lib, module, moduleResolution, noEmit, outDir (+9 more)
 
 ### Community 37 - "Community 37"
+
 Cohesion: 0.07
 Nodes (19): OnboardingData, SplitScreenLayout(), SplitScreenLayoutProps, STEP_INFOS, RULES, Step1_Rules(), Step1Props, Step1Props (+11 more)
 
 ### Community 38 - "Community 38"
+
 Cohesion: 0.13
 Nodes (16): LoginPage(), RegisterForm(), DashboardPage(), SessionUser, RegisterForm(), RoleGuardProps, LoginPayload, RegisterPayload (+8 more)
 
 ### Community 60 - "Community 60"
+
 Cohesion: 0.33
 Nodes (5): Deployment, Development, Getting Started, Learn More, Next.js Application
 
 ### Community 64 - "Community 64"
+
 Cohesion: 0.40
 Nodes (4): { config }, envPath, { resolve }, result
 
 ### Community 70 - "Community 70"
+
 Cohesion: 0.08
 Nodes (27): ErrorBody, sendSuccess(), SuccessResponse, AsyncHandler, catchAsync(), AppError, ErrorCode, STATUS_TO_CODE (+19 more)
 
 ### Community 74 - "Community 74"
+
 Cohesion: 0.19
 Nodes (7): categories, Features(), Hero(), Navbar(), Search(), SearchProps, testimonials
 
 ### Community 75 - "Community 75"
+
 Cohesion: 0.40
 Nodes (3): inter, manrope, metadata
 
 ### Community 76 - "Community 76"
+
 Cohesion: 0.40
 Nodes (4): LoginInput, loginSchema, RegisterInput, registerSchema
 
 ### Community 224 - "Community 224"
+
 Cohesion: 0.33
 Nodes (5): [2026-05-29] Freelancer Profile Page Redesign & Git Setup Fixes, [2026-05-29] Gig & Project Creation Feature (Backend, Cloudinary, and Frontend), [2026-09-18] Real-Time Chat Debugging & Media Download Enhancements, [2026-09-18] Real-Time Messaging, Notification Integration & Messages Page, Action Register
 
 ## Knowledge Gaps
+
 - **320 isolated node(s):** `husky.sh script`, `SessionUser`, `SessionUser`, `manrope`, `inter` (+315 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **161 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
+
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `Community 8` to `Community 14`?**

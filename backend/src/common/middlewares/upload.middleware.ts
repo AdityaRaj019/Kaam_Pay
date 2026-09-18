@@ -9,7 +9,8 @@
 
 import multer, { FileFilterCallback } from 'multer';
 import { Request } from 'express';
-import { v2 as cloudinary, UploadApiResponse } from 'cloudinary';
+import cloudinary from '../../config/cloudinary';
+import type { UploadApiResponse } from 'cloudinary';
 import { Readable } from 'stream';
 
 // ── Constants ─────────────────────────────────────────────────────────────────

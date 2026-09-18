@@ -1,9 +1,27 @@
 import { Router } from 'express';
 import { requireAuth } from '../../common/middlewares/auth.middleware';
 import { uploadMiddleware } from '../../common/middlewares/upload.middleware';
-import { getChatHistory, uploadChatFiles } from './chat.controller';
+import {
+  getChatHistory,
+  uploadChatFiles,
+  getConversations,
+  initChat,
+  downloadChatAttachment,
+} from './chat.controller';
 
 const router = Router();
+
+/**
+ * GET /api/chat/conversations
+ * List all active conversation threads for the current user.
+ */
+router.get('/conversations', requireAuth, getConversations);
+
+/**
+ * POST /api/chat/init
+ * Ensure or initialize a chat room for an order or gig inquiry.
+ */
+router.post('/init', requireAuth, initChat);
 
 /**
  * GET /api/chat/order/:orderId
@@ -18,5 +36,11 @@ router.get('/order/:orderId', requireAuth, getChatHistory);
  * Frontend uses this URL array to send via Socket.io.
  */
 router.post('/upload', requireAuth, uploadMiddleware.array('files', 5), uploadChatFiles);
+
+/**
+ * GET /api/chat/download
+ * Secure attachment download proxy.
+ */
+router.get('/download', requireAuth, downloadChatAttachment);
 
 export default router;

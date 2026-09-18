@@ -13,7 +13,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
-import axios from 'axios';
+import api from '@/lib/axios';
 import { getSocket, connectSocket } from '@/lib/socket';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -42,7 +42,7 @@ export interface ChatMessage {
 
 // ── Hook ──────────────────────────────────────────────────────────────────────
 
-export function useChat(orderId: string, currentUserId: string) {
+export function useChat(orderId: string, currentUserId: string, otherUserId?: string) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isOtherOnline, setIsOtherOnline] = useState(false);
@@ -54,9 +54,7 @@ export function useChat(orderId: string, currentUserId: string) {
     const loadHistory = async () => {
       try {
         setIsLoading(true);
-        const { data } = await axios.get(`/api/chat/order/${orderId}`, {
-          withCredentials: true,
-        });
+        const { data } = await api.get(`/chat/order/${orderId}`);
         setMessages(data.data as ChatMessage[]);
       } catch {
         setError('Failed to load message history');
@@ -84,27 +82,56 @@ export function useChat(orderId: string, currentUserId: string) {
       });
     };
 
+    // Immediate counterparty presence received upon joining room
+    const onRoomPresence = ({
+      orderId: roomOrderId,
+      otherUserId: presenceUserId,
+      isOnline,
+    }: {
+      orderId: string;
+      otherUserId: string;
+      isOnline: boolean;
+      inRoom?: boolean;
+    }) => {
+      if (roomOrderId === orderId) {
+        if (!otherUserId || presenceUserId === otherUserId) {
+          setIsOtherOnline(Boolean(isOnline));
+        }
+      }
+    };
+
     // The other user came online
     const onUserOnline = ({ userId }: { userId: string }) => {
-      if (userId !== currentUserId) setIsOtherOnline(true);
+      if (userId !== currentUserId && (!otherUserId || userId === otherUserId)) {
+        setIsOtherOnline(true);
+      }
     };
 
     // The other user opened the chat window
     const onUserJoinedChat = ({ userId }: { userId: string }) => {
-      if (userId !== currentUserId) setIsOtherOnline(true);
+      if (userId !== currentUserId && (!otherUserId || userId === otherUserId)) {
+        setIsOtherOnline(true);
+      }
     };
 
     // The other user went offline
     const onUserOffline = ({ userId }: { userId: string }) => {
-      if (userId !== currentUserId) setIsOtherOnline(false);
+      if (userId !== currentUserId && (!otherUserId || userId === otherUserId)) {
+        setIsOtherOnline(false);
+      }
     };
 
-    // Typing indicator from the other user
-    const onUserTyping = ({ userId, isTyping }: { userId: string; isTyping: boolean }) => {
-      if (userId !== currentUserId) setOtherIsTyping(isTyping);
+    // Typing indicator: STRICTLY only show for the receiver when the counterparty types
+    const onUserTyping = ({ userId: typingUserId, isTyping }: { userId: string; isTyping: boolean }) => {
+      if (typingUserId && typingUserId !== currentUserId && (!otherUserId || typingUserId === otherUserId)) {
+        setOtherIsTyping(Boolean(isTyping));
+      } else if (typingUserId === currentUserId) {
+        setOtherIsTyping(false);
+      }
     };
 
     socket.on('receive_message', onMessage);
+    socket.on('room_presence', onRoomPresence);
     socket.on('user_online', onUserOnline);
     socket.on('user_joined_chat', onUserJoinedChat);
     socket.on('user_offline', onUserOffline);
@@ -112,12 +139,13 @@ export function useChat(orderId: string, currentUserId: string) {
 
     return () => {
       socket.off('receive_message', onMessage);
+      socket.off('room_presence', onRoomPresence);
       socket.off('user_online', onUserOnline);
       socket.off('user_joined_chat', onUserJoinedChat);
       socket.off('user_offline', onUserOffline);
       socket.off('user_typing', onUserTyping);
     };
-  }, [orderId, currentUserId]);
+  }, [orderId, currentUserId, otherUserId]);
 
   // ── Typing emitter (debounced) ───────────────────────────────────────────
   // Fires "stop typing" 1.5 seconds after the user stops typing
@@ -148,8 +176,7 @@ export function useChat(orderId: string, currentUserId: string) {
       const formData = new FormData();
       files.forEach((f) => formData.append('files', f));
 
-      const { data } = await axios.post('/api/chat/upload', formData, {
-        withCredentials: true,
+      const { data } = await api.post('/chat/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 

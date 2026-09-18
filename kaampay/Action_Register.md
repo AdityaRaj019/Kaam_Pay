@@ -1,6 +1,47 @@
 # Action Register
 
-## [2026-06-01] Custom Agent Framework & Client Discovery Backend
+## [2026-09-18] Real-Time Chat Debugging & Media Download Enhancements
+
+- **Chat Window Responsiveness & Scroll Overflow ([ChatWindow.tsx](file:///e:/New%20folder/Kaam_Pay/components/chat/ChatWindow.tsx), [page.tsx](file:///e:/New%20folder/Kaam_Pay/app/messages/page.tsx))**:
+  - Eliminated flex column infinite expansion bug by inserting `min-h-0` throughout the container hierarchy.
+  - Pinned chat header and input controls with responsive viewport bounds (`100dvh`).
+  - Constrained message history scrolling to inner message list regardless of message volume.
+- **Counterparty Online Presence Sync ([chat.socket.ts](file:///e:/New%20folder/Kaam_Pay/backend/src/socket/chat.socket.ts), [useChat.ts](file:///e:/New%20folder/Kaam_Pay/hooks/useChat.ts), [page.tsx](file:///e:/New%20folder/Kaam_Pay/app/messages/page.tsx))**:
+  - Emitted `room_presence` event directly to joining socket with active online status of the other party by inspecting connected socket pools.
+  - Synchronized real-time online green dots in both the chat header and conversation list sidebar.
+  - Guarded against false offline broadcasts on tab refresh by verifying remaining user sockets upon disconnect.
+- **Universal Attachment Downloads (Images, PDFs, CSVs, Videos) ([lib/download.ts](file:///e:/New%20folder/Kaam_Pay/lib/download.ts), [chat.controller.ts](file:///e:/New%20folder/Kaam_Pay/backend/src/modules/chat/chat.controller.ts), [chat.routes.ts](file:///e:/New%20folder/Kaam_Pay/backend/src/modules/chat/chat.routes.ts), [AttachmentPreview.tsx](file:///e:/New%20folder/Kaam_Pay/components/chat/AttachmentPreview.tsx))**:
+  - Identified root cause of non-image download error: Cloudinary blocks public unauthenticated delivery of `raw` files (e.g. PDFs/CSVs) with HTTP 401 Unauthorized.
+  - Resolved by signing raw media requests on the backend with `cloudinary.utils.private_download_url` and streaming them directly to the client.
+  - Implemented in `downloadFile`: fetches the stream via authenticated Axios `api.get('/chat/download', { responseType: 'blob' })` and triggers native browser save as `Blob`, making non-image downloads **instant** and seamless without opening broken tabs.
+  - Added dedicated download buttons and hover overlay for images, enabling receiver downloads.
+  - Built interactive download cards with spinner states for non-image files (PDF, CSV, spreadsheets).
+- **Typing Indicator Receiver Isolation ([chat.socket.ts](file:///e:/New%20folder/Kaam_Pay/backend/src/socket/chat.socket.ts), [useChat.ts](file:///e:/New%20folder/Kaam_Pay/hooks/useChat.ts), [ChatWindow.tsx](file:///e:/New%20folder/Kaam_Pay/components/chat/ChatWindow.tsx))**:
+  - Enforced strict filtering in `useChat`: typing indicator only activates when `typingUserId === otherUserId && typingUserId !== currentUserId`.
+  - Guaranteed sender never sees typing bubbles on their own screen.
+
+## [2026-09-18] Real-Time Messaging, Notification Integration & Messages Page
+
+- **Messages Page ([app/messages/page.tsx](file:///e:/New%20folder/Kaam_Pay/app/messages/page.tsx))**:
+  - Implemented the `/messages` route resolving the navbar dead link.
+  - Built responsive split-view interface with searchable conversation list, online presence indicators, and integrated `ChatWindow`.
+- **Gig Detail Contact & Order Integration ([GigDetailPanel.tsx](file:///e:/New%20folder/Kaam_Pay/components/find-work/GigDetailPanel.tsx), [FullModal.tsx](file:///e:/New%20folder/Kaam_Pay/components/find-work/FullModal.tsx))**:
+  - Connected "Contact Seller" and "Order Now" buttons to `POST /api/chat/init`.
+  - Automatically initializes an order chat room between client and freelancer for the gig, redirecting the user immediately to `/messages?orderId=${orderId}`.
+  - Rendered `FullModal` when expanded from the detail panel.
+- **Backend Chat API Extensions ([backend/src/modules/chat](file:///e:/New%20folder/Kaam_Pay/backend/src/modules/chat))**:
+  - Added `GET /api/chat/conversations` to list active order chats for the logged-in user with counterparty info and latest messages.
+  - Added `POST /api/chat/init` to initialize or retrieve order chat rooms.
+  - Connected configured Cloudinary client in `upload.middleware.ts`.
+- **Frontend Networking & Notifications ([hooks/useChat.ts](file:///e:/New%20folder/Kaam_Pay/hooks/useChat.ts), [hooks/useNotifications.ts](file:///e:/New%20folder/Kaam_Pay/hooks/useNotifications.ts), [components/AppNavbar.tsx](file:///e:/New%20folder/Kaam_Pay/components/AppNavbar.tsx))**:
+  - Replaced raw relative `axios` calls with `api` (`@/lib/axios`) to resolve cross-origin 404s.
+  - Mounted `<NotificationBell />` in `<AppNavbar />` with updated light theme styling and badge alerts.
+- **Environment & Build Validation**:
+  - Provisioned Kafka topics `kaampay.chat.messages` and `kaampay.notifications` on Aiven broker.
+  - Cleaned `.env` and updated `eslint.config.mjs` ignores.
+  - Seeded initial order and chat room in database ([scripts/seed-chat-order.ts](file:///e:/New%20folder/Kaam_Pay/scripts/seed-chat-order.ts)).
+  - Updated graphify AST knowledge graph.
+
 
 - **Agent Framework Migration ([.agents/](file:///d:/Repo/kaampay/.agents))**:
   - Integrated custom agent framework containing always-on rules (`agent.md`, `rules.md`, `stack.md`, `context.md`, `workflow.md`), workflows (`bug-fixing.md`, `deployment-flow.md`, `feature-development.md`, `hotfix-rollback.md`), and 12 helper skills.

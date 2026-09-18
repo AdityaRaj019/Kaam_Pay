@@ -4,9 +4,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, Search, ChevronDown, LogOut, LayoutDashboard, ExternalLink } from 'lucide-react';
+import { Search, ChevronDown, LogOut, LayoutDashboard, ExternalLink } from 'lucide-react';
 import api from '@/lib/axios';
 import toast from 'react-hot-toast';
+import { NotificationBell } from '@/components/notifications/NotificationBell';
 
 interface AppNavbarProps {
   user?: {
@@ -147,10 +148,7 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
           </div>
 
           {/* Notification Button */}
-          <button className="relative w-9 h-9 rounded-full border border-slate-200 hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors">
-            <Bell className="w-4.5 h-4.5" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-[#4a4bd7] rounded-full border border-white"></span>
-          </button>
+          <NotificationBell />
 
           {/* User Avatar with Dropdown */}
           <div className="relative" ref={avatarRef}>

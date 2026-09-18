@@ -9,7 +9,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '@/lib/axios';
 import toast from 'react-hot-toast';
 import { getSocket, connectSocket } from '@/lib/socket';
 
@@ -33,7 +33,7 @@ export function useNotifications() {
   useEffect(() => {
     const load = async () => {
       try {
-        const { data } = await axios.get('/api/notifications', { withCredentials: true });
+        const { data } = await api.get('/notifications');
         setNotifications(data.data as AppNotification[]);
       } catch {
         // Silently fail — notifications are non-critical
@@ -73,7 +73,7 @@ export function useNotifications() {
   // ── Mark all as read ─────────────────────────────────────────────────────
   const markAllRead = async () => {
     try {
-      await axios.post('/api/notifications/read', {}, { withCredentials: true });
+      await api.post('/notifications/read');
       setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
     } catch {
       toast.error('Failed to mark notifications as read');

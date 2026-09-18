@@ -128,9 +128,29 @@ export async function initSocketServer(httpServer: HttpServer): Promise<SocketSe
         const roomName = `order_${orderId}`;
         await socket.join(roomName);
 
-        // Tell the other party that this user is now in the chat (for presence indicator)
+        // Counterparty is whoever is NOT the current user
+        const otherUserId = order.clientId === userId ? order.freelancerId : order.clientId;
+
+        // Check if counterparty has any connected sockets in user_{otherUserId}
+        const otherUserSockets = await io.in(`user_${otherUserId}`).fetchSockets();
+        const isOtherOnline = otherUserSockets.length > 0;
+
+        // Check if counterparty is also in this specific chat room
+        const roomSockets = await io.in(roomName).fetchSockets();
+        const isOtherInRoom = roomSockets.some((s) => s.data.userId === otherUserId);
+
+        // Inform the joining socket immediately about the other party's presence
+        socket.emit('room_presence', {
+          orderId,
+          otherUserId,
+          isOnline: isOtherOnline || isOtherInRoom,
+          inRoom: isOtherInRoom,
+        });
+
+        // Tell the other party that this user is now in the chat
         socket.to(roomName).emit('user_joined_chat', { userId });
-        console.log(`[Socket] ${userName} joined room ${roomName}`);
+        socket.to(`user_${otherUserId}`).emit('user_online', { userId });
+        console.log(`[Socket] ${userName} joined room ${roomName} (otherUser ${otherUserId} isOnline: ${isOtherOnline || isOtherInRoom})`);
       } catch (err) {
         console.error('[Socket] join_room error:', err);
         socket.emit('error', { message: 'Failed to join room' });
@@ -195,14 +215,20 @@ export async function initSocketServer(httpServer: HttpServer): Promise<SocketSe
     socket.on('typing', (payload: TypingPayload) => {
       const { orderId, isTyping } = payload;
       // Broadcast ONLY to others in the room (not back to the sender)
-      socket.to(`order_${orderId}`).emit('user_typing', { userId, isTyping });
+      socket.to(`order_${orderId}`).emit('user_typing', {
+        userId,
+        isTyping: Boolean(isTyping),
+      });
     });
 
     // ── Disconnect ───────────────────────────────────────────────────────────
-    socket.on('disconnect', (reason) => {
+    socket.on('disconnect', async (reason) => {
       console.log(`[Socket] ${userName} (${userId}) disconnected: ${reason}`);
-      // Tell all other clients this user went offline
-      socket.broadcast.emit('user_offline', { userId });
+      // Only emit user_offline if the user has no remaining active socket connections
+      const remainingSockets = await io.in(`user_${userId}`).fetchSockets();
+      if (remainingSockets.length === 0) {
+        socket.broadcast.emit('user_offline', { userId });
+      }
     });
   });
 

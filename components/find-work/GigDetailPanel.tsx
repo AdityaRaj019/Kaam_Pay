@@ -1,5 +1,10 @@
 'use client';
 
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSession } from '@/lib/auth/auth-client';
+import api from '@/lib/axios';
+import toast from 'react-hot-toast';
 import type { Gig, GigDetail } from '@/types/gig';
 import { BookmarkBtn } from './BookmarkBtn';
 import { timeAgo, formatPrice } from './utils';
@@ -41,6 +46,86 @@ export function GigDetailPanel({
   onExpand,
   onToggleSave,
 }: GigDetailPanelProps) {
+  const router = useRouter();
+  const { data: session } = useSession();
+  const [isInitiating, setIsInitiating] = useState(false);
+
+  const handleContactSeller = async () => {
+    if (!gig) return;
+
+    if (!session?.user) {
+      toast.error('Please sign in to contact the freelancer');
+      router.push('/login');
+      return;
+    }
+
+    if (session.user.id === gig.freelancer.id) {
+      toast.error('You cannot message yourself on your own gig.');
+      return;
+    }
+
+    try {
+      setIsInitiating(true);
+      const res = await api.post('/chat/init', {
+        freelancerId: gig.freelancer.id,
+        gigId: gig.id,
+      });
+
+      const orderId = res.data?.data?.orderId;
+      if (orderId) {
+        toast.success(`Connecting with ${gig.freelancer.name}`);
+        router.push(`/messages?orderId=${orderId}`);
+      } else {
+        router.push('/messages');
+      }
+    } catch (err: unknown) {
+      const errorMsg =
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
+          ?.error?.message || 'Failed to contact seller';
+      toast.error(errorMsg);
+    } finally {
+      setIsInitiating(false);
+    }
+  };
+
+  const handleOrderNow = async () => {
+    if (!gig) return;
+
+    if (!session?.user) {
+      toast.error('Please sign in to order this gig');
+      router.push('/login');
+      return;
+    }
+
+    if (session.user.id === gig.freelancer.id) {
+      toast.error('You cannot order your own gig.');
+      return;
+    }
+
+    try {
+      setIsInitiating(true);
+      const res = await api.post('/chat/init', {
+        freelancerId: gig.freelancer.id,
+        gigId: gig.id,
+      });
+
+      const orderId = res.data?.data?.orderId;
+      if (orderId) {
+        toast.success(`Order placed! Starting chat with ${gig.freelancer.name}`);
+        router.push(`/messages?orderId=${orderId}`);
+      } else {
+        router.push('/messages');
+      }
+    } catch (err: unknown) {
+      const errorMsg =
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
+          ?.error?.message || 'Failed to initiate order';
+      toast.error(errorMsg);
+    } finally {
+      setIsInitiating(false);
+    }
+  };
+
   return (
     <div className="flex flex-col h-full">
       <div className="flex items-center justify-between px-6 py-4 border-b border-[#dce4e8] flex-shrink-0">
@@ -190,21 +275,29 @@ export function GigDetailPanel({
             </section>
 
             <section className="kp-card p-7 space-y-3 shadow-[0_40px_60px_-20px_rgba(44,52,55,0.06)]">
-              <button className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#4a4bd7] to-[#7073ff] text-white font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-[#4a4bd7]/25">
+              <button
+                onClick={handleOrderNow}
+                disabled={isInitiating}
+                className="w-full py-4 px-6 rounded-full bg-gradient-to-r from-[#4a4bd7] to-[#7073ff] text-white font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-[#4a4bd7]/25 disabled:opacity-50"
+              >
                 <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>
                   shopping_cart
                 </span>
-                Order Now · {formatPrice(gig.price)}
+                {isInitiating ? 'Processing...' : `Order Now · ${formatPrice(gig.price)}`}
               </button>
               <BookmarkBtn gig={gig} saved={isSaved} onToggle={onToggleSave} variant="full" />
-              <button className="w-full py-3 px-6 rounded-full bg-[#eaeff2] text-[#2c3437] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#dce4e8] transition-all group">
+              <button
+                onClick={handleContactSeller}
+                disabled={isInitiating}
+                className="w-full py-3 px-6 rounded-full bg-[#eaeff2] text-[#2c3437] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#dce4e8] transition-all group disabled:opacity-50"
+              >
                 <span
                   className="material-symbols-outlined text-[#4a4bd7] group-hover:scale-110 transition-transform"
                   style={{ fontSize: '20px' }}
                 >
                   chat_bubble
                 </span>
-                Contact Seller
+                {isInitiating ? 'Opening Chat...' : 'Contact Seller'}
               </button>
               <div className="text-center">
                 <a className="text-xs text-[#596064] underline underline-offset-4 hover:text-[#a8364b] transition-colors cursor-pointer">

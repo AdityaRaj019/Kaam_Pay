@@ -14,6 +14,9 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "lib/generated/**",
     "kaampay/**",
+    "*.cjs",
+    "scripts/**",
+    "test/**",
   ]),
 ]);
 

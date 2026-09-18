@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 /**
@@ -46,7 +47,7 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const { messages, isLoading, error, isOtherOnline, otherIsTyping, sendTextMessage, sendFiles, emitTyping } =
-    useChat(orderId, currentUserId);
+    useChat(orderId, currentUserId, otherUser.id);
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
@@ -110,10 +111,10 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
 
   // ── Render ───────────────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col h-full bg-gray-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+    <div className="flex flex-col h-full min-h-0 bg-gray-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
 
       {/* ── Header ── */}
-      <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10 bg-gray-900/80 backdrop-blur-sm">
+      <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10 bg-gray-900/80 backdrop-blur-sm shrink-0">
         {/* Avatar with presence dot */}
         <div className="relative shrink-0">
           {otherUser.image ? (
@@ -145,7 +146,7 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
       </div>
 
       {/* ── Messages Area ── */}
-      <div className="flex-1 overflow-y-auto px-5 py-4 space-y-0.5 scrollbar-thin scrollbar-thumb-gray-700">
+      <div className="flex-1 min-h-0 overflow-y-auto px-5 py-4 space-y-0.5 scrollbar-thin scrollbar-thumb-gray-700">
         {/* Loading state */}
         {isLoading && (
           <div className="flex justify-center py-10">
