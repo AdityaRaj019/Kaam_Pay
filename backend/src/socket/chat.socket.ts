@@ -50,18 +50,23 @@ interface TypingPayload {
 
 // ── Socket server initialization ──────────────────────────────────────────────
 
-export async function initSocketServer(httpServer: HttpServer): Promise<SocketServer<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, SocketData>> {
+export async function initSocketServer(
+  httpServer: HttpServer,
+): Promise<SocketServer<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, SocketData>> {
   const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? 'http://localhost:3000').split(',');
 
-  const io = new SocketServer<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, SocketData>(httpServer, {
-    cors: {
-      origin: allowedOrigins,
-      credentials: true, // needed so the browser sends session cookies
+  const io = new SocketServer<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, SocketData>(
+    httpServer,
+    {
+      cors: {
+        origin: allowedOrigins,
+        credentials: true, // needed so the browser sends session cookies
+      },
+      // Allow both WebSocket and HTTP polling.
+      // Polling is slower but works behind strict firewalls/proxies.
+      transports: ['websocket', 'polling'],
     },
-    // Allow both WebSocket and HTTP polling.
-    // Polling is slower but works behind strict firewalls/proxies.
-    transports: ['websocket', 'polling'],
-  });
+  );
 
   // Wire up the Redis adapter — this makes Socket.io state (rooms, sockets)
   // shared across multiple server instances (horizontal scaling)
@@ -150,7 +155,9 @@ export async function initSocketServer(httpServer: HttpServer): Promise<SocketSe
         // Tell the other party that this user is now in the chat
         socket.to(roomName).emit('user_joined_chat', { userId });
         socket.to(`user_${otherUserId}`).emit('user_online', { userId });
-        console.log(`[Socket] ${userName} joined room ${roomName} (otherUser ${otherUserId} isOnline: ${isOtherOnline || isOtherInRoom})`);
+        console.log(
+          `[Socket] ${userName} joined room ${roomName} (otherUser ${otherUserId} isOnline: ${isOtherOnline || isOtherInRoom})`,
+        );
       } catch (err) {
         console.error('[Socket] join_room error:', err);
         socket.emit('error', { message: 'Failed to join room' });
@@ -238,7 +245,11 @@ export async function initSocketServer(httpServer: HttpServer): Promise<SocketSe
 // ── Utility: send a notification through Kafka ────────────────────────────────
 // Call this from your order/gig controllers when order status changes, etc.
 
-export async function emitNotification(userId: string, type: string, message: string): Promise<void> {
+export async function emitNotification(
+  userId: string,
+  type: string,
+  message: string,
+): Promise<void> {
   await kafkaProducer.send({
     topic: KAFKA_TOPIC_NOTIFICATIONS,
     messages: [

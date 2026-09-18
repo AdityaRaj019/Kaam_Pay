@@ -70,8 +70,6 @@ export async function getChatHistory(
   }
 }
 
-
-
 // ── GET /api/chat/conversations ───────────────────────────────────────────────
 
 export async function getConversations(
@@ -161,9 +159,7 @@ export async function getConversations(
     );
 
     // Sort conversations by most recent message/activity
-    conversations.sort(
-      (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
-    );
+    conversations.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
 
     res.json({ success: true, data: conversations });
   } catch (err) {
@@ -173,11 +169,7 @@ export async function getConversations(
 
 // ── POST /api/chat/init ───────────────────────────────────────────────────────
 
-export async function initChat(
-  req: Request,
-  res: Response,
-  next: NextFunction,
-): Promise<void> {
+export async function initChat(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const userId = String(req.user!.id);
     const { orderId, freelancerId, gigId } = req.body as {
@@ -234,7 +226,9 @@ export async function initChat(
     }
 
     if (freelancerId === userId) {
-      return next(new AppError('Cannot start a chat with yourself', 400, ErrorCode.VALIDATION_ERROR));
+      return next(
+        new AppError('Cannot start a chat with yourself', 400, ErrorCode.VALIDATION_ERROR),
+      );
     }
 
     // Check if an order already exists between this client and freelancer for this gig
@@ -327,7 +321,9 @@ export async function downloadChatAttachment(
     let publicId = String(req.query.publicId ?? '');
 
     if (!url && !publicId) {
-      return next(new AppError('Attachment URL or publicId is required', 400, ErrorCode.VALIDATION_ERROR));
+      return next(
+        new AppError('Attachment URL or publicId is required', 400, ErrorCode.VALIDATION_ERROR),
+      );
     }
 
     // SSRF Prevention: Only allow download requests to Cloudinary
@@ -351,7 +347,9 @@ export async function downloadChatAttachment(
       }
     }
 
-    const isRaw = url.includes('/raw/upload/') || (!url.includes('/image/upload/') && !url.includes('/video/upload/'));
+    const isRaw =
+      url.includes('/raw/upload/') ||
+      (!url.includes('/image/upload/') && !url.includes('/video/upload/'));
 
     // If it's a raw resource (PDF, CSV, documents), generate signed download URL to bypass Cloudinary restricted media 401
     let downloadSourceUrl = url;
@@ -368,7 +366,7 @@ export async function downloadChatAttachment(
 
     res.setHeader(
       'Content-Disposition',
-      `attachment; filename="${encodedFileName}"; filename*=UTF-8''${encodedFileName}`
+      `attachment; filename="${encodedFileName}"; filename*=UTF-8''${encodedFileName}`,
     );
 
     const streamResponse = await axios({
@@ -393,4 +391,3 @@ export async function downloadChatAttachment(
     }
   }
 }
-

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, Suspense,useCallback } from 'react';
+import React, { useState, useEffect, useMemo, Suspense, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -85,7 +85,13 @@ function MessagesContent() {
       });
     };
 
-    const onRoomPresence = ({ otherUserId, isOnline }: { otherUserId: string; isOnline: boolean }) => {
+    const onRoomPresence = ({
+      otherUserId,
+      isOnline,
+    }: {
+      otherUserId: string;
+      isOnline: boolean;
+    }) => {
       if (isOnline) {
         setOnlineUserIds((prev) => new Set(prev).add(otherUserId));
       } else {
@@ -165,8 +171,8 @@ function MessagesContent() {
       }
     } catch (err: unknown) {
       const errorMsg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to start demo conversation';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to start demo conversation';
       toast.error(errorMsg);
     } finally {
       setIsCreatingDemo(false);
@@ -319,7 +325,10 @@ function MessagesContent() {
                             {conv.otherUser.name[0]?.toUpperCase()}
                           </div>
                         )}
-                        <PresenceDot isOnline={onlineUserIds.has(conv.otherUser.id)} className="absolute bottom-0 right-0 ring-2 ring-white" />
+                        <PresenceDot
+                          isOnline={onlineUserIds.has(conv.otherUser.id)}
+                          className="absolute bottom-0 right-0 ring-2 ring-white"
+                        />
                       </div>
 
                       {/* Info */}

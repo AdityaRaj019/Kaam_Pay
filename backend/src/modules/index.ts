@@ -6,6 +6,7 @@ import gigRoutes from './gig/gig.routes';
 import clientRoutes from './client/client.routes';
 import chatRoutes from './chat/chat.routes';
 import notificationRoutes from './notifications/notification.routes';
+import orderRoutes from './order/order.routes';
 
 const router = Router();
 
@@ -19,6 +20,6 @@ router.use('/gigs', gigRoutes);
 router.use('/client', clientRoutes);
 router.use('/chat', chatRoutes);
 router.use('/notifications', notificationRoutes);
+router.use('/orders', orderRoutes);
 
 export default router;
-

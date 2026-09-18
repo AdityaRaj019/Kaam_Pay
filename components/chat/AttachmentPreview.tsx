@@ -99,11 +99,7 @@ export function AttachmentPreview({ attachment }: AttachmentPreviewProps) {
     return (
       <div className="max-w-xs flex flex-col gap-1.5">
         <div className="rounded-xl overflow-hidden border border-white/10 bg-black/30">
-          <video
-            controls
-            preload="metadata"
-            className="rounded-xl w-full max-h-64 object-contain"
-          >
+          <video controls preload="metadata" className="rounded-xl w-full max-h-64 object-contain">
             <source src={url} />
             Your browser does not support video playback.
           </video>

@@ -8,7 +8,7 @@ async function testConnections() {
   const { Redis } = await import('ioredis');
   const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
   console.log('Using REDIS_URL:', redisUrl);
-  
+
   const client = new Redis(redisUrl, { maxRetriesPerRequest: 1, connectTimeout: 3000 });
   try {
     const pong = await client.ping();
@@ -25,10 +25,15 @@ async function testConnections() {
     console.error('No KAFKA_BROKERS in env');
     return;
   }
-  
+
   console.log('Brokers:', process.env.KAFKA_BROKERS);
-  console.log('CA CERT exists:', !!process.env.KAFKA_CA_CERT, 'Length:', process.env.KAFKA_CA_CERT?.length);
-  
+  console.log(
+    'CA CERT exists:',
+    !!process.env.KAFKA_CA_CERT,
+    'Length:',
+    process.env.KAFKA_CA_CERT?.length,
+  );
+
   const kafka = new Kafka({
     clientId: 'test-client',
     brokers: process.env.KAFKA_BROKERS.split(','),

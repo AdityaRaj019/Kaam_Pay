@@ -42,7 +42,6 @@
   - Seeded initial order and chat room in database ([scripts/seed-chat-order.ts](file:///e:/New%20folder/Kaam_Pay/scripts/seed-chat-order.ts)).
   - Updated graphify AST knowledge graph.
 
-
 - **Agent Framework Migration ([.agents/](file:///d:/Repo/kaampay/.agents))**:
   - Integrated custom agent framework containing always-on rules (`agent.md`, `rules.md`, `stack.md`, `context.md`, `workflow.md`), workflows (`bug-fixing.md`, `deployment-flow.md`, `feature-development.md`, `hotfix-rollback.md`), and 12 helper skills.
   - Updated [.graphifyignore](file:///d:/Repo/kaampay/.graphifyignore) to ignore the `.agents/` folder.

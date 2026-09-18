@@ -16,10 +16,16 @@ import { Readable } from 'stream';
 // ── Constants ─────────────────────────────────────────────────────────────────
 
 const ALLOWED_MIMES = [
-  'image/jpeg', 'image/png', 'image/gif', 'image/webp',
-  'video/mp4', 'video/quicktime', 'video/x-msvideo',
+  'image/jpeg',
+  'image/png',
+  'image/gif',
+  'image/webp',
+  'video/mp4',
+  'video/quicktime',
+  'video/x-msvideo',
   'application/pdf',
-  'text/csv', 'application/vnd.ms-excel',
+  'text/csv',
+  'application/vnd.ms-excel',
   'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
 ];
 

@@ -67,7 +67,9 @@ export function useNotifications() {
     };
 
     socket.on('notification', onNotification);
-    return () => { socket.off('notification', onNotification); };
+    return () => {
+      socket.off('notification', onNotification);
+    };
   }, []);
 
   // ── Mark all as read ─────────────────────────────────────────────────────

@@ -55,7 +55,9 @@ export function NotificationBell() {
             {unreadCount > 0 && (
               <button
                 type="button"
-                onClick={() => { void markAllRead(); }}
+                onClick={() => {
+                  void markAllRead();
+                }}
                 className="text-xs font-semibold text-[#4a4bd7] hover:text-[#3b3cb8] transition-colors"
               >
                 Mark all read
@@ -83,7 +85,9 @@ export function NotificationBell() {
                       {getNotificationIcon(notif.type)}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-slate-800 leading-snug">{notif.message}</p>
+                      <p className="text-xs font-medium text-slate-800 leading-snug">
+                        {notif.message}
+                      </p>
                       <p className="text-[10px] text-slate-400 mt-1">
                         {formatRelativeTime(notif.createdAt)}
                       </p>

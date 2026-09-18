@@ -80,8 +80,8 @@ export function GigDetailPanel({
       }
     } catch (err: unknown) {
       const errorMsg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to contact seller';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to contact seller';
       toast.error(errorMsg);
     } finally {
       setIsInitiating(false);
@@ -118,8 +118,8 @@ export function GigDetailPanel({
       }
     } catch (err: unknown) {
       const errorMsg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to initiate order';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to initiate order';
       toast.error(errorMsg);
     } finally {
       setIsInitiating(false);

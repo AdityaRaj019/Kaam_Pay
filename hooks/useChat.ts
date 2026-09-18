@@ -122,8 +122,18 @@ export function useChat(orderId: string, currentUserId: string, otherUserId?: st
     };
 
     // Typing indicator: STRICTLY only show for the receiver when the counterparty types
-    const onUserTyping = ({ userId: typingUserId, isTyping }: { userId: string; isTyping: boolean }) => {
-      if (typingUserId && typingUserId !== currentUserId && (!otherUserId || typingUserId === otherUserId)) {
+    const onUserTyping = ({
+      userId: typingUserId,
+      isTyping,
+    }: {
+      userId: string;
+      isTyping: boolean;
+    }) => {
+      if (
+        typingUserId &&
+        typingUserId !== currentUserId &&
+        (!otherUserId || typingUserId === otherUserId)
+      ) {
         setOtherIsTyping(Boolean(isTyping));
       } else if (typingUserId === currentUserId) {
         setOtherIsTyping(false);

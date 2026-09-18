@@ -46,8 +46,16 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
   const fileInputRef = useRef<HTMLInputElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const { messages, isLoading, error, isOtherOnline, otherIsTyping, sendTextMessage, sendFiles, emitTyping } =
-    useChat(orderId, currentUserId, otherUser.id);
+  const {
+    messages,
+    isLoading,
+    error,
+    isOtherOnline,
+    otherIsTyping,
+    sendTextMessage,
+    sendFiles,
+    emitTyping,
+  } = useChat(orderId, currentUserId, otherUser.id);
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
@@ -112,7 +120,6 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
   // ── Render ───────────────────────────────────────────────────────────────
   return (
     <div className="flex flex-col h-full min-h-0 bg-gray-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
-
       {/* ── Header ── */}
       <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10 bg-gray-900/80 backdrop-blur-sm shrink-0">
         {/* Avatar with presence dot */}
@@ -139,7 +146,9 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
         {/* Name + status */}
         <div>
           <p className="font-semibold text-gray-100 text-sm">{otherUser.name}</p>
-          <p className={`text-xs mt-0.5 font-medium ${isOtherOnline ? 'text-emerald-400' : 'text-gray-500'}`}>
+          <p
+            className={`text-xs mt-0.5 font-medium ${isOtherOnline ? 'text-emerald-400' : 'text-gray-500'}`}
+          >
             {isOtherOnline ? '● Online' : '○ Offline — message will notify them'}
           </p>
         </div>
@@ -174,11 +183,7 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
 
         {/* Message list */}
         {messages.map((msg) => (
-          <MessageBubble
-            key={msg.id}
-            message={msg}
-            isOwn={msg.senderId === currentUserId}
-          />
+          <MessageBubble key={msg.id} message={msg} isOwn={msg.senderId === currentUserId} />
         ))}
 
         {/* Typing indicator */}
@@ -220,7 +225,6 @@ export function ChatWindow({ orderId, currentUserId, otherUser }: ChatWindowProp
 
       {/* ── Input Area ── */}
       <div className="px-4 py-3 border-t border-white/10 bg-gray-900/80 backdrop-blur-sm flex items-end gap-2">
-
         {/* File picker button */}
         <button
           type="button"
