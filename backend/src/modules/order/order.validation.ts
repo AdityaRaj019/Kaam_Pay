@@ -32,4 +32,3 @@ export const createOrderSchema = z
   }));
 
 export type CreateOrderInput = z.infer<typeof createOrderSchema>;
-
