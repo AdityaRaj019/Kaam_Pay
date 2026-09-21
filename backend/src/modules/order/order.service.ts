@@ -228,7 +228,11 @@ export class OrderService {
       const isClient = order.clientId === userId;
       const isFreelancer = order.freelancerId === userId;
       if (!isClient && !isFreelancer) {
-        throw new AppError('You are not authorized to update this order.', 403, ErrorCode.FORBIDDEN);
+        throw new AppError(
+          'You are not authorized to update this order.',
+          403,
+          ErrorCode.FORBIDDEN,
+        );
       }
 
       // Role-specific transition guards
