@@ -48,11 +48,13 @@ export class OrderService {
       throw new AppError('You cannot order your own gig.', 422, ErrorCode.VALIDATION_ERROR);
     }
 
-    // ── Step 3: Server-authoritative pricing ──────────────────
-    const unitPrice = gig.price;
-    const subtotal = Math.round(unitPrice * input.quantity * 100) / 100;
-    const platformFee = Math.round(((subtotal * PLATFORM_FEE_PERCENT) / 100) * 100) / 100;
-    const total = Math.round((subtotal + platformFee) * 100) / 100;
+    // ── Step 3: Server-authoritative pricing (Smallest Currency Unit: Paise) ──
+    // All monetary amounts are handled and stored in paise (1 INR = 100 paise)
+    // to eliminate floating-point precision issues and match payment gateway requirements.
+    const unitPrice = Math.round(gig.price * 100);
+    const subtotal = unitPrice * input.quantity;
+    const platformFee = Math.round((subtotal * PLATFORM_FEE_PERCENT) / 100);
+    const total = subtotal + platformFee;
 
     // ── Step 4: Create Order in PENDING status ────────────────
     const order = await prisma.order.create({
@@ -87,6 +89,8 @@ export class OrderService {
     return {
       order,
       pricing: {
+        currency: 'INR',
+        unit: 'paise',
         unitPrice,
         quantity: input.quantity,
         subtotal,
