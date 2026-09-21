@@ -157,7 +157,11 @@ model Order {
   freelancer   User         @relation("FreelancerOrders", fields: [freelancerId], references: [id])
   gigId        String
   gig          Gig          @relation(fields: [gigId], references: [id])
-  amount       Float
+  unitPrice    Float?       // Snapshot: agreed gig unit price (in paise) at order time
+  quantity     Int          @default(1) // Snapshot: booked quantity
+  subtotal     Float?       // Snapshot: subtotal (unitPrice * quantity) in paise
+  platformFee  Float?       // Snapshot: platform fee in paise
+  amount       Float        // Snapshot: total booked price in paise
   status       OrderStatus  @default(PENDING)
   deliverables Deliverable[]
   payment      Payment?

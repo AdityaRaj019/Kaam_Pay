@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { requireAuth } from '../../common/middlewares/auth.middleware';
 import { authorize } from '../../common/middlewares/auth.middleware';
-import { createOrder } from './order.controller';
+import { createOrder, getOrder } from './order.controller';
 
 const router = Router();
 
@@ -16,5 +16,12 @@ const router = Router();
  *   3. createOrder  — validates body, fetches pricing, creates order
  */
 router.post('/', requireAuth, authorize('CLIENT'), createOrder);
+
+/**
+ * @route  GET /api/orders/:id
+ * @desc   Retrieve order details and locked price snapshot for cart/checkout
+ * @access Private — requires authenticated user (client or freelancer of the order)
+ */
+router.get('/:id', requireAuth, getOrder);
 
 export default router;
