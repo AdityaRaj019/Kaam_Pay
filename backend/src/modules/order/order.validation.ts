@@ -38,3 +38,33 @@ export const orderIdParamSchema = z.object({
 });
 
 export type OrderIdParam = z.infer<typeof orderIdParamSchema>;
+
+export const transitionOrderStatusSchema = z.object({
+  status: z.enum([
+    'PENDING',
+    'PAYMENT_PENDING',
+    'PAID',
+    'IN_PROGRESS',
+    'SUBMITTED',
+    'REVISION',
+    'COMPLETED',
+    'CANCELLED',
+    'PAYMENT_FAILED',
+    'DISPUTED',
+  ] as const),
+  reason: z.string().max(500, 'Reason cannot exceed 500 characters').optional(),
+});
+
+export type TransitionOrderStatusInput = z.infer<typeof transitionOrderStatusSchema>;
+
+export const cancelOrderSchema = z.object({
+  reason: z.string().max(500, 'Cancellation reason cannot exceed 500 characters').optional(),
+});
+
+export type CancelOrderInput = z.infer<typeof cancelOrderSchema>;
+
+export const failPaymentSchema = z.object({
+  reason: z.string().max(500, 'Failure reason cannot exceed 500 characters').optional(),
+});
+
+export type FailPaymentInput = z.infer<typeof failPaymentSchema>;

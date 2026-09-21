@@ -1025,7 +1025,7 @@
       "source_file": "app/dashboard/page.tsx",
       "source_location": "L1",
       "id": "app_dashboard_page_tsx",
-      "community": 94,
+      "community": 63,
       "norm_label": "page.tsx"
     },
     {
@@ -1034,7 +1034,7 @@
       "source_file": "app/dashboard/page.tsx",
       "source_location": "L12",
       "id": "dashboard_page_sessionuser",
-      "community": 94,
+      "community": 63,
       "norm_label": "sessionuser"
     },
     {
@@ -1043,7 +1043,7 @@
       "source_file": "app/dashboard/page.tsx",
       "source_location": "L22",
       "id": "dashboard_page_dashboardpage",
-      "community": 94,
+      "community": 63,
       "norm_label": "dashboardpage()"
     },
     {
@@ -1052,7 +1052,7 @@
       "source_file": "app/dashboard/create-gig/page.tsx",
       "source_location": "L1",
       "id": "app_dashboard_create_gig_page_tsx",
-      "community": 79,
+      "community": 63,
       "norm_label": "page.tsx"
     },
     {
@@ -1061,7 +1061,7 @@
       "source_file": "app/dashboard/create-gig/page.tsx",
       "source_location": "L14",
       "id": "create_gig_page_sessionuser",
-      "community": 79,
+      "community": 63,
       "norm_label": "sessionuser"
     },
     {
@@ -1070,7 +1070,7 @@
       "source_file": "app/dashboard/create-gig/page.tsx",
       "source_location": "L22",
       "id": "create_gig_page_creategigpage",
-      "community": 79,
+      "community": 63,
       "norm_label": "creategigpage()"
     },
     {
@@ -1097,7 +1097,7 @@
       "source_file": "app/messages/page.tsx",
       "source_location": "L1",
       "id": "app_messages_page_tsx",
-      "community": 85,
+      "community": 7,
       "norm_label": "page.tsx"
     },
     {
@@ -1106,7 +1106,7 @@
       "source_file": "app/messages/page.tsx",
       "source_location": "L24",
       "id": "messages_page_otheruser",
-      "community": 85,
+      "community": 7,
       "norm_label": "otheruser"
     },
     {
@@ -1115,7 +1115,7 @@
       "source_file": "app/messages/page.tsx",
       "source_location": "L32",
       "id": "messages_page_conversation",
-      "community": 85,
+      "community": 7,
       "norm_label": "conversation"
     },
     {
@@ -1124,7 +1124,7 @@
       "source_file": "app/messages/page.tsx",
       "source_location": "L50",
       "id": "messages_page_messagescontent",
-      "community": 85,
+      "community": 7,
       "norm_label": "messagescontent()"
     },
     {
@@ -1133,7 +1133,7 @@
       "source_file": "app/messages/page.tsx",
       "source_location": "L438",
       "id": "messages_page_messagespage",
-      "community": 85,
+      "community": 7,
       "norm_label": "messagespage()"
     },
     {
@@ -1169,7 +1169,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L1",
       "id": "app_profile_page_tsx",
-      "community": 79,
+      "community": 63,
       "norm_label": "page.tsx"
     },
     {
@@ -1178,7 +1178,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L32",
       "id": "profile_page_userprofile",
-      "community": 79,
+      "community": 63,
       "norm_label": "userprofile"
     },
     {
@@ -1187,7 +1187,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L43",
       "id": "profile_page_fulluser",
-      "community": 79,
+      "community": 63,
       "norm_label": "fulluser"
     },
     {
@@ -1196,7 +1196,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L52",
       "id": "profile_page_gig",
-      "community": 79,
+      "community": 63,
       "norm_label": "gig"
     },
     {
@@ -1205,7 +1205,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L64",
       "id": "profile_page_profilepage",
-      "community": 79,
+      "community": 63,
       "norm_label": "profilepage()"
     },
     {
@@ -1214,7 +1214,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L72",
       "id": "profile_page_freelancerprofilecontent",
-      "community": 79,
+      "community": 63,
       "norm_label": "freelancerprofilecontent()"
     },
     {
@@ -1421,7 +1421,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L1",
       "id": "backend_src_server_ts",
-      "community": 103,
+      "community": 83,
       "norm_label": "server.ts"
     },
     {
@@ -1430,7 +1430,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L5",
       "id": "src_server_config",
-      "community": 103,
+      "community": 83,
       "norm_label": "{ config }"
     },
     {
@@ -1439,7 +1439,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L7",
       "id": "src_server_resolve",
-      "community": 103,
+      "community": 83,
       "norm_label": "{ resolve }"
     },
     {
@@ -1448,7 +1448,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L9",
       "id": "src_server_envpath",
-      "community": 103,
+      "community": 83,
       "norm_label": "envpath"
     },
     {
@@ -1457,7 +1457,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L10",
       "id": "src_server_result",
-      "community": 103,
+      "community": 83,
       "norm_label": "result"
     },
     {
@@ -1466,7 +1466,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L20",
       "id": "src_server_port",
-      "community": 103,
+      "community": 83,
       "norm_label": "port"
     },
     {
@@ -1475,7 +1475,7 @@
       "source_file": "backend/src/server.ts",
       "source_location": "L22",
       "id": "src_server_bootstrap",
-      "community": 76,
+      "community": 83,
       "norm_label": "bootstrap()"
     },
     {
@@ -1610,7 +1610,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L1",
       "id": "backend_src_common_utils_apiresponse_ts",
-      "community": 82,
+      "community": 78,
       "norm_label": "apiresponse.ts"
     },
     {
@@ -1619,7 +1619,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L3",
       "id": "utils_apiresponse_successresponse",
-      "community": 82,
+      "community": 78,
       "norm_label": "successresponse"
     },
     {
@@ -1628,7 +1628,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L10",
       "id": "utils_apiresponse_errorbody",
-      "community": 82,
+      "community": 78,
       "norm_label": "errorbody"
     },
     {
@@ -1637,7 +1637,7 @@
       "source_file": "backend/src/common/utils/apiResponse.ts",
       "source_location": "L17",
       "id": "utils_apiresponse_sendsuccess",
-      "community": 82,
+      "community": 78,
       "norm_label": "sendsuccess()"
     },
     {
@@ -1646,7 +1646,7 @@
       "source_file": "backend/src/common/utils/catchAsync.ts",
       "source_location": "L1",
       "id": "backend_src_common_utils_catchasync_ts",
-      "community": 82,
+      "community": 78,
       "norm_label": "catchasync.ts"
     },
     {
@@ -1655,7 +1655,7 @@
       "source_file": "backend/src/common/utils/catchAsync.ts",
       "source_location": "L3",
       "id": "utils_catchasync_asynchandler",
-      "community": 82,
+      "community": 78,
       "norm_label": "asynchandler"
     },
     {
@@ -1664,7 +1664,7 @@
       "source_file": "backend/src/common/utils/catchAsync.ts",
       "source_location": "L9",
       "id": "utils_catchasync_catchasync",
-      "community": 82,
+      "community": 78,
       "norm_label": "catchasync()"
     },
     {
@@ -1700,7 +1700,7 @@
       "source_file": "backend/src/config/cloudinary.ts",
       "source_location": "L1",
       "id": "backend_src_config_cloudinary_ts",
-      "community": 78,
+      "community": 80,
       "norm_label": "cloudinary.ts"
     },
     {
@@ -1709,7 +1709,7 @@
       "source_file": "backend/src/config/kafka.ts",
       "source_location": "L1",
       "id": "backend_src_config_kafka_ts",
-      "community": 76,
+      "community": 83,
       "norm_label": "kafka.ts"
     },
     {
@@ -1718,7 +1718,7 @@
       "source_file": "backend/src/config/kafka.ts",
       "source_location": "L20",
       "id": "config_kafka_kafka",
-      "community": 76,
+      "community": 83,
       "norm_label": "kafka"
     },
     {
@@ -1727,7 +1727,7 @@
       "source_file": "backend/src/config/kafka.ts",
       "source_location": "L38",
       "id": "config_kafka_kafkaproducer",
-      "community": 142,
+      "community": 83,
       "norm_label": "kafkaproducer"
     },
     {
@@ -1736,7 +1736,7 @@
       "source_file": "backend/src/config/kafka.ts",
       "source_location": "L41",
       "id": "config_kafka_kafkaconsumer",
-      "community": 76,
+      "community": 83,
       "norm_label": "kafkaconsumer"
     },
     {
@@ -1745,7 +1745,7 @@
       "source_file": "backend/src/config/kafka.ts",
       "source_location": "L56",
       "id": "config_kafka_ensurekafkatopics",
-      "community": 76,
+      "community": 83,
       "norm_label": "ensurekafkatopics()"
     },
     {
@@ -1754,7 +1754,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L1",
       "id": "backend_src_config_prisma_ts",
-      "community": 90,
+      "community": 62,
       "norm_label": "prisma.ts"
     },
     {
@@ -1763,7 +1763,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L27",
       "id": "config_prisma_globalforprisma",
-      "community": 90,
+      "community": 62,
       "norm_label": "globalforprisma"
     },
     {
@@ -1772,7 +1772,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L31",
       "id": "config_prisma_buildprisma",
-      "community": 90,
+      "community": 62,
       "norm_label": "buildprisma()"
     },
     {
@@ -1781,7 +1781,7 @@
       "source_file": "backend/src/config/redis.ts",
       "source_location": "L1",
       "id": "backend_src_config_redis_ts",
-      "community": 91,
+      "community": 83,
       "norm_label": "redis.ts"
     },
     {
@@ -1790,7 +1790,7 @@
       "source_file": "backend/src/config/redis.ts",
       "source_location": "L16",
       "id": "config_redis_createredisclient",
-      "community": 91,
+      "community": 83,
       "norm_label": "createredisclient()"
     },
     {
@@ -1799,7 +1799,7 @@
       "source_file": "backend/src/config/redis.ts",
       "source_location": "L32",
       "id": "config_redis_pubclient",
-      "community": 91,
+      "community": 83,
       "norm_label": "pubclient"
     },
     {
@@ -1808,7 +1808,7 @@
       "source_file": "backend/src/config/redis.ts",
       "source_location": "L35",
       "id": "config_redis_subclient",
-      "community": 91,
+      "community": 83,
       "norm_label": "subclient"
     },
     {
@@ -1844,7 +1844,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L22",
       "id": "error_apperror_apperror",
-      "community": 87,
+      "community": 93,
       "norm_label": "apperror"
     },
     {
@@ -1853,7 +1853,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L27",
       "id": "error_apperror_apperror_constructor",
-      "community": 87,
+      "community": 93,
       "norm_label": ".constructor()"
     },
     {
@@ -1934,7 +1934,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L1",
       "id": "backend_src_modules_auth_auth_controller_ts",
-      "community": 82,
+      "community": 78,
       "norm_label": "auth.controller.ts"
     },
     {
@@ -1943,7 +1943,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L23",
       "id": "auth_auth_controller_getme",
-      "community": 82,
+      "community": 78,
       "norm_label": "getme"
     },
     {
@@ -2294,7 +2294,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L1",
       "id": "backend_src_modules_chat_chat_validation_ts",
-      "community": 72,
+      "community": 80,
       "norm_label": "chat.validation.ts"
     },
     {
@@ -2303,7 +2303,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L7",
       "id": "chat_chat_validation_orderidparamschema",
-      "community": 72,
+      "community": 80,
       "norm_label": "orderidparamschema"
     },
     {
@@ -2312,7 +2312,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L11",
       "id": "chat_chat_validation_orderidparaminput",
-      "community": 72,
+      "community": 80,
       "norm_label": "orderidparaminput"
     },
     {
@@ -2321,7 +2321,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L13",
       "id": "chat_chat_validation_initchatschema",
-      "community": 72,
+      "community": 80,
       "norm_label": "initchatschema"
     },
     {
@@ -2330,7 +2330,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L27",
       "id": "chat_chat_validation_initchatschemainput",
-      "community": 72,
+      "community": 80,
       "norm_label": "initchatschemainput"
     },
     {
@@ -2339,7 +2339,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L29",
       "id": "chat_chat_validation_downloadattachmentqueryschema",
-      "community": 72,
+      "community": 80,
       "norm_label": "downloadattachmentqueryschema"
     },
     {
@@ -2348,7 +2348,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L43",
       "id": "chat_chat_validation_downloadattachmentqueryinput",
-      "community": 72,
+      "community": 80,
       "norm_label": "downloadattachmentqueryinput"
     },
     {
@@ -2429,7 +2429,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L1",
       "id": "backend_src_modules_client_client_service_ts",
-      "community": 90,
+      "community": 89,
       "norm_label": "client.service.ts"
     },
     {
@@ -2438,7 +2438,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L7",
       "id": "client_client_service_gigsearchfilters",
-      "community": 90,
+      "community": 89,
       "norm_label": "gigsearchfilters"
     },
     {
@@ -2447,7 +2447,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L18",
       "id": "client_client_service_freelancersearchfilters",
-      "community": 90,
+      "community": 89,
       "norm_label": "freelancersearchfilters"
     },
     {
@@ -2456,7 +2456,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L29",
       "id": "client_client_service_clientservice",
-      "community": 90,
+      "community": 89,
       "norm_label": "clientservice"
     },
     {
@@ -2465,7 +2465,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L34",
       "id": "client_client_service_clientservice_searchgigs",
-      "community": 90,
+      "community": 89,
       "norm_label": ".searchgigs()"
     },
     {
@@ -2474,7 +2474,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L112",
       "id": "client_client_service_clientservice_getgigdetails",
-      "community": 90,
+      "community": 89,
       "norm_label": ".getgigdetails()"
     },
     {
@@ -2483,7 +2483,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L146",
       "id": "client_client_service_clientservice_searchfreelancers",
-      "community": 90,
+      "community": 89,
       "norm_label": ".searchfreelancers()"
     },
     {
@@ -2492,7 +2492,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L223",
       "id": "client_client_service_clientservice_getfreelancerdetails",
-      "community": 90,
+      "community": 89,
       "norm_label": ".getfreelancerdetails()"
     },
     {
@@ -2501,7 +2501,7 @@
       "source_file": "backend/src/modules/client/client.service.ts",
       "source_location": "L269",
       "id": "client_client_service_clientservice_getcategories",
-      "community": 90,
+      "community": 89,
       "norm_label": ".getcategories()"
     },
     {
@@ -2564,7 +2564,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.controller.ts",
       "source_location": "L14",
       "id": "freelancer_freelancer_controller_updatefreelancerprofile",
-      "community": 87,
+      "community": 77,
       "norm_label": "updatefreelancerprofile"
     },
     {
@@ -2573,7 +2573,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_freelancer_freelancer_routes_ts",
-      "community": 87,
+      "community": 77,
       "norm_label": "freelancer.routes.ts"
     },
     {
@@ -2582,7 +2582,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L6",
       "id": "freelancer_freelancer_routes_router",
-      "community": 87,
+      "community": 77,
       "norm_label": "router"
     },
     {
@@ -2591,7 +2591,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L9",
       "id": "freelancer_freelancer_routes_ratelimitstore",
-      "community": 87,
+      "community": 77,
       "norm_label": "ratelimitstore"
     },
     {
@@ -2600,7 +2600,7 @@
       "source_file": "backend/src/modules/freelancer/freelancer.routes.ts",
       "source_location": "L11",
       "id": "freelancer_freelancer_routes_updateratelimiter",
-      "community": 87,
+      "community": 77,
       "norm_label": "updateratelimiter()"
     },
     {
@@ -2735,7 +2735,7 @@
       "source_file": "backend/src/modules/gig/gig.service.ts",
       "source_location": "L1",
       "id": "backend_src_modules_gig_gig_service_ts",
-      "community": 78,
+      "community": 93,
       "norm_label": "gig.service.ts"
     },
     {
@@ -2870,7 +2870,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L1",
       "id": "backend_src_modules_notifications_notification_service_ts",
-      "community": 142,
+      "community": 93,
       "norm_label": "notification.service.ts"
     },
     {
@@ -2879,7 +2879,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L25",
       "id": "notifications_notification_service_notificationservice",
-      "community": 142,
+      "community": 83,
       "norm_label": "notificationservice"
     },
     {
@@ -2888,7 +2888,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L29",
       "id": "notifications_notification_service_notificationservice_getusernotifications",
-      "community": 142,
+      "community": 83,
       "norm_label": ".getusernotifications()"
     },
     {
@@ -2897,7 +2897,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L53",
       "id": "notifications_notification_service_notificationservice_markallasread",
-      "community": 142,
+      "community": 83,
       "norm_label": ".markallasread()"
     },
     {
@@ -2906,7 +2906,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L64",
       "id": "notifications_notification_service_notificationservice_markoneasread",
-      "community": 142,
+      "community": 83,
       "norm_label": ".markoneasread()"
     },
     {
@@ -2915,7 +2915,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L90",
       "id": "notifications_notification_service_notificationservice_persistanddispatch",
-      "community": 142,
+      "community": 83,
       "norm_label": ".persistanddispatch()"
     },
     {
@@ -2924,7 +2924,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L109",
       "id": "notifications_notification_service_notificationservice_publishnotification",
-      "community": 142,
+      "community": 83,
       "norm_label": ".publishnotification()"
     },
     {
@@ -2933,7 +2933,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L124",
       "id": "notifications_notification_service_notificationservice_publishofflinenotification",
-      "community": 142,
+      "community": 83,
       "norm_label": ".publishofflinenotification()"
     },
     {
@@ -2942,7 +2942,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L1",
       "id": "backend_src_modules_notifications_notification_types_ts",
-      "community": 144,
+      "community": 83,
       "norm_label": "notification.types.ts"
     },
     {
@@ -2951,7 +2951,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L5",
       "id": "notifications_notification_types_notification_types",
-      "community": 144,
+      "community": 83,
       "norm_label": "notification_types"
     },
     {
@@ -2960,7 +2960,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L16",
       "id": "notifications_notification_types_notificationtype",
-      "community": 144,
+      "community": 83,
       "norm_label": "notificationtype"
     },
     {
@@ -2969,7 +2969,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L18",
       "id": "notifications_notification_types_createnotificationinput",
-      "community": 142,
+      "community": 83,
       "norm_label": "createnotificationinput"
     },
     {
@@ -2978,7 +2978,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L24",
       "id": "notifications_notification_types_offlinenotificationinput",
-      "community": 144,
+      "community": 83,
       "norm_label": "offlinenotificationinput"
     },
     {
@@ -2987,7 +2987,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L31",
       "id": "notifications_notification_types_notificationpayload",
-      "community": 144,
+      "community": 83,
       "norm_label": "notificationpayload"
     },
     {
@@ -2996,7 +2996,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L37",
       "id": "notifications_notification_types_offlinenotificationpayload",
-      "community": 142,
+      "community": 83,
       "norm_label": "offlinenotificationpayload"
     },
     {
@@ -3005,7 +3005,7 @@
       "source_file": "backend/src/modules/notifications/notification.types.ts",
       "source_location": "L47",
       "id": "notifications_notification_types_getnotificationsquery",
-      "community": 144,
+      "community": 83,
       "norm_label": "getnotificationsquery"
     },
     {
@@ -3014,7 +3014,7 @@
       "source_file": "backend/src/modules/notifications/notification.validation.ts",
       "source_location": "L1",
       "id": "backend_src_modules_notifications_notification_validation_ts",
-      "community": 72,
+      "community": 82,
       "norm_label": "notification.validation.ts"
     },
     {
@@ -3023,7 +3023,7 @@
       "source_file": "backend/src/modules/notifications/notification.validation.ts",
       "source_location": "L7",
       "id": "notifications_notification_validation_getnotificationsqueryschema",
-      "community": 72,
+      "community": 82,
       "norm_label": "getnotificationsqueryschema"
     },
     {
@@ -3032,7 +3032,7 @@
       "source_file": "backend/src/modules/notifications/notification.validation.ts",
       "source_location": "L19",
       "id": "notifications_notification_validation_getnotificationsqueryinput",
-      "community": 142,
+      "community": 82,
       "norm_label": "getnotificationsqueryinput"
     },
     {
@@ -3041,7 +3041,7 @@
       "source_file": "backend/src/modules/notifications/notification.validation.ts",
       "source_location": "L21",
       "id": "notifications_notification_validation_markonereadparamsschema",
-      "community": 72,
+      "community": 82,
       "norm_label": "markonereadparamsschema"
     },
     {
@@ -3050,7 +3050,7 @@
       "source_file": "backend/src/modules/notifications/notification.validation.ts",
       "source_location": "L25",
       "id": "notifications_notification_validation_markonereadparamsinput",
-      "community": 72,
+      "community": 82,
       "norm_label": "markonereadparamsinput"
     },
     {
@@ -3066,19 +3066,64 @@
       "label": "createOrder",
       "file_type": "code",
       "source_file": "backend/src/modules/order/order.controller.ts",
-      "source_location": "L22",
+      "source_location": "L20",
       "id": "order_order_controller_createorder",
-      "community": 77,
+      "community": 98,
       "norm_label": "createorder"
     },
     {
       "label": "getOrder",
       "file_type": "code",
       "source_file": "backend/src/modules/order/order.controller.ts",
-      "source_location": "L49",
+      "source_location": "L43",
       "id": "order_order_controller_getorder",
-      "community": 77,
+      "community": 98,
       "norm_label": "getorder"
+    },
+    {
+      "label": "transitionOrderStatus",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L65",
+      "id": "order_order_controller_transitionorderstatus",
+      "community": 98,
+      "norm_label": "transitionorderstatus"
+    },
+    {
+      "label": "cancelOrder",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L98",
+      "id": "order_order_controller_cancelorder",
+      "community": 98,
+      "norm_label": "cancelorder"
+    },
+    {
+      "label": "failPayment",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L121",
+      "id": "order_order_controller_failpayment",
+      "community": 98,
+      "norm_label": "failpayment"
+    },
+    {
+      "label": "markPaymentPending",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L144",
+      "id": "order_order_controller_markpaymentpending",
+      "community": 98,
+      "norm_label": "markpaymentpending"
+    },
+    {
+      "label": "markPaid",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L164",
+      "id": "order_order_controller_markpaid",
+      "community": 98,
+      "norm_label": "markpaid"
     },
     {
       "label": "order.routes.ts",
@@ -3086,16 +3131,16 @@
       "source_file": "backend/src/modules/order/order.routes.ts",
       "source_location": "L1",
       "id": "backend_src_modules_order_order_routes_ts",
-      "community": 77,
+      "community": 98,
       "norm_label": "order.routes.ts"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "backend/src/modules/order/order.routes.ts",
-      "source_location": "L6",
+      "source_location": "L14",
       "id": "order_order_routes_router",
-      "community": 77,
+      "community": 98,
       "norm_label": "router"
     },
     {
@@ -3104,14 +3149,23 @@
       "source_file": "backend/src/modules/order/order.service.ts",
       "source_location": "L1",
       "id": "backend_src_modules_order_order_service_ts",
-      "community": 98,
+      "community": 93,
       "norm_label": "order.service.ts"
+    },
+    {
+      "label": "ALLOWED_ORDER_TRANSITIONS",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L27",
+      "id": "order_order_service_allowed_order_transitions",
+      "community": 93,
+      "norm_label": "allowed_order_transitions"
     },
     {
       "label": "OrderService",
       "file_type": "code",
       "source_file": "backend/src/modules/order/order.service.ts",
-      "source_location": "L12",
+      "source_location": "L40",
       "id": "order_order_service_orderservice",
       "community": 98,
       "norm_label": "orderservice"
@@ -3120,7 +3174,7 @@
       "label": ".initiateOrder()",
       "file_type": "code",
       "source_file": "backend/src/modules/order/order.service.ts",
-      "source_location": "L23",
+      "source_location": "L51",
       "id": "order_order_service_orderservice_initiateorder",
       "community": 98,
       "norm_label": ".initiateorder()"
@@ -3129,10 +3183,73 @@
       "label": ".getOrderById()",
       "file_type": "code",
       "source_file": "backend/src/modules/order/order.service.ts",
-      "source_location": "L115",
+      "source_location": "L143",
       "id": "order_order_service_orderservice_getorderbyid",
       "community": 98,
       "norm_label": ".getorderbyid()"
+    },
+    {
+      "label": ".transitionStatus()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L193",
+      "id": "order_order_service_orderservice_transitionstatus",
+      "community": 98,
+      "norm_label": ".transitionstatus()"
+    },
+    {
+      "label": ".markPaymentPending()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L318",
+      "id": "order_order_service_orderservice_markpaymentpending",
+      "community": 98,
+      "norm_label": ".markpaymentpending()"
+    },
+    {
+      "label": ".markPaid()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L325",
+      "id": "order_order_service_orderservice_markpaid",
+      "community": 98,
+      "norm_label": ".markpaid()"
+    },
+    {
+      "label": ".startProgress()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L332",
+      "id": "order_order_service_orderservice_startprogress",
+      "community": 98,
+      "norm_label": ".startprogress()"
+    },
+    {
+      "label": ".completeOrder()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L339",
+      "id": "order_order_service_orderservice_completeorder",
+      "community": 98,
+      "norm_label": ".completeorder()"
+    },
+    {
+      "label": ".cancelOrder()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L346",
+      "id": "order_order_service_orderservice_cancelorder",
+      "community": 98,
+      "norm_label": ".cancelorder()"
+    },
+    {
+      "label": ".failPayment()",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L353",
+      "id": "order_order_service_orderservice_failpayment",
+      "community": 98,
+      "norm_label": ".failpayment()"
     },
     {
       "label": "order.validation.ts",
@@ -3178,6 +3295,60 @@
       "id": "order_order_validation_orderidparam",
       "community": 98,
       "norm_label": "orderidparam"
+    },
+    {
+      "label": "transitionOrderStatusSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L42",
+      "id": "order_order_validation_transitionorderstatusschema",
+      "community": 98,
+      "norm_label": "transitionorderstatusschema"
+    },
+    {
+      "label": "TransitionOrderStatusInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L58",
+      "id": "order_order_validation_transitionorderstatusinput",
+      "community": 98,
+      "norm_label": "transitionorderstatusinput"
+    },
+    {
+      "label": "cancelOrderSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L60",
+      "id": "order_order_validation_cancelorderschema",
+      "community": 98,
+      "norm_label": "cancelorderschema"
+    },
+    {
+      "label": "CancelOrderInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L64",
+      "id": "order_order_validation_cancelorderinput",
+      "community": 98,
+      "norm_label": "cancelorderinput"
+    },
+    {
+      "label": "failPaymentSchema",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L66",
+      "id": "order_order_validation_failpaymentschema",
+      "community": 98,
+      "norm_label": "failpaymentschema"
+    },
+    {
+      "label": "FailPaymentInput",
+      "file_type": "code",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L70",
+      "id": "order_order_validation_failpaymentinput",
+      "community": 98,
+      "norm_label": "failpaymentinput"
     },
     {
       "label": "user.controller.ts",
@@ -3275,7 +3446,7 @@
       "source_file": "backend/src/services/chat.consumer.ts",
       "source_location": "L1",
       "id": "backend_src_services_chat_consumer_ts",
-      "community": 76,
+      "community": 83,
       "norm_label": "chat.consumer.ts"
     },
     {
@@ -3284,7 +3455,7 @@
       "source_file": "backend/src/services/chat.consumer.ts",
       "source_location": "L31",
       "id": "services_chat_consumer_startchatconsumer",
-      "community": 76,
+      "community": 83,
       "norm_label": "startchatconsumer()"
     },
     {
@@ -3293,7 +3464,7 @@
       "source_file": "backend/src/services/chat.consumer.ts",
       "source_location": "L63",
       "id": "services_chat_consumer_handlechatmessage",
-      "community": 76,
+      "community": 83,
       "norm_label": "handlechatmessage()"
     },
     {
@@ -3302,7 +3473,7 @@
       "source_file": "backend/src/services/chat.consumer.ts",
       "source_location": "L124",
       "id": "services_chat_consumer_handlenotification",
-      "community": 76,
+      "community": 83,
       "norm_label": "handlenotification()"
     },
     {
@@ -3311,7 +3482,7 @@
       "source_file": "backend/src/services/chat.consumer.ts",
       "source_location": "L130",
       "id": "services_chat_consumer_handleofflinenotification",
-      "community": 76,
+      "community": 83,
       "norm_label": "handleofflinenotification()"
     },
     {
@@ -3320,7 +3491,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L1",
       "id": "backend_src_socket_chat_socket_ts",
-      "community": 91,
+      "community": 83,
       "norm_label": "chat.socket.ts"
     },
     {
@@ -3329,7 +3500,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L25",
       "id": "socket_chat_socket_socketdata",
-      "community": 91,
+      "community": 83,
       "norm_label": "socketdata"
     },
     {
@@ -3338,7 +3509,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L30",
       "id": "socket_chat_socket_joinroompayload",
-      "community": 91,
+      "community": 83,
       "norm_label": "joinroompayload"
     },
     {
@@ -3347,7 +3518,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L34",
       "id": "socket_chat_socket_sendmessagepayload",
-      "community": 91,
+      "community": 83,
       "norm_label": "sendmessagepayload"
     },
     {
@@ -3356,7 +3527,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L46",
       "id": "socket_chat_socket_typingpayload",
-      "community": 91,
+      "community": 83,
       "norm_label": "typingpayload"
     },
     {
@@ -3365,7 +3536,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L53",
       "id": "socket_chat_socket_initsocketserver",
-      "community": 76,
+      "community": 83,
       "norm_label": "initsocketserver()"
     },
     {
@@ -3374,7 +3545,7 @@
       "source_file": "backend/src/socket/chat.socket.ts",
       "source_location": "L214",
       "id": "socket_chat_socket_emitnotification",
-      "community": 91,
+      "community": 83,
       "norm_label": "emitnotification"
     },
     {
@@ -3401,7 +3572,7 @@
       "source_file": "components/AppNavbar.tsx",
       "source_location": "L1",
       "id": "components_appnavbar_tsx",
-      "community": 84,
+      "community": 7,
       "norm_label": "appnavbar.tsx"
     },
     {
@@ -3410,7 +3581,7 @@
       "source_file": "components/AppNavbar.tsx",
       "source_location": "L20",
       "id": "components_appnavbar_appnavbarprops",
-      "community": 84,
+      "community": 7,
       "norm_label": "appnavbarprops"
     },
     {
@@ -3419,7 +3590,7 @@
       "source_file": "components/AppNavbar.tsx",
       "source_location": "L29",
       "id": "components_appnavbar_appnavbar",
-      "community": 86,
+      "community": 63,
       "norm_label": "appnavbar()"
     },
     {
@@ -3491,7 +3662,7 @@
       "source_file": "components/Footer.tsx",
       "source_location": "L1",
       "id": "components_footer_tsx",
-      "community": 79,
+      "community": 63,
       "norm_label": "footer.tsx"
     },
     {
@@ -3500,7 +3671,7 @@
       "source_file": "components/Footer.tsx",
       "source_location": "L7",
       "id": "components_footer_footer",
-      "community": 86,
+      "community": 63,
       "norm_label": "footer()"
     },
     {
@@ -3563,7 +3734,7 @@
       "source_file": "components/RoleGuard.tsx",
       "source_location": "L1",
       "id": "components_roleguard_tsx",
-      "community": 79,
+      "community": 63,
       "norm_label": "roleguard.tsx"
     },
     {
@@ -3572,7 +3743,7 @@
       "source_file": "components/RoleGuard.tsx",
       "source_location": "L8",
       "id": "components_roleguard_roleguardprops",
-      "community": 79,
+      "community": 63,
       "norm_label": "roleguardprops"
     },
     {
@@ -3581,7 +3752,7 @@
       "source_file": "components/RoleGuard.tsx",
       "source_location": "L13",
       "id": "components_roleguard_roleguard",
-      "community": 86,
+      "community": 63,
       "norm_label": "roleguard()"
     },
     {
@@ -3635,7 +3806,7 @@
       "source_file": "components/chat/AttachmentPreview.tsx",
       "source_location": "L1",
       "id": "components_chat_attachmentpreview_tsx",
-      "community": 81,
+      "community": 7,
       "norm_label": "attachmentpreview.tsx"
     },
     {
@@ -3644,7 +3815,7 @@
       "source_file": "components/chat/AttachmentPreview.tsx",
       "source_location": "L18",
       "id": "chat_attachmentpreview_attachmentpreviewprops",
-      "community": 81,
+      "community": 7,
       "norm_label": "attachmentpreviewprops"
     },
     {
@@ -3653,7 +3824,7 @@
       "source_file": "components/chat/AttachmentPreview.tsx",
       "source_location": "L22",
       "id": "chat_attachmentpreview_attachmentpreview",
-      "community": 85,
+      "community": 7,
       "norm_label": "attachmentpreview()"
     },
     {
@@ -3662,7 +3833,7 @@
       "source_file": "components/chat/ChatWindow.tsx",
       "source_location": "L1",
       "id": "components_chat_chatwindow_tsx",
-      "community": 85,
+      "community": 7,
       "norm_label": "chatwindow.tsx"
     },
     {
@@ -3671,7 +3842,7 @@
       "source_file": "components/chat/ChatWindow.tsx",
       "source_location": "L27",
       "id": "chat_chatwindow_otheruser",
-      "community": 85,
+      "community": 7,
       "norm_label": "otheruser"
     },
     {
@@ -3680,7 +3851,7 @@
       "source_file": "components/chat/ChatWindow.tsx",
       "source_location": "L33",
       "id": "chat_chatwindow_chatwindowprops",
-      "community": 85,
+      "community": 7,
       "norm_label": "chatwindowprops"
     },
     {
@@ -3689,7 +3860,7 @@
       "source_file": "components/chat/ChatWindow.tsx",
       "source_location": "L39",
       "id": "chat_chatwindow_chatwindow",
-      "community": 85,
+      "community": 7,
       "norm_label": "chatwindow()"
     },
     {
@@ -3698,7 +3869,7 @@
       "source_file": "components/chat/MessageBubble.tsx",
       "source_location": "L1",
       "id": "components_chat_messagebubble_tsx",
-      "community": 85,
+      "community": 7,
       "norm_label": "messagebubble.tsx"
     },
     {
@@ -3707,7 +3878,7 @@
       "source_file": "components/chat/MessageBubble.tsx",
       "source_location": "L11",
       "id": "chat_messagebubble_messagebubbleprops",
-      "community": 85,
+      "community": 7,
       "norm_label": "messagebubbleprops"
     },
     {
@@ -3716,7 +3887,7 @@
       "source_file": "components/chat/MessageBubble.tsx",
       "source_location": "L16",
       "id": "chat_messagebubble_messagebubble",
-      "community": 85,
+      "community": 7,
       "norm_label": "messagebubble()"
     },
     {
@@ -3725,7 +3896,7 @@
       "source_file": "components/chat/PresenceDot.tsx",
       "source_location": "L1",
       "id": "components_chat_presencedot_tsx",
-      "community": 85,
+      "community": 7,
       "norm_label": "presencedot.tsx"
     },
     {
@@ -3734,7 +3905,7 @@
       "source_file": "components/chat/PresenceDot.tsx",
       "source_location": "L8",
       "id": "chat_presencedot_presencedotprops",
-      "community": 85,
+      "community": 7,
       "norm_label": "presencedotprops"
     },
     {
@@ -3743,7 +3914,7 @@
       "source_file": "components/chat/PresenceDot.tsx",
       "source_location": "L14",
       "id": "chat_presencedot_presencedot",
-      "community": 85,
+      "community": 7,
       "norm_label": "presencedot()"
     },
     {
@@ -3752,7 +3923,7 @@
       "source_file": "components/chat/TypingIndicator.tsx",
       "source_location": "L1",
       "id": "components_chat_typingindicator_tsx",
-      "community": 85,
+      "community": 7,
       "norm_label": "typingindicator.tsx"
     },
     {
@@ -3761,7 +3932,7 @@
       "source_file": "components/chat/TypingIndicator.tsx",
       "source_location": "L5",
       "id": "chat_typingindicator_typingindicator",
-      "community": 85,
+      "community": 7,
       "norm_label": "typingindicator()"
     },
     {
@@ -4004,7 +4175,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L1",
       "id": "components_notifications_notificationbell_tsx",
-      "community": 84,
+      "community": 7,
       "norm_label": "notificationbell.tsx"
     },
     {
@@ -4013,7 +4184,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L15",
       "id": "notifications_notificationbell_notificationbell",
-      "community": 84,
+      "community": 7,
       "norm_label": "notificationbell()"
     },
     {
@@ -4022,7 +4193,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L116",
       "id": "notifications_notificationbell_getnotificationicon",
-      "community": 84,
+      "community": 7,
       "norm_label": "getnotificationicon()"
     },
     {
@@ -4031,7 +4202,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L130",
       "id": "notifications_notificationbell_formatrelativetime",
-      "community": 84,
+      "community": 7,
       "norm_label": "formatrelativetime()"
     },
     {
@@ -4364,7 +4535,7 @@
       "source_file": "hooks/useChat.ts",
       "source_location": "L21",
       "id": "hooks_usechat_attachment",
-      "community": 81,
+      "community": 7,
       "norm_label": "attachment"
     },
     {
@@ -4391,7 +4562,7 @@
       "source_file": "hooks/useNotifications.ts",
       "source_location": "L1",
       "id": "hooks_usenotifications_ts",
-      "community": 84,
+      "community": 7,
       "norm_label": "usenotifications.ts"
     },
     {
@@ -4400,7 +4571,7 @@
       "source_file": "hooks/useNotifications.ts",
       "source_location": "L14",
       "id": "hooks_usenotifications_appnotification",
-      "community": 84,
+      "community": 7,
       "norm_label": "appnotification"
     },
     {
@@ -4409,7 +4580,7 @@
       "source_file": "hooks/useNotifications.ts",
       "source_location": "L23",
       "id": "hooks_usenotifications_usenotifications",
-      "community": 84,
+      "community": 7,
       "norm_label": "usenotifications()"
     },
     {
@@ -4418,7 +4589,7 @@
       "source_file": "hooks/useNotifications.ts",
       "source_location": "L107",
       "id": "hooks_usenotifications_getnotificationicon",
-      "community": 84,
+      "community": 7,
       "norm_label": "getnotificationicon()"
     },
     {
@@ -5669,7 +5840,7 @@
       "source_file": "lib/axios.ts",
       "source_location": "L1",
       "id": "lib_axios_ts",
-      "community": 81,
+      "community": 7,
       "norm_label": "axios.ts"
     },
     {
@@ -5678,7 +5849,7 @@
       "source_file": "lib/axios.ts",
       "source_location": "L3",
       "id": "lib_axios_api",
-      "community": 86,
+      "community": 7,
       "norm_label": "api"
     },
     {
@@ -5687,7 +5858,7 @@
       "source_file": "lib/axios.ts",
       "source_location": "L14",
       "id": "lib_axios_token",
-      "community": 81,
+      "community": 7,
       "norm_label": "token"
     },
     {
@@ -5696,7 +5867,7 @@
       "source_file": "lib/download.ts",
       "source_location": "L1",
       "id": "lib_download_ts",
-      "community": 81,
+      "community": 7,
       "norm_label": "download.ts"
     },
     {
@@ -5705,7 +5876,7 @@
       "source_file": "lib/download.ts",
       "source_location": "L12",
       "id": "lib_download_downloadfile",
-      "community": 81,
+      "community": 7,
       "norm_label": "downloadfile()"
     },
     {
@@ -5759,7 +5930,7 @@
       "source_file": "lib/auth/auth-client.ts",
       "source_location": "L1",
       "id": "lib_auth_auth_client_ts",
-      "community": 79,
+      "community": 63,
       "norm_label": "auth-client.ts"
     },
     {
@@ -5768,7 +5939,7 @@
       "source_file": "lib/auth/auth-client.ts",
       "source_location": "L26",
       "id": "auth_auth_client_authclient",
-      "community": 79,
+      "community": 63,
       "norm_label": "authclient"
     },
     {
@@ -5930,7 +6101,7 @@
       "source_file": "services/auth.service.ts",
       "source_location": "L1",
       "id": "services_auth_service_ts",
-      "community": 88,
+      "community": 7,
       "norm_label": "auth.service.ts"
     },
     {
@@ -5939,7 +6110,7 @@
       "source_file": "services/auth.service.ts",
       "source_location": "L6",
       "id": "services_auth_service_user",
-      "community": 88,
+      "community": 7,
       "norm_label": "user"
     },
     {
@@ -5948,7 +6119,7 @@
       "source_file": "services/auth.service.ts",
       "source_location": "L25",
       "id": "services_auth_service_authservice",
-      "community": 88,
+      "community": 7,
       "norm_label": "authservice"
     },
     {
@@ -5957,7 +6128,7 @@
       "source_file": "services/auth.service.ts",
       "source_location": "L38",
       "id": "services_auth_service_registerpayload",
-      "community": 88,
+      "community": 7,
       "norm_label": "registerpayload"
     },
     {
@@ -5966,7 +6137,7 @@
       "source_file": "services/auth.service.ts",
       "source_location": "L45",
       "id": "services_auth_service_loginpayload",
-      "community": 88,
+      "community": 7,
       "norm_label": "loginpayload"
     },
     {
@@ -5984,7 +6155,7 @@
       "source_file": "store/auth.store.ts",
       "source_location": "L1",
       "id": "store_auth_store_ts",
-      "community": 94,
+      "community": 63,
       "norm_label": "auth.store.ts"
     },
     {
@@ -5993,7 +6164,7 @@
       "source_file": "store/auth.store.ts",
       "source_location": "L7",
       "id": "store_auth_store_user",
-      "community": 94,
+      "community": 63,
       "norm_label": "user"
     },
     {
@@ -6002,7 +6173,7 @@
       "source_file": "store/auth.store.ts",
       "source_location": "L17",
       "id": "store_auth_store_authstate",
-      "community": 94,
+      "community": 63,
       "norm_label": "authstate"
     },
     {
@@ -6011,7 +6182,7 @@
       "source_file": "store/auth.store.ts",
       "source_location": "L45",
       "id": "store_auth_store_useauthstore",
-      "community": 94,
+      "community": 63,
       "norm_label": "useauthstore"
     },
     {
@@ -6038,7 +6209,7 @@
       "source_file": "test/test-chat-notification-service.ts",
       "source_location": "L1",
       "id": "test_test_chat_notification_service_ts",
-      "community": 72,
+      "community": 80,
       "norm_label": "test-chat-notification-service.ts"
     },
     {
@@ -7130,7 +7301,7 @@
         "kind": "file"
       },
       "_origin": "ast",
-      "community": 112,
+      "community": 8,
       "norm_label": "husky.sh",
       "id": "husky_husky"
     },
@@ -7144,7 +7315,7 @@
         "kind": "bash_entrypoint"
       },
       "_origin": "ast",
-      "community": 112,
+      "community": 8,
       "norm_label": "husky.sh script",
       "id": "husky_husky_sh__entry"
     },
@@ -7656,7 +7827,7 @@
       "source_file": "app/dashboard/create-gig/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "page.tsx",
       "id": "app_dashboard_create_gig_page"
     },
@@ -7666,7 +7837,7 @@
       "source_file": "app/dashboard/create-gig/page.tsx",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "sessionuser",
       "id": "app_dashboard_create_gig_page_sessionuser"
     },
@@ -7676,7 +7847,7 @@
       "source_file": "app/dashboard/create-gig/page.tsx",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "creategigpage()",
       "id": "app_dashboard_create_gig_page_creategigpage"
     },
@@ -7686,7 +7857,7 @@
       "source_file": "app/dashboard/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "page.tsx",
       "id": "app_dashboard_page"
     },
@@ -7696,7 +7867,7 @@
       "source_file": "app/dashboard/page.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "sessionuser",
       "id": "app_dashboard_page_sessionuser"
     },
@@ -7706,7 +7877,7 @@
       "source_file": "app/dashboard/page.tsx",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 94,
+      "community": 63,
       "norm_label": "dashboardpage()",
       "id": "app_dashboard_page_dashboardpage"
     },
@@ -7836,7 +8007,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "page.tsx",
       "id": "app_profile_page"
     },
@@ -7846,7 +8017,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "userprofile",
       "id": "app_profile_page_userprofile"
     },
@@ -7856,7 +8027,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "fulluser",
       "id": "app_profile_page_fulluser"
     },
@@ -7866,7 +8037,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "gig",
       "id": "app_profile_page_gig"
     },
@@ -7876,7 +8047,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L64",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "profilepage()",
       "id": "app_profile_page_profilepage"
     },
@@ -7886,7 +8057,7 @@
       "source_file": "app/profile/page.tsx",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "freelancerprofilecontent()",
       "id": "app_profile_page_freelancerprofilecontent"
     },
@@ -7966,7 +8137,7 @@
       "source_file": "backend/src/common/middlewares/errorHandler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "errorhandler.ts",
       "id": "backend_src_common_middlewares_errorhandler"
     },
@@ -8166,7 +8337,7 @@
       "source_file": "backend/src/config/cloudinary.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 11,
       "norm_label": "cloudinary.ts",
       "id": "backend_src_config_cloudinary"
     },
@@ -8226,7 +8397,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 62,
+      "community": 66,
       "norm_label": "prisma.ts",
       "id": "backend_src_config_prisma"
     },
@@ -8236,7 +8407,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 62,
+      "community": 66,
       "norm_label": "globalforprisma",
       "id": "backend_src_config_prisma_globalforprisma"
     },
@@ -8246,7 +8417,7 @@
       "source_file": "backend/src/config/prisma.ts",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 62,
+      "community": 66,
       "norm_label": "buildprisma()",
       "id": "backend_src_config_prisma_buildprisma"
     },
@@ -8296,7 +8467,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "apperror.ts",
       "id": "backend_src_error_apperror"
     },
@@ -8306,7 +8477,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "errorcode",
       "id": "backend_src_error_apperror_errorcode"
     },
@@ -8316,7 +8487,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "status_to_code",
       "id": "backend_src_error_apperror_status_to_code"
     },
@@ -8326,7 +8497,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "apperror",
       "id": "backend_src_error_apperror_apperror"
     },
@@ -8336,7 +8507,7 @@
       "source_file": "backend/src/error/AppError.ts",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": ".constructor()",
       "id": "backend_src_error_apperror_apperror_constructor"
     },
@@ -8346,7 +8517,7 @@
       "source_file": "backend/src/error/errorHandler.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "errorhandler.ts",
       "id": "backend_src_error_errorhandler"
     },
@@ -8356,7 +8527,7 @@
       "source_file": "backend/src/error/errorHandler.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "errorresponse",
       "id": "backend_src_error_errorhandler_errorresponse"
     },
@@ -8366,7 +8537,7 @@
       "source_file": "backend/src/error/errorHandler.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "handlejwtexpirederror()",
       "id": "backend_src_error_errorhandler_handlejwtexpirederror"
     },
@@ -8376,7 +8547,7 @@
       "source_file": "backend/src/error/errorHandler.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "handlejwtinvaliderror()",
       "id": "backend_src_error_errorhandler_handlejwtinvaliderror"
     },
@@ -8386,7 +8557,7 @@
       "source_file": "backend/src/error/errorHandler.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "errorhandler()",
       "id": "backend_src_error_errorhandler_errorhandler"
     },
@@ -8396,7 +8567,7 @@
       "source_file": "backend/src/error/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 141,
+      "community": 1,
       "norm_label": "index.ts",
       "id": "backend_src_error_index"
     },
@@ -8416,7 +8587,7 @@
       "source_file": "backend/src/modules/auth/auth.controller.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 61,
+      "community": 6,
       "norm_label": "getme",
       "id": "backend_src_modules_auth_auth_controller_getme"
     },
@@ -8576,7 +8747,7 @@
       "source_file": "backend/src/modules/chat/chat.controller.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "chat.controller.ts",
       "id": "backend_src_modules_chat_chat_controller"
     },
@@ -8586,7 +8757,7 @@
       "source_file": "backend/src/modules/chat/chat.controller.ts",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "getchathistory",
       "id": "backend_src_modules_chat_chat_controller_getchathistory"
     },
@@ -8596,7 +8767,7 @@
       "source_file": "backend/src/modules/chat/chat.controller.ts",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "getconversations",
       "id": "backend_src_modules_chat_chat_controller_getconversations"
     },
@@ -8606,7 +8777,7 @@
       "source_file": "backend/src/modules/chat/chat.controller.ts",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "initchat",
       "id": "backend_src_modules_chat_chat_controller_initchat"
     },
@@ -8616,7 +8787,7 @@
       "source_file": "backend/src/modules/chat/chat.controller.ts",
       "source_location": "L79",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "uploadchatfiles",
       "id": "backend_src_modules_chat_chat_controller_uploadchatfiles"
     },
@@ -8626,7 +8797,7 @@
       "source_file": "backend/src/modules/chat/chat.controller.ts",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "downloadchatattachment",
       "id": "backend_src_modules_chat_chat_controller_downloadchatattachment"
     },
@@ -8636,7 +8807,7 @@
       "source_file": "backend/src/modules/chat/chat.routes.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 61,
       "norm_label": "chat.routes.ts",
       "id": "backend_src_modules_chat_chat_routes"
     },
@@ -8656,7 +8827,7 @@
       "source_file": "backend/src/modules/chat/chat.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 141,
+      "community": 3,
       "norm_label": "chat.service.ts",
       "id": "backend_src_modules_chat_chat_service"
     },
@@ -8806,7 +8977,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "chat.validation.ts",
       "id": "backend_src_modules_chat_chat_validation"
     },
@@ -8816,7 +8987,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "orderidparamschema",
       "id": "backend_src_modules_chat_chat_validation_orderidparamschema"
     },
@@ -8826,7 +8997,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "orderidparaminput",
       "id": "backend_src_modules_chat_chat_validation_orderidparaminput"
     },
@@ -8836,7 +9007,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "initchatschema",
       "id": "backend_src_modules_chat_chat_validation_initchatschema"
     },
@@ -8846,7 +9017,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "initchatschemainput",
       "id": "backend_src_modules_chat_chat_validation_initchatschemainput"
     },
@@ -8856,7 +9027,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "downloadattachmentqueryschema",
       "id": "backend_src_modules_chat_chat_validation_downloadattachmentqueryschema"
     },
@@ -8866,7 +9037,7 @@
       "source_file": "backend/src/modules/chat/chat.validation.ts",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "downloadattachmentqueryinput",
       "id": "backend_src_modules_chat_chat_validation_downloadattachmentqueryinput"
     },
@@ -9266,7 +9437,7 @@
       "source_file": "backend/src/modules/gig/gig.routes.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 6,
+      "community": 1,
       "norm_label": "router",
       "id": "backend_src_modules_gig_gig_routes_router"
     },
@@ -9466,7 +9637,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 141,
+      "community": 3,
       "norm_label": "notification.service.ts",
       "id": "backend_src_modules_notifications_notification_service"
     },
@@ -9486,7 +9657,7 @@
       "source_file": "backend/src/modules/notifications/notification.service.ts",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 65,
+      "community": 3,
       "norm_label": ".getusernotifications()",
       "id": "backend_src_modules_notifications_notification_service_notificationservice_getusernotifications"
     },
@@ -9646,7 +9817,7 @@
       "source_file": "backend/src/modules/notifications/notification.validation.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 65,
+      "community": 3,
       "norm_label": "getnotificationsqueryinput",
       "id": "backend_src_modules_notifications_notification_validation_getnotificationsqueryinput"
     },
@@ -9676,7 +9847,7 @@
       "source_file": "backend/src/modules/order/order.controller.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": "order.controller.ts",
       "id": "backend_src_modules_order_order_controller"
     },
@@ -9716,7 +9887,7 @@
       "source_file": "backend/src/modules/order/order.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": "order.service.ts",
       "id": "backend_src_modules_order_order_service"
     },
@@ -9726,7 +9897,7 @@
       "source_file": "backend/src/modules/order/order.service.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": "orderservice",
       "id": "backend_src_modules_order_order_service_orderservice"
     },
@@ -9736,7 +9907,7 @@
       "source_file": "backend/src/modules/order/order.service.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": ".initiateorder()",
       "id": "backend_src_modules_order_order_service_orderservice_initiateorder"
     },
@@ -9746,7 +9917,7 @@
       "source_file": "backend/src/modules/order/order.validation.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": "order.validation.ts",
       "id": "backend_src_modules_order_order_validation"
     },
@@ -9756,7 +9927,7 @@
       "source_file": "backend/src/modules/order/order.validation.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": "createorderschema",
       "id": "backend_src_modules_order_order_validation_createorderschema"
     },
@@ -9766,7 +9937,7 @@
       "source_file": "backend/src/modules/order/order.validation.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 61,
+      "community": 72,
       "norm_label": "createorderinput",
       "id": "backend_src_modules_order_order_validation_createorderinput"
     },
@@ -10086,7 +10257,7 @@
       "source_file": "components/AppNavbar.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 7,
       "norm_label": "appnavbar.tsx",
       "id": "components_appnavbar"
     },
@@ -10126,7 +10297,7 @@
       "source_file": "components/Footer.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "footer.tsx",
       "id": "components_footer"
     },
@@ -10166,7 +10337,7 @@
       "source_file": "components/RoleGuard.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "roleguard.tsx",
       "id": "components_roleguard"
     },
@@ -10196,7 +10367,7 @@
       "source_file": "components/chat/AttachmentPreview.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 81,
+      "community": 7,
       "norm_label": "attachmentpreview.tsx",
       "id": "components_chat_attachmentpreview"
     },
@@ -10206,7 +10377,7 @@
       "source_file": "components/chat/AttachmentPreview.tsx",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 81,
+      "community": 7,
       "norm_label": "attachmentpreviewprops",
       "id": "components_chat_attachmentpreview_attachmentpreviewprops"
     },
@@ -10216,7 +10387,7 @@
       "source_file": "components/chat/AttachmentPreview.tsx",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 81,
+      "community": 7,
       "norm_label": "attachmentpreview()",
       "id": "components_chat_attachmentpreview_attachmentpreview"
     },
@@ -10606,7 +10777,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 7,
       "norm_label": "notificationbell.tsx",
       "id": "components_notifications_notificationbell"
     },
@@ -10616,7 +10787,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 84,
+      "community": 7,
       "norm_label": "notificationbell()",
       "id": "components_notifications_notificationbell_notificationbell"
     },
@@ -10626,7 +10797,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L116",
       "_origin": "ast",
-      "community": 84,
+      "community": 7,
       "norm_label": "getnotificationicon()",
       "id": "components_notifications_notificationbell_getnotificationicon"
     },
@@ -10636,7 +10807,7 @@
       "source_file": "components/notifications/NotificationBell.tsx",
       "source_location": "L130",
       "_origin": "ast",
-      "community": 84,
+      "community": 7,
       "norm_label": "formatrelativetime()",
       "id": "components_notifications_notificationbell_formatrelativetime"
     },
@@ -10866,7 +11037,7 @@
       "source_file": "components/onboarding/Step3_Purpose.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 145,
+      "community": 4,
       "norm_label": "step3_purpose.tsx",
       "id": "components_onboarding_step3_purpose"
     },
@@ -10876,7 +11047,7 @@
       "source_file": "components/onboarding/Step3_Purpose.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 145,
+      "community": 4,
       "norm_label": "step3props",
       "id": "components_onboarding_step3_purpose_step3props"
     },
@@ -10886,7 +11057,7 @@
       "source_file": "components/onboarding/Step3_Purpose.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 145,
+      "community": 4,
       "norm_label": "purpose_options",
       "id": "components_onboarding_step3_purpose_purpose_options"
     },
@@ -10896,7 +11067,7 @@
       "source_file": "components/onboarding/Step3_Purpose.tsx",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 145,
+      "community": 4,
       "norm_label": "step3_purpose()",
       "id": "components_onboarding_step3_purpose_step3_purpose"
     },
@@ -10996,7 +11167,7 @@
       "source_file": "hooks/useNotifications.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 7,
       "norm_label": "usenotifications.ts",
       "id": "hooks_usenotifications"
     },
@@ -11016,7 +11187,7 @@
       "source_file": "lib/auth/auth-client.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "auth-client.ts",
       "id": "lib_auth_auth_client"
     },
@@ -11026,7 +11197,7 @@
       "source_file": "lib/auth/auth-client.ts",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 86,
+      "community": 63,
       "norm_label": "authclient",
       "id": "lib_auth_auth_client_authclient"
     },
@@ -11036,7 +11207,7 @@
       "source_file": "lib/axios.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 86,
+      "community": 7,
       "norm_label": "axios.ts",
       "id": "lib_axios"
     },
@@ -11046,7 +11217,7 @@
       "source_file": "lib/download.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 81,
+      "community": 7,
       "norm_label": "download.ts",
       "id": "lib_download"
     },
@@ -11266,7 +11437,7 @@
       "source_file": "package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 2,
+      "community": 7,
       "norm_label": "axios",
       "id": "package_dependencies_axios"
     },
@@ -11286,7 +11457,7 @@
       "source_file": "package.json",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 2,
+      "community": 11,
       "norm_label": "cloudinary",
       "id": "package_dependencies_cloudinary"
     },
@@ -11636,7 +11807,7 @@
       "source_file": "package.json",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 112,
+      "community": 8,
       "norm_label": "husky",
       "id": "package_devdependencies_husky"
     },
@@ -11846,7 +12017,7 @@
       "source_file": "services/auth.service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 88,
+      "community": 7,
       "norm_label": "auth.service.ts",
       "id": "services_auth_service"
     },
@@ -11866,7 +12037,7 @@
       "source_file": "store/auth.store.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 94,
+      "community": 63,
       "norm_label": "auth.store.ts",
       "id": "store_auth_store"
     },
@@ -11886,7 +12057,7 @@
       "source_file": "test/test-chat-notification-service.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 3,
       "norm_label": "test-chat-notification-service.ts",
       "id": "test_test_chat_notification_service"
     },
@@ -19202,6 +19373,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_controller_cancelorder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
       "source_location": "L22",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -19212,10 +19393,50 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/order/order.controller.ts",
-      "source_location": "L49",
+      "source_location": "L121",
       "weight": 1.0,
       "source": "backend_src_modules_order_order_controller_ts",
-      "target": "order_order_controller_getorder",
+      "target": "order_order_controller_failpayment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_controller_getorder"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_controller_markpaid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_controller_markpaymentpending",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_controller_transitionorderstatus",
       "confidence_score": 1.0
     },
     {
@@ -19236,6 +19457,17 @@
       "source_file": "backend/src/modules/order/order.controller.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_validation_cancelorderschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_src_modules_order_order_controller_ts",
       "target": "order_order_validation_createorderschema"
@@ -19248,7 +19480,29 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "backend_src_modules_order_order_controller_ts",
-      "target": "order_order_validation_orderidparamschema",
+      "target": "order_order_validation_failpaymentschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_validation_orderidparamschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_controller_ts",
+      "target": "order_order_validation_transitionorderstatusschema",
       "confidence_score": 1.0
     },
     {
@@ -19280,8 +19534,63 @@
       "source_file": "backend/src/modules/order/order.routes.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_order_order_routes_ts",
-      "target": "order_order_controller_getorder",
+      "target": "order_order_controller_getorder"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_routes_ts",
+      "target": "order_order_controller_transitionorderstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_routes_ts",
+      "target": "order_order_controller_cancelorder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_routes_ts",
+      "target": "order_order_controller_failpayment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_routes_ts",
+      "target": "order_order_controller_markpaymentpending",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_routes_ts",
+      "target": "order_order_controller_markpaid",
       "confidence_score": 1.0
     },
     {
@@ -19309,6 +19618,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_service_ts",
+      "target": "order_order_service_allowed_order_transitions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -19330,11 +19649,41 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/order/order.service.ts",
-      "source_location": "L115",
+      "source_location": "L346",
       "weight": 1.0,
       "source": "order_order_service_orderservice",
-      "target": "order_order_service_orderservice_getorderbyid",
+      "target": "order_order_service_orderservice_cancelorder",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L339",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_completeorder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L353",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_failpayment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_getorderbyid"
     },
     {
       "relation": "method",
@@ -19347,6 +19696,46 @@
       "target": "order_order_service_orderservice_initiateorder"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L325",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_markpaid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_markpaymentpending",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_startprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
@@ -19356,6 +19745,92 @@
       "confidence_score": 1.0,
       "source": "order_order_service_orderservice_initiateorder",
       "target": "order_order_validation_createorderinput"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L347",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice_cancelorder",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L340",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice_completeorder",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice_failpayment",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L326",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice_markpaid",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L319",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice_markpaymentpending",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.service.ts",
+      "source_location": "L333",
+      "weight": 1.0,
+      "source": "order_order_service_orderservice_startprogress",
+      "target": "order_order_service_orderservice_transitionstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_validation_ts",
+      "target": "order_order_validation_cancelorderinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_validation_ts",
+      "target": "order_order_validation_cancelorderschema",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19381,11 +19856,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/modules/order/order.validation.ts",
-      "source_location": "L40",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "backend_src_modules_order_order_validation_ts",
-      "target": "order_order_validation_orderidparam",
+      "target": "order_order_validation_failpaymentinput",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_validation_ts",
+      "target": "order_order_validation_failpaymentschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_src_modules_order_order_validation_ts",
+      "target": "order_order_validation_orderidparam"
     },
     {
       "relation": "contains",
@@ -19393,8 +19888,28 @@
       "source_file": "backend/src/modules/order/order.validation.ts",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_src_modules_order_order_validation_ts",
-      "target": "order_order_validation_orderidparamschema",
+      "target": "order_order_validation_orderidparamschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_validation_ts",
+      "target": "order_order_validation_transitionorderstatusinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/modules/order/order.validation.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "backend_src_modules_order_order_validation_ts",
+      "target": "order_order_validation_transitionorderstatusschema",
       "confidence_score": 1.0
     },
     {
@@ -34210,5 +34725,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "53ec33524d735c945f7e04e5efe4a894161daa63"
+  "built_at_commit": "8978609a603258d63317415c136f4d82f2c91ff6"
 }
