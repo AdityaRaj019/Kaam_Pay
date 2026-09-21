@@ -1,6 +1,7 @@
 import prisma from '../../config/prisma';
 import { AppError, ErrorCode } from '../../error/AppError';
 import type { CreateOrderInput } from './order.validation';
+import type { OrderStatus } from '../../../../lib/generated/prisma';
 
 /**
  * Platform fee percentage applied to every order.
@@ -9,6 +10,33 @@ import type { CreateOrderInput } from './order.validation';
  */
 const PLATFORM_FEE_PERCENT = 10;
 
+/**
+ * Valid order state transition matrix.
+ *
+ * Happy path:
+ * PENDING -> PAYMENT_PENDING -> PAID -> IN_PROGRESS -> COMPLETED
+ *
+ * Failure and cancellation paths:
+ * PENDING -> CANCELLED
+ * PENDING -> PAYMENT_FAILED
+ * PAYMENT_PENDING -> CANCELLED
+ * PAYMENT_PENDING -> PAYMENT_FAILED
+ * PAYMENT_FAILED -> PAYMENT_PENDING (retry payment)
+ * PAYMENT_FAILED -> CANCELLED
+ */
+export const ALLOWED_ORDER_TRANSITIONS: Record<OrderStatus, OrderStatus[]> = {
+  PENDING: ['PAYMENT_PENDING', 'CANCELLED', 'PAYMENT_FAILED'],
+  PAYMENT_PENDING: ['PAID', 'PAYMENT_FAILED', 'CANCELLED'],
+  PAID: ['IN_PROGRESS', 'CANCELLED'],
+  IN_PROGRESS: ['SUBMITTED', 'COMPLETED', 'CANCELLED', 'DISPUTED'],
+  SUBMITTED: ['REVISION', 'COMPLETED', 'DISPUTED'],
+  REVISION: ['SUBMITTED', 'COMPLETED', 'DISPUTED'],
+  COMPLETED: [],
+  CANCELLED: [],
+  PAYMENT_FAILED: ['PAYMENT_PENDING', 'CANCELLED'],
+  DISPUTED: ['COMPLETED', 'CANCELLED'],
+};
+
 export class OrderService {
   /**
    * Initiates a new order for the authenticated client.
@@ -16,9 +44,9 @@ export class OrderService {
    * Flow (server-authoritative):
    *   1. Fetch gig from DB (single source of truth for pricing)
    *   2. Validate the gig is purchasable (ACTIVE, not owned by client)
-   *   3. Calculate subtotal, platform fee, and total from DB price
-   *   4. Create an Order record in PENDING status
-   *   5. Return the order with its pricing breakdown
+   *   3. Calculate subtotal, platform fee, and total in paise
+   *   4. Create an Order record in PENDING status (NEVER 'PAID' at creation)
+   *   5. Return the order with its locked pricing snapshot
    */
   static async initiateOrder(clientId: string, input: CreateOrderInput) {
     // ── Step 1: Fetch gig ─────────────────────────────────────
@@ -57,8 +85,8 @@ export class OrderService {
     const total = subtotal + platformFee;
 
     // ── Step 4: Create Order in PENDING status with price snapshot ────
-    // Snapshots unitPrice, quantity, subtotal, platformFee, and total amount (in paise)
-    // so that future changes to the gig's price never alter this agreed order.
+    // Creating an order reserves the booking in PENDING status.
+    // Payment is a separate state transition: PENDING -> PAYMENT_PENDING -> PAID.
     const order = await prisma.order.create({
       data: {
         clientId,
@@ -156,5 +184,173 @@ export class OrderService {
         total: order.amount,
       },
     };
+  }
+
+  /**
+   * Validates and transitions an order across lifecycle states.
+   * Enforces valid state machine pathways and participant roles.
+   */
+  static async transitionStatus(
+    orderId: string,
+    userId: string,
+    targetStatus: OrderStatus,
+    reason?: string,
+  ) {
+    const order = await prisma.order.findUnique({
+      where: { id: orderId },
+      include: {
+        gig: {
+          select: {
+            id: true,
+            title: true,
+            category: true,
+            deliveryTime: true,
+            images: true,
+          },
+        },
+        freelancer: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+          },
+        },
+      },
+    });
+
+    if (!order) {
+      throw new AppError('Order not found.', 404, ErrorCode.NOT_FOUND);
+    }
+
+    const isClient = order.clientId === userId;
+    const isFreelancer = order.freelancerId === userId;
+    if (!isClient && !isFreelancer) {
+      throw new AppError('You are not authorized to update this order.', 403, ErrorCode.FORBIDDEN);
+    }
+
+    // Role-specific transition guards
+    if (
+      (targetStatus === 'CANCELLED' ||
+        targetStatus === 'PAYMENT_PENDING' ||
+        targetStatus === 'PAYMENT_FAILED') &&
+      !isClient
+    ) {
+      throw new AppError(
+        'Only the client can modify payment or cancel pending orders.',
+        403,
+        ErrorCode.FORBIDDEN,
+      );
+    }
+
+    if (targetStatus === 'IN_PROGRESS' && !isFreelancer) {
+      throw new AppError(
+        'Only the freelancer can start work on this order.',
+        403,
+        ErrorCode.FORBIDDEN,
+      );
+    }
+
+    if (targetStatus === 'COMPLETED' && !isClient) {
+      throw new AppError(
+        'Only the client can approve and complete this order.',
+        403,
+        ErrorCode.FORBIDDEN,
+      );
+    }
+
+    // State machine transition validation
+    const allowed = ALLOWED_ORDER_TRANSITIONS[order.status] ?? [];
+    if (!allowed.includes(targetStatus)) {
+      throw new AppError(
+        `Cannot transition order from '${order.status}' to '${targetStatus}'. Allowed next states: [${allowed.join(', ')}]`,
+        400,
+        ErrorCode.VALIDATION_ERROR,
+      );
+    }
+
+    const updatedOrder = await prisma.order.update({
+      where: { id: orderId },
+      data: { status: targetStatus },
+      include: {
+        gig: {
+          select: {
+            id: true,
+            title: true,
+            category: true,
+            deliveryTime: true,
+            images: true,
+          },
+        },
+        freelancer: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+          },
+        },
+      },
+    });
+
+    return {
+      order: updatedOrder,
+      pricing: {
+        currency: 'INR',
+        unit: 'paise',
+        unitPrice: updatedOrder.unitPrice ?? updatedOrder.amount,
+        quantity: updatedOrder.quantity,
+        subtotal: updatedOrder.subtotal ?? updatedOrder.amount,
+        platformFeePercent: PLATFORM_FEE_PERCENT,
+        platformFee: updatedOrder.platformFee ?? 0,
+        total: updatedOrder.amount,
+      },
+      transition: {
+        from: order.status,
+        to: targetStatus,
+        reason: reason ?? null,
+        timestamp: new Date(),
+      },
+    };
+  }
+
+  /**
+   * PENDING -> PAYMENT_PENDING
+   */
+  static async markPaymentPending(orderId: string, clientId: string) {
+    return this.transitionStatus(orderId, clientId, 'PAYMENT_PENDING');
+  }
+
+  /**
+   * PAYMENT_PENDING -> PAID
+   */
+  static async markPaid(orderId: string, userId: string) {
+    return this.transitionStatus(orderId, userId, 'PAID');
+  }
+
+  /**
+   * PAID -> IN_PROGRESS
+   */
+  static async startProgress(orderId: string, freelancerId: string) {
+    return this.transitionStatus(orderId, freelancerId, 'IN_PROGRESS');
+  }
+
+  /**
+   * IN_PROGRESS -> COMPLETED
+   */
+  static async completeOrder(orderId: string, clientId: string) {
+    return this.transitionStatus(orderId, clientId, 'COMPLETED');
+  }
+
+  /**
+   * PENDING / PAYMENT_PENDING -> CANCELLED
+   */
+  static async cancelOrder(orderId: string, clientId: string, reason?: string) {
+    return this.transitionStatus(orderId, clientId, 'CANCELLED', reason);
+  }
+
+  /**
+   * PENDING / PAYMENT_PENDING -> PAYMENT_FAILED
+   */
+  static async failPayment(orderId: string, clientId: string, reason?: string) {
+    return this.transitionStatus(orderId, clientId, 'PAYMENT_FAILED', reason);
   }
 }

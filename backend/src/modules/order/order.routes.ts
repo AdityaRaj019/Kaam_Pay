@@ -1,19 +1,22 @@
 import { Router } from 'express';
 import { requireAuth } from '../../common/middlewares/auth.middleware';
 import { authorize } from '../../common/middlewares/auth.middleware';
-import { createOrder, getOrder } from './order.controller';
+import {
+  createOrder,
+  getOrder,
+  transitionOrderStatus,
+  cancelOrder,
+  failPayment,
+  markPaymentPending,
+  markPaid,
+} from './order.controller';
 
 const router = Router();
 
 /**
  * @route  POST /api/orders
- * @desc   Initiate a new order for a gig
+ * @desc   Initiate a new order for a gig (Created in PENDING status)
  * @access Private — requires authenticated CLIENT user
- *
- * Middleware chain:
- *   1. requireAuth  — validates Better Auth session cookie, attaches req.user
- *   2. authorize('CLIENT') — rejects non-CLIENT roles with 403
- *   3. createOrder  — validates body, fetches pricing, creates order
  */
 router.post('/', requireAuth, authorize('CLIENT'), createOrder);
 
@@ -23,5 +26,40 @@ router.post('/', requireAuth, authorize('CLIENT'), createOrder);
  * @access Private — requires authenticated user (client or freelancer of the order)
  */
 router.get('/:id', requireAuth, getOrder);
+
+/**
+ * @route  PATCH /api/orders/:id/status
+ * @desc   Transition order through the formal state machine
+ * @access Private — requires authenticated order participant
+ */
+router.patch('/:id/status', requireAuth, transitionOrderStatus);
+
+/**
+ * @route  POST /api/orders/:id/payment-pending
+ * @desc   Transition PENDING -> PAYMENT_PENDING when buyer launches payment
+ * @access Private — requires authenticated client
+ */
+router.post('/:id/payment-pending', requireAuth, markPaymentPending);
+
+/**
+ * @route  POST /api/orders/:id/pay
+ * @desc   Confirm payment completion: PAYMENT_PENDING -> PAID
+ * @access Private — requires authenticated user or payment callback
+ */
+router.post('/:id/pay', requireAuth, markPaid);
+
+/**
+ * @route  POST /api/orders/:id/cancel
+ * @desc   Cancel a PENDING or PAYMENT_PENDING order
+ * @access Private — requires authenticated client
+ */
+router.post('/:id/cancel', requireAuth, cancelOrder);
+
+/**
+ * @route  POST /api/orders/:id/payment-failed
+ * @desc   Record payment failure: PENDING/PAYMENT_PENDING -> PAYMENT_FAILED
+ * @access Private — requires authenticated client
+ */
+router.post('/:id/payment-failed', requireAuth, failPayment);
 
 export default router;
