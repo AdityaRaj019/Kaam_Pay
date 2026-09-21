@@ -60,4 +60,3 @@ export const getOrder = catchAsync(async (req: Request, res: Response) => {
 
   sendSuccess(res, 200, 'Order retrieved successfully.', result);
 });
-
