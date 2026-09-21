@@ -49,7 +49,8 @@ export class OrderService {
     }
 
     // ── Step 3: Server-authoritative pricing ──────────────────
-    const subtotal = gig.price;
+    const unitPrice = gig.price;
+    const subtotal = Math.round(unitPrice * input.quantity * 100) / 100;
     const platformFee = Math.round(((subtotal * PLATFORM_FEE_PERCENT) / 100) * 100) / 100;
     const total = Math.round((subtotal + platformFee) * 100) / 100;
 
@@ -86,6 +87,8 @@ export class OrderService {
     return {
       order,
       pricing: {
+        unitPrice,
+        quantity: input.quantity,
         subtotal,
         platformFeePercent: PLATFORM_FEE_PERCENT,
         platformFee,

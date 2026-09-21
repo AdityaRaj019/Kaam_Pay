@@ -848,5 +848,865 @@
     "mtime": 1789751501.02783,
     "ast_hash": "501f975b22782fca48c201ef48f697fe",
     "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\eslint.config.mjs": {
+    "mtime": 1789812698.2651176,
+    "ast_hash": "d1a70ba493bff795ea4fb3f58bac336b",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\mcp.json": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "6e70807660d221bd779dac10fc55ca90",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\next-env.d.ts": {
+    "mtime": 1780511846.5931537,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\next.config.ts": {
+    "mtime": 1773510068.2262814,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\package.json": {
+    "mtime": 1789812698.2814279,
+    "ast_hash": "1d8fee254877ac2f33fb116c1dcfa29c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\postcss.config.mjs": {
+    "mtime": 1773510068.1439168,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\prisma.config.ts": {
+    "mtime": 1778694774.8728487,
+    "ast_hash": "9634b52da427306ffc74d41f21ffece5",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\tsconfig.json": {
+    "mtime": 1778694774.8778713,
+    "ast_hash": "b40f43b9a5257b9622a55869b11d085e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\post-checkout": {
+    "mtime": 1780078409.2447062,
+    "ast_hash": "d2724dc3abf82ccbdc932656a5b6bbc5",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\post-commit": {
+    "mtime": 1780078409.2457073,
+    "ast_hash": "df0b8cf7a3d2f787d342d4ce66c900f9",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\applypatch-msg": {
+    "mtime": 1789928620.339165,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\commit-msg": {
+    "mtime": 1789928620.339165,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\h": {
+    "mtime": 1778332856.961373,
+    "ast_hash": "15239a01c5554e56ff745570fb583a91",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\husky.sh": {
+    "mtime": 1789928620.3407283,
+    "ast_hash": "13871d2ab13e8423790ecb2c01c78c18",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-applypatch": {
+    "mtime": 1789928620.33969,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-checkout": {
+    "mtime": 1789928620.33969,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-commit": {
+    "mtime": 1789928620.339165,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-merge": {
+    "mtime": 1789928620.3402097,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\post-rewrite": {
+    "mtime": 1789928620.33969,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-applypatch": {
+    "mtime": 1789928620.339165,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-auto-gc": {
+    "mtime": 1789928620.3402097,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-commit": {
+    "mtime": 1789928620.33865,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-merge-commit": {
+    "mtime": 1789928620.33865,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-push": {
+    "mtime": 1789928620.3402097,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\pre-rebase": {
+    "mtime": 1789928620.33969,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\.husky\\_\\prepare-commit-msg": {
+    "mtime": 1789928620.33865,
+    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\layout.tsx": {
+    "mtime": 1779802805.569893,
+    "ast_hash": "89ad1dc8a89296970c95ce7b5741df48",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\page.tsx": {
+    "mtime": 1778349635.7621317,
+    "ast_hash": "6845fa994e15f7e9d8a132a869d38450",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\layout.tsx": {
+    "mtime": 1779969505.2931771,
+    "ast_hash": "af0e7b340d5fc3f391189a20b114a52d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\login\\page.tsx": {
+    "mtime": 1779969505.2931771,
+    "ast_hash": "0cbc271f9ba73094b4139f67651d2c8e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\register\\page.tsx": {
+    "mtime": 1780162563.2103736,
+    "ast_hash": "0ece6e8c029cd05007037caa7ff69476",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\signup\\page.tsx": {
+    "mtime": 1779969505.2942233,
+    "ast_hash": "c577ebe9a592889ff76fde6fb40d21a0",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\(auth)\\verify-email\\page.tsx": {
+    "mtime": 1779969505.2947416,
+    "ast_hash": "bf5b8e0d8905133a21a85e40f0ca1525",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\dashboard\\page.tsx": {
+    "mtime": 1789812698.252437,
+    "ast_hash": "91657827e7556a7557b0961edf947c64",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\dashboard\\create-gig\\page.tsx": {
+    "mtime": 1780078409.248026,
+    "ast_hash": "24cbbb22b8e0585af6f8d28960ac124c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\find-work\\page.tsx": {
+    "mtime": 1789812698.2534735,
+    "ast_hash": "c300100965e90ac2d21e536181131d40",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\messages\\page.tsx": {
+    "mtime": 1789812698.2534735,
+    "ast_hash": "35ae84ced37e82299b42687efee28f0a",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\onboarding\\page.tsx": {
+    "mtime": 1780038847.296193,
+    "ast_hash": "6edbc7d18f4906c8a26c8213d1262e43",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\app\\profile\\page.tsx": {
+    "mtime": 1780078409.2501342,
+    "ast_hash": "435ec172908530de12b646917037ec03",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\tsconfig.json": {
+    "mtime": 1778694774.8661208,
+    "ast_hash": "395c48218f1e5d6d8b2e414335b582f5",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\app.ts": {
+    "mtime": 1780162563.2103736,
+    "ast_hash": "b87b18ada2ea33375f32e78df62943f3",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\server.ts": {
+    "mtime": 1789812698.259602,
+    "ast_hash": "94f7d3e6494eedfe4fc416f375c9c43a",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\constant\\index.ts": {
+    "mtime": 1778694774.857379,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\auth.middleware.ts": {
+    "mtime": 1779969505.2965689,
+    "ast_hash": "6632ae2264201eb147a9d35e478c8d03",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\errorHandler.ts": {
+    "mtime": 1778694774.8584256,
+    "ast_hash": "55388e602ecb5b2003a1ac4f11a63556",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\index.ts": {
+    "mtime": 1778694774.8589523,
+    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\upload.middleware.ts": {
+    "mtime": 1789812698.2539961,
+    "ast_hash": "1f2d7be8c95809280cd1b558db199238",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\apiResponse.ts": {
+    "mtime": 1778694774.859468,
+    "ast_hash": "555fe8c82b2052ad477b0dae70de777c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\catchAsync.ts": {
+    "mtime": 1778694774.859468,
+    "ast_hash": "ea571ed550442d2fc9d0849ecbd6ac4e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\index.ts": {
+    "mtime": 1778694774.8600883,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\auth.ts": {
+    "mtime": 1779969505.2965689,
+    "ast_hash": "94fe61e0b540de6bd8db29abdf53b611",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\cloudinary.ts": {
+    "mtime": 1780078409.2511642,
+    "ast_hash": "cdd4a7732ac490871a8d575381b18093",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\kafka.ts": {
+    "mtime": 1789812698.2539961,
+    "ast_hash": "32baea2fab32e469cf7e9f2bb7fdc5a6",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\prisma.ts": {
+    "mtime": 1789812698.2550387,
+    "ast_hash": "3266e8f7129a4f7f140cfe149734e99e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\config\\redis.ts": {
+    "mtime": 1789812698.255558,
+    "ast_hash": "cb7b3e876974bc6d93df03c2ec3fca7d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\error\\AppError.ts": {
+    "mtime": 1778694774.8610976,
+    "ast_hash": "8c409694d27224f486ba878033bf6cdd",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\error\\errorHandler.ts": {
+    "mtime": 1789127248.811164,
+    "ast_hash": "fef89d0de47cc55dd77022ae20551882",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\error\\index.ts": {
+    "mtime": 1778694774.8610976,
+    "ast_hash": "0d9408f4b15006a8e8966107d0831f3c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\index.ts": {
+    "mtime": 1789812698.256594,
+    "ast_hash": "3875c0b271c6fc4224eeee17ec4d376b",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.controller.ts": {
+    "mtime": 1779969505.2970889,
+    "ast_hash": "5eccdaabe7fcef1fc573e382ebea911b",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.routes.ts": {
+    "mtime": 1779969505.2976592,
+    "ast_hash": "c4bb316409c0ea9acbd8da731f7e1bb1",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.service.ts": {
+    "mtime": 1780038847.2967067,
+    "ast_hash": "250b15d70554e56bf4e9d5f0657f96a9",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.types.ts": {
+    "mtime": 1780038847.297232,
+    "ast_hash": "2959f78b4019817afb3460fbdb0f2828",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.validation.ts": {
+    "mtime": 1779969505.2987015,
+    "ast_hash": "a0324c359cb108222e7614f6054a9123",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.controller.ts": {
+    "mtime": 1789812698.2560756,
+    "ast_hash": "cce03c802476dc932d9e79a5ce29676e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.routes.ts": {
+    "mtime": 1789812698.2560756,
+    "ast_hash": "c7e45c9a0e908acc2178afd0a3af3a4b",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.service.ts": {
+    "mtime": 1789812698.2560756,
+    "ast_hash": "a01e75831ef786a1460c35605e8dd4a7",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.types.ts": {
+    "mtime": 1789812698.256594,
+    "ast_hash": "eafbfca1981839c69ce30c36112d7c34",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.validation.ts": {
+    "mtime": 1789812698.256594,
+    "ast_hash": "c1539b627f83ec6a997bacbf383a99f8",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.controller.ts": {
+    "mtime": 1780255086.6475472,
+    "ast_hash": "ee982528d516025acecea877abfd8fc4",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.routes.ts": {
+    "mtime": 1780255086.6480713,
+    "ast_hash": "1484659a8fb05e767f313d6e33bcd747",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.service.ts": {
+    "mtime": 1780255086.6480713,
+    "ast_hash": "6d85bdf5dac86d79cc628211c8b298cc",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.validation.ts": {
+    "mtime": 1780255086.6485846,
+    "ast_hash": "e4dbfee190ccea8ac80a146e73f2da64",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.controller.ts": {
+    "mtime": 1780038847.297754,
+    "ast_hash": "57b511ab44c09d7c151752d24f450b87",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.routes.ts": {
+    "mtime": 1780038847.297754,
+    "ast_hash": "8a0ef66fcd7e6b73acb7fa92bc4b283c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.service.ts": {
+    "mtime": 1780038847.2982776,
+    "ast_hash": "d7c6ee605fde13de55be01c8466ddc5c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.validation.ts": {
+    "mtime": 1780038847.2982776,
+    "ast_hash": "69aef53433821421523f1bf3f6d179cb",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.controller.ts": {
+    "mtime": 1780078409.2516887,
+    "ast_hash": "ce22b94075d309ef065a7b447987e9b9",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.routes.ts": {
+    "mtime": 1780078409.2526946,
+    "ast_hash": "fc4e057e2bdabcee9967a46217683401",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.service.ts": {
+    "mtime": 1780078409.2536943,
+    "ast_hash": "c312f036a555e39afbb84df0c622ee8c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.validation.ts": {
+    "mtime": 1780078409.2536943,
+    "ast_hash": "cebe4dc09cd3edab654b81fc0dcb9e9e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.controller.ts": {
+    "mtime": 1789812698.2575989,
+    "ast_hash": "d0d84c526ac7e25a20fa2c8f4faf8530",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.routes.ts": {
+    "mtime": 1789812698.2575989,
+    "ast_hash": "54cf88310b3abed77e40b7162e791321",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.service.ts": {
+    "mtime": 1789812698.2575989,
+    "ast_hash": "b85f5e823822702a9bd538c1c79a73b9",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.types.ts": {
+    "mtime": 1789812698.2575989,
+    "ast_hash": "4e040c3ce14eab5dcf600d6257516ac2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.validation.ts": {
+    "mtime": 1789812698.2575989,
+    "ast_hash": "aebec50e243835e8d356497b8042a056",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.controller.ts": {
+    "mtime": 1789812698.2585993,
+    "ast_hash": "df8ae2d93b383d727bed5638eac17b81",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.routes.ts": {
+    "mtime": 1789812698.2585993,
+    "ast_hash": "6ba67b645197d26378e8905f80cafd0b",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.service.ts": {
+    "mtime": 1789988822.7131495,
+    "ast_hash": "ba00e21d3eb7896218647da1bb60073a",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.validation.ts": {
+    "mtime": 1789988822.729275,
+    "ast_hash": "d9e5968b703546d612f851855676a081",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.controller.ts": {
+    "mtime": 1779969505.2997425,
+    "ast_hash": "716cdf8f792b7d198b0c6d5cb055a66d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.routes.ts": {
+    "mtime": 1779969505.2997425,
+    "ast_hash": "98255019f46dc19067d821113e5d155c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.service.ts": {
+    "mtime": 1779969505.3002613,
+    "ast_hash": "00cbdb57e55dfb348dca3f4599b2ea91",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.validation.ts": {
+    "mtime": 1779969505.300779,
+    "ast_hash": "de4fd3b2b5e9e217896f21fd105f4549",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\services\\chat.consumer.ts": {
+    "mtime": 1789812698.2605999,
+    "ast_hash": "94ff7b366ac345b70303dceee4cf4d10",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\socket\\chat.socket.ts": {
+    "mtime": 1789812698.2605999,
+    "ast_hash": "c8a9d45f32007d6b1315456ac14f85cd",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\backend\\src\\types\\express.d.ts": {
+    "mtime": 1779874426.1696365,
+    "ast_hash": "eed6bc1b69ef88d0129019a799a5197c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\AppNavbar.tsx": {
+    "mtime": 1789812698.261599,
+    "ast_hash": "5e578c28ae09d9c3957e6a9c738fc199",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Button.tsx": {
+    "mtime": 1778349635.7668018,
+    "ast_hash": "ccc54c14b2b8a9e9a5d55594172e96a8",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Categories.tsx": {
+    "mtime": 1778349635.7673202,
+    "ast_hash": "77b9ea7be26aaef6b6665d38de3ab0c6",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Features.tsx": {
+    "mtime": 1778349635.7678318,
+    "ast_hash": "ec0009d8e7ced58119b62a5e0b488fc4",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Footer.tsx": {
+    "mtime": 1780048220.1507227,
+    "ast_hash": "b5da067a8902f852eade0d5e18234976",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Hero.tsx": {
+    "mtime": 1778349635.7693844,
+    "ast_hash": "ee5187333d934d79e7ff5a7b73516762",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Navbar.tsx": {
+    "mtime": 1779969505.300779,
+    "ast_hash": "5fb49536a44d6f386da3664a2290a9d5",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\RegisterForm.tsx": {
+    "mtime": 1780162563.2103736,
+    "ast_hash": "a542760abb5c1957ab60d74b7c333998",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\RoleGuard.tsx": {
+    "mtime": 1780038847.298797,
+    "ast_hash": "cf6e8203621910c58b5c02463301bc91",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Search.tsx": {
+    "mtime": 1778349635.7707,
+    "ast_hash": "c634c17652d9c1d13007fcfa587eb02c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\Testimonials.tsx": {
+    "mtime": 1778349635.7715628,
+    "ast_hash": "34969a3c01a0b517154f88d2687dbd5c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\chat\\AttachmentPreview.tsx": {
+    "mtime": 1789812698.261599,
+    "ast_hash": "25bade04c5b5f9674080edf2a745a909",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\chat\\ChatWindow.tsx": {
+    "mtime": 1789812698.261599,
+    "ast_hash": "e5e1784e6863adc1d7f0c3b50a5c6c90",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\chat\\MessageBubble.tsx": {
+    "mtime": 1789812698.262601,
+    "ast_hash": "1341fe67e8037caa4861dd9542b89ead",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\chat\\PresenceDot.tsx": {
+    "mtime": 1789812698.262601,
+    "ast_hash": "836dcbe79dd0ca7a37d994411a7f0033",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\chat\\TypingIndicator.tsx": {
+    "mtime": 1789812698.262601,
+    "ast_hash": "f02293f994a99e994449d4c5637e991d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\BookmarkBtn.tsx": {
+    "mtime": 1780484004.4948025,
+    "ast_hash": "8140791f167d96347beddac1859f77eb",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\FilterDrawer.tsx": {
+    "mtime": 1780484004.4953234,
+    "ast_hash": "f76a098c0cbbf21ad9c417b717a38163",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\FullModal.tsx": {
+    "mtime": 1789812698.2635992,
+    "ast_hash": "1662f5d0b18c15ed88b4296a0577a438",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\GigCard.tsx": {
+    "mtime": 1780484004.49585,
+    "ast_hash": "ac806a76c4c4702fd9a91782d71c7a19",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\GigDetailPanel.tsx": {
+    "mtime": 1789812698.2635992,
+    "ast_hash": "9285237980079bbae65a82f109f7c403",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\SavedEmpty.tsx": {
+    "mtime": 1780484004.49585,
+    "ast_hash": "7d6797d877c82c1f797cdc32b7d127a3",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\find-work\\utils.ts": {
+    "mtime": 1780484004.49585,
+    "ast_hash": "c5bb0fe5a595b546de092746a074127e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\notifications\\NotificationBell.tsx": {
+    "mtime": 1789812698.2641106,
+    "ast_hash": "f7cf89bf77e600fcab5db3fcdc238bdf",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\SplitScreenLayout.tsx": {
+    "mtime": 1779969505.3013022,
+    "ast_hash": "e153ac0e0118005f2dd1fbdd4cdbda74",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step1_Rules.tsx": {
+    "mtime": 1779969505.3013022,
+    "ast_hash": "b83105475d93ed58bf9e57af9fd03d8c",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step1_TitleBio.tsx": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "066d61a4927a4bca082fe17fdfd63bc1",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step2_Experience.tsx": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "0c3b44b306948b524d18264077db1db3",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step2_Skills.tsx": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "377774aa342008c4063e7439eb15495e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step3_Pricing.tsx": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "f38b2a5e6f4baedf5ed0fe9694a3c6b6",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step3_Purpose.tsx": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "84551196e94df40c85627812a3f330b6",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\components\\onboarding\\Step4_Review.tsx": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "84150bee351544f4e5a102132e459a79",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\features\\index.ts": {
+    "mtime": 1778694774.8676362,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\hooks\\index.ts": {
+    "mtime": 1778694774.8686435,
+    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\hooks\\useAuth.ts": {
+    "mtime": 1780162563.2174666,
+    "ast_hash": "61f48576d8ba4e0ee0a456513f534aba",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\hooks\\useChat.ts": {
+    "mtime": 1789812698.2775686,
+    "ast_hash": "edb8e81fc209117dcaaf22600ede8294",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\hooks\\useNotifications.ts": {
+    "mtime": 1789812698.2775686,
+    "ast_hash": "5ad2507d0b6a07449cab103b3c3e3fb9",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\app.json": {
+    "mtime": 1780484453.960834,
+    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\appearance.json": {
+    "mtime": 1780484453.9648361,
+    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\community-plugins.json": {
+    "mtime": 1780484453.9693482,
+    "ast_hash": "89c2f174bf448aabcf02e09a48001950",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\core-plugins.json": {
+    "mtime": 1780484453.9734192,
+    "ast_hash": "8616ba7c17a6b2fa7d4e6bd39c414de2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\graph.json": {
+    "mtime": 1780484453.9778895,
+    "ast_hash": "e4a9a171300bbf1a9dad41777c44121d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\workspace.json": {
+    "mtime": 1780484453.9850729,
+    "ast_hash": "e714c3de27db716b6a91b0afc620d987",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\.smart-env\\smart_env.json": {
+    "mtime": 1780484453.9913082,
+    "ast_hash": "d03cb5b95bb31c83086c61f972f9b408",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\lib\\axios.ts": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "ac02859969ccd7c5b9f99b195a36f107",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\lib\\download.ts": {
+    "mtime": 1789812698.278574,
+    "ast_hash": "198121921ccf8381b6da13a330114cff",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\lib\\index.ts": {
+    "mtime": 1778694774.8696496,
+    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\lib\\socket.ts": {
+    "mtime": 1789812698.278574,
+    "ast_hash": "f1dd61d7c2ecddfe1b38177ca9c2a157",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\lib\\auth\\auth-client.ts": {
+    "mtime": 1779969505.3023076,
+    "ast_hash": "4e638a7211df88fcbc2f9df963722c4d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\prisma\\seed.ts": {
+    "mtime": 1779969505.3080604,
+    "ast_hash": "76c8054f08a4a6f4826c5122ed068193",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\prisma\\migrations\\20260531183445_init\\migration.sql": {
+    "mtime": 1780484004.49585,
+    "ast_hash": "fb4bf37a89b35b0693267400f04339b4",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\prisma\\migrations\\20260918103727_add_message_attachments_and_order_statuses\\migration.sql": {
+    "mtime": 1789812698.2814279,
+    "ast_hash": "c4581aa846ff6a623fffe09d6f8a6666",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\providers\\index.ts": {
+    "mtime": 1778694774.8738573,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\public\\index.ts": {
+    "mtime": 1778694774.8738573,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\scripts\\index.ts": {
+    "mtime": 1778694774.874859,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\scripts\\seed-chat-order.ts": {
+    "mtime": 1789812698.282427,
+    "ast_hash": "1f501ce1d3b31e05ecc9c97dddb5f6b4",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\scripts\\seed-gigs.ts": {
+    "mtime": 1780484004.4988327,
+    "ast_hash": "97bf609c3e32ae071fc24154066a0830",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\services\\auth.service.ts": {
+    "mtime": 1779969505.3090663,
+    "ast_hash": "9453969641553066966b9693e35334e3",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\services\\index.ts": {
+    "mtime": 1778694774.8758554,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\store\\auth.store.ts": {
+    "mtime": 1779969505.3090663,
+    "ast_hash": "976f0797c8b559e384156601db1ef7a2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\test\\check-orders.ts": {
+    "mtime": 1789812698.282427,
+    "ast_hash": "02d20cfec171dc1ee1425570d0a7b9e8",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\test\\test-chat-notification-service.ts": {
+    "mtime": 1789812698.2834277,
+    "ast_hash": "dc704b5fbcd19a1c1157dbd67783ad41",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\test\\test-connections.ts": {
+    "mtime": 1789812698.2834277,
+    "ast_hash": "96162311178e82b3208d86121e4e9603",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\test\\test-kafka-topics.ts": {
+    "mtime": 1789812698.2834277,
+    "ast_hash": "cda0d2a4364928fd976797969de82e9d",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\test\\test-offline-notification.ts": {
+    "mtime": 1789812698.2834277,
+    "ast_hash": "32ea4611cd45c1a18336d25d6b256c73",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\types\\gig.ts": {
+    "mtime": 1780484004.4988327,
+    "ast_hash": "3eefa8e1f867f2ec6fb031cf1bad0512",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\types\\index.ts": {
+    "mtime": 1778694774.8783758,
+    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\utils\\authUtils.ts": {
+    "mtime": 1779969505.3090663,
+    "ast_hash": "25b8bd1b67a63aa6a3e4ffaff94fecbe",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\utils\\index.ts": {
+    "mtime": 1779969505.3100667,
+    "ast_hash": "46790ad4315ffb0c9b6590a2b0ba56ee",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\docker-compose.yml": {
+    "mtime": 1789812698.2641106,
+    "ast_hash": "34cce67af4b908772991f4f742bf0dba",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\project_structure.md": {
+    "mtime": 1780484004.4988327,
+    "ast_hash": "26d525fa686849eb619285e234692bf7",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\README.md": {
+    "mtime": 1780485057.7321553,
+    "ast_hash": "acfdaec51edd1e46d9e8752fe8a817fe",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\Action_Register.md": {
+    "mtime": 1789812698.278574,
+    "ast_hash": "9ec509cdcfefa94a5b05657dc7e6c284",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\Context_State.md": {
+    "mtime": 1780484454.0225506,
+    "ast_hash": "4f245845feef588aed8eed46b907ebcc",
+    "semantic_hash": ""
+  },
+  "D:\\Repo\\kaampay\\kaampay\\Untitled.md": {
+    "mtime": 1780048220.1901667,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
   }
 }
