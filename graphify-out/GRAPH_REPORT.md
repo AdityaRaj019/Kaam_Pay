@@ -1,7 +1,7 @@
 # Graph Report - kaampay  (2026-09-21)
 
 ## Corpus Check
-- 171 files · ~48,915 words
+- 171 files · ~48,981 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -295,84 +295,84 @@ Cohesion: 0.15
 Nodes (12): ensureKafkaTopics(), kafka, kafkaConsumer, GetNotificationsQuery, NOTIFICATION_TYPES, NotificationPayload, NotificationType, OfflineNotificationInput (+4 more)
 
 ### Community 77 - "Community 77"
-Cohesion: 0.16
-Nodes (9): SessionUser, FullUser, Gig, UserProfile, api, AuthService, LoginPayload, RegisterPayload (+1 more)
-
-### Community 78 - "Community 78"
 Cohesion: 0.18
 Nodes (11): router, Auth, authorize(), requireAuth(), router, createOrder, router, allowedOrigins (+3 more)
 
-### Community 79 - "Community 79"
+### Community 78 - "Community 78"
 Cohesion: 0.16
 Nodes (8): createGig, getAllGigs, getMyGigs, rateLimitStore, router, GigService, CreateGigInput, createGigSchema
 
-### Community 80 - "Community 80"
+### Community 79 - "Community 79"
 Cohesion: 0.20
 Nodes (8): AppNavbar(), Footer(), SessionUser, SessionUser, token, FullUser, Gig, UserProfile
 
-### Community 81 - "Community 81"
+### Community 80 - "Community 80"
 Cohesion: 0.19
 Nodes (10): downloadChatAttachment, getChatHistory, getConversations, initChat, uploadChatFiles, router, ALLOWED_MIMES, CloudinaryResult (+2 more)
 
+### Community 81 - "Community 81"
+Cohesion: 0.21
+Nodes (11): AttachmentPreview(), AttachmentPreviewProps, MessageBubble(), MessageBubbleProps, AttachmentPreview(), AttachmentPreviewProps, MessageBubble(), MessageBubbleProps (+3 more)
+
 ### Community 82 - "Community 82"
-Cohesion: 0.22
-Nodes (10): AttachmentPreview(), AttachmentPreviewProps, MessageBubbleProps, AttachmentPreview(), AttachmentPreviewProps, MessageBubble(), MessageBubbleProps, Attachment (+2 more)
-
-### Community 83 - "Community 83"
-Cohesion: 0.18
-Nodes (9): ChatWindow(), ChatWindowProps, OtherUser, MessageBubble(), PresenceDot(), PresenceDotProps, TypingIndicator(), Conversation (+1 more)
-
-### Community 84 - "Community 84"
 Cohesion: 0.21
 Nodes (10): getMe, getNotifications, markAllRead, markOneRead, router, ErrorBody, sendSuccess(), SuccessResponse (+2 more)
 
-### Community 85 - "Community 85"
+### Community 83 - "Community 83"
 Cohesion: 0.23
 Nodes (7): ChatService, AttachmentPayload, ChatMessagePayload, ChatUserSummary, ConversationCard, DownloadAttachmentQuery, InitChatInput
 
-### Community 86 - "Community 86"
+### Community 84 - "Community 84"
 Cohesion: 0.23
 Nodes (8): AppNavbarProps, formatRelativeTime(), getNotificationIcon(), NotificationBell(), AppNotification, getNotificationIcon(), useNotifications(), NotificationBell()
+
+### Community 85 - "Community 85"
+Cohesion: 0.20
+Nodes (8): ChatWindow(), ChatWindowProps, OtherUser, PresenceDot(), PresenceDotProps, TypingIndicator(), Conversation, OtherUser
+
+### Community 86 - "Community 86"
+Cohesion: 0.19
+Nodes (7): FullUser, Gig, UserProfile, authClient, RoleGuard(), RoleGuardProps, authClient
 
 ### Community 87 - "Community 87"
 Cohesion: 0.23
 Nodes (7): AppError, updateFreelancerProfile, rateLimitStore, router, FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema
 
 ### Community 88 - "Community 88"
+Cohesion: 0.23
+Nodes (6): SessionUser, api, AuthService, LoginPayload, RegisterPayload, User
+
+### Community 89 - "Community 89"
 Cohesion: 0.24
 Nodes (10): getCategoriesController, getFreelancerDetailsController, getGigDetailsController, searchFreelancersController, searchGigsController, router, FreelancerSearchInput, freelancerSearchSchema (+2 more)
 
-### Community 89 - "Community 89"
+### Community 90 - "Community 90"
 Cohesion: 0.17
 Nodes (4): ClientService, FreelancerSearchFilters, GigSearchFilters, globalForPrisma
 
-### Community 90 - "Community 90"
+### Community 91 - "Community 91"
 Cohesion: 0.22
 Nodes (8): kafkaProducer, pubClient, subClient, emitNotification, JoinRoomPayload, SendMessagePayload, SocketData, TypingPayload
 
-### Community 91 - "Community 91"
+### Community 92 - "Community 92"
 Cohesion: 0.33
 Nodes (6): AuthService, toPublicUser(), AuthenticatedUser, PublicUser, UserRole, Request
 
-### Community 92 - "Community 92"
+### Community 93 - "Community 93"
 Cohesion: 0.38
 Nodes (6): ErrorCode, STATUS_TO_CODE, errorHandler(), ErrorResponse, handleJwtExpiredError(), handleJwtInvalidError()
 
-### Community 93 - "Community 93"
+### Community 94 - "Community 94"
 Cohesion: 0.33
 Nodes (6): DashboardPage(), SessionUser, DashboardPage(), AuthState, useAuthStore, User
 
-### Community 94 - "Community 94"
+### Community 95 - "Community 95"
 Cohesion: 0.22
 Nodes (8): embedding_models, default_model_key, is_obsidian_vault, language, new_user, re_import_wait_time, smart_notices, version
 
-### Community 95 - "Community 95"
+### Community 96 - "Community 96"
 Cohesion: 0.22
 Nodes (9): adapter, transformers, smart_sources, embed_model, excluded_headings, file_exclusions, folder_exclusions, min_chars (+1 more)
-
-### Community 96 - "Community 96"
-Cohesion: 0.36
-Nodes (4): authClient, RoleGuard(), RoleGuardProps, authClient
 
 ### Community 97 - "Community 97"
 Cohesion: 0.43
@@ -452,7 +452,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `Community 101`?**
   _High betweenness centrality (0.189) - this node is a cross-community bridge._
-- **Why does `axios` connect `dependencies` to `Community 77`?**
+- **Why does `axios` connect `dependencies` to `Community 88`?**
   _High betweenness centrality (0.167) - this node is a cross-community bridge._
 - **Why does `cloudinary` connect `dependencies` to `AppError`?**
   _High betweenness centrality (0.145) - this node is a cross-community bridge._
