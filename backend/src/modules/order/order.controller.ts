@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { createOrderSchema } from './order.validation';
+import { createOrderSchema, orderIdParamSchema } from './order.validation';
 import { OrderService } from './order.service';
 import { sendSuccess } from '../../common/utils/apiResponse';
 import { AppError, ErrorCode } from '../../error/AppError';
@@ -40,3 +40,24 @@ export const createOrder = catchAsync(async (req: Request, res: Response) => {
 
   sendSuccess(res, 201, 'Order created successfully.', result);
 });
+
+/**
+ * GET /api/orders/:id
+ *
+ * Retrieves an order and its snapshotted pricing breakdown.
+ */
+export const getOrder = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const validation = orderIdParamSchema.safeParse(req.params);
+  if (!validation.success) {
+    throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.getOrderById(validation.data.id, req.user.id);
+
+  sendSuccess(res, 200, 'Order retrieved successfully.', result);
+});
+

@@ -32,3 +32,9 @@ export const createOrderSchema = z
   }));
 
 export type CreateOrderInput = z.infer<typeof createOrderSchema>;
+
+export const orderIdParamSchema = z.object({
+  id: z.string().min(1, 'Order ID is required'),
+});
+
+export type OrderIdParam = z.infer<typeof orderIdParamSchema>;

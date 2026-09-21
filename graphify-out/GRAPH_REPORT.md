@@ -1,16 +1,16 @@
 # Graph Report - kaampay  (2026-09-21)
 
 ## Corpus Check
-- 171 files · ~48,981 words
+- 171 files · ~49,303 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1297 nodes · 2073 edges · 141 communities (111 shown, 30 thin omitted)
+- 1301 nodes · 2079 edges · 146 communities (116 shown, 30 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.65)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7a60b569`
+- Built from commit: `53ec3352`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -119,6 +119,11 @@
 - [[_COMMUNITY_Community 121|Community 121]]
 - [[_COMMUNITY_Community 122|Community 122]]
 - [[_COMMUNITY_Community 140|Community 140]]
+- [[_COMMUNITY_Community 141|Community 141]]
+- [[_COMMUNITY_Community 142|Community 142]]
+- [[_COMMUNITY_Community 143|Community 143]]
+- [[_COMMUNITY_Community 144|Community 144]]
+- [[_COMMUNITY_Community 145|Community 145]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `AppError` - 25 edges
@@ -133,6 +138,8 @@
 10. `useAuth()` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `MessageBubbleProps` --references--> `ChatMessage`  [EXTRACTED]
+  components/chat/MessageBubble.tsx → hooks/useChat.ts
 - `LoginPage()` --calls--> `useAuth()`  [EXTRACTED]
   app/(auth)/login/page.tsx → hooks/useAuth.ts
 - `RegisterForm()` --calls--> `useAuth()`  [EXTRACTED]
@@ -141,18 +148,16 @@
   app/dashboard/page.tsx → store/auth.store.ts
 - `AttachmentPreviewProps` --references--> `Attachment`  [EXTRACTED]
   components/chat/AttachmentPreview.tsx → hooks/useChat.ts
-- `ChatWindow()` --calls--> `useChat()`  [EXTRACTED]
-  components/chat/ChatWindow.tsx → hooks/useChat.ts
 
-## Communities (141 total, 30 thin omitted)
+## Communities (146 total, 30 thin omitted)
 
 ### Community 0 - "page.tsx"
 Cohesion: 0.09
 Nodes (44): FindWorkPage(), BookmarkBtn(), BookmarkBtnProps, DEFAULT_FILTERS, FilterDrawer(), FilterDrawerProps, Filters, FullModal() (+36 more)
 
 ### Community 1 - "AppError"
-Cohesion: 0.13
-Nodes (14): AppError, ErrorCode, STATUS_TO_CODE, errorHandler(), ErrorResponse, handleJwtExpiredError(), handleJwtInvalidError(), createGig (+6 more)
+Cohesion: 0.18
+Nodes (7): createGig, getAllGigs, getMyGigs, rateLimitStore, GigService, CreateGigInput, createGigSchema
 
 ### Community 2 - "dependencies"
 Cohesion: 0.07
@@ -160,11 +165,11 @@ Nodes (29): dependencies, axios, better-auth, cloudinary, cors, dotenv, express,
 
 ### Community 3 - "prisma.ts"
 Cohesion: 0.05
-Nodes (36): ensureKafkaTopics(), kafka, kafkaConsumer, kafkaProducer, pubClient, subClient, ChatService, AttachmentPayload (+28 more)
+Nodes (35): ensureKafkaTopics(), kafka, kafkaConsumer, kafkaProducer, pubClient, subClient, ChatService, AttachmentPayload (+27 more)
 
 ### Community 4 - "page.tsx"
-Cohesion: 0.07
-Nodes (19): OnboardingData, SplitScreenLayout(), SplitScreenLayoutProps, STEP_INFOS, RULES, Step1_Rules(), Step1Props, Step1Props (+11 more)
+Cohesion: 0.08
+Nodes (16): OnboardingData, SplitScreenLayout(), SplitScreenLayoutProps, STEP_INFOS, RULES, Step1_Rules(), Step1Props, Step1Props (+8 more)
 
 ### Community 5 - "page.tsx"
 Cohesion: 0.17
@@ -175,8 +180,8 @@ Cohesion: 0.13
 Nodes (18): allowedOrigins, app, authorize(), requireAuth(), Auth, router, router, router (+10 more)
 
 ### Community 7 - "useAuth.ts"
-Cohesion: 0.19
-Nodes (13): Conversation, MessagesContent(), OtherUser, ChatWindow(), ChatWindowProps, OtherUser, PresenceDot(), PresenceDotProps (+5 more)
+Cohesion: 0.16
+Nodes (16): Conversation, MessagesContent(), OtherUser, ChatWindow(), ChatWindowProps, OtherUser, MessageBubble(), MessageBubbleProps (+8 more)
 
 ### Community 8 - "devDependencies"
 Cohesion: 0.10
@@ -191,8 +196,8 @@ Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 11 - "chat.controller.ts"
-Cohesion: 0.24
-Nodes (12): ALLOWED_MIMES, CloudinaryResult, fileFilter(), getFileType(), getResourceType(), uploadMiddleware, uploadToCloudinary(), downloadChatAttachment (+4 more)
+Cohesion: 0.15
+Nodes (18): ALLOWED_MIMES, CloudinaryResult, fileFilter(), getFileType(), getResourceType(), uploadMiddleware, uploadToCloudinary(), downloadChatAttachment (+10 more)
 
 ### Community 12 - "compilerOptions"
 Cohesion: 0.12
@@ -235,8 +240,8 @@ Cohesion: 0.21
 Nodes (9): ErrorBody, sendSuccess(), SuccessResponse, AsyncHandler, catchAsync(), getMe, OrderService, CreateOrderInput (+1 more)
 
 ### Community 62 - "AppError"
-Cohesion: 0.17
-Nodes (6): globalForPrisma, FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema, seedChatOrder(), main()
+Cohesion: 0.22
+Nodes (3): globalForPrisma, seedChatOrder(), main()
 
 ### Community 63 - "useAuth"
 Cohesion: 0.16
@@ -247,8 +252,8 @@ Cohesion: 0.05
 Nodes (36): `app/` — Pages & Routes, ⚙️ BACKEND — Express API (`backend/`), code:block1 (Kaam_Pay/), code:block10 (Browser Request), code:ts (// Example usage), code:block12 (Frontend (Next.js :3000)), code:bash (# Terminal 1 — Frontend), code:block2 (app/) (+28 more)
 
 ### Community 65 - "notification.controller.ts"
-Cohesion: 0.19
-Nodes (12): DownloadAttachmentQueryInput, downloadAttachmentQuerySchema, initChatSchema, InitChatSchemaInput, OrderIdParamInput, orderIdParamSchema, getNotifications, markAllRead (+4 more)
+Cohesion: 0.27
+Nodes (7): getNotifications, markAllRead, markOneRead, GetNotificationsQueryInput, getNotificationsQuerySchema, MarkOneReadParamsInput, markOneReadParamsSchema
 
 ### Community 66 - "user.controller.ts"
 Cohesion: 0.52
@@ -275,8 +280,8 @@ Cohesion: 0.08
 Nodes (24): 🔍 1. Client Discovery & Marketplace (`/find-work`), 1. Configure Environment Variables, 🎨 2. Freelancer Workspace & Gig Creation (`/dashboard/create-gig`), 2. Install Dependencies, 3. Initialize Database Migrations & Seeds, 👤 3. Profile Customization & Onboarding (`/profile` & `/onboarding`), 4. Run Development Servers, 🔑 4. Session & Authentication Core (+16 more)
 
 ### Community 72 - "Community 72"
-Cohesion: 0.14
-Nodes (12): DownloadAttachmentQueryInput, downloadAttachmentQuerySchema, initChatSchema, InitChatSchemaInput, OrderIdParamInput, orderIdParamSchema, NotificationService, CreateNotificationInput (+4 more)
+Cohesion: 0.24
+Nodes (9): DownloadAttachmentQueryInput, downloadAttachmentQuerySchema, initChatSchema, InitChatSchemaInput, OrderIdParamInput, orderIdParamSchema, getNotificationsQuerySchema, MarkOneReadParamsInput (+1 more)
 
 ### Community 73 - "Community 73"
 Cohesion: 0.10
@@ -291,28 +296,28 @@ Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.15
-Nodes (12): ensureKafkaTopics(), kafka, kafkaConsumer, GetNotificationsQuery, NOTIFICATION_TYPES, NotificationPayload, NotificationType, OfflineNotificationInput (+4 more)
+Cohesion: 0.25
+Nodes (6): ensureKafkaTopics(), kafka, kafkaConsumer, startChatConsumer(), initSocketServer(), bootstrap()
 
 ### Community 77 - "Community 77"
-Cohesion: 0.18
-Nodes (11): router, Auth, authorize(), requireAuth(), router, createOrder, router, allowedOrigins (+3 more)
+Cohesion: 0.16
+Nodes (13): router, Auth, authorize(), requireAuth(), router, createOrder, getOrder, router (+5 more)
 
 ### Community 78 - "Community 78"
 Cohesion: 0.16
 Nodes (8): createGig, getAllGigs, getMyGigs, rateLimitStore, router, GigService, CreateGigInput, createGigSchema
 
 ### Community 79 - "Community 79"
-Cohesion: 0.20
-Nodes (8): AppNavbar(), Footer(), SessionUser, SessionUser, token, FullUser, Gig, UserProfile
+Cohesion: 0.16
+Nodes (6): authClient, RoleGuardProps, SessionUser, FullUser, Gig, UserProfile
 
 ### Community 80 - "Community 80"
 Cohesion: 0.19
 Nodes (10): downloadChatAttachment, getChatHistory, getConversations, initChat, uploadChatFiles, router, ALLOWED_MIMES, CloudinaryResult (+2 more)
 
 ### Community 81 - "Community 81"
-Cohesion: 0.21
-Nodes (11): AttachmentPreview(), AttachmentPreviewProps, MessageBubble(), MessageBubbleProps, AttachmentPreview(), AttachmentPreviewProps, MessageBubble(), MessageBubbleProps (+3 more)
+Cohesion: 0.29
+Nodes (6): AttachmentPreviewProps, AttachmentPreview(), AttachmentPreviewProps, Attachment, token, downloadFile()
 
 ### Community 82 - "Community 82"
 Cohesion: 0.21
@@ -327,20 +332,20 @@ Cohesion: 0.23
 Nodes (8): AppNavbarProps, formatRelativeTime(), getNotificationIcon(), NotificationBell(), AppNotification, getNotificationIcon(), useNotifications(), NotificationBell()
 
 ### Community 85 - "Community 85"
-Cohesion: 0.20
-Nodes (8): ChatWindow(), ChatWindowProps, OtherUser, PresenceDot(), PresenceDotProps, TypingIndicator(), Conversation, OtherUser
+Cohesion: 0.15
+Nodes (11): AttachmentPreview(), ChatWindow(), ChatWindowProps, OtherUser, MessageBubble(), MessageBubbleProps, PresenceDot(), PresenceDotProps (+3 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.19
-Nodes (7): FullUser, Gig, UserProfile, authClient, RoleGuard(), RoleGuardProps, authClient
+Nodes (10): SessionUser, SessionUser, FullUser, Gig, UserProfile, AppNavbar(), Footer(), RoleGuard() (+2 more)
 
 ### Community 87 - "Community 87"
 Cohesion: 0.23
 Nodes (7): AppError, updateFreelancerProfile, rateLimitStore, router, FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema
 
 ### Community 88 - "Community 88"
-Cohesion: 0.23
-Nodes (6): SessionUser, api, AuthService, LoginPayload, RegisterPayload, User
+Cohesion: 0.53
+Nodes (4): AuthService, LoginPayload, RegisterPayload, User
 
 ### Community 89 - "Community 89"
 Cohesion: 0.24
@@ -351,8 +356,8 @@ Cohesion: 0.17
 Nodes (4): ClientService, FreelancerSearchFilters, GigSearchFilters, globalForPrisma
 
 ### Community 91 - "Community 91"
-Cohesion: 0.22
-Nodes (8): kafkaProducer, pubClient, subClient, emitNotification, JoinRoomPayload, SendMessagePayload, SocketData, TypingPayload
+Cohesion: 0.24
+Nodes (7): pubClient, subClient, emitNotification, JoinRoomPayload, SendMessagePayload, SocketData, TypingPayload
 
 ### Community 92 - "Community 92"
 Cohesion: 0.33
@@ -364,7 +369,7 @@ Nodes (6): ErrorCode, STATUS_TO_CODE, errorHandler(), ErrorResponse, handleJwtEx
 
 ### Community 94 - "Community 94"
 Cohesion: 0.33
-Nodes (6): DashboardPage(), SessionUser, DashboardPage(), AuthState, useAuthStore, User
+Nodes (6): DashboardPage(), DashboardPage(), SessionUser, AuthState, useAuthStore, User
 
 ### Community 95 - "Community 95"
 Cohesion: 0.22
@@ -375,12 +380,12 @@ Cohesion: 0.22
 Nodes (9): adapter, transformers, smart_sources, embed_model, excluded_headings, file_exclusions, folder_exclusions, min_chars (+1 more)
 
 ### Community 97 - "Community 97"
-Cohesion: 0.43
-Nodes (4): completeFreelancerOnboarding, UserService, FreelancerOnboardingInput, freelancerOnboardingSchema
+Cohesion: 0.52
+Nodes (3): UserService, FreelancerOnboardingInput, freelancerOnboardingSchema
 
 ### Community 98 - "Community 98"
-Cohesion: 0.52
-Nodes (3): OrderService, CreateOrderInput, createOrderSchema
+Cohesion: 0.33
+Nodes (5): OrderService, CreateOrderInput, createOrderSchema, OrderIdParam, orderIdParamSchema
 
 ### Community 99 - "Community 99"
 Cohesion: 0.29
@@ -442,8 +447,28 @@ Nodes (3): models, chat_completion_platform, embedding_platform
 Cohesion: 0.67
 Nodes (3): smart_blocks, embed_blocks, min_chars
 
+### Community 141 - "Community 141"
+Cohesion: 0.30
+Nodes (7): AppError, ErrorCode, STATUS_TO_CODE, errorHandler(), ErrorResponse, handleJwtExpiredError(), handleJwtInvalidError()
+
+### Community 142 - "Community 142"
+Cohesion: 0.21
+Nodes (5): kafkaProducer, NotificationService, CreateNotificationInput, OfflineNotificationPayload, GetNotificationsQueryInput
+
+### Community 143 - "Community 143"
+Cohesion: 0.52
+Nodes (3): FreelancerService, FreelancerProfileUpdateInput, freelancerProfileUpdateSchema
+
+### Community 144 - "Community 144"
+Cohesion: 0.33
+Nodes (5): GetNotificationsQuery, NOTIFICATION_TYPES, NotificationPayload, NotificationType, OfflineNotificationInput
+
+### Community 145 - "Community 145"
+Cohesion: 0.67
+Nodes (3): PURPOSE_OPTIONS, Step3_Purpose(), Step3Props
+
 ## Knowledge Gaps
-- **484 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+479 more)
+- **485 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+480 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -451,16 +476,16 @@ Nodes (3): smart_blocks, embed_blocks, min_chars
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `Community 101`?**
-  _High betweenness centrality (0.189) - this node is a cross-community bridge._
-- **Why does `axios` connect `dependencies` to `Community 88`?**
+  _High betweenness centrality (0.188) - this node is a cross-community bridge._
+- **Why does `axios` connect `dependencies` to `Community 86`?**
   _High betweenness centrality (0.167) - this node is a cross-community bridge._
 - **Why does `cloudinary` connect `dependencies` to `AppError`?**
-  _High betweenness centrality (0.145) - this node is a cross-community bridge._
+  _High betweenness centrality (0.146) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _486 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _487 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `page.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.08509615384615385 - nodes in this community are weakly interconnected._
-- **Should `AppError` be split into smaller, more focused modules?**
-  _Cohesion score 0.1310344827586207 - nodes in this community are weakly interconnected._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
+- **Should `prisma.ts` be split into smaller, more focused modules?**
+  _Cohesion score 0.053185271770894216 - nodes in this community are weakly interconnected._

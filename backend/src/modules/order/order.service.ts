@@ -56,12 +56,18 @@ export class OrderService {
     const platformFee = Math.round((subtotal * PLATFORM_FEE_PERCENT) / 100);
     const total = subtotal + platformFee;
 
-    // ── Step 4: Create Order in PENDING status ────────────────
+    // ── Step 4: Create Order in PENDING status with price snapshot ────
+    // Snapshots unitPrice, quantity, subtotal, platformFee, and total amount (in paise)
+    // so that future changes to the gig's price never alter this agreed order.
     const order = await prisma.order.create({
       data: {
         clientId,
         freelancerId: gig.freelancerId,
         gigId: gig.id,
+        unitPrice,
+        quantity: input.quantity,
+        subtotal,
+        platformFee,
         amount: total,
         status: 'PENDING',
       },
@@ -97,6 +103,57 @@ export class OrderService {
         platformFeePercent: PLATFORM_FEE_PERCENT,
         platformFee,
         total,
+      },
+    };
+  }
+
+  /**
+   * Retrieves an order by ID for the cart/checkout review.
+   * Returns the locked pricing snapshot agreed at booking time,
+   * regardless of whether the gig price was subsequently changed.
+   */
+  static async getOrderById(orderId: string, userId: string) {
+    const order = await prisma.order.findUnique({
+      where: { id: orderId },
+      include: {
+        gig: {
+          select: {
+            id: true,
+            title: true,
+            category: true,
+            deliveryTime: true,
+            images: true,
+          },
+        },
+        freelancer: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+          },
+        },
+      },
+    });
+
+    if (!order) {
+      throw new AppError('Order not found.', 404, ErrorCode.NOT_FOUND);
+    }
+
+    if (order.clientId !== userId && order.freelancerId !== userId) {
+      throw new AppError('You are not authorized to view this order.', 403, ErrorCode.FORBIDDEN);
+    }
+
+    return {
+      order,
+      pricing: {
+        currency: 'INR',
+        unit: 'paise',
+        unitPrice: order.unitPrice ?? order.amount,
+        quantity: order.quantity,
+        subtotal: order.subtotal ?? order.amount,
+        platformFeePercent: PLATFORM_FEE_PERCENT,
+        platformFee: order.platformFee ?? 0,
+        total: order.amount,
       },
     };
   }
