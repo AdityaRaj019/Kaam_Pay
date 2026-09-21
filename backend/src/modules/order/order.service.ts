@@ -49,90 +49,92 @@ export class OrderService {
    *   5. Return the order with its locked pricing snapshot
    */
   static async initiateOrder(clientId: string, input: CreateOrderInput) {
-    // ── Step 1: Fetch gig ─────────────────────────────────────
-    const gig = await prisma.gig.findUnique({
-      where: { id: input.gigId },
-      include: {
-        freelancer: {
-          select: { id: true, name: true },
-        },
-      },
-    });
-
-    if (!gig) {
-      throw new AppError('Gig not found. It may have been removed.', 404, ErrorCode.NOT_FOUND);
-    }
-
-    // ── Step 2: Validate purchasability ───────────────────────
-    if (gig.status !== 'ACTIVE') {
-      throw new AppError(
-        'This gig is not currently available for purchase.',
-        422,
-        ErrorCode.VALIDATION_ERROR,
-      );
-    }
-
-    if (gig.freelancerId === clientId) {
-      throw new AppError('You cannot order your own gig.', 422, ErrorCode.VALIDATION_ERROR);
-    }
-
-    // ── Step 3: Server-authoritative pricing (Smallest Currency Unit: Paise) ──
-    // All monetary amounts are handled and stored in paise (1 INR = 100 paise)
-    // to eliminate floating-point precision issues and match payment gateway requirements.
-    const unitPrice = Math.round(gig.price * 100);
-    const subtotal = unitPrice * input.quantity;
-    const platformFee = Math.round((subtotal * PLATFORM_FEE_PERCENT) / 100);
-    const total = subtotal + platformFee;
-
-    // ── Step 4: Create Order in PENDING status with price snapshot ────
-    // Creating an order reserves the booking in PENDING status.
-    // Payment is a separate state transition: PENDING -> PAYMENT_PENDING -> PAID.
-    const order = await prisma.order.create({
-      data: {
-        clientId,
-        freelancerId: gig.freelancerId,
-        gigId: gig.id,
-        unitPrice,
-        quantity: input.quantity,
-        subtotal,
-        platformFee,
-        amount: total,
-        status: 'PENDING',
-      },
-      include: {
-        gig: {
-          select: {
-            id: true,
-            title: true,
-            category: true,
-            deliveryTime: true,
-            images: true,
+    return prisma.$transaction(async (tx) => {
+      // ── Step 1: Fetch gig within transaction ─────────────────
+      const gig = await tx.gig.findUnique({
+        where: { id: input.gigId },
+        include: {
+          freelancer: {
+            select: { id: true, name: true },
           },
         },
-        freelancer: {
-          select: {
-            id: true,
-            name: true,
-            image: true,
+      });
+
+      if (!gig) {
+        throw new AppError('Gig not found. It may have been removed.', 404, ErrorCode.NOT_FOUND);
+      }
+
+      // ── Step 2: Validate purchasability within transaction ───
+      if (gig.status !== 'ACTIVE') {
+        throw new AppError(
+          'This gig is not currently available for purchase.',
+          422,
+          ErrorCode.VALIDATION_ERROR,
+        );
+      }
+
+      if (gig.freelancerId === clientId) {
+        throw new AppError('You cannot order your own gig.', 422, ErrorCode.VALIDATION_ERROR);
+      }
+
+      // ── Step 3: Server-authoritative pricing (Smallest Currency Unit: Paise) ──
+      // All monetary amounts are handled and stored in paise (1 INR = 100 paise)
+      // to eliminate floating-point precision issues and match payment gateway requirements.
+      const unitPrice = Math.round(gig.price * 100);
+      const subtotal = unitPrice * input.quantity;
+      const platformFee = Math.round((subtotal * PLATFORM_FEE_PERCENT) / 100);
+      const total = subtotal + platformFee;
+
+      // ── Step 4: Create Order in PENDING status with price snapshot ────
+      // Creating an order reserves the booking in PENDING status.
+      // Payment is a separate state transition: PENDING -> PAYMENT_PENDING -> PAID.
+      const order = await tx.order.create({
+        data: {
+          clientId,
+          freelancerId: gig.freelancerId,
+          gigId: gig.id,
+          unitPrice,
+          quantity: input.quantity,
+          subtotal,
+          platformFee,
+          amount: total,
+          status: 'PENDING',
+        },
+        include: {
+          gig: {
+            select: {
+              id: true,
+              title: true,
+              category: true,
+              deliveryTime: true,
+              images: true,
+            },
+          },
+          freelancer: {
+            select: {
+              id: true,
+              name: true,
+              image: true,
+            },
           },
         },
-      },
-    });
+      });
 
-    // ── Step 5: Return order with pricing breakdown ────────────
-    return {
-      order,
-      pricing: {
-        currency: 'INR',
-        unit: 'paise',
-        unitPrice,
-        quantity: input.quantity,
-        subtotal,
-        platformFeePercent: PLATFORM_FEE_PERCENT,
-        platformFee,
-        total,
-      },
-    };
+      // ── Step 5: Return order with pricing breakdown ────────────
+      return {
+        order,
+        pricing: {
+          currency: 'INR',
+          unit: 'paise',
+          unitPrice,
+          quantity: input.quantity,
+          subtotal,
+          platformFeePercent: PLATFORM_FEE_PERCENT,
+          platformFee,
+          total,
+        },
+      };
+    });
   }
 
   /**
@@ -196,120 +198,122 @@ export class OrderService {
     targetStatus: OrderStatus,
     reason?: string,
   ) {
-    const order = await prisma.order.findUnique({
-      where: { id: orderId },
-      include: {
-        gig: {
-          select: {
-            id: true,
-            title: true,
-            category: true,
-            deliveryTime: true,
-            images: true,
+    return prisma.$transaction(async (tx) => {
+      const order = await tx.order.findUnique({
+        where: { id: orderId },
+        include: {
+          gig: {
+            select: {
+              id: true,
+              title: true,
+              category: true,
+              deliveryTime: true,
+              images: true,
+            },
+          },
+          freelancer: {
+            select: {
+              id: true,
+              name: true,
+              image: true,
+            },
           },
         },
-        freelancer: {
-          select: {
-            id: true,
-            name: true,
-            image: true,
+      });
+
+      if (!order) {
+        throw new AppError('Order not found.', 404, ErrorCode.NOT_FOUND);
+      }
+
+      const isClient = order.clientId === userId;
+      const isFreelancer = order.freelancerId === userId;
+      if (!isClient && !isFreelancer) {
+        throw new AppError('You are not authorized to update this order.', 403, ErrorCode.FORBIDDEN);
+      }
+
+      // Role-specific transition guards
+      if (
+        (targetStatus === 'CANCELLED' ||
+          targetStatus === 'PAYMENT_PENDING' ||
+          targetStatus === 'PAYMENT_FAILED') &&
+        !isClient
+      ) {
+        throw new AppError(
+          'Only the client can modify payment or cancel pending orders.',
+          403,
+          ErrorCode.FORBIDDEN,
+        );
+      }
+
+      if (targetStatus === 'IN_PROGRESS' && !isFreelancer) {
+        throw new AppError(
+          'Only the freelancer can start work on this order.',
+          403,
+          ErrorCode.FORBIDDEN,
+        );
+      }
+
+      if (targetStatus === 'COMPLETED' && !isClient) {
+        throw new AppError(
+          'Only the client can approve and complete this order.',
+          403,
+          ErrorCode.FORBIDDEN,
+        );
+      }
+
+      // State machine transition validation
+      const allowed = ALLOWED_ORDER_TRANSITIONS[order.status] ?? [];
+      if (!allowed.includes(targetStatus)) {
+        throw new AppError(
+          `Cannot transition order from '${order.status}' to '${targetStatus}'. Allowed next states: [${allowed.join(', ')}]`,
+          400,
+          ErrorCode.VALIDATION_ERROR,
+        );
+      }
+
+      const updatedOrder = await tx.order.update({
+        where: { id: orderId },
+        data: { status: targetStatus },
+        include: {
+          gig: {
+            select: {
+              id: true,
+              title: true,
+              category: true,
+              deliveryTime: true,
+              images: true,
+            },
+          },
+          freelancer: {
+            select: {
+              id: true,
+              name: true,
+              image: true,
+            },
           },
         },
-      },
+      });
+
+      return {
+        order: updatedOrder,
+        pricing: {
+          currency: 'INR',
+          unit: 'paise',
+          unitPrice: updatedOrder.unitPrice ?? updatedOrder.amount,
+          quantity: updatedOrder.quantity,
+          subtotal: updatedOrder.subtotal ?? updatedOrder.amount,
+          platformFeePercent: PLATFORM_FEE_PERCENT,
+          platformFee: updatedOrder.platformFee ?? 0,
+          total: updatedOrder.amount,
+        },
+        transition: {
+          from: order.status,
+          to: targetStatus,
+          reason: reason ?? null,
+          timestamp: new Date(),
+        },
+      };
     });
-
-    if (!order) {
-      throw new AppError('Order not found.', 404, ErrorCode.NOT_FOUND);
-    }
-
-    const isClient = order.clientId === userId;
-    const isFreelancer = order.freelancerId === userId;
-    if (!isClient && !isFreelancer) {
-      throw new AppError('You are not authorized to update this order.', 403, ErrorCode.FORBIDDEN);
-    }
-
-    // Role-specific transition guards
-    if (
-      (targetStatus === 'CANCELLED' ||
-        targetStatus === 'PAYMENT_PENDING' ||
-        targetStatus === 'PAYMENT_FAILED') &&
-      !isClient
-    ) {
-      throw new AppError(
-        'Only the client can modify payment or cancel pending orders.',
-        403,
-        ErrorCode.FORBIDDEN,
-      );
-    }
-
-    if (targetStatus === 'IN_PROGRESS' && !isFreelancer) {
-      throw new AppError(
-        'Only the freelancer can start work on this order.',
-        403,
-        ErrorCode.FORBIDDEN,
-      );
-    }
-
-    if (targetStatus === 'COMPLETED' && !isClient) {
-      throw new AppError(
-        'Only the client can approve and complete this order.',
-        403,
-        ErrorCode.FORBIDDEN,
-      );
-    }
-
-    // State machine transition validation
-    const allowed = ALLOWED_ORDER_TRANSITIONS[order.status] ?? [];
-    if (!allowed.includes(targetStatus)) {
-      throw new AppError(
-        `Cannot transition order from '${order.status}' to '${targetStatus}'. Allowed next states: [${allowed.join(', ')}]`,
-        400,
-        ErrorCode.VALIDATION_ERROR,
-      );
-    }
-
-    const updatedOrder = await prisma.order.update({
-      where: { id: orderId },
-      data: { status: targetStatus },
-      include: {
-        gig: {
-          select: {
-            id: true,
-            title: true,
-            category: true,
-            deliveryTime: true,
-            images: true,
-          },
-        },
-        freelancer: {
-          select: {
-            id: true,
-            name: true,
-            image: true,
-          },
-        },
-      },
-    });
-
-    return {
-      order: updatedOrder,
-      pricing: {
-        currency: 'INR',
-        unit: 'paise',
-        unitPrice: updatedOrder.unitPrice ?? updatedOrder.amount,
-        quantity: updatedOrder.quantity,
-        subtotal: updatedOrder.subtotal ?? updatedOrder.amount,
-        platformFeePercent: PLATFORM_FEE_PERCENT,
-        platformFee: updatedOrder.platformFee ?? 0,
-        total: updatedOrder.amount,
-      },
-      transition: {
-        from: order.status,
-        to: targetStatus,
-        reason: reason ?? null,
-        timestamp: new Date(),
-      },
-    };
   }
 
   /**
