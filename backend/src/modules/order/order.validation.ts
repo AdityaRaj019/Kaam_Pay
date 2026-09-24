@@ -21,6 +21,18 @@ export const createOrderSchema = z
       .int('Quantity must be an integer')
       .min(1, 'Quantity must be at least 1')
       .max(MAX_ORDER_QUANTITY, `Quantity cannot exceed ${MAX_ORDER_QUANTITY}`),
+    idempotencyKey: z
+      .string()
+      .trim()
+      .min(1, 'Idempotency key must not be empty')
+      .max(255, 'Idempotency key cannot exceed 255 characters')
+      .optional(),
+    idempotency_key: z
+      .string()
+      .trim()
+      .min(1, 'Idempotency key must not be empty')
+      .max(255, 'Idempotency key cannot exceed 255 characters')
+      .optional(),
   })
   .refine((data) => Boolean(data.gig_id || data.gigId), {
     message: 'Gig ID is required',
@@ -29,6 +41,7 @@ export const createOrderSchema = z
   .transform((data) => ({
     gigId: (data.gig_id || data.gigId) as string,
     quantity: data.quantity,
+    idempotencyKey: data.idempotencyKey || data.idempotency_key,
   }));
 
 export type CreateOrderInput = z.infer<typeof createOrderSchema>;
@@ -38,6 +51,12 @@ export const orderIdParamSchema = z.object({
 });
 
 export type OrderIdParam = z.infer<typeof orderIdParamSchema>;
+
+export const idempotencyKeyParamSchema = z.object({
+  key: z.string().min(1, 'Idempotency key is required').max(255),
+});
+
+export type IdempotencyKeyParam = z.infer<typeof idempotencyKeyParamSchema>;
 
 export const transitionOrderStatusSchema = z.object({
   status: z.enum([

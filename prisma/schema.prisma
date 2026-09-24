@@ -46,15 +46,15 @@ enum EscrowStatus {
 // ─── Better Auth: Core Models ─────────────────────────────────
 
 model User {
-  id               String    @id @default(cuid())
+  id               String   @id @default(cuid())
   name             String
-  email            String    @unique
-  emailVerified    Boolean   @default(false)
+  email            String   @unique
+  emailVerified    Boolean  @default(false)
   image            String?
-  role             UserRole  @default(CLIENT)
-  twoFactorEnabled Boolean   @default(false)
-  createdAt        DateTime  @default(now())
-  updatedAt        DateTime  @updatedAt
+  role             UserRole @default(CLIENT)
+  twoFactorEnabled Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   // Better Auth relationships
   sessions   Session[]
@@ -144,7 +144,7 @@ model Gig {
   description  String    @db.Text
   category     String
   price        Float
-  deliveryTime Int       // In days
+  deliveryTime Int // In days
   status       GigStatus @default(ACTIVE)
   images       String[]
   orders       Order[]
@@ -153,25 +153,26 @@ model Gig {
 }
 
 model Order {
-  id           String       @id @default(cuid())
-  clientId     String
-  client       User         @relation("ClientOrders", fields: [clientId], references: [id])
-  freelancerId String
-  freelancer   User         @relation("FreelancerOrders", fields: [freelancerId], references: [id])
-  gigId        String
-  gig          Gig          @relation(fields: [gigId], references: [id])
-  unitPrice    Float?       // Snapshot: agreed gig unit price (in paise) at order time
-  quantity     Int          @default(1) // Snapshot: booked quantity
-  subtotal     Float?       // Snapshot: subtotal (unitPrice * quantity) in paise
-  platformFee  Float?       // Snapshot: platform fee in paise
-  amount       Float        // Snapshot: total booked price in paise
-  status       OrderStatus  @default(PENDING)
-  deliverables Deliverable[]
-  payment      Payment?
-  chatRoom     ChatRoom?
-  review       Review?
-  createdAt    DateTime     @default(now())
-  updatedAt    DateTime     @updatedAt
+  id             String        @id @default(cuid())
+  clientId       String
+  client         User          @relation("ClientOrders", fields: [clientId], references: [id])
+  freelancerId   String
+  freelancer     User          @relation("FreelancerOrders", fields: [freelancerId], references: [id])
+  gigId          String
+  gig            Gig           @relation(fields: [gigId], references: [id])
+  unitPrice      Float? // Snapshot: agreed gig unit price (in paise) at order time
+  quantity       Int           @default(1) // Snapshot: booked quantity
+  subtotal       Float? // Snapshot: subtotal (unitPrice * quantity) in paise
+  platformFee    Float? // Snapshot: platform fee in paise
+  amount         Float // Snapshot: total booked price in paise
+  status         OrderStatus   @default(PENDING)
+  idempotencyKey String?       @unique
+  deliverables   Deliverable[]
+  payment        Payment?
+  chatRoom       ChatRoom?
+  review         Review?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
 }
 
 model Deliverable {
@@ -185,15 +186,15 @@ model Deliverable {
 }
 
 model Payment {
-  id                   String       @id @default(cuid())
-  orderId              String       @unique
-  order                Order        @relation(fields: [orderId], references: [id])
-  razorpayOrderId      String       @unique
-  amount               Float
-  platformFee          Float
-  escrowStatus         EscrowStatus @default(HELD)
-  createdAt            DateTime     @default(now())
-  updatedAt            DateTime     @updatedAt
+  id              String       @id @default(cuid())
+  orderId         String       @unique
+  order           Order        @relation(fields: [orderId], references: [id])
+  razorpayOrderId String       @unique
+  amount          Float
+  platformFee     Float
+  escrowStatus    EscrowStatus @default(HELD)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
 }
 
 model ChatRoom {
@@ -219,11 +220,11 @@ model Attachment {
   id        String   @id @default(cuid())
   messageId String
   message   Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
-  url       String   // Cloudinary secure URL
-  publicId  String   // Cloudinary public_id (needed for deletion)
-  fileType  String   // "image" | "video" | "pdf" | "csv" | "other"
-  fileName  String   // original filename shown to user
-  fileSize  Int      // bytes
+  url       String // Cloudinary secure URL
+  publicId  String // Cloudinary public_id (needed for deletion)
+  fileType  String // "image" | "video" | "pdf" | "csv" | "other"
+  fileName  String // original filename shown to user
+  fileSize  Int // bytes
   createdAt DateTime @default(now())
 }
 
@@ -235,7 +236,7 @@ model Review {
   reviewer   User     @relation("ReviewsGiven", fields: [reviewerId], references: [id])
   targetId   String
   target     User     @relation("ReviewsReceived", fields: [targetId], references: [id])
-  rating     Int      // 1-5
+  rating     Int // 1-5
   comment    String?  @db.Text
   createdAt  DateTime @default(now())
 }
