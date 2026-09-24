@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import {
   createOrderSchema,
   orderIdParamSchema,
+  idempotencyKeyParamSchema,
   transitionOrderStatusSchema,
   cancelOrderSchema,
   failPaymentSchema,
@@ -15,7 +16,8 @@ import { catchAsync } from '../../common/utils/catchAsync';
  * POST /api/orders
  *
  * Initiates a new order for the authenticated client in PENDING status.
- * (Creating an order does NOT equal paying for it; status is strictly PENDING).
+ * Supports idempotency: If an idempotency-key header or body property is supplied,
+ * network retries return the previously generated order rather than duplicating it.
  */
 export const createOrder = catchAsync(async (req: Request, res: Response) => {
   if (!req.user) {
@@ -30,9 +32,24 @@ export const createOrder = catchAsync(async (req: Request, res: Response) => {
     throw new AppError(`Validation failed: ${errorDetails}`, 422, ErrorCode.VALIDATION_ERROR);
   }
 
-  const result = await OrderService.initiateOrder(req.user.id, validation.data);
+  // Header takes precedence, then body fallback
+  const headerKey = req.headers['idempotency-key'] || req.headers['x-idempotency-key'];
+  const idempotencyKey =
+    typeof headerKey === 'string' && headerKey.trim().length > 0
+      ? headerKey.trim()
+      : validation.data.idempotencyKey?.trim();
 
-  sendSuccess(res, 201, 'Order created successfully.', result);
+  const result = await OrderService.initiateOrder(req.user.id, {
+    ...validation.data,
+    idempotencyKey,
+  });
+
+  const statusCode = result.isExisting ? 200 : 201;
+  const message = result.isExisting
+    ? 'Existing order retrieved successfully for idempotency key.'
+    : 'Order created successfully.';
+
+  sendSuccess(res, statusCode, message, result);
 });
 
 /**
@@ -174,4 +191,44 @@ export const markPaid = catchAsync(async (req: Request, res: Response) => {
   const result = await OrderService.markPaid(paramValidation.data.id, req.user.id);
 
   sendSuccess(res, 200, 'Order paid successfully.', result);
+});
+
+/**
+ * GET /api/orders/key/:key
+ *
+ * Retrieves an order by its unique idempotency key.
+ */
+export const getOrderByIdempotencyKey = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const paramValidation = idempotencyKeyParamSchema.safeParse(req.params);
+  if (!paramValidation.success) {
+    throw new AppError('Invalid idempotency key parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.getOrderByIdempotencyKey(paramValidation.data.key, req.user.id);
+
+  sendSuccess(res, 200, 'Order retrieved successfully by idempotency key.', result);
+});
+
+/**
+ * POST /api/orders/:id/complete
+ *
+ * Approves and marks an IN_PROGRESS order as COMPLETED.
+ */
+export const completeOrder = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const paramValidation = orderIdParamSchema.safeParse(req.params);
+  if (!paramValidation.success) {
+    throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.completeOrder(paramValidation.data.id, req.user.id);
+
+  sendSuccess(res, 200, 'Order completed and approved successfully.', result);
 });

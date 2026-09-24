@@ -4,21 +4,30 @@ import { authorize } from '../../common/middlewares/auth.middleware';
 import {
   createOrder,
   getOrder,
+  getOrderByIdempotencyKey,
   transitionOrderStatus,
   cancelOrder,
   failPayment,
   markPaymentPending,
   markPaid,
+  completeOrder,
 } from './order.controller';
 
 const router = Router();
 
 /**
  * @route  POST /api/orders
- * @desc   Initiate a new order for a gig (Created in PENDING status)
+ * @desc   Initiate a new order for a gig (Created in PENDING status, idempotent)
  * @access Private — requires authenticated CLIENT user
  */
 router.post('/', requireAuth, authorize('CLIENT'), createOrder);
+
+/**
+ * @route  GET /api/orders/key/:key
+ * @desc   Retrieve order by its unique idempotency key
+ * @access Private — requires authenticated order participant
+ */
+router.get('/key/:key', requireAuth, getOrderByIdempotencyKey);
 
 /**
  * @route  GET /api/orders/:id
@@ -47,6 +56,13 @@ router.post('/:id/payment-pending', requireAuth, markPaymentPending);
  * @access Private — requires authenticated user or payment callback
  */
 router.post('/:id/pay', requireAuth, markPaid);
+
+/**
+ * @route  POST /api/orders/:id/complete
+ * @desc   Approve and complete work: IN_PROGRESS -> COMPLETED
+ * @access Private — requires authenticated client
+ */
+router.post('/:id/complete', requireAuth, completeOrder);
 
 /**
  * @route  POST /api/orders/:id/cancel
