@@ -11,9 +11,17 @@ import {
   markPaymentPending,
   markPaid,
   completeOrder,
+  getMyOrders,
 } from './order.controller';
 
 const router = Router();
+
+/**
+ * @route  GET /api/orders/my-orders
+ * @desc   Retrieve all orders for authenticated user
+ * @access Private
+ */
+router.get('/my-orders', requireAuth, getMyOrders);
 
 /**
  * @route  POST /api/orders

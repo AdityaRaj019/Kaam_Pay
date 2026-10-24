@@ -232,3 +232,23 @@ export const completeOrder = catchAsync(async (req: Request, res: Response) => {
 
   sendSuccess(res, 200, 'Order completed and approved successfully.', result);
 });
+
+/**
+ * GET /api/orders/my-orders
+ *
+ * Retrieves all orders for the authenticated user based on role or query param.
+ */
+export const getMyOrders = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const role = req.query.role === 'freelancer' ? 'FREELANCER' : req.user.role;
+  const result =
+    role === 'FREELANCER'
+      ? await OrderService.getFreelancerOrders(req.user.id)
+      : await OrderService.getClientOrders(req.user.id);
+
+  sendSuccess(res, 200, 'Orders retrieved successfully.', result);
+});
+

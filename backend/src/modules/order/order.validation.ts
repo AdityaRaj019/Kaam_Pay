@@ -87,3 +87,11 @@ export const failPaymentSchema = z.object({
 });
 
 export type FailPaymentInput = z.infer<typeof failPaymentSchema>;
+
+export const markPaidBodySchema = z.object({
+  razorpayOrderId: z.string().optional(),
+  razorpayPaymentId: z.string().optional(),
+  razorpaySignature: z.string().optional(),
+});
+
+export type MarkPaidBodyInput = z.infer<typeof markPaidBodySchema>;
