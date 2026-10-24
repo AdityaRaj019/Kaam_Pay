@@ -62,12 +62,12 @@ export function FullModal({ gig, isSaved, onClose, onToggleSave }: FullModalProp
     }
   };
 
-  const handleOrderNow = async () => {
+  const handleOrderNow = () => {
     if (!gig) return;
 
     if (!session?.user) {
       toast.error('Please sign in to order this gig');
-      router.push('/login');
+      router.push(`/login?redirect=/checkout/${gig.id}`);
       return;
     }
 
@@ -76,30 +76,8 @@ export function FullModal({ gig, isSaved, onClose, onToggleSave }: FullModalProp
       return;
     }
 
-    try {
-      setIsInitiating(true);
-      const res = await api.post('/chat/init', {
-        freelancerId: gig.freelancer.id,
-        gigId: gig.id,
-      });
-
-      const orderId = res.data?.data?.orderId;
-      if (orderId) {
-        toast.success(`Order placed! Starting chat with ${gig.freelancer.name}`);
-        onClose();
-        router.push(`/messages?orderId=${orderId}`);
-      } else {
-        onClose();
-        router.push('/messages');
-      }
-    } catch (err: unknown) {
-      const errorMsg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
-          ?.message || 'Failed to initiate order';
-      toast.error(errorMsg);
-    } finally {
-      setIsInitiating(false);
-    }
+    onClose();
+    router.push(`/checkout/${gig.id}`);
   };
 
   const handleBackdropClick = (e: React.MouseEvent) => {

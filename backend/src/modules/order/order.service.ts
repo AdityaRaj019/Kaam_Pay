@@ -273,6 +273,38 @@ export class OrderService {
   }
 
   /**
+   * Retrieves all orders placed by the authenticated client.
+   */
+  static async getClientOrders(clientId: string) {
+    const orders = await prisma.order.findMany({
+      where: { clientId },
+      include: ORDER_INCLUDE,
+      orderBy: { createdAt: 'desc' },
+    });
+
+    return orders.map((order) => ({
+      order,
+      pricing: formatOrderPricing(order),
+    }));
+  }
+
+  /**
+   * Retrieves all orders assigned to the authenticated freelancer.
+   */
+  static async getFreelancerOrders(freelancerId: string) {
+    const orders = await prisma.order.findMany({
+      where: { freelancerId },
+      include: ORDER_INCLUDE,
+      orderBy: { createdAt: 'desc' },
+    });
+
+    return orders.map((order) => ({
+      order,
+      pricing: formatOrderPricing(order),
+    }));
+  }
+
+  /**
    * Validates and transitions an order across lifecycle states.
    * Enforces valid state machine pathways and participant roles.
    */
@@ -363,6 +395,32 @@ export class OrderService {
         data: { status: targetStatus },
         include: ORDER_INCLUDE,
       });
+
+      // When moving to PAID, ensure Escrow Payment record and ChatRoom are provisioned
+      if (targetStatus === 'PAID') {
+        const paymentId = `pay_${randomUUID().replace(/-/g, '').slice(0, 16)}`;
+        await tx.payment.upsert({
+          where: { orderId },
+          update: {
+            escrowStatus: 'HELD',
+          },
+          create: {
+            orderId,
+            razorpayOrderId: paymentId,
+            amount: updatedOrder.amount,
+            platformFee: updatedOrder.platformFee ?? 0,
+            escrowStatus: 'HELD',
+          },
+        });
+
+        // Initialize chat room between client and freelancer if not already created
+        const existingRoom = await tx.chatRoom.findUnique({ where: { orderId } });
+        if (!existingRoom) {
+          await tx.chatRoom.create({
+            data: { orderId },
+          });
+        }
+      }
 
       return {
         order: updatedOrder,
