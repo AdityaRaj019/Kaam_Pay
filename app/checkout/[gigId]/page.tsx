@@ -104,8 +104,8 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
         }
       } catch (err: unknown) {
         const msg =
-          (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-            ?.error?.message || 'Failed to load gig details.';
+          (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+            ?.message || 'Failed to load gig details.';
         toast.error(msg);
         router.push('/find-work');
       } finally {

@@ -3,10 +3,7 @@ import prisma from '../../config/prisma';
 import razorpay from '../../config/razorpay';
 import { AppError, ErrorCode } from '../../error/AppError';
 import { OrderService } from '../order/order.service';
-import type {
-  CreateRazorpayOrderInput,
-  VerifyRazorpayPaymentInput,
-} from './payment.validation';
+import type { CreateRazorpayOrderInput, VerifyRazorpayPaymentInput } from './payment.validation';
 
 export class PaymentService {
   /**
@@ -135,7 +132,11 @@ export class PaymentService {
     }
 
     if (order.clientId !== clientId) {
-      throw new AppError('You are not authorized to verify this payment.', 403, ErrorCode.FORBIDDEN);
+      throw new AppError(
+        'You are not authorized to verify this payment.',
+        403,
+        ErrorCode.FORBIDDEN,
+      );
     }
 
     const keySecret = process.env.RAZORPAY_KEY_SECRET;

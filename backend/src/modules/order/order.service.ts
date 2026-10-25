@@ -449,11 +449,7 @@ export class OrderService {
   /**
    * PAYMENT_PENDING -> PAID
    */
-  static async markPaid(
-    orderId: string,
-    userId: string,
-    options?: { razorpayOrderId?: string },
-  ) {
+  static async markPaid(orderId: string, userId: string, options?: { razorpayOrderId?: string }) {
     return this.transitionStatus(orderId, userId, 'PAID', undefined, options);
   }
 
