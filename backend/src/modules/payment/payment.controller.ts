@@ -2,10 +2,7 @@ import { Request, Response } from 'express';
 import { catchAsync } from '../../common/utils/catchAsync';
 import { sendSuccess } from '../../common/utils/apiResponse';
 import { AppError, ErrorCode } from '../../error/AppError';
-import {
-  createRazorpayOrderSchema,
-  verifyRazorpayPaymentSchema,
-} from './payment.validation';
+import { createRazorpayOrderSchema, verifyRazorpayPaymentSchema } from './payment.validation';
 import { PaymentService } from './payment.service';
 
 /**

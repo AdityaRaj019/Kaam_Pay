@@ -257,4 +257,3 @@ export const getMyOrders = catchAsync(async (req: Request, res: Response) => {
 
   sendSuccess(res, 200, 'Orders retrieved successfully.', result);
 });
-
