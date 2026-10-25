@@ -608,7 +608,7 @@ export class OrderService {
     }> = [];
 
     for (const order of orders) {
-      const netPayout = order.subtotal ?? (order.amount - (order.platformFee ?? 0));
+      const netPayout = order.subtotal ?? order.amount - (order.platformFee ?? 0);
       if (order.status === 'COMPLETED') {
         walletBalancePaise += netPayout;
         totalGrossPaise += order.amount;
@@ -646,4 +646,3 @@ export class OrderService {
     };
   }
 }
-

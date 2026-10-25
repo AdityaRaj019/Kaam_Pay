@@ -49,8 +49,8 @@ export default function MyOrdersPage() {
       setOrders(res.data.data || []);
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to load orders.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to load orders.';
       toast.error(msg);
     } finally {
       setIsLoading(false);
@@ -82,7 +82,6 @@ export default function MyOrdersPage() {
       fetchEarnings();
     }
   }, [session, sessionLoading, router, fetchOrders, fetchEarnings]);
-
 
   const filteredOrders = orders.filter(({ order }) => {
     // Tab filter
@@ -154,72 +153,85 @@ export default function MyOrdersPage() {
         </div>
 
         {/* Virtual Skill Wallet & Settlement Summary (shown for Freelancers) */}
-        {earnings && (roleFilter === 'freelancer' || (session?.user as SessionUser | undefined)?.role === 'FREELANCER') && (
-          <div className="bg-gradient-to-br from-[#2c3437] to-[#1f2528] rounded-3xl p-6 text-white shadow-xl space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-white/10 pb-4">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-green-400" style={{ fontSize: '24px' }}>
-                  account_balance_wallet
+        {earnings &&
+          (roleFilter === 'freelancer' ||
+            (session?.user as SessionUser | undefined)?.role === 'FREELANCER') && (
+            <div className="bg-gradient-to-br from-[#2c3437] to-[#1f2528] rounded-3xl p-6 text-white shadow-xl space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-white/10 pb-4">
+                <div className="flex items-center gap-2">
+                  <span
+                    className="material-symbols-outlined text-green-400"
+                    style={{ fontSize: '24px' }}
+                  >
+                    account_balance_wallet
+                  </span>
+                  <div>
+                    <h2 className="font-headline font-bold text-sm sm:text-base">
+                      Freelancer Virtual Skill Wallet
+                    </h2>
+                    <p className="text-xs text-white/60">
+                      Auto-settled earnings & escrow reserve (10% platform fee applied)
+                    </p>
+                  </div>
+                </div>
+                <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs font-bold rounded-full self-start sm:self-auto flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  Live Settlement
                 </span>
-                <div>
-                  <h2 className="font-headline font-bold text-sm sm:text-base">
-                    Freelancer Virtual Skill Wallet
-                  </h2>
-                  <p className="text-xs text-white/60">
-                    Auto-settled earnings & escrow reserve (10% platform fee applied)
-                  </p>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
+                <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
+                  <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
+                    Available Wallet
+                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-green-400 mt-1 block">
+                    ₹
+                    {earnings.walletBalanceInr.toLocaleString('en-IN', {
+                      minimumFractionDigits: 2,
+                    })}
+                  </span>
+                  <span className="text-[10px] text-white/40">Released from Escrow</span>
+                </div>
+
+                <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
+                  <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
+                    Held in Escrow
+                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-amber-300 mt-1 block">
+                    ₹
+                    {earnings.pendingEscrowInr.toLocaleString('en-IN', {
+                      minimumFractionDigits: 2,
+                    })}
+                  </span>
+                  <span className="text-[10px] text-white/40">Active Project Funds</span>
+                </div>
+
+                <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
+                  <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
+                    Platform Cut (10%)
+                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-white/80 mt-1 block">
+                    ₹
+                    {earnings.totalPlatformFeeInr.toLocaleString('en-IN', {
+                      minimumFractionDigits: 2,
+                    })}
+                  </span>
+                  <span className="text-[10px] text-white/40">Commission Retained</span>
+                </div>
+
+                <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
+                  <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
+                    Settled Orders
+                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-[#7073ff] mt-1 block">
+                    {earnings.completedOrdersCount}
+                  </span>
+                  <span className="text-[10px] text-white/40">Completed Milestones</span>
                 </div>
               </div>
-              <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs font-bold rounded-full self-start sm:self-auto flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Live Settlement
-              </span>
             </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
-              <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
-                <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
-                  Available Wallet
-                </span>
-                <span className="text-xl sm:text-2xl font-black text-green-400 mt-1 block">
-                  ₹{earnings.walletBalanceInr.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
-                </span>
-                <span className="text-[10px] text-white/40">Released from Escrow</span>
-              </div>
-
-              <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
-                <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
-                  Held in Escrow
-                </span>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 mt-1 block">
-                  ₹{earnings.pendingEscrowInr.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
-                </span>
-                <span className="text-[10px] text-white/40">Active Project Funds</span>
-              </div>
-
-              <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
-                <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
-                  Platform Cut (10%)
-                </span>
-                <span className="text-xl sm:text-2xl font-black text-white/80 mt-1 block">
-                  ₹{earnings.totalPlatformFeeInr.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
-                </span>
-                <span className="text-[10px] text-white/40">Commission Retained</span>
-              </div>
-
-              <div className="p-3.5 bg-white/5 rounded-2xl border border-white/5">
-                <span className="text-[11px] font-semibold text-white/60 uppercase tracking-wider block">
-                  Settled Orders
-                </span>
-                <span className="text-xl sm:text-2xl font-black text-[#7073ff] mt-1 block">
-                  {earnings.completedOrdersCount}
-                </span>
-                <span className="text-[10px] text-white/40">Completed Milestones</span>
-              </div>
-            </div>
-          </div>
-        )}
-
+          )}
 
         {/* Tab Selection */}
         <div className="flex gap-2 border-b border-[#dce4e8]/80 pb-1 text-sm font-semibold">
@@ -334,7 +346,10 @@ export default function MyOrdersPage() {
           </div>
         ) : (
           <div className="py-16 text-center bg-white rounded-3xl border border-dashed border-[#dce4e8] p-8 space-y-3">
-            <span className="material-symbols-outlined text-[#596064]/40" style={{ fontSize: '48px' }}>
+            <span
+              className="material-symbols-outlined text-[#596064]/40"
+              style={{ fontSize: '48px' }}
+            >
               inventory_2
             </span>
             <h3 className="font-headline font-bold text-base text-[#2c3437]">No orders found</h3>

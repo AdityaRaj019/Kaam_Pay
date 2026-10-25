@@ -56,7 +56,6 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
     setDisputeReason('');
   };
 
-
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#dce4e8] shadow-[0_25px_50px_-15px_rgba(44,52,55,0.08)] space-y-5">
       <h3 className="font-headline font-bold text-base text-[#2c3437] flex items-center gap-2">
@@ -186,10 +185,11 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
             cancel
           </span>
           <p className="text-sm font-bold text-red-800">Order Cancelled</p>
-          <p className="text-xs text-red-600">Any escrow balances have been processed for refund.</p>
+          <p className="text-xs text-red-600">
+            Any escrow balances have been processed for refund.
+          </p>
         </div>
       )}
-
 
       {/* Revision Modal */}
       {showRevisionModal && (
@@ -236,9 +236,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-4">
             <h4 className="font-headline font-bold text-base text-[#2c3437]">Cancel This Order</h4>
-            <p className="text-xs text-[#596064]">
-              Are you sure you want to cancel this order?
-            </p>
+            <p className="text-xs text-[#596064]">Are you sure you want to cancel this order?</p>
             <form onSubmit={handleCancelSubmit} className="space-y-4">
               <textarea
                 value={cancelReason}
@@ -280,7 +278,8 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
               </h4>
             </div>
             <p className="text-xs text-[#596064]">
-              Describe the problem or disagreement clearly. Escrow funds will remain safely held while platform support investigates.
+              Describe the problem or disagreement clearly. Escrow funds will remain safely held
+              while platform support investigates.
             </p>
             <form onSubmit={handleDisputeSubmit} className="space-y-4">
               <textarea
@@ -315,4 +314,3 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
     </div>
   );
 };
-

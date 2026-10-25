@@ -103,7 +103,11 @@ export const OrderTimeline: React.FC<OrderTimelineProps> = ({ status }) => {
               </div>
               <span
                 className={`text-xs mt-2 font-medium text-center ${
-                  isCurrent ? 'font-bold text-[#4a4bd7]' : isDone ? 'text-[#2c3437]' : 'text-[#596064]'
+                  isCurrent
+                    ? 'font-bold text-[#4a4bd7]'
+                    : isDone
+                      ? 'text-[#2c3437]'
+                      : 'text-[#596064]'
                 }`}
               >
                 {step.label}

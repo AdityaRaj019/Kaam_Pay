@@ -37,8 +37,8 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       setPricing(res.data.data.pricing);
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to load order details.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to load order details.';
       toast.error(msg);
       router.push('/dashboard');
     } finally {
@@ -69,8 +69,8 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       await fetchOrder();
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to update order status.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to update order status.';
       toast.error(msg);
     } finally {
       setIsActionLoading(false);
@@ -86,8 +86,8 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       await fetchOrder();
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to submit deliverables.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to submit deliverables.';
       toast.error(msg);
     } finally {
       setIsSubmittingDeliverable(false);
@@ -103,8 +103,8 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       await fetchOrder();
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to request revision.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to request revision.';
       toast.error(msg);
     } finally {
       setIsActionLoading(false);
@@ -120,8 +120,8 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       await fetchOrder();
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to complete order.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to complete order.';
       toast.error(msg);
     } finally {
       setIsActionLoading(false);
@@ -137,8 +137,8 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       await fetchOrder();
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to cancel order.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to cancel order.';
       toast.error(msg);
     } finally {
       setIsActionLoading(false);
@@ -154,14 +154,13 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
       await fetchOrder();
     } catch (err: unknown) {
       const msg =
-        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data
-          ?.error?.message || 'Failed to dispute order.';
+        (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
+          ?.message || 'Failed to dispute order.';
       toast.error(msg);
     } finally {
       setIsActionLoading(false);
     }
   };
-
 
   if (sessionLoading || isLoading) {
     return (

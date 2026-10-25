@@ -43,7 +43,6 @@ router.get('/earnings', requireAuth, getEarnings);
  */
 router.post('/auto-complete', requireAuth, triggerAutoCompleteSweep);
 
-
 /**
  * @route  POST /api/orders
  * @desc   Initiate a new order for a gig (Created in PENDING status, idempotent)
@@ -136,4 +135,3 @@ router.post('/:id/cancel', requireAuth, cancelOrder);
 router.post('/:id/payment-failed', requireAuth, failPayment);
 
 export default router;
-

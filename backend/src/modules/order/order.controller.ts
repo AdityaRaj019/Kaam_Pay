@@ -17,7 +17,6 @@ import { sendSuccess } from '../../common/utils/apiResponse';
 import { AppError, ErrorCode } from '../../error/AppError';
 import { catchAsync } from '../../common/utils/catchAsync';
 
-
 /**
  * POST /api/orders
  *
@@ -404,5 +403,3 @@ export const triggerAutoCompleteSweep = catchAsync(async (_req: Request, res: Re
 
   sendSuccess(res, 200, `Auto-complete sweep processed ${result.processedCount} orders.`, result);
 });
-
-

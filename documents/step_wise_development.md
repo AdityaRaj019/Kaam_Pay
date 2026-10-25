@@ -119,7 +119,6 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 - [x] **7.9. Auto-Completion Cron Job:** Script that auto-approves orders `3 days` after submission if client goes inactive.
 - [x] **7.10. Order Cancellation & Refund:** Logic to handle dispute/cancellation, returning money from Escrow to Client.
 
-
 ---
 
 ## 8. Real-time Communication (Chat & Notifications)

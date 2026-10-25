@@ -258,7 +258,6 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                     <span>My Orders</span>
                   </button>
 
-
                   <button
                     onClick={() => {
                       setIsAvatarOpen(false);

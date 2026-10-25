@@ -62,7 +62,6 @@ import('./app').then(async ({ default: app }) => {
         // Stop accepting new connections
         httpServer.close(() => console.log('✅ HTTP server closed'));
 
-
         // Disconnect Kafka
         await kafkaProducer.disconnect().catch(console.error);
         const { kafkaConsumer } = await import('./config/kafka');
@@ -88,4 +87,3 @@ import('./app').then(async ({ default: app }) => {
 
   bootstrap();
 });
-

@@ -20,8 +20,7 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
   const [fileUrls, setFileUrls] = useState<string[]>([]);
   const [textProof, setTextProof] = useState('');
 
-  const canDeliver =
-    isFreelancer && (orderStatus === 'IN_PROGRESS' || orderStatus === 'REVISION');
+  const canDeliver = isFreelancer && (orderStatus === 'IN_PROGRESS' || orderStatus === 'REVISION');
 
   const handleAddUrl = (e: React.FormEvent) => {
     e.preventDefault();
@@ -96,7 +95,9 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
               )}
 
               <div className="space-y-1.5">
-                <span className="text-xs font-semibold text-[#596064]">Attached Files / Links:</span>
+                <span className="text-xs font-semibold text-[#596064]">
+                  Attached Files / Links:
+                </span>
                 <div className="flex flex-wrap gap-2">
                   {item.fileUrls.map((url, i) => (
                     <a
@@ -110,7 +111,10 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
                         attachment
                       </span>
                       <span className="max-w-[200px] truncate">{url}</span>
-                      <span className="material-symbols-outlined text-gray-400" style={{ fontSize: '14px' }}>
+                      <span
+                        className="material-symbols-outlined text-gray-400"
+                        style={{ fontSize: '14px' }}
+                      >
                         open_in_new
                       </span>
                     </a>
@@ -122,7 +126,10 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
         </div>
       ) : (
         <div className="py-8 text-center bg-[#f7f9fb] rounded-2xl border border-dashed border-[#dce4e8]">
-          <span className="material-symbols-outlined text-[#596064]/50" style={{ fontSize: '40px' }}>
+          <span
+            className="material-symbols-outlined text-[#596064]/50"
+            style={{ fontSize: '40px' }}
+          >
             cloud_off
           </span>
           <p className="text-sm font-semibold text-[#2c3437] mt-2">No deliverables submitted yet</p>
