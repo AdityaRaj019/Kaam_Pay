@@ -223,7 +223,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
 
               if (verifyRes.data?.success) {
                 toast.success('Payment verified! Funds safely locked in Escrow.');
-                router.push(`/messages?orderId=${createdOrder.id}`);
+                router.push(`/orders/${createdOrder.id}`);
               }
             } catch (verifyErr: unknown) {
               const verifyErrMsg =
@@ -252,7 +252,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
 
         if (verifyRes.data?.success) {
           toast.success('Payment verified! Funds safely locked in Escrow.');
-          router.push(`/messages?orderId=${createdOrder.id}`);
+          router.push(`/orders/${createdOrder.id}`);
         }
         setIsProcessing(false);
       }
