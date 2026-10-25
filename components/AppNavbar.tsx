@@ -12,6 +12,7 @@ import {
   ExternalLink,
   User as UserIcon,
   PlusCircle,
+  Package,
 } from 'lucide-react';
 import api from '@/lib/axios';
 import toast from 'react-hot-toast';
@@ -155,6 +156,14 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
           >
             <span>Messages</span>
           </Link>
+
+          {/* Orders Link */}
+          <Link
+            href="/orders"
+            className="flex items-center gap-1.5 text-slate-700 hover:text-[#4a4bd7] transition-colors font-bold text-sm"
+          >
+            <span>Orders</span>
+          </Link>
         </div>
 
         {/* Right Side: Search, Notification, Avatar */}
@@ -236,6 +245,17 @@ export const AppNavbar: React.FC<AppNavbarProps> = ({ user }) => {
                   >
                     <UserIcon className="w-4 h-4 text-slate-500" />
                     <span>My Profile</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setIsAvatarOpen(false);
+                      router.push('/orders');
+                    }}
+                    className="w-full flex items-center gap-2.5 hover:bg-slate-50 text-slate-700 transition-colors px-3 py-2 rounded-xl font-bold text-xs text-left cursor-pointer"
+                  >
+                    <Package className="w-4 h-4 text-slate-500" />
+                    <span>My Orders</span>
                   </button>
 
                   <button

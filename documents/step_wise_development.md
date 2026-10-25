@@ -108,16 +108,16 @@ Based on the Product Requirement Document (PRD) and initial Roadmap, here is the
 
 **Goal:** Handle the workflow between payment and final delivery.
 
-- [ ] **7.1. Order State Machine Logic:** Backend enforcer to ensure transition safety (`Pending` -> `Progress` -> `Submitted` -> `Complete`).
-- [ ] **7.2. Order Detail Management UI:** Mutual workspace UI for Client & Freelancer showing exactly where the order stands.
-- [ ] **7.3. Submit Deliverables API:** Allow freelancer to POST final zip files/links along with a completion message.
-- [ ] **7.4. Deliverables UI:** Upload widget on the freelancer end to attach final outcomes to the order.
-- [ ] **7.5. Revision Request API:** Logic allowing client to mark a submission as `Revision Needed` (decrementing revision allowance).
-- [ ] **7.6. Revision Flow UI:** Interface allowing client to clearly list feedback and reject early submissions.
-- [ ] **7.7. Order Completion API:** Endpoint triggered when client clicks "Approve", finalizing the order.
-- [ ] **7.8. Revenue Splitting & Settlement Simulation:** Backend calculation taking platform cut (e.g., 10%) and adding the rest to Freelancer Virtual Wallet.
-- [ ] **7.9. Auto-Completion Cron Job:** Script that auto-approves orders `3 days` after submission if client goes inactive.
-- [ ] **7.10. Order Cancellation & Refund:** Logic to handle dispute/cancellation, returning money from Escrow to Client.
+- [x] **7.1. Order State Machine Logic:** Backend enforcer to ensure transition safety (`Pending` -> `Progress` -> `Submitted` -> `Complete`).
+- [x] **7.2. Order Detail Management UI:** Mutual workspace UI for Client & Freelancer showing exactly where the order stands.
+- [x] **7.3. Submit Deliverables API:** Allow freelancer to POST final zip files/links along with a completion message.
+- [x] **7.4. Deliverables UI:** Upload widget on the freelancer end to attach final outcomes to the order.
+- [x] **7.5. Revision Request API:** Logic allowing client to mark a submission as `Revision Needed` (decrementing revision allowance).
+- [x] **7.6. Revision Flow UI:** Interface allowing client to clearly list feedback and reject early submissions.
+- [x] **7.7. Order Completion API:** Endpoint triggered when client clicks "Approve", finalizing the order.
+- [x] **7.8. Revenue Splitting & Settlement Simulation:** Backend calculation taking platform cut (e.g., 10%) and adding the rest to Freelancer Virtual Wallet.
+- [x] **7.9. Auto-Completion Cron Job:** Script that auto-approves orders `3 days` after submission if client goes inactive.
+- [x] **7.10. Order Cancellation & Refund:** Logic to handle dispute/cancellation, returning money from Escrow to Client.
 
 ---
 

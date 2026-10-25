@@ -42,7 +42,12 @@ import('./app').then(async ({ default: app }) => {
       await startChatConsumer(io);
       console.log('[Kafka Consumer] Started ✅');
 
-      // ── 5. Start listening ────────────────────────────────────────────────
+      // ── 5. Start background jobs (Order Auto-Completion) ──────────────────
+      const { startOrderCronJobs } = await import('./modules/order/order.cron');
+      const cronInterval = startOrderCronJobs();
+      console.log('[Order Cron] Inactivity auto-completion worker started ✅');
+
+      // ── 6. Start listening ────────────────────────────────────────────────
       httpServer.listen(PORT, () => {
         console.log(`🚀 Server running on http://localhost:${PORT}`);
         console.log(`🌍 Environment: ${process.env.NODE_ENV ?? 'development'}`);
@@ -51,6 +56,8 @@ import('./app').then(async ({ default: app }) => {
       // ── Graceful shutdown ─────────────────────────────────────────────────
       const shutdown = async (signal: string) => {
         console.log(`\n🔴 ${signal} received — shutting down gracefully`);
+
+        clearInterval(cronInterval);
 
         // Stop accepting new connections
         httpServer.close(() => console.log('✅ HTTP server closed'));
@@ -80,4 +87,3 @@ import('./app').then(async ({ default: app }) => {
 
   bootstrap();
 });
-

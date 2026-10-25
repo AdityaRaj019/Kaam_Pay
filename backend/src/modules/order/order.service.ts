@@ -357,6 +357,22 @@ export class OrderService {
         );
       }
 
+      if (targetStatus === 'SUBMITTED' && !isFreelancer) {
+        throw new AppError(
+          'Only the freelancer can submit deliverables for this order.',
+          403,
+          ErrorCode.FORBIDDEN,
+        );
+      }
+
+      if (targetStatus === 'REVISION' && !isClient) {
+        throw new AppError(
+          'Only the client can request revisions for this order.',
+          403,
+          ErrorCode.FORBIDDEN,
+        );
+      }
+
       if (targetStatus === 'COMPLETED' && !isClient) {
         throw new AppError(
           'Only the client can approve and complete this order.',
@@ -425,6 +441,22 @@ export class OrderService {
         }
       }
 
+      // When order is COMPLETED, release escrow payment to freelancer
+      if (targetStatus === 'COMPLETED') {
+        await tx.payment.updateMany({
+          where: { orderId },
+          data: { escrowStatus: 'RELEASED' },
+        });
+      }
+
+      // When order is CANCELLED, mark escrow payment as REFUNDED
+      if (targetStatus === 'CANCELLED') {
+        await tx.payment.updateMany({
+          where: { orderId },
+          data: { escrowStatus: 'REFUNDED' },
+        });
+      }
+
       return {
         order: updatedOrder,
         pricing: formatOrderPricing(updatedOrder),
@@ -468,6 +500,57 @@ export class OrderService {
   }
 
   /**
+   * IN_PROGRESS / REVISION -> SUBMITTED
+   * Freelancer submits completed deliverables (file URLs and text proof)
+   */
+  static async submitDeliverable(
+    orderId: string,
+    freelancerId: string,
+    input: { fileUrls: string[]; textProof?: string },
+  ) {
+    return prisma.$transaction(async (tx) => {
+      // Transition order status
+      const transitionResult = await this.transitionStatus(orderId, freelancerId, 'SUBMITTED');
+
+      // Count existing deliverables to determine current revision cycle count
+      const existingCount = await tx.deliverable.count({
+        where: { orderId },
+      });
+
+      // Persist the deliverable submission
+      const deliverable = await tx.deliverable.create({
+        data: {
+          orderId,
+          fileUrls: input.fileUrls,
+          textProof: input.textProof ?? null,
+          revisionCount: existingCount,
+        },
+      });
+
+      // Refetch full order with latest deliverables
+      const order = await tx.order.findUnique({
+        where: { id: orderId },
+        include: ORDER_INCLUDE,
+      });
+
+      return {
+        order: order!,
+        deliverable,
+        pricing: transitionResult.pricing,
+        transition: transitionResult.transition,
+      };
+    });
+  }
+
+  /**
+   * SUBMITTED -> REVISION
+   * Client requests changes on submitted deliverables
+   */
+  static async requestRevision(orderId: string, clientId: string, reason: string) {
+    return this.transitionStatus(orderId, clientId, 'REVISION', reason);
+  }
+
+  /**
    * PENDING / PAYMENT_PENDING -> CANCELLED
    */
   static async cancelOrder(orderId: string, clientId: string, reason?: string) {
@@ -479,5 +562,87 @@ export class OrderService {
    */
   static async failPayment(orderId: string, clientId: string, reason?: string) {
     return this.transitionStatus(orderId, clientId, 'PAYMENT_FAILED', reason);
+  }
+
+  /**
+   * IN_PROGRESS / SUBMITTED / REVISION -> DISPUTED
+   * Client or Freelancer escalates the order to dispute
+   */
+  static async disputeOrder(orderId: string, userId: string, reason: string) {
+    return this.transitionStatus(orderId, userId, 'DISPUTED', reason);
+  }
+
+  /**
+   * Calculates revenue splitting and virtual wallet balances for a freelancer:
+   * - Platform cut (10% of subtotal)
+   * - Released earnings (virtual wallet balance in paise & INR)
+   * - In-escrow funds (pending orders)
+   * - Completed order breakdown
+   */
+  static async getFreelancerEarnings(freelancerId: string) {
+    const orders = await prisma.order.findMany({
+      where: { freelancerId },
+      include: {
+        gig: { select: { id: true, title: true, category: true } },
+        client: { select: { id: true, name: true, image: true } },
+        payment: true,
+      },
+      orderBy: { createdAt: 'desc' },
+    });
+
+    let walletBalancePaise = 0;
+    let totalGrossPaise = 0;
+    let totalPlatformFeePaise = 0;
+    let pendingEscrowPaise = 0;
+
+    const settlementHistory: Array<{
+      orderId: string;
+      gigTitle: string;
+      clientName: string;
+      completedAt: Date;
+      grossPaise: number;
+      platformFeePaise: number;
+      netPayoutPaise: number;
+      status: string;
+      escrowStatus: string;
+    }> = [];
+
+    for (const order of orders) {
+      const netPayout = order.subtotal ?? order.amount - (order.platformFee ?? 0);
+      if (order.status === 'COMPLETED') {
+        walletBalancePaise += netPayout;
+        totalGrossPaise += order.amount;
+        totalPlatformFeePaise += order.platformFee ?? 0;
+        settlementHistory.push({
+          orderId: order.id,
+          gigTitle: order.gig?.title ?? 'Gig',
+          clientName: order.client?.name ?? 'Client',
+          completedAt: order.updatedAt,
+          grossPaise: order.amount,
+          platformFeePaise: order.platformFee ?? 0,
+          netPayoutPaise: netPayout,
+          status: order.status,
+          escrowStatus: order.payment?.escrowStatus ?? 'RELEASED',
+        });
+      } else if (['PAID', 'IN_PROGRESS', 'SUBMITTED', 'REVISION'].includes(order.status)) {
+        pendingEscrowPaise += netPayout;
+      }
+    }
+
+    return {
+      currency: 'INR',
+      summary: {
+        walletBalancePaise,
+        walletBalanceInr: walletBalancePaise / 100,
+        pendingEscrowPaise,
+        pendingEscrowInr: pendingEscrowPaise / 100,
+        totalGrossPaise,
+        totalGrossInr: totalGrossPaise / 100,
+        totalPlatformFeePaise,
+        totalPlatformFeeInr: totalPlatformFeePaise / 100,
+        completedOrdersCount: settlementHistory.length,
+      },
+      settlementHistory,
+    };
   }
 }

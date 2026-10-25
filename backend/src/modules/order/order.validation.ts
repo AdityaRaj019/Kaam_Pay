@@ -95,3 +95,30 @@ export const markPaidBodySchema = z.object({
 });
 
 export type MarkPaidBodyInput = z.infer<typeof markPaidBodySchema>;
+
+export const submitDeliverableSchema = z.object({
+  fileUrls: z
+    .array(z.string().url('Invalid deliverable URL'))
+    .min(1, 'At least one file or link is required'),
+  textProof: z.string().max(2000, 'Text proof cannot exceed 2000 characters').optional(),
+});
+
+export type SubmitDeliverableInput = z.infer<typeof submitDeliverableSchema>;
+
+export const requestRevisionSchema = z.object({
+  reason: z
+    .string()
+    .min(5, 'Revision reason must be at least 5 characters')
+    .max(1000, 'Revision reason cannot exceed 1000 characters'),
+});
+
+export type RequestRevisionInput = z.infer<typeof requestRevisionSchema>;
+
+export const disputeOrderSchema = z.object({
+  reason: z
+    .string()
+    .min(10, 'Dispute reason must be at least 10 characters')
+    .max(1000, 'Dispute reason cannot exceed 1000 characters'),
+});
+
+export type DisputeOrderInput = z.infer<typeof disputeOrderSchema>;

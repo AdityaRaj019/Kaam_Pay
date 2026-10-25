@@ -7,8 +7,12 @@ import {
   cancelOrderSchema,
   failPaymentSchema,
   markPaidBodySchema,
+  submitDeliverableSchema,
+  requestRevisionSchema,
+  disputeOrderSchema,
 } from './order.validation';
 import { OrderService } from './order.service';
+import { autoCompleteSubmittedOrders } from './order.cron';
 import { sendSuccess } from '../../common/utils/apiResponse';
 import { AppError, ErrorCode } from '../../error/AppError';
 import { catchAsync } from '../../common/utils/catchAsync';
@@ -256,4 +260,146 @@ export const getMyOrders = catchAsync(async (req: Request, res: Response) => {
       : await OrderService.getClientOrders(req.user.id);
 
   sendSuccess(res, 200, 'Orders retrieved successfully.', result);
+});
+
+/**
+ * POST /api/orders/:id/start
+ *
+ * Freelancer moves order from PAID to IN_PROGRESS to begin work.
+ */
+export const startOrderProgress = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const paramValidation = orderIdParamSchema.safeParse(req.params);
+  if (!paramValidation.success) {
+    throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.startProgress(paramValidation.data.id, req.user.id);
+
+  sendSuccess(res, 200, 'Work on order started successfully (IN_PROGRESS).', result);
+});
+
+/**
+ * POST /api/orders/:id/deliver
+ *
+ * Freelancer submits completed deliverables (files + text proof), transitioning to SUBMITTED.
+ */
+export const submitDeliverables = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const paramValidation = orderIdParamSchema.safeParse(req.params);
+  if (!paramValidation.success) {
+    throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const bodyValidation = submitDeliverableSchema.safeParse(req.body);
+  if (!bodyValidation.success) {
+    const errorDetails = bodyValidation.error.issues
+      .map((issue) => `${issue.path.join('.')}: ${issue.message}`)
+      .join(', ');
+    throw new AppError(`Validation failed: ${errorDetails}`, 422, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.submitDeliverable(
+    paramValidation.data.id,
+    req.user.id,
+    bodyValidation.data,
+  );
+
+  sendSuccess(res, 201, 'Deliverables submitted successfully for client review.', result);
+});
+
+/**
+ * POST /api/orders/:id/revision
+ *
+ * Client requests revisions on submitted deliverables, transitioning order to REVISION.
+ */
+export const requestOrderRevision = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const paramValidation = orderIdParamSchema.safeParse(req.params);
+  if (!paramValidation.success) {
+    throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const bodyValidation = requestRevisionSchema.safeParse(req.body);
+  if (!bodyValidation.success) {
+    const errorDetails = bodyValidation.error.issues
+      .map((issue) => `${issue.path.join('.')}: ${issue.message}`)
+      .join(', ');
+    throw new AppError(`Validation failed: ${errorDetails}`, 422, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.requestRevision(
+    paramValidation.data.id,
+    req.user.id,
+    bodyValidation.data.reason,
+  );
+
+  sendSuccess(res, 200, 'Revision requested successfully.', result);
+});
+
+/**
+ * POST /api/orders/:id/dispute
+ *
+ * Client or Freelancer escalates an active order to DISPUTED status.
+ */
+export const disputeOrder = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const paramValidation = orderIdParamSchema.safeParse(req.params);
+  if (!paramValidation.success) {
+    throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const bodyValidation = disputeOrderSchema.safeParse(req.body);
+  if (!bodyValidation.success) {
+    const errorDetails = bodyValidation.error.issues
+      .map((issue) => `${issue.path.join('.')}: ${issue.message}`)
+      .join(', ');
+    throw new AppError(`Validation failed: ${errorDetails}`, 422, ErrorCode.VALIDATION_ERROR);
+  }
+
+  const result = await OrderService.disputeOrder(
+    paramValidation.data.id,
+    req.user.id,
+    bodyValidation.data.reason,
+  );
+
+  sendSuccess(res, 200, 'Order escalated to dispute status.', result);
+});
+
+/**
+ * GET /api/orders/settlement/earnings
+ *
+ * Retrieves freelancer revenue settlement breakdown and virtual wallet balance.
+ */
+export const getEarnings = catchAsync(async (req: Request, res: Response) => {
+  if (!req.user) {
+    throw new AppError('Not authenticated. Please sign in.', 401, ErrorCode.UNAUTHORIZED);
+  }
+
+  const result = await OrderService.getFreelancerEarnings(req.user.id);
+
+  sendSuccess(res, 200, 'Earnings and virtual wallet balances retrieved successfully.', result);
+});
+
+/**
+ * POST /api/orders/auto-complete
+ *
+ * Manual or admin trigger to process auto-completion for orders inactive for 3+ days in SUBMITTED state.
+ */
+export const triggerAutoCompleteSweep = catchAsync(async (_req: Request, res: Response) => {
+  const result = await autoCompleteSubmittedOrders();
+
+  sendSuccess(res, 200, `Auto-complete sweep processed ${result.processedCount} orders.`, result);
 });
