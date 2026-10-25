@@ -1,1717 +1,1007 @@
 {
-  ".husky/_/applypatch-msg": {
-    "mtime": 1780150279.8044772,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/commit-msg": {
-    "mtime": 1780150279.8038616,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/h": {
-    "mtime": 1780150256.8500586,
-    "ast_hash": "15239a01c5554e56ff745570fb583a91",
-    "semantic_hash": ""
-  },
-  ".husky/_/husky.sh": {
-    "mtime": 1780150279.8055687,
-    "ast_hash": "13871d2ab13e8423790ecb2c01c78c18",
-    "semantic_hash": ""
-  },
-  ".husky/_/post-applypatch": {
-    "mtime": 1780150279.8044772,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/post-checkout": {
-    "mtime": 1780150279.8050072,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/post-commit": {
-    "mtime": 1780150279.8044772,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/post-merge": {
-    "mtime": 1780150279.8050072,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/post-rewrite": {
-    "mtime": 1780150279.8050072,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/pre-applypatch": {
-    "mtime": 1780150279.8044772,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/pre-auto-gc": {
-    "mtime": 1780150279.8050072,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/pre-commit": {
-    "mtime": 1780150279.8033342,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/pre-merge-commit": {
-    "mtime": 1780150279.8038616,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/pre-push": {
-    "mtime": 1780150279.8050072,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/pre-rebase": {
-    "mtime": 1780150279.8044772,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  ".husky/_/prepare-commit-msg": {
-    "mtime": 1780150279.8038616,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
   ".husky/post-checkout": {
-    "mtime": 1780149431.7891133,
+    "mtime": 1792575604.5742936,
+    "seen": 1792928251.1355793,
     "ast_hash": "d2724dc3abf82ccbdc932656a5b6bbc5",
     "semantic_hash": ""
   },
   ".husky/post-commit": {
-    "mtime": 1780149431.7891133,
+    "mtime": 1792575604.5825486,
+    "seen": 1792928251.135588,
     "ast_hash": "df0b8cf7a3d2f787d342d4ce66c900f9",
     "semantic_hash": ""
   },
   "app/(auth)/layout.tsx": {
-    "mtime": 1780149431.7901132,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.135592,
     "ast_hash": "af0e7b340d5fc3f391189a20b114a52d",
     "semantic_hash": ""
   },
   "app/(auth)/login/page.tsx": {
-    "mtime": 1780149431.7901132,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1355941,
     "ast_hash": "0cbc271f9ba73094b4139f67651d2c8e",
     "semantic_hash": ""
   },
   "app/(auth)/register/page.tsx": {
-    "mtime": 1780321615.8996398,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1355965,
     "ast_hash": "0ece6e8c029cd05007037caa7ff69476",
     "semantic_hash": ""
   },
   "app/(auth)/signup/page.tsx": {
-    "mtime": 1780149431.7901132,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.135599,
     "ast_hash": "c577ebe9a592889ff76fde6fb40d21a0",
     "semantic_hash": ""
   },
   "app/(auth)/verify-email/page.tsx": {
-    "mtime": 1780149431.7901132,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356006,
     "ast_hash": "bf5b8e0d8905133a21a85e40f0ca1525",
     "semantic_hash": ""
   },
   "app/dashboard/create-gig/page.tsx": {
-    "mtime": 1780149431.791205,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356046,
     "ast_hash": "24cbbb22b8e0585af6f8d28960ac124c",
     "semantic_hash": ""
   },
   "app/dashboard/page.tsx": {
-    "mtime": 1789752759.4120655,
-    "ast_hash": "7b20e64bf32a36485ae8136329be3e78",
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356065,
+    "ast_hash": "91657827e7556a7557b0961edf947c64",
     "semantic_hash": ""
   },
   "app/find-work/page.tsx": {
-    "mtime": 1789731605.9833634,
-    "ast_hash": "5656a8ec6f17ed4e8f0dc98a33566b9b",
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356084,
+    "ast_hash": "c300100965e90ac2d21e536181131d40",
     "semantic_hash": ""
   },
   "app/layout.tsx": {
-    "mtime": 1780149431.791205,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.13561,
     "ast_hash": "89ad1dc8a89296970c95ce7b5741df48",
     "semantic_hash": ""
   },
   "app/messages/page.tsx": {
-    "mtime": 1789740153.4150188,
-    "ast_hash": "8e67c32782ddba27d4b3d071ac0e36ee",
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356115,
+    "ast_hash": "35ae84ced37e82299b42687efee28f0a",
     "semantic_hash": ""
   },
   "app/onboarding/page.tsx": {
-    "mtime": 1780149431.791205,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.135613,
     "ast_hash": "6edbc7d18f4906c8a26c8213d1262e43",
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1780149431.7927196,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.135618,
     "ast_hash": "6845fa994e15f7e9d8a132a869d38450",
     "semantic_hash": ""
   },
   "app/profile/page.tsx": {
-    "mtime": 1780149431.7932873,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356196,
     "ast_hash": "435ec172908530de12b646917037ec03",
     "semantic_hash": ""
   },
   "backend/src/app.ts": {
-    "mtime": 1780321615.901246,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356208,
     "ast_hash": "b87b18ada2ea33375f32e78df62943f3",
     "semantic_hash": ""
   },
   "backend/src/common/constant/index.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356227,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "backend/src/common/middlewares/auth.middleware.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356242,
     "ast_hash": "6632ae2264201eb147a9d35e478c8d03",
     "semantic_hash": ""
   },
   "backend/src/common/middlewares/errorHandler.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356254,
     "ast_hash": "55388e602ecb5b2003a1ac4f11a63556",
     "semantic_hash": ""
   },
   "backend/src/common/middlewares/index.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356273,
     "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
     "semantic_hash": ""
   },
   "backend/src/common/middlewares/upload.middleware.ts": {
-    "mtime": 1789740153.431833,
-    "ast_hash": "ad920b63baa6640106da2abf85edef91",
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356287,
+    "ast_hash": "1f2d7be8c95809280cd1b558db199238",
     "semantic_hash": ""
   },
   "backend/src/common/utils/apiResponse.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356301,
     "ast_hash": "555fe8c82b2052ad477b0dae70de777c",
     "semantic_hash": ""
   },
   "backend/src/common/utils/catchAsync.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356318,
     "ast_hash": "ea571ed550442d2fc9d0849ecbd6ac4e",
     "semantic_hash": ""
   },
   "backend/src/common/utils/index.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.1356335,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "backend/src/config/auth.ts": {
-    "mtime": 1780149431.7937987,
+    "mtime": 1792575604.5837138,
+    "seen": 1792928251.135635,
     "ast_hash": "94fe61e0b540de6bd8db29abdf53b611",
     "semantic_hash": ""
   },
   "backend/src/config/cloudinary.ts": {
-    "mtime": 1780149431.794809,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356366,
     "ast_hash": "cdd4a7732ac490871a8d575381b18093",
     "semantic_hash": ""
   },
   "backend/src/config/kafka.ts": {
-    "mtime": 1789752759.437669,
-    "ast_hash": "e8ca19eb08bf3e21a1652bc96ecd4d2d",
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.135638,
+    "ast_hash": "32baea2fab32e469cf7e9f2bb7fdc5a6",
     "semantic_hash": ""
   },
   "backend/src/config/prisma.ts": {
-    "mtime": 1789740771.300736,
-    "ast_hash": "311ceedf1303814ba312fab325f52a7a",
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356397,
+    "ast_hash": "3266e8f7129a4f7f140cfe149734e99e",
     "semantic_hash": ""
   },
   "backend/src/config/redis.ts": {
-    "mtime": 1789729678.9355896,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356428,
     "ast_hash": "cb7b3e876974bc6d93df03c2ec3fca7d",
     "semantic_hash": ""
   },
   "backend/src/error/AppError.ts": {
-    "mtime": 1780149431.794809,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356442,
     "ast_hash": "8c409694d27224f486ba878033bf6cdd",
     "semantic_hash": ""
   },
   "backend/src/error/errorHandler.ts": {
-    "mtime": 1780149431.794809,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356454,
     "ast_hash": "c2c319f57d6a3bfa13e0aafbc676c840",
     "semantic_hash": ""
   },
   "backend/src/error/index.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356468,
     "ast_hash": "0d9408f4b15006a8e8966107d0831f3c",
     "semantic_hash": ""
   },
   "backend/src/modules/auth/auth.controller.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356483,
     "ast_hash": "5eccdaabe7fcef1fc573e382ebea911b",
     "semantic_hash": ""
   },
   "backend/src/modules/auth/auth.routes.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356494,
     "ast_hash": "c4bb316409c0ea9acbd8da731f7e1bb1",
     "semantic_hash": ""
   },
   "backend/src/modules/auth/auth.service.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356514,
     "ast_hash": "250b15d70554e56bf4e9d5f0657f96a9",
     "semantic_hash": ""
   },
   "backend/src/modules/auth/auth.types.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356525,
     "ast_hash": "2959f78b4019817afb3460fbdb0f2828",
     "semantic_hash": ""
   },
   "backend/src/modules/auth/auth.validation.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5937512,
+    "seen": 1792928251.1356547,
     "ast_hash": "a0324c359cb108222e7614f6054a9123",
     "semantic_hash": ""
   },
   "backend/src/modules/chat/chat.controller.ts": {
-    "mtime": 1789752759.4576619,
-    "ast_hash": "0928bfc71c3481ae20daca923e4edd3d",
+    "mtime": 1792575604.597051,
+    "seen": 1792928251.135656,
+    "ast_hash": "cce03c802476dc932d9e79a5ce29676e",
     "semantic_hash": ""
   },
   "backend/src/modules/chat/chat.routes.ts": {
-    "mtime": 1789740153.463401,
-    "ast_hash": "90a284a9b5ac05ea7eea84ec2a745ae6",
+    "mtime": 1792575604.597051,
+    "seen": 1792928251.135658,
+    "ast_hash": "c7e45c9a0e908acc2178afd0a3af3a4b",
     "semantic_hash": ""
   },
   "backend/src/modules/client/client.controller.ts": {
-    "mtime": 1780321615.9022572,
+    "mtime": 1792575604.597051,
+    "seen": 1792928251.1356642,
     "ast_hash": "ee982528d516025acecea877abfd8fc4",
     "semantic_hash": ""
   },
   "backend/src/modules/client/client.routes.ts": {
-    "mtime": 1780321615.9022572,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356657,
     "ast_hash": "1484659a8fb05e767f313d6e33bcd747",
     "semantic_hash": ""
   },
   "backend/src/modules/client/client.service.ts": {
-    "mtime": 1780321615.9032547,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356668,
     "ast_hash": "6d85bdf5dac86d79cc628211c8b298cc",
     "semantic_hash": ""
   },
   "backend/src/modules/client/client.validation.ts": {
-    "mtime": 1780321615.9032547,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356683,
     "ast_hash": "e4dbfee190ccea8ac80a146e73f2da64",
     "semantic_hash": ""
   },
   "backend/src/modules/freelancer/freelancer.controller.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356697,
     "ast_hash": "57b511ab44c09d7c151752d24f450b87",
     "semantic_hash": ""
   },
   "backend/src/modules/freelancer/freelancer.routes.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356714,
     "ast_hash": "8a0ef66fcd7e6b73acb7fa92bc4b283c",
     "semantic_hash": ""
   },
   "backend/src/modules/freelancer/freelancer.service.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356726,
     "ast_hash": "d7c6ee605fde13de55be01c8466ddc5c",
     "semantic_hash": ""
   },
   "backend/src/modules/freelancer/freelancer.validation.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135674,
     "ast_hash": "69aef53433821421523f1bf3f6d179cb",
     "semantic_hash": ""
   },
   "backend/src/modules/gig/gig.controller.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356757,
     "ast_hash": "ce22b94075d309ef065a7b447987e9b9",
     "semantic_hash": ""
   },
   "backend/src/modules/gig/gig.routes.ts": {
-    "mtime": 1780149431.7954233,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135677,
     "ast_hash": "fc4e057e2bdabcee9967a46217683401",
     "semantic_hash": ""
   },
   "backend/src/modules/gig/gig.service.ts": {
-    "mtime": 1780149431.796928,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356788,
     "ast_hash": "c312f036a555e39afbb84df0c622ee8c",
     "semantic_hash": ""
   },
   "backend/src/modules/gig/gig.validation.ts": {
-    "mtime": 1780149431.796928,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356802,
     "ast_hash": "cebe4dc09cd3edab654b81fc0dcb9e9e",
     "semantic_hash": ""
   },
   "backend/src/modules/index.ts": {
-    "mtime": 1789740771.3337398,
-    "ast_hash": "be19c7d3a757f92c7b10ba1ae3012a98",
+    "mtime": 1792919634.0880191,
+    "seen": 1792928251.1356816,
+    "ast_hash": "263c260eda544d26ca007a90fc1062d2",
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.controller.ts": {
-    "mtime": 1789752759.5041215,
-    "ast_hash": "4c6dc66164679a63bbbbdf3e68bc8358",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356828,
+    "ast_hash": "d0d84c526ac7e25a20fa2c8f4faf8530",
     "semantic_hash": ""
   },
   "backend/src/modules/notifications/notification.routes.ts": {
-    "mtime": 1789751400.7910385,
-    "ast_hash": "48b1b8c998141e7ee210d0ec87ef100b",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135684,
+    "ast_hash": "54cf88310b3abed77e40b7162e791321",
     "semantic_hash": ""
   },
   "backend/src/modules/order/order.controller.ts": {
-    "mtime": 1789740771.3427603,
-    "ast_hash": "eae497f069e95c52ab3f5e157f91a7bb",
+    "mtime": 1792922223.2723868,
+    "seen": 1792928251.1356907,
+    "ast_hash": "f8f20e784d80663d11f2f0cde9078c1b",
     "semantic_hash": ""
   },
   "backend/src/modules/order/order.routes.ts": {
-    "mtime": 1789740771.3467565,
-    "ast_hash": "423997043d3ad883e4471ba972e14b15",
+    "mtime": 1792922223.2984629,
+    "seen": 1792928251.1356938,
+    "ast_hash": "1fc3129bbecb757c232e52cca509884c",
     "semantic_hash": ""
   },
   "backend/src/modules/order/order.service.ts": {
-    "mtime": 1789740771.3538437,
-    "ast_hash": "27bdb4ce17a81860d9e1b9b0fbf1cafc",
+    "mtime": 1792922223.3455193,
+    "seen": 1792928251.1356952,
+    "ast_hash": "f85ce931261bf17a09240ef65b06a9b8",
     "semantic_hash": ""
   },
   "backend/src/modules/order/order.validation.ts": {
-    "mtime": 1789740771.358825,
-    "ast_hash": "cf4d4db2368fe8cd2178695374664800",
+    "mtime": 1792922223.3670776,
+    "seen": 1792928251.1356964,
+    "ast_hash": "31f45f444da13f2d60242c00327858ba",
     "semantic_hash": ""
   },
   "backend/src/modules/users/user.controller.ts": {
-    "mtime": 1780149431.796928,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135703,
     "ast_hash": "716cdf8f792b7d198b0c6d5cb055a66d",
     "semantic_hash": ""
   },
   "backend/src/modules/users/user.routes.ts": {
-    "mtime": 1780149431.796928,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357043,
     "ast_hash": "98255019f46dc19067d821113e5d155c",
     "semantic_hash": ""
   },
   "backend/src/modules/users/user.service.ts": {
-    "mtime": 1780149431.796928,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135706,
     "ast_hash": "00cbdb57e55dfb348dca3f4599b2ea91",
     "semantic_hash": ""
   },
   "backend/src/modules/users/user.validation.ts": {
-    "mtime": 1780149431.796928,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357074,
     "ast_hash": "de4fd3b2b5e9e217896f21fd105f4549",
     "semantic_hash": ""
   },
   "backend/src/server.ts": {
-    "mtime": 1789752759.5411346,
-    "ast_hash": "333cabd7ea49abe717aa995ff7d7018c",
+    "mtime": 1792922223.3837688,
+    "seen": 1792928251.1357088,
+    "ast_hash": "9da13027d49e0ee2eecdce6ebb32c6c4",
     "semantic_hash": ""
   },
   "backend/src/services/chat.consumer.ts": {
-    "mtime": 1789751447.1872995,
-    "ast_hash": "70579038a748d6ad7eae5fb00b8c40a4",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357102,
+    "ast_hash": "94ff7b366ac345b70303dceee4cf4d10",
     "semantic_hash": ""
   },
   "backend/src/socket/chat.socket.ts": {
-    "mtime": 1789751465.198834,
-    "ast_hash": "faead46ba0decdfb309acba75bbe09d8",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357117,
+    "ast_hash": "c8a9d45f32007d6b1315456ac14f85cd",
     "semantic_hash": ""
   },
   "backend/src/types/express.d.ts": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357133,
     "ast_hash": "a496e6c47ab7d25a7420aa42c21fb533",
     "semantic_hash": ""
   },
   "backend/tsconfig.json": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357145,
     "ast_hash": "395c48218f1e5d6d8b2e414335b582f5",
     "semantic_hash": ""
   },
   "components/AppNavbar.tsx": {
-    "mtime": 1789742479.241989,
-    "ast_hash": "c4c7508f977fb71f990f0b3d35b9b7da",
+    "mtime": 1792922223.4110937,
+    "seen": 1792928251.1357157,
+    "ast_hash": "291d74985a36f0cb1c33032ee38f5ced",
     "semantic_hash": ""
   },
   "components/Button.tsx": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357172,
     "ast_hash": "ccc54c14b2b8a9e9a5d55594172e96a8",
     "semantic_hash": ""
   },
   "components/Categories.tsx": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357186,
     "ast_hash": "77b9ea7be26aaef6b6665d38de3ab0c6",
     "semantic_hash": ""
   },
   "components/Features.tsx": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.13572,
     "ast_hash": "ec0009d8e7ced58119b62a5e0b488fc4",
     "semantic_hash": ""
   },
   "components/Footer.tsx": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357214,
     "ast_hash": "b5da067a8902f852eade0d5e18234976",
     "semantic_hash": ""
   },
   "components/Hero.tsx": {
-    "mtime": 1780149431.7979338,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357226,
     "ast_hash": "ee5187333d934d79e7ff5a7b73516762",
     "semantic_hash": ""
   },
   "components/Navbar.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357243,
     "ast_hash": "5fb49536a44d6f386da3664a2290a9d5",
     "semantic_hash": ""
   },
   "components/RegisterForm.tsx": {
-    "mtime": 1780321615.9042585,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357257,
     "ast_hash": "a542760abb5c1957ab60d74b7c333998",
     "semantic_hash": ""
   },
   "components/RoleGuard.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357274,
     "ast_hash": "cf6e8203621910c58b5c02463301bc91",
     "semantic_hash": ""
   },
   "components/Search.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357288,
     "ast_hash": "c634c17652d9c1d13007fcfa587eb02c",
     "semantic_hash": ""
   },
   "components/Testimonials.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357303,
     "ast_hash": "34969a3c01a0b517154f88d2687dbd5c",
     "semantic_hash": ""
   },
   "components/chat/AttachmentPreview.tsx": {
-    "mtime": 1789742913.5627983,
-    "ast_hash": "07f8feb5e50ecc2dc3fd01bcebc779af",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357322,
+    "ast_hash": "25bade04c5b5f9674080edf2a745a909",
     "semantic_hash": ""
   },
   "components/chat/ChatWindow.tsx": {
-    "mtime": 1789752759.6239853,
-    "ast_hash": "71d8b48b847a4e6f2dc01c7ad5b23b3b",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135734,
+    "ast_hash": "e5e1784e6863adc1d7f0c3b50a5c6c90",
     "semantic_hash": ""
   },
   "components/chat/MessageBubble.tsx": {
-    "mtime": 1789752759.6289766,
-    "ast_hash": "ffc298d9de0c7e6d42b0b7e1290058fb",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357353,
+    "ast_hash": "1341fe67e8037caa4861dd9542b89ead",
     "semantic_hash": ""
   },
   "components/chat/PresenceDot.tsx": {
-    "mtime": 1789729678.9393249,
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135737,
     "ast_hash": "836dcbe79dd0ca7a37d994411a7f0033",
     "semantic_hash": ""
   },
   "components/chat/TypingIndicator.tsx": {
-    "mtime": 1789752759.6319766,
-    "ast_hash": "6b1f6f0934c9d1f9f296c41958159481",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357381,
+    "ast_hash": "f02293f994a99e994449d4c5637e991d",
     "semantic_hash": ""
   },
   "components/find-work/BookmarkBtn.tsx": {
-    "mtime": 1780481573.1103039,
-    "ast_hash": "f267d7c1f3b7b9c9b81bf614c7f21a0f",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357462,
+    "ast_hash": "8140791f167d96347beddac1859f77eb",
     "semantic_hash": ""
   },
   "components/find-work/FilterDrawer.tsx": {
-    "mtime": 1780481573.1314313,
-    "ast_hash": "4ce24d8fd4ec4d12c928e6eec9a04004",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357477,
+    "ast_hash": "f76a098c0cbbf21ad9c417b717a38163",
     "semantic_hash": ""
   },
   "components/find-work/FullModal.tsx": {
-    "mtime": 1789740153.5478723,
-    "ast_hash": "d6bc8caf6a98983efd63089321858e67",
+    "mtime": 1792839808.0452619,
+    "seen": 1792928251.135749,
+    "ast_hash": "52bcfd001aa9cd4fdf1af6a0d5183139",
     "semantic_hash": ""
   },
   "components/find-work/GigCard.tsx": {
-    "mtime": 1780481573.166054,
-    "ast_hash": "814648dcf76af147841b90b3b0a29a36",
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1357508,
+    "ast_hash": "ac806a76c4c4702fd9a91782d71c7a19",
     "semantic_hash": ""
   },
   "components/find-work/GigDetailPanel.tsx": {
-    "mtime": 1789740153.5678704,
-    "ast_hash": "f44777a4039e3a5d452e5cd57d869c5b",
+    "mtime": 1792839787.6604974,
+    "seen": 1792928251.1357524,
+    "ast_hash": "af507f34007d35f5545b60d41923ad24",
     "semantic_hash": ""
   },
   "components/find-work/SavedEmpty.tsx": {
-    "mtime": 1780481573.1935563,
-    "ast_hash": "097c842b31fc1234ac15cea1cb9c13ab",
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.1357539,
+    "ast_hash": "7d6797d877c82c1f797cdc32b7d127a3",
     "semantic_hash": ""
   },
   "components/find-work/utils.ts": {
-    "mtime": 1780481573.2031233,
-    "ast_hash": "485089c3cf2cb03aa5f31373ea6abb57",
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.1357555,
+    "ast_hash": "c5bb0fe5a595b546de092746a074127e",
     "semantic_hash": ""
   },
   "components/notifications/NotificationBell.tsx": {
-    "mtime": 1789751489.8214746,
-    "ast_hash": "000dc869eadffa8d7f199af19f04d8cf",
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.135757,
+    "ast_hash": "f7cf89bf77e600fcab5db3fcdc238bdf",
     "semantic_hash": ""
   },
   "components/onboarding/SplitScreenLayout.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.1357586,
     "ast_hash": "e153ac0e0118005f2dd1fbdd4cdbda74",
     "semantic_hash": ""
   },
   "components/onboarding/Step1_Rules.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.13576,
     "ast_hash": "b83105475d93ed58bf9e57af9fd03d8c",
     "semantic_hash": ""
   },
   "components/onboarding/Step1_TitleBio.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.1357617,
     "ast_hash": "066d61a4927a4bca082fe17fdfd63bc1",
     "semantic_hash": ""
   },
   "components/onboarding/Step2_Experience.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.1357632,
     "ast_hash": "0c3b44b306948b524d18264077db1db3",
     "semantic_hash": ""
   },
   "components/onboarding/Step2_Skills.tsx": {
-    "mtime": 1780149431.7989316,
+    "mtime": 1792575604.612206,
+    "seen": 1792928251.135765,
     "ast_hash": "377774aa342008c4063e7439eb15495e",
     "semantic_hash": ""
   },
   "components/onboarding/Step3_Pricing.tsx": {
-    "mtime": 1780149431.8004346,
+    "mtime": 1792575604.6142142,
+    "seen": 1792928251.1357663,
     "ast_hash": "f38b2a5e6f4baedf5ed0fe9694a3c6b6",
     "semantic_hash": ""
   },
   "components/onboarding/Step3_Purpose.tsx": {
-    "mtime": 1780149431.8004346,
+    "mtime": 1792575604.6142142,
+    "seen": 1792928251.1357675,
     "ast_hash": "84551196e94df40c85627812a3f330b6",
     "semantic_hash": ""
   },
   "components/onboarding/Step4_Review.tsx": {
-    "mtime": 1780149431.8004346,
+    "mtime": 1792575604.6142142,
+    "seen": 1792928251.135769,
     "ast_hash": "84150bee351544f4e5a102132e459a79",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
-    "mtime": 1789730676.2513156,
+    "mtime": 1792575604.6162217,
+    "seen": 1792928251.1357799,
     "ast_hash": "d1a70ba493bff795ea4fb3f58bac336b",
     "semantic_hash": ""
   },
   "features/index.ts": {
-    "mtime": 1780149431.8004346,
+    "mtime": 1792575604.6162217,
+    "seen": 1792928251.135781,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "hooks/index.ts": {
-    "mtime": 1780149431.814503,
+    "mtime": 1792575604.640104,
+    "seen": 1792928251.1357825,
     "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
     "semantic_hash": ""
   },
   "hooks/useAuth.ts": {
-    "mtime": 1780321615.918631,
+    "mtime": 1792575604.640104,
+    "seen": 1792928251.135784,
     "ast_hash": "61f48576d8ba4e0ee0a456513f534aba",
     "semantic_hash": ""
   },
   "hooks/useChat.ts": {
-    "mtime": 1789740153.5908787,
-    "ast_hash": "919fbe22056421e50c87a234204fa549",
+    "mtime": 1792575604.640104,
+    "seen": 1792928251.135785,
+    "ast_hash": "edb8e81fc209117dcaaf22600ede8294",
     "semantic_hash": ""
   },
   "hooks/useNotifications.ts": {
-    "mtime": 1789752759.6514933,
-    "ast_hash": "550dabe9094dfee97a4e5a1eeb8ec168",
-    "semantic_hash": ""
-  },
-  "kaampay/.obsidian/app.json": {
-    "mtime": 1780149431.816115,
-    "ast_hash": "c443b04d0fc26b0a5a4573a78e0082a1",
-    "semantic_hash": ""
-  },
-  "kaampay/.obsidian/appearance.json": {
-    "mtime": 1780149431.816115,
-    "ast_hash": "c443b04d0fc26b0a5a4573a78e0082a1",
-    "semantic_hash": ""
-  },
-  "kaampay/.obsidian/community-plugins.json": {
-    "mtime": 1780149431.816115,
-    "ast_hash": "681a2623bf23399667f8e822e89dafbd",
-    "semantic_hash": ""
-  },
-  "kaampay/.obsidian/core-plugins.json": {
-    "mtime": 1780149431.816115,
-    "ast_hash": "fb7bf078e4ceabff503367b2fe357692",
-    "semantic_hash": ""
-  },
-  "kaampay/.obsidian/graph.json": {
-    "mtime": 1789740769.347196,
-    "ast_hash": "e4a9a171300bbf1a9dad41777c44121d",
-    "semantic_hash": ""
-  },
-  "kaampay/.obsidian/workspace.json": {
-    "mtime": 1789740769.352197,
-    "ast_hash": "e714c3de27db716b6a91b0afc620d987",
-    "semantic_hash": ""
-  },
-  "kaampay/.smart-env/smart_env.json": {
-    "mtime": 1780149431.824781,
-    "ast_hash": "62d439c8b4d3711956d1033c351e796c",
+    "mtime": 1792575604.640104,
+    "seen": 1792928251.1357868,
+    "ast_hash": "5ad2507d0b6a07449cab103b3c3e3fb9",
     "semantic_hash": ""
   },
   "lib/auth/auth-client.ts": {
-    "mtime": 1780149431.824781,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1357882,
     "ast_hash": "4e638a7211df88fcbc2f9df963722c4d",
     "semantic_hash": ""
   },
   "lib/axios.ts": {
-    "mtime": 1780149431.8257878,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1357899,
     "ast_hash": "ac02859969ccd7c5b9f99b195a36f107",
     "semantic_hash": ""
   },
   "lib/download.ts": {
-    "mtime": 1789740153.60541,
-    "ast_hash": "5f5ae2c43893582380cd5fcd1df772f6",
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.135791,
+    "ast_hash": "198121921ccf8381b6da13a330114cff",
     "semantic_hash": ""
   },
   "lib/index.ts": {
-    "mtime": 1780149431.8257878,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1357927,
     "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
     "semantic_hash": ""
   },
   "lib/socket.ts": {
-    "mtime": 1789729678.9414847,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.135794,
     "ast_hash": "f1dd61d7c2ecddfe1b38177ca9c2a157",
     "semantic_hash": ""
   },
   "mcp.json": {
     "mtime": 1780149431.8257878,
-    "ast_hash": "6e70807660d221bd779dac10fc55ca90",
+    "ast_hash": "",
     "semantic_hash": ""
   },
   "next.config.ts": {
-    "mtime": 1780149431.8257878,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1357954,
     "ast_hash": "025f4fcb6024b3524d19492cf7ce54a2",
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1789729678.943616,
-    "ast_hash": "1d8fee254877ac2f33fb116c1dcfa29c",
+    "mtime": 1792918540.860925,
+    "seen": 1792928251.1357968,
+    "ast_hash": "5ad4587271116ef84ce3c9ba642250c0",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
-    "mtime": 1780149431.8272922,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.135798,
     "ast_hash": "481fac0fdecd70e1821cc30b86030c1a",
     "semantic_hash": ""
   },
   "prisma.config.ts": {
-    "mtime": 1780149431.8272922,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1357994,
     "ast_hash": "9634b52da427306ffc74d41f21ffece5",
     "semantic_hash": ""
   },
   "prisma/migrations/20260531183445_init/migration.sql": {
     "mtime": 1780481480.3627038,
-    "ast_hash": "fb4bf37a89b35b0693267400f04339b4",
+    "ast_hash": "",
     "semantic_hash": ""
   },
   "prisma/migrations/20260918103727_add_message_attachments_and_order_statuses/migration.sql": {
     "mtime": 1789729572.1135807,
-    "ast_hash": "c4581aa846ff6a623fffe09d6f8a6666",
+    "ast_hash": "",
     "semantic_hash": ""
   },
   "prisma/seed.ts": {
-    "mtime": 1780149431.828297,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358004,
     "ast_hash": "76c8054f08a4a6f4826c5122ed068193",
     "semantic_hash": ""
   },
   "providers/index.ts": {
-    "mtime": 1780149431.828297,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358023,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "public/index.ts": {
-    "mtime": 1780149431.828297,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358037,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "scripts/index.ts": {
-    "mtime": 1780149431.828297,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.135805,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "scripts/seed-chat-order.ts": {
-    "mtime": 1789731037.2312756,
-    "ast_hash": "da404f0deddb52c147f1b19a3da7f27c",
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358068,
+    "ast_hash": "1f501ce1d3b31e05ecc9c97dddb5f6b4",
     "semantic_hash": ""
   },
   "scripts/seed-gigs.ts": {
-    "mtime": 1780481573.2368865,
-    "ast_hash": "f1b23390e509ff101daafabf9f42decd",
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.135808,
+    "ast_hash": "97bf609c3e32ae071fc24154066a0830",
     "semantic_hash": ""
   },
   "services/auth.service.ts": {
-    "mtime": 1780149431.828297,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358092,
     "ast_hash": "9453969641553066966b9693e35334e3",
     "semantic_hash": ""
   },
   "services/index.ts": {
-    "mtime": 1780149431.828297,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358109,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "store/auth.store.ts": {
-    "mtime": 1780149431.8293996,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.135812,
     "ast_hash": "976f0797c8b559e384156601db1ef7a2",
     "semantic_hash": ""
   },
   "test/check-orders.ts": {
-    "mtime": 1789740153.6184704,
-    "ast_hash": "60aa35887d2775db227a4f66f69644d9",
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358135,
+    "ast_hash": "02d20cfec171dc1ee1425570d0a7b9e8",
     "semantic_hash": ""
   },
   "test/test-connections.ts": {
-    "mtime": 1789740153.6264632,
-    "ast_hash": "86ab23053da2067904598be4f115a29b",
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.135816,
+    "ast_hash": "96162311178e82b3208d86121e4e9603",
     "semantic_hash": ""
   },
   "tsconfig.json": {
-    "mtime": 1780149431.8293996,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358218,
     "ast_hash": "b40f43b9a5257b9622a55869b11d085e",
     "semantic_hash": ""
   },
   "types/gig.ts": {
-    "mtime": 1780481573.2468724,
-    "ast_hash": "9d83f85d3ebcc8405114d8ba52f800ea",
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.135823,
+    "ast_hash": "3eefa8e1f867f2ec6fb031cf1bad0512",
     "semantic_hash": ""
   },
   "types/index.ts": {
-    "mtime": 1780149431.8293996,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358244,
     "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
     "semantic_hash": ""
   },
   "utils/authUtils.ts": {
-    "mtime": 1780149431.8293996,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358273,
     "ast_hash": "25b8bd1b67a63aa6a3e4ffaff94fecbe",
     "semantic_hash": ""
   },
   "utils/index.ts": {
-    "mtime": 1780149431.8293996,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358285,
     "ast_hash": "46790ad4315ffb0c9b6590a2b0ba56ee",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789740768.9916584,
-    "ast_hash": "acfdaec51edd1e46d9e8752fe8a817fe",
+    "mtime": 1792575604.5825486,
+    "seen": 1792928251.13583,
+    "ast_hash": "073520737a15d89c082354a884ab50ba",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1789729572.1135807,
+    "mtime": 1792575604.6142142,
+    "seen": 1792928251.135778,
     "ast_hash": "34cce67af4b908772991f4f742bf0dba",
     "semantic_hash": ""
   },
   "kaampay/Action_Register.md": {
-    "mtime": 1789740149.8482087,
-    "ast_hash": "8d4a88c80c458df9e4fadb7d8093822a",
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1358316,
+    "ast_hash": "9ec509cdcfefa94a5b05657dc7e6c284",
     "semantic_hash": ""
   },
   "kaampay/Context_State.md": {
-    "mtime": 1789740769.4045546,
-    "ast_hash": "4f245845feef588aed8eed46b907ebcc",
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1358328,
+    "ast_hash": "8cab16d4dc3737cd9b1664e767c3a09c",
     "semantic_hash": ""
   },
   "kaampay/Untitled.md": {
-    "mtime": 1780149431.824781,
+    "mtime": 1792575604.6461263,
+    "seen": 1792928251.1358342,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "test/test-kafka-topics.ts": {
-    "mtime": 1789741479.6296623,
-    "ast_hash": "4816ee09925b076501e37a5753cc97c6",
-    "semantic_hash": ""
-  },
-  "test/test-offline-notification.ts": {
-    "mtime": 1789752759.6800914,
-    "ast_hash": "3e7f5175441d8aa940dbc1a5108c2fcc",
-    "semantic_hash": ""
-  },
-  "backend/src/modules/chat/chat.service.ts": {
-    "mtime": 1789751427.3980126,
-    "ast_hash": "ed9e8fddc2f63c7b6158dcde1095445b",
-    "semantic_hash": ""
-  },
-  "backend/src/modules/chat/chat.types.ts": {
-    "mtime": 1789751407.1265495,
-    "ast_hash": "df9a88007e02384655757ee1f719f62d",
-    "semantic_hash": ""
-  },
-  "backend/src/modules/chat/chat.validation.ts": {
-    "mtime": 1789752759.49617,
-    "ast_hash": "6f028d7783e1671a41cbfa920b7e041f",
-    "semantic_hash": ""
-  },
-  "backend/src/modules/notifications/notification.service.ts": {
-    "mtime": 1789752759.518122,
-    "ast_hash": "38ad2c3f6d8ac8d4b7a0b447abb910fd",
-    "semantic_hash": ""
-  },
-  "backend/src/modules/notifications/notification.types.ts": {
-    "mtime": 1789752759.5241218,
-    "ast_hash": "ba76040cb228ca2fe3ffcd3eeb0d8e30",
-    "semantic_hash": ""
-  },
-  "backend/src/modules/notifications/notification.validation.ts": {
-    "mtime": 1789751379.3298597,
-    "ast_hash": "d0f01bd250cafa02eccae02c82511819",
-    "semantic_hash": ""
-  },
-  "test/test-chat-notification-service.ts": {
-    "mtime": 1789751501.02783,
-    "ast_hash": "501f975b22782fca48c201ef48f697fe",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\eslint.config.mjs": {
-    "mtime": 1789812698.2651176,
-    "ast_hash": "d1a70ba493bff795ea4fb3f58bac336b",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\mcp.json": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "6e70807660d221bd779dac10fc55ca90",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\next-env.d.ts": {
-    "mtime": 1780511846.5931537,
-    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\next.config.ts": {
-    "mtime": 1773510068.2262814,
-    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\package.json": {
-    "mtime": 1789812698.2814279,
-    "ast_hash": "1d8fee254877ac2f33fb116c1dcfa29c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\postcss.config.mjs": {
-    "mtime": 1773510068.1439168,
-    "ast_hash": "239f3ebf717465dc636818a1a619398d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\prisma.config.ts": {
-    "mtime": 1778694774.8728487,
-    "ast_hash": "9634b52da427306ffc74d41f21ffece5",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\tsconfig.json": {
-    "mtime": 1778694774.8778713,
-    "ast_hash": "b40f43b9a5257b9622a55869b11d085e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\post-checkout": {
-    "mtime": 1780078409.2447062,
-    "ast_hash": "d2724dc3abf82ccbdc932656a5b6bbc5",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\post-commit": {
-    "mtime": 1780078409.2457073,
-    "ast_hash": "df0b8cf7a3d2f787d342d4ce66c900f9",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\applypatch-msg": {
-    "mtime": 1789928620.339165,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\commit-msg": {
-    "mtime": 1789928620.339165,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\h": {
-    "mtime": 1778332856.961373,
-    "ast_hash": "15239a01c5554e56ff745570fb583a91",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\husky.sh": {
-    "mtime": 1789928620.3407283,
-    "ast_hash": "13871d2ab13e8423790ecb2c01c78c18",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\post-applypatch": {
-    "mtime": 1789928620.33969,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\post-checkout": {
-    "mtime": 1789928620.33969,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\post-commit": {
-    "mtime": 1789928620.339165,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\post-merge": {
-    "mtime": 1789928620.3402097,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\post-rewrite": {
-    "mtime": 1789928620.33969,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\pre-applypatch": {
-    "mtime": 1789928620.339165,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\pre-auto-gc": {
-    "mtime": 1789928620.3402097,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\pre-commit": {
-    "mtime": 1789928620.33865,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\pre-merge-commit": {
-    "mtime": 1789928620.33865,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\pre-push": {
-    "mtime": 1789928620.3402097,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\pre-rebase": {
-    "mtime": 1789928620.33969,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\.husky\\_\\prepare-commit-msg": {
-    "mtime": 1789928620.33865,
-    "ast_hash": "0b71c2e7d39daa010985d529f1320b37",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\layout.tsx": {
-    "mtime": 1779802805.569893,
-    "ast_hash": "89ad1dc8a89296970c95ce7b5741df48",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\page.tsx": {
-    "mtime": 1778349635.7621317,
-    "ast_hash": "6845fa994e15f7e9d8a132a869d38450",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\(auth)\\layout.tsx": {
-    "mtime": 1779969505.2931771,
-    "ast_hash": "af0e7b340d5fc3f391189a20b114a52d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\(auth)\\login\\page.tsx": {
-    "mtime": 1779969505.2931771,
-    "ast_hash": "0cbc271f9ba73094b4139f67651d2c8e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\(auth)\\register\\page.tsx": {
-    "mtime": 1780162563.2103736,
-    "ast_hash": "0ece6e8c029cd05007037caa7ff69476",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\(auth)\\signup\\page.tsx": {
-    "mtime": 1779969505.2942233,
-    "ast_hash": "c577ebe9a592889ff76fde6fb40d21a0",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\(auth)\\verify-email\\page.tsx": {
-    "mtime": 1779969505.2947416,
-    "ast_hash": "bf5b8e0d8905133a21a85e40f0ca1525",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\dashboard\\page.tsx": {
-    "mtime": 1789812698.252437,
-    "ast_hash": "91657827e7556a7557b0961edf947c64",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\dashboard\\create-gig\\page.tsx": {
-    "mtime": 1780078409.248026,
-    "ast_hash": "24cbbb22b8e0585af6f8d28960ac124c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\find-work\\page.tsx": {
-    "mtime": 1789812698.2534735,
-    "ast_hash": "c300100965e90ac2d21e536181131d40",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\messages\\page.tsx": {
-    "mtime": 1789812698.2534735,
-    "ast_hash": "35ae84ced37e82299b42687efee28f0a",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\onboarding\\page.tsx": {
-    "mtime": 1780038847.296193,
-    "ast_hash": "6edbc7d18f4906c8a26c8213d1262e43",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\app\\profile\\page.tsx": {
-    "mtime": 1780078409.2501342,
-    "ast_hash": "435ec172908530de12b646917037ec03",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\tsconfig.json": {
-    "mtime": 1778694774.8661208,
-    "ast_hash": "395c48218f1e5d6d8b2e414335b582f5",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\app.ts": {
-    "mtime": 1780162563.2103736,
-    "ast_hash": "b87b18ada2ea33375f32e78df62943f3",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\server.ts": {
-    "mtime": 1789812698.259602,
-    "ast_hash": "94f7d3e6494eedfe4fc416f375c9c43a",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\constant\\index.ts": {
-    "mtime": 1778694774.857379,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\auth.middleware.ts": {
-    "mtime": 1779969505.2965689,
-    "ast_hash": "6632ae2264201eb147a9d35e478c8d03",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\errorHandler.ts": {
-    "mtime": 1778694774.8584256,
-    "ast_hash": "55388e602ecb5b2003a1ac4f11a63556",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\index.ts": {
-    "mtime": 1778694774.8589523,
-    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\middlewares\\upload.middleware.ts": {
-    "mtime": 1789812698.2539961,
-    "ast_hash": "1f2d7be8c95809280cd1b558db199238",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\apiResponse.ts": {
-    "mtime": 1778694774.859468,
-    "ast_hash": "555fe8c82b2052ad477b0dae70de777c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\catchAsync.ts": {
-    "mtime": 1778694774.859468,
-    "ast_hash": "ea571ed550442d2fc9d0849ecbd6ac4e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\common\\utils\\index.ts": {
-    "mtime": 1778694774.8600883,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\config\\auth.ts": {
-    "mtime": 1779969505.2965689,
-    "ast_hash": "94fe61e0b540de6bd8db29abdf53b611",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\config\\cloudinary.ts": {
-    "mtime": 1780078409.2511642,
-    "ast_hash": "cdd4a7732ac490871a8d575381b18093",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\config\\kafka.ts": {
-    "mtime": 1789812698.2539961,
-    "ast_hash": "32baea2fab32e469cf7e9f2bb7fdc5a6",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\config\\prisma.ts": {
-    "mtime": 1789812698.2550387,
-    "ast_hash": "3266e8f7129a4f7f140cfe149734e99e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\config\\redis.ts": {
-    "mtime": 1789812698.255558,
-    "ast_hash": "cb7b3e876974bc6d93df03c2ec3fca7d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\error\\AppError.ts": {
-    "mtime": 1778694774.8610976,
-    "ast_hash": "8c409694d27224f486ba878033bf6cdd",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\error\\errorHandler.ts": {
-    "mtime": 1789127248.811164,
-    "ast_hash": "fef89d0de47cc55dd77022ae20551882",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\error\\index.ts": {
-    "mtime": 1778694774.8610976,
-    "ast_hash": "0d9408f4b15006a8e8966107d0831f3c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\index.ts": {
-    "mtime": 1789812698.256594,
-    "ast_hash": "3875c0b271c6fc4224eeee17ec4d376b",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.controller.ts": {
-    "mtime": 1779969505.2970889,
-    "ast_hash": "5eccdaabe7fcef1fc573e382ebea911b",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.routes.ts": {
-    "mtime": 1779969505.2976592,
-    "ast_hash": "c4bb316409c0ea9acbd8da731f7e1bb1",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.service.ts": {
-    "mtime": 1780038847.2967067,
-    "ast_hash": "250b15d70554e56bf4e9d5f0657f96a9",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.types.ts": {
-    "mtime": 1780038847.297232,
-    "ast_hash": "2959f78b4019817afb3460fbdb0f2828",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\auth\\auth.validation.ts": {
-    "mtime": 1779969505.2987015,
-    "ast_hash": "a0324c359cb108222e7614f6054a9123",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.controller.ts": {
-    "mtime": 1789812698.2560756,
-    "ast_hash": "cce03c802476dc932d9e79a5ce29676e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.routes.ts": {
-    "mtime": 1789812698.2560756,
-    "ast_hash": "c7e45c9a0e908acc2178afd0a3af3a4b",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.service.ts": {
-    "mtime": 1789812698.2560756,
-    "ast_hash": "a01e75831ef786a1460c35605e8dd4a7",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.types.ts": {
-    "mtime": 1789812698.256594,
-    "ast_hash": "eafbfca1981839c69ce30c36112d7c34",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\chat\\chat.validation.ts": {
-    "mtime": 1789812698.256594,
-    "ast_hash": "c1539b627f83ec6a997bacbf383a99f8",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.controller.ts": {
-    "mtime": 1780255086.6475472,
-    "ast_hash": "ee982528d516025acecea877abfd8fc4",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.routes.ts": {
-    "mtime": 1780255086.6480713,
-    "ast_hash": "1484659a8fb05e767f313d6e33bcd747",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.service.ts": {
-    "mtime": 1780255086.6480713,
-    "ast_hash": "6d85bdf5dac86d79cc628211c8b298cc",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\client\\client.validation.ts": {
-    "mtime": 1780255086.6485846,
-    "ast_hash": "e4dbfee190ccea8ac80a146e73f2da64",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.controller.ts": {
-    "mtime": 1780038847.297754,
-    "ast_hash": "57b511ab44c09d7c151752d24f450b87",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.routes.ts": {
-    "mtime": 1780038847.297754,
-    "ast_hash": "8a0ef66fcd7e6b73acb7fa92bc4b283c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.service.ts": {
-    "mtime": 1780038847.2982776,
-    "ast_hash": "d7c6ee605fde13de55be01c8466ddc5c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\freelancer\\freelancer.validation.ts": {
-    "mtime": 1780038847.2982776,
-    "ast_hash": "69aef53433821421523f1bf3f6d179cb",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.controller.ts": {
-    "mtime": 1780078409.2516887,
-    "ast_hash": "ce22b94075d309ef065a7b447987e9b9",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.routes.ts": {
-    "mtime": 1780078409.2526946,
-    "ast_hash": "fc4e057e2bdabcee9967a46217683401",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.service.ts": {
-    "mtime": 1780078409.2536943,
-    "ast_hash": "c312f036a555e39afbb84df0c622ee8c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\gig\\gig.validation.ts": {
-    "mtime": 1780078409.2536943,
-    "ast_hash": "cebe4dc09cd3edab654b81fc0dcb9e9e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.controller.ts": {
-    "mtime": 1789812698.2575989,
-    "ast_hash": "d0d84c526ac7e25a20fa2c8f4faf8530",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.routes.ts": {
-    "mtime": 1789812698.2575989,
-    "ast_hash": "54cf88310b3abed77e40b7162e791321",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.service.ts": {
-    "mtime": 1789812698.2575989,
-    "ast_hash": "b85f5e823822702a9bd538c1c79a73b9",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.types.ts": {
-    "mtime": 1789812698.2575989,
-    "ast_hash": "4e040c3ce14eab5dcf600d6257516ac2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\notifications\\notification.validation.ts": {
-    "mtime": 1789812698.2575989,
-    "ast_hash": "aebec50e243835e8d356497b8042a056",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.controller.ts": {
-    "mtime": 1790255690.6918705,
-    "ast_hash": "8ae4342f3a9efa4e8c819e30b86bcf90",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.routes.ts": {
-    "mtime": 1790255703.077429,
-    "ast_hash": "c0da5edaa2eebee11d02a6c7b3a5586a",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.service.ts": {
-    "mtime": 1790256018.350162,
-    "ast_hash": "a8242a6566f8d1054c4698b004ca8456",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\order\\order.validation.ts": {
-    "mtime": 1790255619.9982839,
-    "ast_hash": "eef47abcf95d34072608cc8676848b72",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.controller.ts": {
-    "mtime": 1779969505.2997425,
-    "ast_hash": "716cdf8f792b7d198b0c6d5cb055a66d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.routes.ts": {
-    "mtime": 1779969505.2997425,
-    "ast_hash": "98255019f46dc19067d821113e5d155c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.service.ts": {
-    "mtime": 1779969505.3002613,
-    "ast_hash": "00cbdb57e55dfb348dca3f4599b2ea91",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\modules\\users\\user.validation.ts": {
-    "mtime": 1779969505.300779,
-    "ast_hash": "de4fd3b2b5e9e217896f21fd105f4549",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\services\\chat.consumer.ts": {
-    "mtime": 1789812698.2605999,
-    "ast_hash": "94ff7b366ac345b70303dceee4cf4d10",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\socket\\chat.socket.ts": {
-    "mtime": 1789812698.2605999,
-    "ast_hash": "c8a9d45f32007d6b1315456ac14f85cd",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\backend\\src\\types\\express.d.ts": {
-    "mtime": 1779874426.1696365,
-    "ast_hash": "eed6bc1b69ef88d0129019a799a5197c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\AppNavbar.tsx": {
-    "mtime": 1789812698.261599,
-    "ast_hash": "5e578c28ae09d9c3957e6a9c738fc199",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Button.tsx": {
-    "mtime": 1778349635.7668018,
-    "ast_hash": "ccc54c14b2b8a9e9a5d55594172e96a8",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Categories.tsx": {
-    "mtime": 1778349635.7673202,
-    "ast_hash": "77b9ea7be26aaef6b6665d38de3ab0c6",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Features.tsx": {
-    "mtime": 1778349635.7678318,
-    "ast_hash": "ec0009d8e7ced58119b62a5e0b488fc4",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Footer.tsx": {
-    "mtime": 1780048220.1507227,
-    "ast_hash": "b5da067a8902f852eade0d5e18234976",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Hero.tsx": {
-    "mtime": 1778349635.7693844,
-    "ast_hash": "ee5187333d934d79e7ff5a7b73516762",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Navbar.tsx": {
-    "mtime": 1779969505.300779,
-    "ast_hash": "5fb49536a44d6f386da3664a2290a9d5",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\RegisterForm.tsx": {
-    "mtime": 1780162563.2103736,
-    "ast_hash": "a542760abb5c1957ab60d74b7c333998",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\RoleGuard.tsx": {
-    "mtime": 1780038847.298797,
-    "ast_hash": "cf6e8203621910c58b5c02463301bc91",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Search.tsx": {
-    "mtime": 1778349635.7707,
-    "ast_hash": "c634c17652d9c1d13007fcfa587eb02c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\Testimonials.tsx": {
-    "mtime": 1778349635.7715628,
-    "ast_hash": "34969a3c01a0b517154f88d2687dbd5c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\chat\\AttachmentPreview.tsx": {
-    "mtime": 1789812698.261599,
-    "ast_hash": "25bade04c5b5f9674080edf2a745a909",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\chat\\ChatWindow.tsx": {
-    "mtime": 1789812698.261599,
-    "ast_hash": "e5e1784e6863adc1d7f0c3b50a5c6c90",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\chat\\MessageBubble.tsx": {
-    "mtime": 1789812698.262601,
-    "ast_hash": "1341fe67e8037caa4861dd9542b89ead",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\chat\\PresenceDot.tsx": {
-    "mtime": 1789812698.262601,
-    "ast_hash": "836dcbe79dd0ca7a37d994411a7f0033",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\chat\\TypingIndicator.tsx": {
-    "mtime": 1789812698.262601,
-    "ast_hash": "f02293f994a99e994449d4c5637e991d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\BookmarkBtn.tsx": {
-    "mtime": 1780484004.4948025,
-    "ast_hash": "8140791f167d96347beddac1859f77eb",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\FilterDrawer.tsx": {
-    "mtime": 1780484004.4953234,
-    "ast_hash": "f76a098c0cbbf21ad9c417b717a38163",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\FullModal.tsx": {
-    "mtime": 1789812698.2635992,
-    "ast_hash": "1662f5d0b18c15ed88b4296a0577a438",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\GigCard.tsx": {
-    "mtime": 1780484004.49585,
-    "ast_hash": "ac806a76c4c4702fd9a91782d71c7a19",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\GigDetailPanel.tsx": {
-    "mtime": 1789812698.2635992,
-    "ast_hash": "9285237980079bbae65a82f109f7c403",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\SavedEmpty.tsx": {
-    "mtime": 1780484004.49585,
-    "ast_hash": "7d6797d877c82c1f797cdc32b7d127a3",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\find-work\\utils.ts": {
-    "mtime": 1780484004.49585,
-    "ast_hash": "c5bb0fe5a595b546de092746a074127e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\notifications\\NotificationBell.tsx": {
-    "mtime": 1789812698.2641106,
-    "ast_hash": "f7cf89bf77e600fcab5db3fcdc238bdf",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\SplitScreenLayout.tsx": {
-    "mtime": 1779969505.3013022,
-    "ast_hash": "e153ac0e0118005f2dd1fbdd4cdbda74",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step1_Rules.tsx": {
-    "mtime": 1779969505.3013022,
-    "ast_hash": "b83105475d93ed58bf9e57af9fd03d8c",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step1_TitleBio.tsx": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "066d61a4927a4bca082fe17fdfd63bc1",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step2_Experience.tsx": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "0c3b44b306948b524d18264077db1db3",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step2_Skills.tsx": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "377774aa342008c4063e7439eb15495e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step3_Pricing.tsx": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "f38b2a5e6f4baedf5ed0fe9694a3c6b6",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step3_Purpose.tsx": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "84551196e94df40c85627812a3f330b6",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\components\\onboarding\\Step4_Review.tsx": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "84150bee351544f4e5a102132e459a79",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\features\\index.ts": {
-    "mtime": 1778694774.8676362,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\hooks\\index.ts": {
-    "mtime": 1778694774.8686435,
-    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\hooks\\useAuth.ts": {
-    "mtime": 1780162563.2174666,
-    "ast_hash": "61f48576d8ba4e0ee0a456513f534aba",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\hooks\\useChat.ts": {
-    "mtime": 1789812698.2775686,
-    "ast_hash": "edb8e81fc209117dcaaf22600ede8294",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\hooks\\useNotifications.ts": {
-    "mtime": 1789812698.2775686,
-    "ast_hash": "5ad2507d0b6a07449cab103b3c3e3fb9",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\app.json": {
-    "mtime": 1780484453.960834,
-    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\appearance.json": {
-    "mtime": 1780484453.9648361,
-    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\community-plugins.json": {
-    "mtime": 1780484453.9693482,
-    "ast_hash": "89c2f174bf448aabcf02e09a48001950",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\core-plugins.json": {
-    "mtime": 1780484453.9734192,
-    "ast_hash": "8616ba7c17a6b2fa7d4e6bd39c414de2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\graph.json": {
-    "mtime": 1780484453.9778895,
-    "ast_hash": "e4a9a171300bbf1a9dad41777c44121d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.obsidian\\workspace.json": {
-    "mtime": 1780484453.9850729,
-    "ast_hash": "e714c3de27db716b6a91b0afc620d987",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\.smart-env\\smart_env.json": {
-    "mtime": 1780484453.9913082,
-    "ast_hash": "d03cb5b95bb31c83086c61f972f9b408",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\lib\\axios.ts": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "ac02859969ccd7c5b9f99b195a36f107",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\lib\\download.ts": {
-    "mtime": 1789812698.278574,
-    "ast_hash": "198121921ccf8381b6da13a330114cff",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\lib\\index.ts": {
-    "mtime": 1778694774.8696496,
-    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\lib\\socket.ts": {
-    "mtime": 1789812698.278574,
-    "ast_hash": "f1dd61d7c2ecddfe1b38177ca9c2a157",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\lib\\auth\\auth-client.ts": {
-    "mtime": 1779969505.3023076,
-    "ast_hash": "4e638a7211df88fcbc2f9df963722c4d",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\prisma\\seed.ts": {
-    "mtime": 1779969505.3080604,
-    "ast_hash": "76c8054f08a4a6f4826c5122ed068193",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\prisma\\migrations\\20260531183445_init\\migration.sql": {
-    "mtime": 1780484004.49585,
-    "ast_hash": "fb4bf37a89b35b0693267400f04339b4",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\prisma\\migrations\\20260918103727_add_message_attachments_and_order_statuses\\migration.sql": {
-    "mtime": 1789812698.2814279,
-    "ast_hash": "c4581aa846ff6a623fffe09d6f8a6666",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\providers\\index.ts": {
-    "mtime": 1778694774.8738573,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\public\\index.ts": {
-    "mtime": 1778694774.8738573,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\scripts\\index.ts": {
-    "mtime": 1778694774.874859,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\scripts\\seed-chat-order.ts": {
-    "mtime": 1789812698.282427,
-    "ast_hash": "1f501ce1d3b31e05ecc9c97dddb5f6b4",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\scripts\\seed-gigs.ts": {
-    "mtime": 1780484004.4988327,
-    "ast_hash": "97bf609c3e32ae071fc24154066a0830",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\services\\auth.service.ts": {
-    "mtime": 1779969505.3090663,
-    "ast_hash": "9453969641553066966b9693e35334e3",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\services\\index.ts": {
-    "mtime": 1778694774.8758554,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\store\\auth.store.ts": {
-    "mtime": 1779969505.3090663,
-    "ast_hash": "976f0797c8b559e384156601db1ef7a2",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\test\\check-orders.ts": {
-    "mtime": 1789812698.282427,
-    "ast_hash": "02d20cfec171dc1ee1425570d0a7b9e8",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\test\\test-chat-notification-service.ts": {
-    "mtime": 1789812698.2834277,
-    "ast_hash": "dc704b5fbcd19a1c1157dbd67783ad41",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\test\\test-connections.ts": {
-    "mtime": 1789812698.2834277,
-    "ast_hash": "96162311178e82b3208d86121e4e9603",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\test\\test-kafka-topics.ts": {
-    "mtime": 1789812698.2834277,
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358178,
     "ast_hash": "cda0d2a4364928fd976797969de82e9d",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\test\\test-offline-notification.ts": {
-    "mtime": 1789812698.2834277,
+  "test/test-offline-notification.ts": {
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.135819,
     "ast_hash": "32ea4611cd45c1a18336d25d6b256c73",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\types\\gig.ts": {
-    "mtime": 1780484004.4988327,
-    "ast_hash": "3eefa8e1f867f2ec6fb031cf1bad0512",
+  "backend/src/modules/chat/chat.service.ts": {
+    "mtime": 1792575604.597051,
+    "seen": 1792928251.1356595,
+    "ast_hash": "a01e75831ef786a1460c35605e8dd4a7",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\types\\index.ts": {
-    "mtime": 1778694774.8783758,
-    "ast_hash": "5c7f99e3d4eaae821996a487acc6a5e2",
+  "backend/src/modules/chat/chat.types.ts": {
+    "mtime": 1792575604.597051,
+    "seen": 1792928251.1356614,
+    "ast_hash": "eafbfca1981839c69ce30c36112d7c34",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\utils\\authUtils.ts": {
-    "mtime": 1779969505.3090663,
-    "ast_hash": "25b8bd1b67a63aa6a3e4ffaff94fecbe",
+  "backend/src/modules/chat/chat.validation.ts": {
+    "mtime": 1792575604.597051,
+    "seen": 1792928251.1356628,
+    "ast_hash": "c1539b627f83ec6a997bacbf383a99f8",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\utils\\index.ts": {
-    "mtime": 1779969505.3100667,
-    "ast_hash": "46790ad4315ffb0c9b6590a2b0ba56ee",
+  "backend/src/modules/notifications/notification.service.ts": {
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.135686,
+    "ast_hash": "b85f5e823822702a9bd538c1c79a73b9",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\docker-compose.yml": {
-    "mtime": 1789812698.2641106,
-    "ast_hash": "34cce67af4b908772991f4f742bf0dba",
+  "backend/src/modules/notifications/notification.types.ts": {
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356878,
+    "ast_hash": "4e040c3ce14eab5dcf600d6257516ac2",
     "semantic_hash": ""
   },
-  "D:\\Repo\\kaampay\\project_structure.md": {
-    "mtime": 1780484004.4988327,
+  "backend/src/modules/notifications/notification.validation.ts": {
+    "mtime": 1792575604.5985897,
+    "seen": 1792928251.1356893,
+    "ast_hash": "aebec50e243835e8d356497b8042a056",
+    "semantic_hash": ""
+  },
+  "test/test-chat-notification-service.ts": {
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358147,
+    "ast_hash": "dc704b5fbcd19a1c1157dbd67783ad41",
+    "semantic_hash": ""
+  },
+  "app/checkout/[gigId]/page.tsx": {
+    "mtime": 1792923227.4690442,
+    "seen": 1792928251.1356022,
+    "ast_hash": "600f777a37915adb0bf47e5b4352ac96",
+    "semantic_hash": ""
+  },
+  "app/orders/[id]/page.tsx": {
+    "mtime": 1792922223.1484344,
+    "seen": 1792928251.1356144,
+    "ast_hash": "8fe6c66f7b6baa3f58edf13d30fd7194",
+    "semantic_hash": ""
+  },
+  "app/orders/page.tsx": {
+    "mtime": 1792922223.2132497,
+    "seen": 1792928251.135616,
+    "ast_hash": "039ecfb6a8a8ce8d16936d703c37d0f8",
+    "semantic_hash": ""
+  },
+  "backend/src/config/razorpay.ts": {
+    "mtime": 1792912972.7318153,
+    "seen": 1792928251.135641,
+    "ast_hash": "33ccbdca54fabb351f7dc75cf58beb63",
+    "semantic_hash": ""
+  },
+  "backend/src/modules/order/order.cron.ts": {
+    "mtime": 1792921474.1027248,
+    "seen": 1792928251.1356921,
+    "ast_hash": "35313672a74dda02134943d902f73362",
+    "semantic_hash": ""
+  },
+  "backend/src/modules/payment/payment.controller.ts": {
+    "mtime": 1792919634.187668,
+    "seen": 1792928251.1356974,
+    "ast_hash": "71f3a25db4022e0838d3ac11f29bf927",
+    "semantic_hash": ""
+  },
+  "backend/src/modules/payment/payment.routes.ts": {
+    "mtime": 1792919634.1938775,
+    "seen": 1792928251.135699,
+    "ast_hash": "f1ec743950ec662caefd221bb3ff378f",
+    "semantic_hash": ""
+  },
+  "backend/src/modules/payment/payment.service.ts": {
+    "mtime": 1792919634.2095048,
+    "seen": 1792928251.1357002,
+    "ast_hash": "c1ac276093cb070f838aa0678ae729b3",
+    "semantic_hash": ""
+  },
+  "backend/src/modules/payment/payment.validation.ts": {
+    "mtime": 1792919346.4445007,
+    "seen": 1792928251.1357017,
+    "ast_hash": "3bde53ca150dea5163a5886b0d938e58",
+    "semantic_hash": ""
+  },
+  "components/checkout/EscrowBadge.tsx": {
+    "mtime": 1792839873.527742,
+    "seen": 1792928251.1357405,
+    "ast_hash": "6c12416ab287ca1e39f3a6c0eaad6bcf",
+    "semantic_hash": ""
+  },
+  "components/checkout/FreelancerCard.tsx": {
+    "mtime": 1792839864.9984355,
+    "seen": 1792928251.135742,
+    "ast_hash": "71271bab629a76c2cb95df788e0d1384",
+    "semantic_hash": ""
+  },
+  "components/checkout/OrderSummaryCard.tsx": {
+    "mtime": 1792839854.136677,
+    "seen": 1792928251.135744,
+    "ast_hash": "a28861977fefaef1e2bef121e801eba7",
+    "semantic_hash": ""
+  },
+  "components/checkout/PaymentActionCard.tsx": {
+    "mtime": 1792839885.3424914,
+    "seen": 1792928251.135745,
+    "ast_hash": "f3aed35bdd8b660eaf4a87828975e23b",
+    "semantic_hash": ""
+  },
+  "components/orders/DeliverablesCard.tsx": {
+    "mtime": 1792922223.435904,
+    "seen": 1792928251.1357706,
+    "ast_hash": "8943ea9726ddc731b9c8a2a84c431e90",
+    "semantic_hash": ""
+  },
+  "components/orders/OrderActionsPanel.tsx": {
+    "mtime": 1792922223.4583485,
+    "seen": 1792928251.135772,
+    "ast_hash": "aa27afcf7771ca9d8cf5ffe96fd9bb94",
+    "semantic_hash": ""
+  },
+  "components/orders/OrderDetailsSummary.tsx": {
+    "mtime": 1792920413.9962616,
+    "seen": 1792928251.1357734,
+    "ast_hash": "6035716bfd0c27a1e7fedf54e4db575a",
+    "semantic_hash": ""
+  },
+  "components/orders/OrderTimeline.tsx": {
+    "mtime": 1792922223.486446,
+    "seen": 1792928251.1357746,
+    "ast_hash": "5d2c6ab7f0b352ec535e32eff59c33c4",
+    "semantic_hash": ""
+  },
+  "db-view.cjs": {
+    "mtime": 1792575604.6142142,
+    "seen": 1792928251.1357765,
+    "ast_hash": "48ccba2d8ac6efbca452c4b56c50a6db",
+    "semantic_hash": ""
+  },
+  "test/test-order-idempotency.ts": {
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358204,
+    "ast_hash": "e717c828ae303960eaf8f8ca41243214",
+    "semantic_hash": ""
+  },
+  "types/order.ts": {
+    "mtime": 1792920292.7000659,
+    "seen": 1792928251.1358256,
+    "ast_hash": "bccaf20b78ab6e59f5901f30ff4322d7",
+    "semantic_hash": ""
+  },
+  "project_structure.md": {
+    "mtime": 1792575604.661771,
+    "seen": 1792928251.1358354,
     "ast_hash": "26d525fa686849eb619285e234692bf7",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\README.md": {
-    "mtime": 1780485057.7321553,
-    "ast_hash": "acfdaec51edd1e46d9e8752fe8a817fe",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\Action_Register.md": {
-    "mtime": 1789812698.278574,
-    "ast_hash": "9ec509cdcfefa94a5b05657dc7e6c284",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\Context_State.md": {
-    "mtime": 1780484454.0225506,
-    "ast_hash": "4f245845feef588aed8eed46b907ebcc",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\kaampay\\Untitled.md": {
-    "mtime": 1780048220.1901667,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "D:\\Repo\\kaampay\\test\\test-order-idempotency.ts": {
-    "mtime": 1790256018.382867,
-    "ast_hash": "68717598fef0e323aa2cda0bc24a72d6",
     "semantic_hash": ""
   }
 }
