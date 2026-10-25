@@ -313,6 +313,7 @@ export class OrderService {
     userId: string,
     targetStatus: OrderStatus,
     reason?: string,
+    options?: { razorpayOrderId?: string },
   ) {
     return prisma.$transaction(async (tx) => {
       const order = await tx.order.findUnique({
@@ -398,10 +399,12 @@ export class OrderService {
 
       // When moving to PAID, ensure Escrow Payment record and ChatRoom are provisioned
       if (targetStatus === 'PAID') {
-        const paymentId = `pay_${randomUUID().replace(/-/g, '').slice(0, 16)}`;
+        const paymentId =
+          options?.razorpayOrderId?.trim() || `pay_${randomUUID().replace(/-/g, '').slice(0, 16)}`;
         await tx.payment.upsert({
           where: { orderId },
           update: {
+            razorpayOrderId: paymentId,
             escrowStatus: 'HELD',
           },
           create: {
@@ -446,8 +449,12 @@ export class OrderService {
   /**
    * PAYMENT_PENDING -> PAID
    */
-  static async markPaid(orderId: string, userId: string) {
-    return this.transitionStatus(orderId, userId, 'PAID');
+  static async markPaid(
+    orderId: string,
+    userId: string,
+    options?: { razorpayOrderId?: string },
+  ) {
+    return this.transitionStatus(orderId, userId, 'PAID', undefined, options);
   }
 
   /**

@@ -74,3 +74,34 @@ export interface GetOrderResponse {
     pricing: OrderPricing;
   };
 }
+
+export interface CreateRazorpayOrderResponse {
+  success: boolean;
+  message: string;
+  data: {
+    razorpayOrderId: string;
+    amount: number;
+    currency: string;
+    kaampayOrderId: string;
+    keyId: string;
+    customer: {
+      name: string;
+      email: string;
+    };
+  };
+}
+
+export interface VerifyRazorpayPaymentResponse {
+  success: boolean;
+  message: string;
+  data: {
+    order: OrderItem;
+    pricing: OrderPricing;
+    payment: {
+      razorpayOrderId: string;
+      razorpayPaymentId: string;
+      escrowStatus: 'HELD' | 'RELEASED' | 'REFUNDED';
+    };
+  };
+}
+
