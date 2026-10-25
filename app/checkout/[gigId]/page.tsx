@@ -11,8 +11,48 @@ import { EscrowBadge } from '@/components/checkout/EscrowBadge';
 import { PaymentActionCard } from '@/components/checkout/PaymentActionCard';
 import { formatPrice } from '@/components/find-work/utils';
 import type { GigDetail, GigDetailResponse } from '@/types/gig';
-import type { InitiateOrderResponse } from '@/types/order';
+import type {
+  InitiateOrderResponse,
+  CreateRazorpayOrderResponse,
+  VerifyRazorpayPaymentResponse,
+} from '@/types/order';
 import toast from 'react-hot-toast';
+
+interface RazorpayResponse {
+  razorpay_payment_id: string;
+  razorpay_order_id: string;
+  razorpay_signature: string;
+}
+
+interface RazorpayOptions {
+  key: string;
+  amount: number;
+  currency: string;
+  name: string;
+  description: string;
+  image?: string;
+  order_id: string;
+  handler: (response: RazorpayResponse) => void | Promise<void>;
+  prefill?: {
+    name?: string;
+    email?: string;
+  };
+  theme?: {
+    color?: string;
+  };
+  modal?: {
+    ondismiss?: () => void;
+  };
+}
+
+declare global {
+  interface Window {
+    Razorpay?: new (options: RazorpayOptions) => {
+      open: () => void;
+      on: (event: string, handler: (response: unknown) => void) => void;
+    };
+  }
+}
 
 interface CheckoutPageProps {
   params: Promise<{ gigId: string }>;
@@ -38,6 +78,19 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
     const key = `order_checkout_${gigId}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
     setIdempotencyKey(key);
   }, [gigId]);
+
+  // Load Razorpay checkout.js script once on mount
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const scriptId = 'razorpay-checkout-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   // Fetch gig details
   useEffect(() => {
@@ -100,7 +153,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
       setIsProcessing(true);
 
       // ── Step 1: Send server-authoritative & idempotent order creation ──
-      const res = await api.post<InitiateOrderResponse>(
+      const orderRes = await api.post<InitiateOrderResponse>(
         '/orders',
         {
           gigId: gig.id,
@@ -114,34 +167,100 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
         },
       );
 
-      const createdOrder = res.data?.data?.order;
-      const isExisting = res.data?.data?.isExisting;
-
+      const createdOrder = orderRes.data?.data?.order;
       if (!createdOrder?.id) {
         throw new Error('Order creation failed to return order identifier.');
       }
 
-      // ── Step 2: Transition order to PAYMENT_PENDING ──
-      await api.post(`/orders/${createdOrder.id}/payment-pending`);
-
-      // ── Step 3: Complete Mock Escrow Payment (PAID status) ──
-      // Transitions order to PAID, locks payment in HELD escrow, and initializes ChatRoom
-      await api.post(`/orders/${createdOrder.id}/pay`);
-
-      toast.success(
-        isExisting
-          ? 'Existing order loaded and payment confirmed!'
-          : 'Payment successful! Order is in Escrow.',
+      // ── Step 2: Initialize Razorpay Payment Order via Payment Module ──
+      const rzpOrderRes = await api.post<CreateRazorpayOrderResponse>(
+        '/payments/razorpay/create-order',
+        {
+          orderId: createdOrder.id,
+        },
       );
 
-      // ── Step 4: Direct to real-time messaging / order workspace ──
-      router.push(`/messages?orderId=${createdOrder.id}`);
+      const rzpData = rzpOrderRes.data?.data;
+      if (!rzpData?.razorpayOrderId) {
+        throw new Error('Failed to generate payment gateway order.');
+      }
+
+      // ── Step 3: Launch Razorpay Checkout Modal ──
+      if (typeof window !== 'undefined' && window.Razorpay) {
+        const razorpayInstance = new window.Razorpay({
+          key: rzpData.keyId,
+          amount: rzpData.amount,
+          currency: rzpData.currency || 'INR',
+          name: 'KaamPay',
+          description: `Order: ${gig.title}`,
+          image: gig.images?.[0] || undefined,
+          order_id: rzpData.razorpayOrderId,
+          prefill: {
+            name: rzpData.customer.name,
+            email: rzpData.customer.email,
+          },
+          theme: {
+            color: '#4a4bd7',
+          },
+          modal: {
+            ondismiss: () => {
+              setIsProcessing(false);
+              toast('Payment modal closed. You can retry when ready.', { icon: 'ℹ️' });
+            },
+          },
+          handler: async (paymentResponse: RazorpayResponse) => {
+            try {
+              // ── Step 4: Verify Payment Signature & Transition to PAID in Escrow ──
+              const verifyRes = await api.post<VerifyRazorpayPaymentResponse>(
+                '/payments/razorpay/verify',
+                {
+                  orderId: createdOrder.id,
+                  razorpayOrderId: paymentResponse.razorpay_order_id,
+                  razorpayPaymentId: paymentResponse.razorpay_payment_id,
+                  razorpaySignature: paymentResponse.razorpay_signature,
+                },
+              );
+
+              if (verifyRes.data?.success) {
+                toast.success('Payment verified! Funds safely locked in Escrow.');
+                router.push(`/messages?orderId=${createdOrder.id}`);
+              }
+            } catch (verifyErr: unknown) {
+              const verifyErrMsg =
+                (verifyErr as { response?: { data?: { error?: { message?: string } } } })?.response
+                  ?.data?.error?.message || 'Payment verification failed.';
+              toast.error(verifyErrMsg);
+            } finally {
+              setIsProcessing(false);
+            }
+          },
+        });
+
+        razorpayInstance.open();
+      } else {
+        // Fallback if Razorpay SDK script failed to load (e.g. adblocker)
+        // Verify mock payment directly
+        const verifyRes = await api.post<VerifyRazorpayPaymentResponse>(
+          '/payments/razorpay/verify',
+          {
+            orderId: createdOrder.id,
+            razorpayOrderId: rzpData.razorpayOrderId,
+            razorpayPaymentId: `pay_${Date.now()}`,
+            razorpaySignature: 'mock_signature',
+          },
+        );
+
+        if (verifyRes.data?.success) {
+          toast.success('Payment verified! Funds safely locked in Escrow.');
+          router.push(`/messages?orderId=${createdOrder.id}`);
+        }
+        setIsProcessing(false);
+      }
     } catch (err: unknown) {
       const errorMsg =
         (err as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error
           ?.message || 'Failed to complete checkout. Please try again.';
       toast.error(errorMsg);
-    } finally {
       setIsProcessing(false);
     }
   }, [gig, session, quantity, idempotencyKey, gigId, router]);

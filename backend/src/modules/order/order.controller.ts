@@ -6,6 +6,7 @@ import {
   transitionOrderStatusSchema,
   cancelOrderSchema,
   failPaymentSchema,
+  markPaidBodySchema,
 } from './order.validation';
 import { OrderService } from './order.service';
 import { sendSuccess } from '../../common/utils/apiResponse';
@@ -188,7 +189,12 @@ export const markPaid = catchAsync(async (req: Request, res: Response) => {
     throw new AppError('Invalid order ID parameter.', 400, ErrorCode.VALIDATION_ERROR);
   }
 
-  const result = await OrderService.markPaid(paramValidation.data.id, req.user.id);
+  const bodyValidation = markPaidBodySchema.safeParse(req.body);
+  const razorpayOrderId = bodyValidation.success ? bodyValidation.data.razorpayOrderId : undefined;
+
+  const result = await OrderService.markPaid(paramValidation.data.id, req.user.id, {
+    razorpayOrderId,
+  });
 
   sendSuccess(res, 200, 'Order paid successfully.', result);
 });

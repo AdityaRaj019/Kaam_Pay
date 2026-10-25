@@ -7,6 +7,7 @@ import clientRoutes from './client/client.routes';
 import chatRoutes from './chat/chat.routes';
 import notificationRoutes from './notifications/notification.routes';
 import orderRoutes from './order/order.routes';
+import paymentRoutes from './payment/payment.routes';
 
 const router = Router();
 
@@ -21,5 +22,6 @@ router.use('/client', clientRoutes);
 router.use('/chat', chatRoutes);
 router.use('/notifications', notificationRoutes);
 router.use('/orders', orderRoutes);
+router.use('/payments', paymentRoutes);
 
 export default router;
