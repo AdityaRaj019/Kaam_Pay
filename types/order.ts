@@ -45,6 +45,7 @@ export interface OrderItem {
     name: string;
     image: string | null;
   };
+  deliverables?: DeliverableItem[];
   payment?: {
     id: string;
     orderId: string;
@@ -54,6 +55,15 @@ export interface OrderItem {
     escrowStatus: 'HELD' | 'RELEASED' | 'REFUNDED';
     createdAt: string;
   } | null;
+}
+
+export interface DeliverableItem {
+  id: string;
+  orderId: string;
+  fileUrls: string[];
+  textProof: string | null;
+  revisionCount: number;
+  createdAt: string;
 }
 
 export interface InitiateOrderResponse {

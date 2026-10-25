@@ -12,6 +12,12 @@ import {
   markPaid,
   completeOrder,
   getMyOrders,
+  startOrderProgress,
+  submitDeliverables,
+  requestOrderRevision,
+  disputeOrder,
+  getEarnings,
+  triggerAutoCompleteSweep,
 } from './order.controller';
 
 const router = Router();
@@ -22,6 +28,21 @@ const router = Router();
  * @access Private
  */
 router.get('/my-orders', requireAuth, getMyOrders);
+
+/**
+ * @route  GET /api/orders/earnings
+ * @desc   Retrieve freelancer revenue breakdown and virtual wallet balance
+ * @access Private — Freelancer
+ */
+router.get('/earnings', requireAuth, getEarnings);
+
+/**
+ * @route  POST /api/orders/auto-complete
+ * @desc   Trigger sweep for auto-completing orders inactive for 3+ days
+ * @access Private
+ */
+router.post('/auto-complete', requireAuth, triggerAutoCompleteSweep);
+
 
 /**
  * @route  POST /api/orders
@@ -66,11 +87,39 @@ router.post('/:id/payment-pending', requireAuth, markPaymentPending);
 router.post('/:id/pay', requireAuth, markPaid);
 
 /**
+ * @route  POST /api/orders/:id/start
+ * @desc   Freelancer starts working on order: PAID -> IN_PROGRESS
+ * @access Private — requires authenticated freelancer
+ */
+router.post('/:id/start', requireAuth, startOrderProgress);
+
+/**
+ * @route  POST /api/orders/:id/deliver
+ * @desc   Freelancer submits deliverables: IN_PROGRESS/REVISION -> SUBMITTED
+ * @access Private — requires authenticated freelancer
+ */
+router.post('/:id/deliver', requireAuth, submitDeliverables);
+
+/**
+ * @route  POST /api/orders/:id/revision
+ * @desc   Client requests revision: SUBMITTED -> REVISION
+ * @access Private — requires authenticated client
+ */
+router.post('/:id/revision', requireAuth, requestOrderRevision);
+
+/**
  * @route  POST /api/orders/:id/complete
- * @desc   Approve and complete work: IN_PROGRESS -> COMPLETED
+ * @desc   Approve and complete work: SUBMITTED/IN_PROGRESS -> COMPLETED (Releases Escrow)
  * @access Private — requires authenticated client
  */
 router.post('/:id/complete', requireAuth, completeOrder);
+
+/**
+ * @route  POST /api/orders/:id/dispute
+ * @desc   Escalate order to dispute: IN_PROGRESS/SUBMITTED/REVISION -> DISPUTED
+ * @access Private — requires authenticated participant
+ */
+router.post('/:id/dispute', requireAuth, disputeOrder);
 
 /**
  * @route  POST /api/orders/:id/cancel
@@ -87,3 +136,4 @@ router.post('/:id/cancel', requireAuth, cancelOrder);
 router.post('/:id/payment-failed', requireAuth, failPayment);
 
 export default router;
+
