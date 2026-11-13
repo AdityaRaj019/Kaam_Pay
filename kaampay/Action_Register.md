@@ -1,5 +1,16 @@
 # Action Register
 
+## [2026-11-13] Kafka & Redis Resilience Implementation & Backend Startup
+
+- **Dev Mode Fallback Architecture for Real-Time Chat & Notifications**:
+  - Implemented graceful dev-mode resilience in [kafka.ts](file:///f:/Repo/Kaam_Pay/backend/src/config/kafka.ts) and [redis.ts](file:///f:/Repo/Kaam_Pay/backend/src/config/redis.ts) to prevent the Express server from throwing top-level missing env exceptions when Kafka brokers or Redis are not configured.
+  - Exported safe mock implementations for `kafkaProducer` and `kafkaConsumer` when `isKafkaConfigured` is `false`.
+  - Configured [chat.socket.ts](file:///f:/Repo/Kaam_Pay/backend/src/socket/chat.socket.ts) to automatically fall back to Socket.io's built-in in-memory adapter when Redis is not detected, while preserving seamless attachment of `@socket.io/redis-adapter` when Redis is configured.
+  - Routed message payloads in [chat.socket.ts](file:///f:/Repo/Kaam_Pay/backend/src/socket/chat.socket.ts) directly to `handleChatMessage` (persisting to PostgreSQL and broadcasting in real-time) in dev fallback mode, and into Kafka topic `kaampay.chat.messages` when Kafka is active.
+  - Updated [notification.service.ts](file:///f:/Repo/Kaam_Pay/backend/src/modules/notifications/notification.service.ts) to fallback to direct DB persistence and in-app Socket.io dispatching via `getGlobalIo()` when Kafka offline queues are not configured.
+  - Refactored [server.ts](file:///f:/Repo/Kaam_Pay/backend/src/server.ts) startup sequence to conditionally launch Kafka consumers and ensure safe cleanup during shutdown.
+  - Verified server startup: Express boots cleanly on `http://localhost:5000` with passing `/api/health` and database `/api/client/categories` query responses.
+
 ## [2026-09-18] Real-Time Chat Debugging & Media Download Enhancements
 
 - **Chat Window Responsiveness & Scroll Overflow ([ChatWindow.tsx](file:///e:/New%20folder/Kaam_Pay/components/chat/ChatWindow.tsx), [page.tsx](file:///e:/New%20folder/Kaam_Pay/app/messages/page.tsx))**:

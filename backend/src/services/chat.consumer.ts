@@ -11,6 +11,7 @@
 import { Server as SocketServer } from 'socket.io';
 import {
   kafkaConsumer,
+  isKafkaConfigured,
   KAFKA_TOPIC_CHAT,
   KAFKA_TOPIC_NOTIFICATIONS,
   KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
@@ -29,6 +30,10 @@ import {
  * Connects to Kafka and begins processing messages indefinitely.
  */
 export async function startChatConsumer(io: SocketServer): Promise<void> {
+  if (!isKafkaConfigured) {
+    console.log('[Kafka Consumer] Kafka unconfigured. Running in dev direct-dispatch mode ⚠️');
+    return;
+  }
   await kafkaConsumer.connect();
   console.log('[Kafka Consumer] Connected ✅');
 
@@ -60,7 +65,10 @@ export async function startChatConsumer(io: SocketServer): Promise<void> {
 
 // ── Chat message handler ──────────────────────────────────────────────────────
 
-async function handleChatMessage(io: SocketServer, payload: ChatMessagePayload): Promise<void> {
+export async function handleChatMessage(
+  io: SocketServer,
+  payload: ChatMessagePayload,
+): Promise<void> {
   const { orderId, senderId, recipientId, text, attachments } = payload;
 
   // 1. Persist the message to PostgreSQL via ChatService
