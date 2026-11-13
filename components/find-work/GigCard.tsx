@@ -89,9 +89,7 @@ export function GigCard({ gig, isSelected, isSaved, onClick, onToggleSave }: Gig
 
         {/* Metadata row: Price, Delivery Time, Category Badge */}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-3">
-          <span className="font-extrabold text-base text-[#4a4bd7]">
-            {formatPrice(gig.price)}
-          </span>
+          <span className="font-extrabold text-base text-[#4a4bd7]">{formatPrice(gig.price)}</span>
 
           <span className="flex items-center gap-1.5 text-xs text-[#596064]">
             <Clock className="w-3.5 h-3.5 text-[#596064]" />

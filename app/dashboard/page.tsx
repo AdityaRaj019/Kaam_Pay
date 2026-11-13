@@ -75,7 +75,7 @@ export default function DashboardPage() {
   const { data: session, isPending } = useSession();
   const { setUser } = useAuthStore();
 
-  const userRole = ((session?.user as SessionUser)?.role ?? 'CLIENT');
+  const userRole = (session?.user as SessionUser)?.role ?? 'CLIENT';
   const [activeView, setActiveView] = useState<'freelancer' | 'client'>('client');
   const [orders, setOrders] = useState<OrderListEntry[]>([]);
   const [earnings, setEarnings] = useState<EarningsSummary | null>(null);
@@ -220,10 +220,7 @@ export default function DashboardPage() {
   const activeClientOrders = clientOrders.filter(
     ({ order }) => !['COMPLETED', 'CANCELLED', 'PAYMENT_FAILED'].includes(order.status),
   );
-  const totalCommittedInr = activeClientOrders.reduce(
-    (sum, { pricing }) => sum + pricing.total,
-    0,
-  );
+  const totalCommittedInr = activeClientOrders.reduce((sum, { pricing }) => sum + pricing.total, 0);
 
   const getStatusConfig = (status: OrderItem['status']) => {
     switch (status) {
@@ -236,7 +233,10 @@ export default function DashboardPage() {
       case 'REVISION':
         return { label: 'Revision', badge: 'bg-pink-50 text-pink-700 border-pink-200/80' };
       case 'COMPLETED':
-        return { label: 'Completed', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/80' };
+        return {
+          label: 'Completed',
+          badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
+        };
       case 'CANCELLED':
         return { label: 'Cancelled', badge: 'bg-red-50 text-red-700 border-red-200/80' };
       case 'DISPUTED':
@@ -244,7 +244,10 @@ export default function DashboardPage() {
       case 'PAYMENT_PENDING':
       case 'PENDING':
       default:
-        return { label: 'Payment Pending', badge: 'bg-amber-50 text-amber-700 border-amber-200/80' };
+        return {
+          label: 'Payment Pending',
+          badge: 'bg-amber-50 text-amber-700 border-amber-200/80',
+        };
     }
   };
 
@@ -305,7 +308,9 @@ export default function DashboardPage() {
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/20">
                     <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                    <span>{activeView === 'freelancer' ? 'Freelancer Account' : 'Client Account'}</span>
+                    <span>
+                      {activeView === 'freelancer' ? 'Freelancer Account' : 'Client Account'}
+                    </span>
                   </span>
                   {user.emailVerified ? (
                     <span className="inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-400/30">
@@ -1031,7 +1036,9 @@ export default function DashboardPage() {
                 <div className="space-y-2.5 text-xs text-[#596064]">
                   <div className="flex justify-between">
                     <span>Account Role:</span>
-                    <span className="font-bold text-[#2c3437] capitalize">{userRole.toLowerCase()}</span>
+                    <span className="font-bold text-[#2c3437] capitalize">
+                      {userRole.toLowerCase()}
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span>Member Since:</span>

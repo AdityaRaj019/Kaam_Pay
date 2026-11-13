@@ -150,9 +150,7 @@ export function GigDetailPanel({
             {/* Main Overview */}
             <section className="bg-[#f7f9fb] rounded-2xl p-6 border border-[#dce4e8]/80 space-y-4">
               <div className="flex items-center gap-2">
-                <span className="text-xs text-[#596064] font-medium">
-                  {timeAgo(gig.createdAt)}
-                </span>
+                <span className="text-xs text-[#596064] font-medium">{timeAgo(gig.createdAt)}</span>
                 <span className="flex items-center gap-1 bg-emerald-500/10 text-emerald-700 font-bold py-0.5 px-2.5 rounded-full text-xs">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
@@ -271,7 +269,9 @@ export function GigDetailPanel({
                 className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-[#4a4bd7] to-[#7073ff] text-white font-bold text-sm flex items-center justify-center gap-2 hover:opacity-95 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-[#4a4bd7]/20 disabled:opacity-50 cursor-pointer"
               >
                 <ShoppingCart className="w-4 h-4" />
-                <span>{isInitiating ? 'Processing...' : `Order Now · ${formatPrice(gig.price)}`}</span>
+                <span>
+                  {isInitiating ? 'Processing...' : `Order Now · ${formatPrice(gig.price)}`}
+                </span>
               </button>
 
               <BookmarkBtn gig={gig} saved={isSaved} onToggle={onToggleSave} variant="full" />

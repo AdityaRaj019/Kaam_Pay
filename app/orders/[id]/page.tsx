@@ -188,7 +188,10 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 text-xs font-semibold text-[#596064] mb-1.5">
-              <Link href="/orders" className="hover:text-[#4a4bd7] transition-colors flex items-center gap-1">
+              <Link
+                href="/orders"
+                className="hover:text-[#4a4bd7] transition-colors flex items-center gap-1"
+              >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>My Orders</span>
               </Link>

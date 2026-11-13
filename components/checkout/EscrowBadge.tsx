@@ -9,7 +9,9 @@ export const EscrowBadge: React.FC = () => {
           <ShieldCheck className="w-5 h-5" />
         </div>
         <div>
-          <h4 className="font-headline font-bold text-sm text-[#2c3437]">KaamPay Escrow Protection</h4>
+          <h4 className="font-headline font-bold text-sm text-[#2c3437]">
+            KaamPay Escrow Protection
+          </h4>
           <span className="text-xs text-[#596064]">Funds stay protected until you approve</span>
         </div>
       </div>

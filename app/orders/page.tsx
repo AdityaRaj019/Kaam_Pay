@@ -110,7 +110,10 @@ export default function MyOrdersPage() {
       case 'REVISION':
         return { label: 'Revision', badge: 'bg-pink-50 text-pink-700 border-pink-200/80' };
       case 'COMPLETED':
-        return { label: 'Completed', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/80' };
+        return {
+          label: 'Completed',
+          badge: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
+        };
       case 'CANCELLED':
         return { label: 'Cancelled', badge: 'bg-red-50 text-red-700 border-red-200/80' };
       case 'DISPUTED':
@@ -118,7 +121,10 @@ export default function MyOrdersPage() {
       case 'PAYMENT_PENDING':
       case 'PENDING':
       default:
-        return { label: 'Payment Pending', badge: 'bg-amber-50 text-amber-700 border-amber-200/80' };
+        return {
+          label: 'Payment Pending',
+          badge: 'bg-amber-50 text-amber-700 border-amber-200/80',
+        };
     }
   };
 
@@ -193,7 +199,9 @@ export default function MyOrdersPage() {
                       minimumFractionDigits: 2,
                     })}
                   </span>
-                  <span className="text-[10px] text-emerald-700/70 font-medium">Released from Escrow</span>
+                  <span className="text-[10px] text-emerald-700/70 font-medium">
+                    Released from Escrow
+                  </span>
                 </div>
 
                 <div className="p-4 bg-amber-500/[0.06] rounded-2xl border border-amber-500/15">
@@ -206,7 +214,9 @@ export default function MyOrdersPage() {
                       minimumFractionDigits: 2,
                     })}
                   </span>
-                  <span className="text-[10px] text-amber-700/70 font-medium">Active Project Funds</span>
+                  <span className="text-[10px] text-amber-700/70 font-medium">
+                    Active Project Funds
+                  </span>
                 </div>
 
                 <div className="p-4 bg-[#f7f9fb] rounded-2xl border border-[#dce4e8]">
@@ -229,7 +239,9 @@ export default function MyOrdersPage() {
                   <span className="text-xl sm:text-2xl font-black text-[#4a4bd7] mt-1 block">
                     {earnings.completedOrdersCount}
                   </span>
-                  <span className="text-[10px] text-[#4a4bd7]/70 font-medium">Completed Milestones</span>
+                  <span className="text-[10px] text-[#4a4bd7]/70 font-medium">
+                    Completed Milestones
+                  </span>
                 </div>
               </div>
             </div>
@@ -247,9 +259,7 @@ export default function MyOrdersPage() {
               type="button"
               onClick={() => setActiveTab(tab.key as typeof activeTab)}
               className={`font-headline font-bold text-sm sm:text-base relative transition-colors pb-3 cursor-pointer ${
-                activeTab === tab.key
-                  ? 'text-[#4a4bd7]'
-                  : 'text-[#596064]/70 hover:text-[#2c3437]'
+                activeTab === tab.key ? 'text-[#4a4bd7]' : 'text-[#596064]/70 hover:text-[#2c3437]'
               }`}
             >
               {tab.label}
@@ -330,7 +340,9 @@ export default function MyOrdersPage() {
                           {formatPrice(pricing.total)}
                         </span>
                         <span>•</span>
-                        <span>{order.quantity} milestone{order.quantity > 1 ? 's' : ''}</span>
+                        <span>
+                          {order.quantity} milestone{order.quantity > 1 ? 's' : ''}
+                        </span>
                         <span>•</span>
                         <span>
                           {new Date(order.createdAt).toLocaleDateString('en-IN', {

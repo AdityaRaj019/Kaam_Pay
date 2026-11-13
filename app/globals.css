@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #f7f9fb;
@@ -31,10 +31,10 @@
   --color-surface-low: var(--surface-container-low);
   --color-surface-lowest: var(--surface-container-lowest);
   --color-surface-high: var(--surface-container-high);
-  
+
   --font-sans: var(--font-inter);
   --font-display: var(--font-manrope);
-  
+
   --radius-full: var(--radius-full);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
@@ -47,7 +47,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-manrope), sans-serif;
   font-weight: 700;
 }
@@ -69,7 +74,11 @@ h1, h2, h3, h4, h5, h6 {
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
   vertical-align: middle;
   user-select: none;
 }
@@ -96,4 +105,3 @@ h1, h2, h3, h4, h5, h6 {
   background: #dce4e8;
   border-radius: 9999px;
 }
-
