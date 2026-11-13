@@ -1,4 +1,13 @@
 import React, { useState } from 'react';
+import {
+  FolderArchive,
+  Paperclip,
+  ExternalLink,
+  CloudOff,
+  UploadCloud,
+  Plus,
+  Send,
+} from 'lucide-react';
 import type { DeliverableItem } from '@/types/order';
 
 interface DeliverablesCardProps {
@@ -53,9 +62,7 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
     <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[#dce4e8]/80 shadow-[0_15px_35px_-15px_rgba(44,52,55,0.06)] space-y-6">
       <div className="flex items-center justify-between pb-4 border-b border-[#dce4e8]/60">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '24px' }}>
-            folder_zip
-          </span>
+          <FolderArchive className="w-5 h-5 text-[#4a4bd7]" />
           <h3 className="font-headline font-bold text-base sm:text-lg text-[#2c3437]">
             Project Deliverables
           </h3>
@@ -107,16 +114,9 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#4a4bd7]/30 text-[#4a4bd7] rounded-xl text-xs font-semibold hover:bg-[#4a4bd7]/5 transition-colors"
                     >
-                      <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                        attachment
-                      </span>
+                      <Paperclip className="w-3.5 h-3.5" />
                       <span className="max-w-[200px] truncate">{url}</span>
-                      <span
-                        className="material-symbols-outlined text-gray-400"
-                        style={{ fontSize: '14px' }}
-                      >
-                        open_in_new
-                      </span>
+                      <ExternalLink className="w-3.5 h-3.5 text-gray-400" />
                     </a>
                   ))}
                 </div>
@@ -126,12 +126,7 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
         </div>
       ) : (
         <div className="py-8 text-center bg-[#f7f9fb] rounded-2xl border border-dashed border-[#dce4e8]">
-          <span
-            className="material-symbols-outlined text-[#596064]/50"
-            style={{ fontSize: '40px' }}
-          >
-            cloud_off
-          </span>
+          <CloudOff className="w-10 h-10 text-[#596064]/40 mx-auto" />
           <p className="text-sm font-semibold text-[#2c3437] mt-2">No deliverables submitted yet</p>
           <p className="text-xs text-[#596064] mt-0.5">
             {isFreelancer
@@ -145,9 +140,7 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
       {canDeliver && (
         <form onSubmit={handleSubmit} className="pt-4 border-t border-[#dce4e8]/60 space-y-4">
           <h4 className="text-sm font-headline font-bold text-[#2c3437] flex items-center gap-2">
-            <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '18px' }}>
-              upload_file
-            </span>
+            <UploadCloud className="w-4 h-4 text-[#4a4bd7]" />
             Submit Deliverables & Final Work
           </h4>
 
@@ -163,11 +156,9 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
             <button
               type="button"
               onClick={handleAddUrl}
-              className="px-4 py-2.5 bg-[#eaeff2] hover:bg-[#dce4e8] text-[#2c3437] rounded-xl text-xs font-semibold transition-colors flex items-center gap-1"
+              className="px-4 py-2.5 bg-[#eaeff2] hover:bg-[#dce4e8] text-[#2c3437] rounded-xl text-xs font-semibold transition-colors flex items-center gap-1.5"
             >
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                add
-              </span>
+              <Plus className="w-3.5 h-3.5" />
               Add Link
             </button>
           </div>
@@ -214,9 +205,7 @@ export const DeliverablesCard: React.FC<DeliverablesCardProps> = ({
               </>
             ) : (
               <>
-                <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
-                  send
-                </span>
+                <Send className="w-4 h-4" />
                 Send Deliverable for Client Approval
               </>
             )}

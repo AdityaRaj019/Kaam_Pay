@@ -1,7 +1,8 @@
 'use client';
 
-import { use, useEffect, useState, useRef, useCallback } from 'react';
+import { use, useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { ArrowLeft } from 'lucide-react';
 import { useSession } from '@/lib/auth/auth-client';
 import api from '@/lib/axios';
 import { AppNavbar } from '@/components/AppNavbar';
@@ -293,11 +294,9 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
         <div className="mb-6 flex items-center gap-2 text-sm text-[#596064]">
           <button
             onClick={() => router.push('/find-work')}
-            className="hover:text-[#4a4bd7] flex items-center gap-1 transition-colors"
+            className="hover:text-[#4a4bd7] flex items-center gap-1.5 transition-colors"
           >
-            <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
-              arrow_back
-            </span>
+            <ArrowLeft className="w-4 h-4" />
             Marketplace
           </button>
           <span>/</span>
@@ -329,7 +328,6 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               totalFormatted={totalFormatted}
               isProcessing={isProcessing}
               onInitiateOrder={handleOrderInitiation}
-              idempotencyKey={idempotencyKey}
             />
 
             <EscrowBadge />

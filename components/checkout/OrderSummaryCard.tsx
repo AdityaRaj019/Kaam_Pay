@@ -1,6 +1,7 @@
 import React from 'react';
 import type { GigDetail } from '@/types/gig';
 import { formatPrice } from '@/components/find-work/utils';
+import { Receipt, Clock, RefreshCw, Info } from 'lucide-react';
 
 interface OrderSummaryCardProps {
   gig: GigDetail;
@@ -25,9 +26,7 @@ export const OrderSummaryCard: React.FC<OrderSummaryCardProps> = ({
     <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[#dce4e8]/80 shadow-[0_20px_45px_-15px_rgba(44,52,55,0.08)] flex flex-col gap-6">
       <div className="flex items-center justify-between pb-4 border-b border-[#dce4e8]/60">
         <h2 className="text-lg font-headline font-bold text-[#2c3437] flex items-center gap-2">
-          <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '22px' }}>
-            receipt_long
-          </span>
+          <Receipt className="w-5 h-5 text-[#4a4bd7]" />
           Order Summary
         </h2>
         <span className="px-3 py-1 bg-[#4a4bd7]/10 text-[#4a4bd7] rounded-full text-xs font-semibold">
@@ -54,15 +53,15 @@ export const OrderSummaryCard: React.FC<OrderSummaryCardProps> = ({
             {gig.title}
           </h3>
           <div className="flex items-center gap-2 mt-2 text-xs text-[#596064]">
-            <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '16px' }}>
-              schedule
+            <span className="flex items-center gap-1">
+              <Clock className="w-3.5 h-3.5 text-[#4a4bd7]" />
+              <span>{gig.deliveryTime} Days Delivery</span>
             </span>
-            <span>{gig.deliveryTime} Days Delivery</span>
             <span className="text-gray-300">•</span>
-            <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '16px' }}>
-              sync
+            <span className="flex items-center gap-1">
+              <RefreshCw className="w-3.5 h-3.5 text-[#4a4bd7]" />
+              <span>1 Revision</span>
             </span>
-            <span>1 Revision</span>
           </div>
         </div>
       </div>
@@ -105,11 +104,10 @@ export const OrderSummaryCard: React.FC<OrderSummaryCardProps> = ({
           <span className="flex items-center gap-1.5">
             Platform Service Fee (10%)
             <span
-              className="material-symbols-outlined text-gray-400 cursor-help"
               title="Covers 24/7 dispute mediation, client protection & escrow handling"
-              style={{ fontSize: '16px' }}
+              className="inline-flex items-center cursor-help"
             >
-              info
+              <Info className="w-3.5 h-3.5 text-gray-400" />
             </span>
           </span>
           <span className="font-medium text-[#2c3437]">{formatPrice(platformFee)}</span>

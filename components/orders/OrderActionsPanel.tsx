@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Zap, Play, CheckCircle2, RefreshCw, X, AlertTriangle, Scale, XCircle } from 'lucide-react';
 import type { OrderItem } from '@/types/order';
 
 interface OrderActionsPanelProps {
@@ -59,9 +60,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#dce4e8] shadow-[0_25px_50px_-15px_rgba(44,52,55,0.08)] space-y-5">
       <h3 className="font-headline font-bold text-base text-[#2c3437] flex items-center gap-2">
-        <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '20px' }}>
-          bolt
-        </span>
+        <Zap className="w-5 h-5 text-[#4a4bd7]" />
         Workflow Actions
       </h3>
 
@@ -77,9 +76,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
             disabled={isActionLoading}
             className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-[#4a4bd7] to-[#7073ff] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 hover:opacity-95 transition-all shadow-md shadow-[#4a4bd7]/20 disabled:opacity-40"
           >
-            <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
-              play_arrow
-            </span>
+            <Play className="w-4 h-4" />
             {isActionLoading ? 'Starting...' : 'Start Working (Move to In Progress)'}
           </button>
         </div>
@@ -100,9 +97,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
             disabled={isActionLoading}
             className="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-600/20 disabled:opacity-40"
           >
-            <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
-              verified
-            </span>
+            <CheckCircle2 className="w-4 h-4" />
             {isActionLoading ? 'Releasing Escrow...' : 'Approve & Release Payment'}
           </button>
 
@@ -113,9 +108,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
               disabled={isActionLoading}
               className="w-full py-3 px-6 rounded-2xl bg-[#eaeff2] hover:bg-[#dce4e8] text-[#2c3437] font-semibold text-xs transition-colors flex items-center justify-center gap-2 disabled:opacity-40"
             >
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                sync
-              </span>
+              <RefreshCw className="w-3.5 h-3.5" />
               Request Revision
             </button>
           )}
@@ -130,9 +123,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
           disabled={isActionLoading}
           className="w-full py-3 px-6 rounded-2xl border border-red-200 text-red-600 hover:bg-red-50 font-semibold text-xs transition-colors flex items-center justify-center gap-2 disabled:opacity-40"
         >
-          <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-            close
-          </span>
+          <X className="w-3.5 h-3.5" />
           Cancel Order
         </button>
       )}
@@ -145,9 +136,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
           disabled={isActionLoading}
           className="w-full py-2.5 px-4 rounded-xl text-amber-700 bg-amber-50 hover:bg-amber-100 font-medium text-xs transition-colors flex items-center justify-center gap-1.5"
         >
-          <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>
-            report_problem
-          </span>
+          <AlertTriangle className="w-3.5 h-3.5" />
           Raise Dispute / Need Mediation
         </button>
       )}
@@ -155,9 +144,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
       {/* Disputed State Badge */}
       {status === 'DISPUTED' && (
         <div className="p-4 bg-amber-50 border border-amber-200 rounded-2xl text-center space-y-1">
-          <span className="material-symbols-outlined text-amber-600" style={{ fontSize: '28px' }}>
-            balance
-          </span>
+          <Scale className="w-7 h-7 text-amber-600 mx-auto" />
           <p className="text-sm font-bold text-amber-800">Order Under Dispute Review</p>
           <p className="text-xs text-amber-700">
             Escrow funds remain securely frozen while platform support reviews order deliverables.
@@ -168,9 +155,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
       {/* Completed State Badge */}
       {status === 'COMPLETED' && (
         <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-1">
-          <span className="material-symbols-outlined text-emerald-600" style={{ fontSize: '28px' }}>
-            task_alt
-          </span>
+          <CheckCircle2 className="w-7 h-7 text-emerald-600 mx-auto" />
           <p className="text-sm font-bold text-emerald-800">Order Completed Successfully</p>
           <p className="text-xs text-emerald-600">
             Escrow payment has been officially released to the freelancer.
@@ -181,9 +166,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
       {/* Cancelled State Badge */}
       {status === 'CANCELLED' && (
         <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-center space-y-1">
-          <span className="material-symbols-outlined text-red-600" style={{ fontSize: '28px' }}>
-            cancel
-          </span>
+          <XCircle className="w-7 h-7 text-red-600 mx-auto" />
           <p className="text-sm font-bold text-red-800">Order Cancelled</p>
           <p className="text-xs text-red-600">
             Any escrow balances have been processed for refund.
@@ -270,9 +253,7 @@ export const OrderActionsPanel: React.FC<OrderActionsPanelProps> = ({
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-4">
             <div className="flex items-center gap-2 text-amber-600">
-              <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>
-                report_problem
-              </span>
+              <AlertTriangle className="w-5 h-5" />
               <h4 className="font-headline font-bold text-base text-[#2c3437]">
                 Escalate Order Dispute
               </h4>

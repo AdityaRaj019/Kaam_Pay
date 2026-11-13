@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+import { X } from 'lucide-react';
 import type { SortOption } from '@/types/gig';
 
 export interface Filters {
@@ -40,20 +42,20 @@ export function FilterDrawer({
   return (
     <>
       {open && (
-        <div className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm" onClick={onClose} />
+        <div className="fixed inset-0 z-30 bg-black/30 backdrop-blur-sm" onClick={onClose} />
       )}
       <div
         className={`fixed top-0 right-0 h-full z-40 w-80 bg-[#f7f9fb] shadow-2xl transition-transform duration-300 ease-out flex flex-col ${open ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div className="flex items-center justify-between p-6 border-b border-[#dce4e8]">
+        <div className="flex items-center justify-between p-6 border-b border-[#dce4e8] bg-white">
           <h3 className="font-headline font-bold text-[#2c3437]">Filters</h3>
           <button
+            type="button"
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-[#dce4e8] transition-colors"
+            aria-label="Close filters"
+            className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#eaeff2] transition-colors cursor-pointer"
           >
-            <span className="material-symbols-outlined text-[#596064]" style={{ fontSize: '20px' }}>
-              close
-            </span>
+            <X className="w-4 h-4 text-[#596064]" />
           </button>
         </div>
 

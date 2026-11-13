@@ -3,6 +3,7 @@
 import { use, useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { ArrowLeft, MessageSquare } from 'lucide-react';
 import { useSession } from '@/lib/auth/auth-client';
 import api from '@/lib/axios';
 import { AppNavbar } from '@/components/AppNavbar';
@@ -182,13 +183,17 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
     <div className="min-h-screen bg-[#f7f9fb] flex flex-col text-[#2c3437]">
       <AppNavbar />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-16 space-y-8">
         {/* Workspace Top Header Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-[#596064] mb-1">
-              <Link href="/orders" className="hover:text-[#4a4bd7] transition-colors">
-                My Orders
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#596064] mb-1.5">
+              <Link
+                href="/orders"
+                className="hover:text-[#4a4bd7] transition-colors flex items-center gap-1"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" />
+                <span>My Orders</span>
               </Link>
               <span>/</span>
               <span className="text-[#2c3437]">Workspace #{order.id.slice(0, 8)}</span>
@@ -201,12 +206,10 @@ export default function OrderWorkspacePage({ params }: OrderWorkspacePageProps) 
           {/* Quick Chat Link */}
           <Link
             href={`/messages?orderId=${order.id}`}
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#eaeff2] hover:bg-[#dce4e8] text-[#2c3437] font-bold text-xs sm:text-sm transition-colors shadow-sm self-start sm:self-auto"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-[#dce4e8] hover:border-[#4a4bd7]/30 hover:bg-[#4a4bd7]/5 text-[#2c3437] font-bold text-xs sm:text-sm transition-all shadow-xs self-start sm:self-auto cursor-pointer"
           >
-            <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '20px' }}>
-              forum
-            </span>
-            Chat with {isClient ? order.freelancer?.name : 'Client'}
+            <MessageSquare className="w-4 h-4 text-[#4a4bd7]" />
+            <span>Chat with {isClient ? order.freelancer?.name : 'Client'}</span>
           </Link>
         </div>
 
