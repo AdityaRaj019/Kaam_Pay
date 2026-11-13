@@ -10,35 +10,65 @@
  *  3. Download the CA Certificate file and paste its content into KAFKA_CA_CERT (.env)
  */
 
-import { Kafka, logLevel } from 'kafkajs';
+import { Kafka, logLevel, type Producer, type Consumer } from 'kafkajs';
 
-if (!process.env.KAFKA_BROKERS) throw new Error('Missing env: KAFKA_BROKERS');
-if (!process.env.KAFKA_USERNAME) throw new Error('Missing env: KAFKA_USERNAME');
-if (!process.env.KAFKA_PASSWORD) throw new Error('Missing env: KAFKA_PASSWORD');
-if (!process.env.KAFKA_CA_CERT) throw new Error('Missing env: KAFKA_CA_CERT');
+export const isKafkaConfigured = Boolean(
+  process.env.KAFKA_BROKERS &&
+  process.env.KAFKA_USERNAME &&
+  process.env.KAFKA_PASSWORD,
+);
 
-export const kafka = new Kafka({
-  clientId: 'kaampay-chat-server',
-  brokers: process.env.KAFKA_BROKERS.split(',').map((b) => b.trim()),
-  logLevel: logLevel.ERROR, // Keep logs quiet; change to INFO for debugging
-  ssl: {
-    // Aiven CA cert — proves the broker is legitimate and not an impostor
-    ca: [process.env.KAFKA_CA_CERT.replace(/\\n/g, '\n')],
-  },
-  sasl: {
-    mechanism: 'plain',
-    username: process.env.KAFKA_USERNAME,
-    password: process.env.KAFKA_PASSWORD,
-  },
-  // Retry sending up to 5 times before giving up
-  retry: { retries: 5 },
-});
+let kafkaInstance: Kafka | null = null;
+let producerInstance: Producer;
+let consumerInstance: Consumer;
+
+if (isKafkaConfigured) {
+  kafkaInstance = new Kafka({
+    clientId: 'kaampay-chat-server',
+    brokers: (process.env.KAFKA_BROKERS || '').split(',').map((b) => b.trim()),
+    logLevel: logLevel.ERROR, // Keep logs quiet; change to INFO for debugging
+    ...(process.env.KAFKA_CA_CERT
+      ? {
+          ssl: {
+            // Aiven CA cert — proves the broker is legitimate and not an impostor
+            ca: [process.env.KAFKA_CA_CERT.replace(/\\n/g, '\n')],
+          },
+        }
+      : {}),
+    sasl: {
+      mechanism: 'plain',
+      username: process.env.KAFKA_USERNAME || '',
+      password: process.env.KAFKA_PASSWORD || '',
+    },
+    // Retry sending up to 5 times before giving up
+    retry: { retries: 5 },
+  });
+
+  producerInstance = kafkaInstance.producer();
+  consumerInstance = kafkaInstance.consumer({ groupId: 'kaampay-chat-group' });
+} else {
+  // Safe mock producer & consumer for dev fallback when Kafka is not configured
+  producerInstance = {
+    connect: async () => {},
+    disconnect: async () => {},
+    send: async () => [] as never[],
+  } as unknown as Producer;
+
+  consumerInstance = {
+    connect: async () => {},
+    disconnect: async () => {},
+    subscribe: async () => {},
+    run: async () => {},
+  } as unknown as Consumer;
+}
+
+export const kafka = kafkaInstance;
 
 /** Sends messages TO Kafka. One instance shared across the whole app. */
-export const kafkaProducer = kafka.producer();
+export const kafkaProducer = producerInstance;
 
 /** Reads messages FROM Kafka. Uses a consumer group so offsets are tracked. */
-export const kafkaConsumer = kafka.consumer({ groupId: 'kaampay-chat-group' });
+export const kafkaConsumer = consumerInstance;
 
 /** Kafka topic for chat messages */
 export const KAFKA_TOPIC_CHAT = 'kaampay.chat.messages';
@@ -54,7 +84,11 @@ export const KAFKA_TOPIC_OFFLINE_NOTIFICATIONS = 'kaampay.notifications.offline'
  * Automatically runs during backend bootstrap before consumers start.
  */
 export async function ensureKafkaTopics(): Promise<void> {
-  const admin = kafka.admin();
+  if (!isKafkaConfigured || !kafkaInstance) {
+    console.log('[Kafka Admin] Kafka is not configured. Running in in-memory dev mode ⚠️');
+    return;
+  }
+  const admin = kafkaInstance.admin();
   try {
     await admin.connect();
     const existingTopics = await admin.listTopics();

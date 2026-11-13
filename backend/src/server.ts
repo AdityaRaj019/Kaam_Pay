@@ -27,20 +27,26 @@ import('./app').then(async ({ default: app }) => {
       const httpServer = http.createServer(app);
 
       // ── 2. Ensure Kafka topics & connect producer ────────────────────────
-      const { kafkaProducer, ensureKafkaTopics } = await import('./config/kafka');
-      await ensureKafkaTopics();
-      await kafkaProducer.connect();
-      console.log('[Kafka Producer] Connected ✅');
+      const { kafkaProducer, ensureKafkaTopics, isKafkaConfigured } = await import('./config/kafka');
+      if (isKafkaConfigured) {
+        await ensureKafkaTopics();
+        await kafkaProducer.connect();
+        console.log('[Kafka Producer] Connected ✅');
+      } else {
+        console.log('[Kafka] Offline / Unconfigured — running in dev fallback mode (direct DB & Socket.io) 🚀');
+      }
 
-      // ── 3. Initialize Socket.io (with Redis adapter) ──────────────────────
+      // ── 3. Initialize Socket.io (with Redis adapter or in-memory) ─────────
       const { initSocketServer } = await import('./socket/chat.socket');
       const io = await initSocketServer(httpServer);
       console.log('[Socket.io] Server initialized ✅');
 
-      // ── 4. Start Kafka consumer (pass io so it can broadcast) ─────────────
-      const { startChatConsumer } = await import('./services/chat.consumer');
-      await startChatConsumer(io);
-      console.log('[Kafka Consumer] Started ✅');
+      // ── 4. Start Kafka consumer (if Kafka is configured) ──────────────────
+      if (isKafkaConfigured) {
+        const { startChatConsumer } = await import('./services/chat.consumer');
+        await startChatConsumer(io);
+        console.log('[Kafka Consumer] Started ✅');
+      }
 
       // ── 5. Start background jobs (Order Auto-Completion) ──────────────────
       const { startOrderCronJobs } = await import('./modules/order/order.cron');
@@ -62,17 +68,21 @@ import('./app').then(async ({ default: app }) => {
         // Stop accepting new connections
         httpServer.close(() => console.log('✅ HTTP server closed'));
 
-        // Disconnect Kafka
-        await kafkaProducer.disconnect().catch(console.error);
-        const { kafkaConsumer } = await import('./config/kafka');
-        await kafkaConsumer.disconnect().catch(console.error);
-        console.log('✅ Kafka disconnected');
+        // Disconnect Kafka if active
+        if (isKafkaConfigured) {
+          await kafkaProducer.disconnect().catch(console.error);
+          const { kafkaConsumer } = await import('./config/kafka');
+          await kafkaConsumer.disconnect().catch(console.error);
+          console.log('✅ Kafka disconnected');
+        }
 
-        // Disconnect Redis
-        const { pubClient, subClient } = await import('./config/redis');
-        await pubClient.quit().catch(console.error);
-        await subClient.quit().catch(console.error);
-        console.log('✅ Redis disconnected');
+        // Disconnect Redis if active
+        const { pubClient, subClient, isRedisConfigured } = await import('./config/redis');
+        if (isRedisConfigured && pubClient && subClient) {
+          await pubClient.quit().catch(console.error);
+          await subClient.quit().catch(console.error);
+          console.log('✅ Redis disconnected');
+        }
 
         process.exit(0);
       };

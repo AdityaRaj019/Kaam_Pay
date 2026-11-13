@@ -12,6 +12,7 @@ import { Server as SocketServer } from 'socket.io';
 import prisma from '../../config/prisma';
 import {
   kafkaProducer,
+  isKafkaConfigured,
   KAFKA_TOPIC_NOTIFICATIONS,
   KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
 } from '../../config/kafka';
@@ -104,32 +105,52 @@ export class NotificationService {
   }
 
   /**
-   * Publishes an in-app notification event to Kafka for asynchronous delivery and persistence.
+   * Publishes an in-app notification event to Kafka (or directly dispatches in dev mode).
    */
   static async publishNotification(userId: string, type: string, message: string): Promise<void> {
-    await kafkaProducer.send({
-      topic: KAFKA_TOPIC_NOTIFICATIONS,
-      messages: [
-        {
-          key: userId,
-          value: JSON.stringify({ userId, type, message }),
-        },
-      ],
-    });
+    if (isKafkaConfigured) {
+      await kafkaProducer.send({
+        topic: KAFKA_TOPIC_NOTIFICATIONS,
+        messages: [
+          {
+            key: userId,
+            value: JSON.stringify({ userId, type, message }),
+          },
+        ],
+      });
+    } else {
+      const { getGlobalIo } = await import('../../socket/chat.socket');
+      await this.persistAndDispatch(
+        { userId, type, message },
+        (getGlobalIo() as unknown as SocketServer) ?? undefined,
+      );
+    }
   }
 
   /**
-   * Publishes an offline notification event to the dedicated Kafka offline topic.
+   * Publishes an offline notification event to Kafka (or directly persists in dev mode).
    */
   static async publishOfflineNotification(payload: OfflineNotificationPayload): Promise<void> {
-    await kafkaProducer.send({
-      topic: KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
-      messages: [
+    if (isKafkaConfigured) {
+      await kafkaProducer.send({
+        topic: KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
+        messages: [
+          {
+            key: payload.userId,
+            value: JSON.stringify(payload),
+          },
+        ],
+      });
+    } else {
+      const { getGlobalIo } = await import('../../socket/chat.socket');
+      await this.persistAndDispatch(
         {
-          key: payload.userId,
-          value: JSON.stringify(payload),
+          userId: payload.userId,
+          type: payload.type || 'NEW_MESSAGE',
+          message: payload.message,
         },
-      ],
-    });
+        (getGlobalIo() as unknown as SocketServer) ?? undefined,
+      );
+    }
   }
 }

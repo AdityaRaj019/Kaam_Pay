@@ -11,25 +11,37 @@
 
 import { Redis } from 'ioredis';
 
-if (!process.env.REDIS_URL) throw new Error('Missing env: REDIS_URL');
+export const isRedisConfigured = Boolean(process.env.REDIS_URL);
 
-function createRedisClient(name: string): Redis {
-  const client = new Redis(process.env.REDIS_URL as string, {
-    // Automatically reconnect up to 10 times with exponential backoff
-    maxRetriesPerRequest: null,
-    enableReadyCheck: true,
-    lazyConnect: false,
-  });
+let pubInstance: Redis | null = null;
+let subInstance: Redis | null = null;
 
-  client.on('connect', () => console.log(`[Redis:${name}] Connected ✅`));
-  client.on('error', (err: Error) => console.error(`[Redis:${name}] Error:`, err.message));
-  client.on('reconnecting', () => console.log(`[Redis:${name}] Reconnecting…`));
+if (isRedisConfigured) {
+  try {
+    pubInstance = new Redis(process.env.REDIS_URL as string, {
+      maxRetriesPerRequest: null,
+      enableReadyCheck: true,
+      lazyConnect: false,
+    });
+    pubInstance.on('connect', () => console.log('[Redis:pub] Connected ✅'));
+    pubInstance.on('error', (err: Error) => console.error('[Redis:pub] Error:', err.message));
+    pubInstance.on('reconnecting', () => console.log('[Redis:pub] Reconnecting…'));
 
-  return client;
+    subInstance = pubInstance.duplicate();
+    subInstance.on('connect', () => console.log('[Redis:sub] Connected ✅'));
+    subInstance.on('error', (err: Error) => console.error('[Redis:sub] Error:', err.message));
+    subInstance.on('reconnecting', () => console.log('[Redis:sub] Reconnecting…'));
+  } catch (err) {
+    console.warn('[Redis] Failed to initialize client, fallback to in-memory:', err);
+    pubInstance = null;
+    subInstance = null;
+  }
+} else {
+  console.log('[Redis] REDIS_URL not configured. Running in-memory for Socket.io ⚠️');
 }
 
-/** Publisher client — used by Socket.io to broadcast events */
-export const pubClient = createRedisClient('pub');
+/** Publisher client — used by Socket.io to broadcast events (null if unconfigured) */
+export const pubClient = pubInstance;
 
-/** Subscriber client — used by Socket.io to receive events from other instances */
-export const subClient = pubClient.duplicate();
+/** Subscriber client — used by Socket.io to receive events from other instances (null if unconfigured) */
+export const subClient = subInstance;

@@ -11,18 +11,24 @@
 
 import { Server as HttpServer } from 'http';
 import { Server as SocketServer } from 'socket.io';
-import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
 import { createAdapter } from '@socket.io/redis-adapter';
-import { pubClient, subClient } from '../config/redis';
-import { kafkaProducer, KAFKA_TOPIC_CHAT } from '../config/kafka';
+import { pubClient, subClient, isRedisConfigured } from '../config/redis';
+import { kafkaProducer, KAFKA_TOPIC_CHAT, isKafkaConfigured } from '../config/kafka';
 import { auth } from '../config/auth';
 import { fromNodeHeaders } from 'better-auth/node';
 import { ChatService } from '../modules/chat/chat.service';
 import { NotificationService } from '../modules/notifications/notification.service';
+import { handleChatMessage } from '../services/chat.consumer';
+
+let globalIo: SocketServer | null = null;
+
+export function getGlobalIo(): SocketServer | null {
+  return globalIo;
+}
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
-interface SocketData {
+export interface SocketData {
   userId: string;
   userName: string;
 }
@@ -52,23 +58,26 @@ interface TypingPayload {
 
 export async function initSocketServer(
   httpServer: HttpServer,
-): Promise<SocketServer<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, SocketData>> {
+): Promise<SocketServer> {
   const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? 'http://localhost:3000').split(',');
 
-  const io = new SocketServer<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, SocketData>(
-    httpServer,
-    {
-      cors: {
-        origin: allowedOrigins,
-        credentials: true, // needed so the browser sends session cookies
-      },
-      transports: ['websocket', 'polling'],
+  const io = new SocketServer(httpServer, {
+    cors: {
+      origin: allowedOrigins,
+      credentials: true, // needed so the browser sends session cookies
     },
-  );
+    transports: ['websocket', 'polling'],
+  });
 
   // Redis adapter for horizontal multi-instance scaling
-  io.adapter(createAdapter(pubClient, subClient));
-  console.log('[Socket.io] Redis adapter attached ✅');
+  if (isRedisConfigured && pubClient && subClient) {
+    io.adapter(createAdapter(pubClient, subClient));
+    console.log('[Socket.io] Redis adapter attached ✅');
+  } else {
+    console.log('[Socket.io] In-memory adapter active (single-node dev mode) 🚀');
+  }
+
+  globalIo = io;
 
   // ── Authentication middleware ───────────────────────────────────────────────
   io.use(async (socket, next) => {
@@ -165,23 +174,35 @@ export async function initSocketServer(
           return;
         }
 
-        // Push to Kafka for persistence and dispatching
-        await kafkaProducer.send({
-          topic: KAFKA_TOPIC_CHAT,
-          messages: [
-            {
-              key: chatRoom.id,
-              value: JSON.stringify({
-                chatRoomId: chatRoom.id,
-                orderId,
-                senderId: userId,
-                recipientId,
-                text: text?.trim() ?? undefined,
-                attachments,
-              }),
-            },
-          ],
-        });
+        if (isKafkaConfigured) {
+          // Push to Kafka for persistence and dispatching
+          await kafkaProducer.send({
+            topic: KAFKA_TOPIC_CHAT,
+            messages: [
+              {
+                key: chatRoom.id,
+                value: JSON.stringify({
+                  chatRoomId: chatRoom.id,
+                  orderId,
+                  senderId: userId,
+                  recipientId,
+                  text: text?.trim() ?? undefined,
+                  attachments,
+                }),
+              },
+            ],
+          });
+        } else {
+          // Direct dispatch in dev fallback mode (persists to DB & emits to order room)
+          await handleChatMessage(io as unknown as SocketServer, {
+            chatRoomId: chatRoom.id,
+            orderId,
+            senderId: userId,
+            recipientId,
+            text: text?.trim() ?? undefined,
+            attachments,
+          });
+        }
       } catch (err) {
         console.error('[Socket] send_message error:', err);
         socket.emit('error', { message: 'Failed to send message. Please try again.' });
