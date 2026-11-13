@@ -56,9 +56,7 @@ interface TypingPayload {
 
 // ── Socket server initialization ──────────────────────────────────────────────
 
-export async function initSocketServer(
-  httpServer: HttpServer,
-): Promise<SocketServer> {
+export async function initSocketServer(httpServer: HttpServer): Promise<SocketServer> {
   const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? 'http://localhost:3000').split(',');
 
   const io = new SocketServer(httpServer, {

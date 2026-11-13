@@ -13,9 +13,7 @@
 import { Kafka, logLevel, type Producer, type Consumer } from 'kafkajs';
 
 export const isKafkaConfigured = Boolean(
-  process.env.KAFKA_BROKERS &&
-  process.env.KAFKA_USERNAME &&
-  process.env.KAFKA_PASSWORD,
+  process.env.KAFKA_BROKERS && process.env.KAFKA_USERNAME && process.env.KAFKA_PASSWORD,
 );
 
 let kafkaInstance: Kafka | null = null;
@@ -118,4 +116,3 @@ export async function ensureKafkaTopics(): Promise<void> {
     await admin.disconnect().catch(() => {});
   }
 }
-

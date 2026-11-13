@@ -65,7 +65,10 @@ export async function startChatConsumer(io: SocketServer): Promise<void> {
 
 // ── Chat message handler ──────────────────────────────────────────────────────
 
-export async function handleChatMessage(io: SocketServer, payload: ChatMessagePayload): Promise<void> {
+export async function handleChatMessage(
+  io: SocketServer,
+  payload: ChatMessagePayload,
+): Promise<void> {
   const { orderId, senderId, recipientId, text, attachments } = payload;
 
   // 1. Persist the message to PostgreSQL via ChatService

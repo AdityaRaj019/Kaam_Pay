@@ -27,13 +27,16 @@ import('./app').then(async ({ default: app }) => {
       const httpServer = http.createServer(app);
 
       // ── 2. Ensure Kafka topics & connect producer ────────────────────────
-      const { kafkaProducer, ensureKafkaTopics, isKafkaConfigured } = await import('./config/kafka');
+      const { kafkaProducer, ensureKafkaTopics, isKafkaConfigured } =
+        await import('./config/kafka');
       if (isKafkaConfigured) {
         await ensureKafkaTopics();
         await kafkaProducer.connect();
         console.log('[Kafka Producer] Connected ✅');
       } else {
-        console.log('[Kafka] Offline / Unconfigured — running in dev fallback mode (direct DB & Socket.io) 🚀');
+        console.log(
+          '[Kafka] Offline / Unconfigured — running in dev fallback mode (direct DB & Socket.io) 🚀',
+        );
       }
 
       // ── 3. Initialize Socket.io (with Redis adapter or in-memory) ─────────

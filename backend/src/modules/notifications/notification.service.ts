@@ -17,10 +17,7 @@ import {
   KAFKA_TOPIC_OFFLINE_NOTIFICATIONS,
 } from '../../config/kafka';
 import { AppError, ErrorCode } from '../../error/AppError';
-import type {
-  CreateNotificationInput,
-  OfflineNotificationPayload,
-} from './notification.types';
+import type { CreateNotificationInput, OfflineNotificationPayload } from './notification.types';
 import type { GetNotificationsQueryInput } from './notification.validation';
 
 export class NotificationService {
