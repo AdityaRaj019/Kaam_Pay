@@ -1,15 +1,26 @@
 import React from 'react';
+import {
+  Wallet,
+  Wrench,
+  PackageCheck,
+  CheckCircle2,
+  Check,
+  XCircle,
+  AlertTriangle,
+  RotateCcw,
+  Lock,
+} from 'lucide-react';
 import type { OrderItem } from '@/types/order';
 
 interface OrderTimelineProps {
   status: OrderItem['status'];
 }
 
-const STEPS: { key: OrderItem['status']; label: string; icon: string }[] = [
-  { key: 'PAID', label: 'Paid in Escrow', icon: 'account_balance_wallet' },
-  { key: 'IN_PROGRESS', label: 'In Progress', icon: 'engineering' },
-  { key: 'SUBMITTED', label: 'Delivered', icon: 'task' },
-  { key: 'COMPLETED', label: 'Completed', icon: 'verified' },
+const STEPS = [
+  { key: 'PAID' as const, label: 'Paid in Escrow', icon: Wallet },
+  { key: 'IN_PROGRESS' as const, label: 'In Progress', icon: Wrench },
+  { key: 'SUBMITTED' as const, label: 'Delivered', icon: PackageCheck },
+  { key: 'COMPLETED' as const, label: 'Completed', icon: CheckCircle2 },
 ];
 
 export const OrderTimeline: React.FC<OrderTimelineProps> = ({ status }) => {
@@ -48,23 +59,23 @@ export const OrderTimeline: React.FC<OrderTimelineProps> = ({ status }) => {
         </div>
 
         {isCancelled ? (
-          <span className="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full flex items-center gap-1">
-            <span className="material-symbols-outlined text-[16px]">cancel</span>
+          <span className="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full flex items-center gap-1.5">
+            <XCircle className="w-3.5 h-3.5" />
             Order Cancelled
           </span>
         ) : isDisputed ? (
-          <span className="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full flex items-center gap-1">
-            <span className="material-symbols-outlined text-[16px]">warning</span>
+          <span className="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full flex items-center gap-1.5">
+            <AlertTriangle className="w-3.5 h-3.5" />
             Disputed
           </span>
         ) : isRevision ? (
-          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full flex items-center gap-1">
-            <span className="material-symbols-outlined text-[16px]">sync</span>
+          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full flex items-center gap-1.5">
+            <RotateCcw className="w-3.5 h-3.5" />
             Revision Requested
           </span>
         ) : (
-          <span className="px-3 py-1 bg-[#4a4bd7]/10 text-[#4a4bd7] text-xs font-bold rounded-full flex items-center gap-1">
-            <span className="material-symbols-outlined text-[16px]">lock</span>
+          <span className="px-3 py-1 bg-[#4a4bd7]/10 text-[#4a4bd7] text-xs font-bold rounded-full flex items-center gap-1.5">
+            <Lock className="w-3.5 h-3.5" />
             Escrow Protected
           </span>
         )}
@@ -85,6 +96,7 @@ export const OrderTimeline: React.FC<OrderTimelineProps> = ({ status }) => {
         {STEPS.map((step, idx) => {
           const isDone = currentIndex > idx || status === 'COMPLETED';
           const isCurrent = currentIndex === idx && status !== 'COMPLETED';
+          const StepIcon = step.icon;
 
           return (
             <div key={step.key} className="flex flex-col items-center relative z-10">
@@ -97,9 +109,11 @@ export const OrderTimeline: React.FC<OrderTimelineProps> = ({ status }) => {
                       : 'bg-white border-2 border-[#dce4e8] text-[#596064]'
                 }`}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>
-                  {isDone ? 'check' : step.icon}
-                </span>
+                {isDone ? (
+                  <Check className="w-5 h-5 text-white" />
+                ) : (
+                  <StepIcon className="w-5 h-5" />
+                )}
               </div>
               <span
                 className={`text-xs mt-2 font-medium text-center ${

@@ -1,6 +1,7 @@
 import React from 'react';
 import type { GigDetail } from '@/types/gig';
 import { formatPrice } from '@/components/find-work/utils';
+import { BadgeCheck } from 'lucide-react';
 
 interface FreelancerCardProps {
   freelancer: GigDetail['freelancer'];
@@ -27,16 +28,12 @@ export const FreelancerCard: React.FC<FreelancerCardProps> = ({ freelancer }) =>
           </div>
         )}
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <h4 className="font-headline font-bold text-[#2c3437] text-base truncate">
               {freelancer.name}
             </h4>
-            <span
-              className="material-symbols-outlined text-[#4a4bd7]"
-              style={{ fontSize: '18px', fontVariationSettings: "'FILL' 1" }}
-              title="Verified Freelancer"
-            >
-              verified
+            <span title="Verified Freelancer" className="inline-flex items-center">
+              <BadgeCheck className="w-4 h-4 text-[#4a4bd7] shrink-0" />
             </span>
           </div>
           {freelancer.profile?.title && (

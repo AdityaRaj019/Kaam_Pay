@@ -1,4 +1,5 @@
 import React from 'react';
+import { Tag, Clock } from 'lucide-react';
 import type { OrderItem, OrderPricing } from '@/types/order';
 import { formatPrice } from '@/components/find-work/utils';
 
@@ -38,14 +39,10 @@ export const OrderDetailsSummary: React.FC<OrderDetailsSummaryProps> = ({ order,
             {order.gig?.title}
           </h4>
           <div className="flex items-center gap-2 mt-2 text-xs text-[#596064]">
-            <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '16px' }}>
-              category
-            </span>
+            <Tag className="w-3.5 h-3.5 text-[#4a4bd7]" />
             <span>{order.gig?.category}</span>
             <span>•</span>
-            <span className="material-symbols-outlined text-[#4a4bd7]" style={{ fontSize: '16px' }}>
-              schedule
-            </span>
+            <Clock className="w-3.5 h-3.5 text-[#4a4bd7]" />
             <span>{order.gig?.deliveryTime} Days Delivery</span>
           </div>
         </div>

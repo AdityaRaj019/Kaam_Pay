@@ -17,11 +17,15 @@ export function persistSavedMap(map: Record<string, Gig>) {
 
 export function timeAgo(dateString: string): string {
   const diff = Date.now() - new Date(dateString).getTime();
+  if (isNaN(diff) || diff < 0) return 'Just now';
   const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'Just now';
   if (mins < 60) return `${mins}m ago`;
   const hrs = Math.floor(mins / 60);
   if (hrs < 24) return `${hrs}h ago`;
-  return `${Math.floor(hrs / 24)}d ago`;
+  const days = Math.floor(hrs / 24);
+  if (days === 1) return 'Yesterday';
+  return `${days}d ago`;
 }
 
 export function formatPrice(price: number): string {
